@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Đăng nhập";
+}
+
+<section id="login" class="login section">
+    <div class="container section-title" data-aos="fade-up">
+        <h2>Đăng nhập</h2>
+        <p>Truy cập tài khoản của bạn để bắt đầu học AI</p>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8">
+                <form action="/Account/Login" method="post" class="login-form" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mb-4">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control form-control-lg" id="email" name="email" placeholder="Nhập email của bạn" aria-label="Email" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="password" class="form-label">Mật khẩu</label>
+                        <input type="password" class="form-control form-control-lg" id="password" name="password" placeholder="Nhập mật khẩu" aria-label="Mật khẩu" required>
+                    </div>
+                    <div class="mb-4 form-check">
+                        <input type="checkbox" class="form-check-input" id="rememberMe" name="rememberMe">
+                        <label class="form-check-label" for="rememberMe">Ghi nhớ tôi</label>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary btn-lg btn-get-started">Đăng nhập</button>
+                    </div>
+                    <div class="text-center mt-3">
+                        <a href="/Account/ForgotPassword" class="text-muted">Quên mật khẩu?</a>
+                    </div>
+                    <div class="text-center mt-3">
+                        <p>Chưa có tài khoản? <a asp-controller="Account" asp-action="Register" class="text-primary">Đăng ký ngay</a></p>
+                    </div>
+                    <div class="text-center mt-3 error-message" style="display: none; color: #dc3545;">
+                        Email hoặc mật khẩu không đúng. Vui lòng thử lại.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
