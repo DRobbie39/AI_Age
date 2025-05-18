@@ -1,12 +1,4 @@
-/**
-* Template Name: Mentor
-* Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
-* Updated: Aug 07 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
-/*--------------------------------------------------------------
+﻿/*--------------------------------------------------------------
 # Font & Color Variables
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
@@ -61,9 +53,11 @@
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
 body {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  font-family: var(--default-font);
+    color: var(--default-color);
+    background-color: var(--background-color);
+    font-family: var(--default-font);
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 a {
@@ -83,8 +77,9 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--heading-color);
-  font-family: var(--heading-font);
+    color: var(--heading-color);
+    font-family: var(--heading-font);
+    font-weight: 500;
 }
 
 /* PHP Email Form Messages

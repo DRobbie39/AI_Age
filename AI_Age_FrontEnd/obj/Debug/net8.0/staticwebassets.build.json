@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6i6Otu0SqQbjZAemDJHkNYhNsaiMEPurcfkgo68VQwM=",
+  "Hash": "inF6clVOfY94Wwg3b/GMHsZ0ECPFJWrucddCvl/mDAI=",
   "Source": "AI_Age_FrontEnd",
   "BasePath": "_content/AI_Age_FrontEnd",
   "Mode": "Default",
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "i6vn6inj3c",
-      "Integrity": "ZoSJ041HppD9zMhIF4Aa6qB5zB2d57M1E4FTi5swuz8=",
+      "Fingerprint": "bb23oviqpv",
+      "Integrity": "d8KZpwfPPlRoHT1mMdM2qKbzNhfPWS+Xl1brndyLZ+U=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\main.css"
@@ -2367,6 +2367,51 @@
       ]
     },
     {
+      "Route": "css/main.bb23oviqpv.css",
+      "AssetFile": "D:\\Study\\HK2 2024-2025\\Đồ án tốt nghiệp\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\main.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "40334"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"d8KZpwfPPlRoHT1mMdM2qKbzNhfPWS+Xl1brndyLZ+U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 16:44:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bb23oviqpv"
+        },
+        {
+          "Name": "label",
+          "Value": "css/main.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-d8KZpwfPPlRoHT1mMdM2qKbzNhfPWS+Xl1brndyLZ+U="
+        }
+      ]
+    },
+    {
       "Route": "css/main.css",
       "AssetFile": "D:\\Study\\HK2 2024-2025\\Đồ án tốt nghiệp\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\main.css",
       "Selectors": [],
@@ -2377,7 +2422,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "40488"
+          "Value": "40334"
         },
         {
           "Name": "Content-Type",
@@ -2385,11 +2430,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ZoSJ041HppD9zMhIF4Aa6qB5zB2d57M1E4FTi5swuz8=\""
+          "Value": "\"d8KZpwfPPlRoHT1mMdM2qKbzNhfPWS+Xl1brndyLZ+U=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 17:54:43 GMT"
+          "Value": "Sun, 18 May 2025 16:44:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2399,52 +2444,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ZoSJ041HppD9zMhIF4Aa6qB5zB2d57M1E4FTi5swuz8="
-        }
-      ]
-    },
-    {
-      "Route": "css/main.i6vn6inj3c.css",
-      "AssetFile": "D:\\Study\\HK2 2024-2025\\Đồ án tốt nghiệp\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\main.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "40488"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ZoSJ041HppD9zMhIF4Aa6qB5zB2d57M1E4FTi5swuz8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 17:54:43 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "i6vn6inj3c"
-        },
-        {
-          "Name": "label",
-          "Value": "css/main.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-ZoSJ041HppD9zMhIF4Aa6qB5zB2d57M1E4FTi5swuz8="
+          "Value": "sha256-d8KZpwfPPlRoHT1mMdM2qKbzNhfPWS+Xl1brndyLZ+U="
         }
       ]
     },
