@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj",
+        "Action": "StartWithoutDebugging"
+      },
+      {
+        "Path": "AI_Age_BackEnd\\AI_Age_BackEnd.csproj",
+        "Action": "StartWithoutDebugging"
+      }
+    ]
+  }
+]

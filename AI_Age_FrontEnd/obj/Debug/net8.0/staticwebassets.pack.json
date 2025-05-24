@@ -5,12 +5,12 @@
       "PackagePath": "staticwebassets\\AI_Age_FrontEnd.mxsp8nmk67.bundle.scp.css"
     },
     {
-      "Id": "D:\\Study\\HK2 2024-2025\\Đồ án tốt nghiệp\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\main.css",
-      "PackagePath": "staticwebassets\\css\\main.css"
+      "Id": "D:\\Study\\HK2 2024-2025\\Đồ án tốt nghiệp\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\auth.css",
+      "PackagePath": "staticwebassets\\css\\auth.css"
     },
     {
-      "Id": "D:\\Study\\HK2 2024-2025\\Đồ án tốt nghiệp\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\site.css",
-      "PackagePath": "staticwebassets\\css\\site.css"
+      "Id": "D:\\Study\\HK2 2024-2025\\Đồ án tốt nghiệp\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\main.css",
+      "PackagePath": "staticwebassets\\css\\main.css"
     },
     {
       "Id": "D:\\Study\\HK2 2024-2025\\Đồ án tốt nghiệp\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\favicon.ico",
@@ -155,10 +155,6 @@
     {
       "Id": "D:\\Study\\HK2 2024-2025\\Đồ án tốt nghiệp\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\js\\main.js",
       "PackagePath": "staticwebassets\\js\\main.js"
-    },
-    {
-      "Id": "D:\\Study\\HK2 2024-2025\\Đồ án tốt nghiệp\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\js\\site.js",
-      "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
       "Id": "D:\\Study\\HK2 2024-2025\\Đồ án tốt nghiệp\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\lib\\bootstrap-icons\\bootstrap-icons.css",

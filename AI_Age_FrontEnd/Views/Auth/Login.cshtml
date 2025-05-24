@@ -1,0 +1,40 @@
+﻿@model AI_Age_FrontEnd.Models.UserViewModel.LoginViewModel
+
+@{
+    ViewData["Title"] = "Đăng nhập";
+}
+
+<section id="login" class="login section">
+    <div class="container section-title" data-aos="fade-up">
+        <h2>Đăng nhập</h2>
+        <p>Truy cập tài khoản của bạn để bắt đầu học AI</p>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8">
+                <form asp-action="Login" method="post" class="login-form" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mb-4">
+                        <label asp-for="Email" class="form-label" style="font-size: 1.2em;">Email</label>
+                        <input asp-for="Email" class="form-control form-control-lg" placeholder="Nhập email của bạn" aria-label="Email" required>
+                        <span asp-validation-for="Email" class="field-validation-error"></span>
+                    </div>
+                    <div class="mb-4">
+                        <label asp-for="Password" class="form-label" style="font-size: 1.2em;">Mật khẩu</label>
+                        <input asp-for="Password" type="password" class="form-control form-control-lg" placeholder="Nhập mật khẩu" aria-label="Mật khẩu" required>
+                        <span asp-validation-for="Password" class="field-validation-error"></span>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary btn-get-started">Đăng nhập</button>
+                    </div>
+                    <div class="text-center mt-3">
+                        <a href="/Account/ForgotPassword" class="text-muted" style="font-size: 1.1em;">Quên mật khẩu?</a>
+                    </div>
+                    <div class="text-center mt-3">
+                        <p style="font-size: 1.1em;">Chưa có tài khoản? <a asp-controller="Auth" asp-action="Register" class="text-primary">Đăng ký ngay</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
