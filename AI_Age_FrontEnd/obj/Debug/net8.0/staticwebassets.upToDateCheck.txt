@@ -1,5 +1,5 @@
+wwwroot\css\auth.css
 wwwroot\css\main.css
-wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\img\about.jpg
 wwwroot\img\about-2.jpg
@@ -36,7 +36,6 @@ wwwroot\img\trainers\trainer-2-2.jpg
 wwwroot\img\trainers\trainer-3.jpg
 wwwroot\img\trainers\trainer-3-2.jpg
 wwwroot\js\main.js
-wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
 wwwroot\lib\bootstrap\dist\css\bootstrap.min.css

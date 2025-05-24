@@ -1,0 +1,106 @@
+﻿@{
+    ViewData["Title"] = "Courses";
+}
+
+<!-- Page Title -->
+<div class="page-title" data-aos="fade">
+    <div class="heading">
+        <div class="container">
+            <div class="row d-flex justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h1>Khóa học</h1>
+                    <p class="mb-0">Khám phá các khóa học được thiết kế dành riêng cho người cao tuổi, giúp bạn làm quen và thành thạo công nghệ AI một cách dễ dàng và hiệu quả.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="breadcrumbs">
+        <div class="container">
+            <ol>
+                <li><a asp-controller="Home" asp-action="Index">Trang chủ</a></li>
+                <li class="current">Khóa học</li>
+            </ol>
+        </div>
+    </nav>
+</div><!-- End Page Title -->
+<!-- Courses Section -->
+<section id="courses" class="courses section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                <div class="course-item">
+                    <img src="~/img/course-1.jpg" class="img-fluid" alt="Khóa học cơ bản về AI cho người cao tuổi">
+                    <div class="course-content">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <p class="category">AI Cơ bản</p>
+                            <p class="price">1.500.000 VNĐ</p>
+                        </div>
+                        <h3><a asp-controller="Course" asp-action="Details" asp-route-id="1">Nhập môn AI</a></h3>
+                        <p class="description">Tìm hiểu các khái niệm cơ bản về trí tuệ nhân tạo, cách AI hoạt động và ứng dụng trong cuộc sống hàng ngày.</p>
+                        <div class="trainer d-flex justify-content-between align-items-center">
+                            <div class="trainer-profile d-flex align-items-center">
+                                <img src="~/img/trainers/trainer-1.jpg" class="img-fluid" alt="Giảng viên Nguyễn Văn A">
+                                <a href="#" class="trainer-link">Nguyễn Văn A</a>
+                            </div>
+                            <div class="trainer-rank d-flex align-items-center">
+                                <i class="bi bi-person user-icon"></i>&nbsp;50
+                                &nbsp;&nbsp;
+                                <i class="bi bi-heart heart-icon"></i>&nbsp;65
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- End Course Item -->
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+                <div class="course-item">
+                    <img src="~/img/course-2.jpg" class="img-fluid" alt="Khóa học công cụ AI thực hành">
+                    <div class="course-content">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <p class="category">Công cụ AI</p>
+                            <p class="price">2.000.000 VNĐ</p>
+                        </div>
+                        <h3><a asp-controller="Course" asp-action="Details" asp-route-id="2">Công cụ AI thực hành</a></h3>
+                        <p class="description">Học cách sử dụng các công cụ AI phổ biến như chatbot, trợ lý ảo và ứng dụng tự động hóa đơn giản.</p>
+                        <div class="trainer d-flex justify-content-between align-items-center">
+                            <div class="trainer-profile d-flex align-items-center">
+                                <img src="~/img/trainers/trainer-2.jpg" class="img-fluid" alt="Giảng viên Trần Thị B">
+                                <a href="#" class="trainer-link">Trần Thị B</a>
+                            </div>
+                            <div class="trainer-rank d-flex align-items-center">
+                                <i class="bi bi-person user-icon"></i>&nbsp;35
+                                &nbsp;&nbsp;
+                                <i class="bi bi-heart heart-icon"></i>&nbsp;42
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- End Course Item -->
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+                <div class="course-item">
+                    <img src="~/img/course-3.jpg" class="img-fluid" alt="Khóa học AI nâng cao">
+                    <div class="course-content">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <p class="category">AI Nâng cao</p>
+                            <p class="price">2.500.000 VNĐ</p>
+                        </div>
+                        <h3><a asp-controller="Course" asp-action="Details" asp-route-id="3">AI Nâng cao</a></h3>
+                        <p class="description">Khám phá các ứng dụng AI phức tạp hơn như phân tích dữ liệu và tự động hóa thông minh.</p>
+                        <div class="trainer d-flex justify-content-between align-items-center">
+                            <div class="trainer-profile d-flex align-items-center">
+                                <img src="~/img/trainers/trainer-3.jpg" class="img-fluid" alt="Giảng viên Lê Văn C">
+                                <a href="#" class="trainer-link">Lê Văn C</a>
+                            </div>
+                            <div class="trainer-rank d-flex align-items-center">
+                                <i class="bi bi-person user-icon"></i>&nbsp;20
+                                &nbsp;&nbsp;
+                                <i class="bi bi-heart heart-icon"></i>&nbsp;85
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- End Course Item -->
+        </div>
+    </div>
+</section><!-- /Courses Section -->

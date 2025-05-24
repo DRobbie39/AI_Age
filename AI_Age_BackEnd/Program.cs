@@ -1,3 +1,9 @@
+﻿
+using AI_Age_BackEnd.Models;
+using AI_Age_BackEnd.Repositories.Interfaces;
+using AI_Age_BackEnd.Repositories;
+using AI_Age_BackEnd.Services;
+using Microsoft.EntityFrameworkCore;
 
 namespace AI_Age_BackEnd
 {
@@ -7,7 +13,15 @@ namespace AI_Age_BackEnd
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
+            // Đăng ký database
+            builder.Services.AddDbContext<AI_Age_HelpContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            // Đăng ký các repository
+            builder.Services.AddScoped<IUserRepository, UserRepository>();
+
+            // Đăng ký các service
+            builder.Services.AddScoped<UserService>();
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
