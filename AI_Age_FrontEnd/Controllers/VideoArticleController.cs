@@ -2,7 +2,7 @@
 
 namespace AI_Age_FrontEnd.Controllers
 {
-    public class CourseController : Controller
+    public class VideoArticleController : Controller
     {
         public IActionResult Index()
         {
@@ -10,7 +10,7 @@ namespace AI_Age_FrontEnd.Controllers
         }
 
         public IActionResult Details()
-        {      
+        {
             return View();
         }
     }
