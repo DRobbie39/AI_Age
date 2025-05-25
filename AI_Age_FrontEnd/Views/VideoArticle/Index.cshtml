@@ -1,0 +1,125 @@
+﻿@{
+    ViewData["Title"] = "Video hướng dẫn";
+}
+
+<!-- Page Title -->
+<div class="page-title" data-aos="fade">
+    <div class="heading">
+        <div class="container">
+            <div class="row d-flex justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h1>Video Hướng Dẫn</h1>
+                    <p class="mb-0">Xem các video hướng dẫn được thiết kế dành riêng cho người cao tuổi, giúp bạn dễ dàng nắm bắt và ứng dụng công nghệ AI trong cuộc sống.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="breadcrumbs">
+        <div class="container">
+            <ol>
+                <li><a asp-controller="Home" asp-action="Index">Trang chủ</a></li>
+                <li class="current">Video Hướng Dẫn</li>
+            </ol>
+        </div>
+    </nav>
+</div><!-- End Page Title -->
+<!-- Video Tutorials Section -->
+<section id="videos" class="videos section">
+    <div class="container">
+        <!-- Search and Filter Form -->
+        <div class="row mb-4">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="input-group">
+                    <input type="text" id="searchInput" class="form-control" placeholder="Tìm kiếm video hướng dẫn..." aria-label="Tìm kiếm video hướng dẫn">
+                    <select id="categoryFilter" class="form-select">
+                        <option value="">Tất cả thể loại</option>
+                        <option value="AI Cơ bản">AI Cơ bản</option>
+                        <option value="Công cụ AI">Công cụ AI</option>
+                        <option value="AI Nâng cao">AI Nâng cao</option>
+                    </select>
+                    <button class="btn btn-primary" type="button" onclick="filterVideos()">Lọc</button>
+                </div>
+            </div>
+        </div>
+        <!-- Video List -->
+        <div class="row" id="videoList">
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100" data-category="AI Cơ bản">
+                <div class="card video-item">
+                    <div class="position-relative">
+                        <img src="~/img/course-1.jpg" class="card-img-top" alt="Video Nhập môn AI">
+                        <a href="/Home/VideoDetails/1" class="play-btn"></a>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-primary">AI Cơ bản</span>
+                        </div>
+                        <h5 class="card-title"><a asp-controller="VideoArticle" asp-action="Details" asp-route-id="1">Nhập môn AI qua Video</a></h5>
+                        <p class="card-text">Khám phá các khái niệm cơ bản về trí tuệ nhân tạo qua video minh họa dễ hiểu, phù hợp cho người mới bắt đầu.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="trainer-profile d-flex align-items-center">
+                                <img src="~/img/profile.png" class="img-fluid rounded-circle" style="width: 30px; height: 30px;" alt="Giảng viên">
+                                <a href="#" class="trainer-link ms-2">Admin</a>
+                            </div>
+                            <div class="video-stats d-flex align-items-center">
+                                <i class="bi bi-eye me-1"></i> 120
+                                <i class="bi bi-heart ms-3 me-1"></i> 45
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- End Video Item -->
+
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200" data-category="Công cụ AI">
+                <div class="card video-item">
+                    <div class="position-relative">
+                        <img src="~/img/course-2.jpg" class="card-img-top" alt="Video Công cụ AI thực hành">
+                        <a href="/Home/VideoDetails/2" class="play-btn"></a>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-primary">Công cụ AI</span>
+                        </div>
+                        <h5 class="card-title"><a href="/Home/VideoDetails/2">Sử dụng Công cụ AI qua Video</a></h5>
+                        <p class="card-text">Hướng dẫn chi tiết cách sử dụng chatbot và trợ lý ảo qua các video thực hành sinh động.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="trainer-profile d-flex align-items-center">
+                                <img src="~/img/profile.png" class="img-fluid rounded-circle" style="width: 30px; height: 30px;" alt="Giảng viên">
+                                <a href="#" class="trainer-link ms-2">Admin</a>
+                            </div>
+                            <div class="video-stats d-flex align-items-center">
+                                <i class="bi bi-eye me-1"></i> 95
+                                <i class="bi bi-heart ms-3 me-1"></i> 30
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- End Video Item -->
+
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300" data-category="AI Nâng cao">
+                <div class="card video-item">
+                    <div class="position-relative">
+                        <img src="~/img/course-3.jpg" class="card-img-top" alt="Video AI nâng cao">
+                        <a href="/Home/VideoDetails/3" class="play-btn"></a>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-primary">AI Nâng cao</span>
+                        </div>
+                        <h5 class="card-title"><a href="/Home/VideoDetails/3">AI Nâng cao qua Video</a></h5>
+                        <p class="card-text">Tìm hiểu các ứng dụng AI phức tạp như phân tích dữ liệu qua các video hướng dẫn chuyên sâu.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="trainer-profile d-flex align-items-center">
+                                <img src="~/img/profile.png" class="img-fluid rounded-circle" style="width: 30px; height: 30px;" alt="Giảng viên">
+                                <a href="#" class="trainer-link ms-2">Admin</a>
+                            </div>
+                            <div class="video-stats d-flex align-items-center">
+                                <i class="bi bi-eye me-1"></i> 80
+                                <i class="bi bi-heart ms-3 me-1"></i> 60
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- End Video Item -->
+        </div>
+    </div>
+</section><!-- /Video Tutorials Section -->

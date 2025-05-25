@@ -2,15 +2,10 @@
 
 namespace AI_Age_FrontEnd.Controllers
 {
-    public class CourseController : Controller
+    public class AboutController : Controller
     {
         public IActionResult Index()
         {
-            return View();
-        }
-
-        public IActionResult Details()
-        {      
             return View();
         }
     }

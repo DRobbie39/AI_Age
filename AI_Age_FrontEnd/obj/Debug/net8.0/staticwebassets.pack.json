@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\AI_Age_FrontEnd.mxsp8nmk67.bundle.scp.css"
     },
     {
+      "Id": "D:\\Study\\HK2 2024-2025\\Đồ án tốt nghiệp\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\article.css",
+      "PackagePath": "staticwebassets\\css\\article.css"
+    },
+    {
       "Id": "D:\\Study\\HK2 2024-2025\\Đồ án tốt nghiệp\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\auth.css",
       "PackagePath": "staticwebassets\\css\\auth.css"
     },
@@ -27,6 +31,10 @@
     {
       "Id": "D:\\Study\\HK2 2024-2025\\Đồ án tốt nghiệp\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\apple-touch-icon.png",
       "PackagePath": "staticwebassets\\img\\apple-touch-icon.png"
+    },
+    {
+      "Id": "D:\\Study\\HK2 2024-2025\\Đồ án tốt nghiệp\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\chatgpt.jpg",
+      "PackagePath": "staticwebassets\\img\\chatgpt.jpg"
     },
     {
       "Id": "D:\\Study\\HK2 2024-2025\\Đồ án tốt nghiệp\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\course-1.jpg",
@@ -63,6 +71,10 @@
     {
       "Id": "D:\\Study\\HK2 2024-2025\\Đồ án tốt nghiệp\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\old.jpg",
       "PackagePath": "staticwebassets\\img\\old.jpg"
+    },
+    {
+      "Id": "D:\\Study\\HK2 2024-2025\\Đồ án tốt nghiệp\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\profile.png",
+      "PackagePath": "staticwebassets\\img\\profile.png"
     },
     {
       "Id": "D:\\Study\\HK2 2024-2025\\Đồ án tốt nghiệp\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\tabs\\tab-1.png",
@@ -151,6 +163,10 @@
     {
       "Id": "D:\\Study\\HK2 2024-2025\\Đồ án tốt nghiệp\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\trainers\\trainer-3.jpg",
       "PackagePath": "staticwebassets\\img\\trainers\\trainer-3.jpg"
+    },
+    {
+      "Id": "D:\\Study\\HK2 2024-2025\\Đồ án tốt nghiệp\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\videoplayback.mp4",
+      "PackagePath": "staticwebassets\\img\\videoplayback.mp4"
     },
     {
       "Id": "D:\\Study\\HK2 2024-2025\\Đồ án tốt nghiệp\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\js\\main.js",

@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Chi tiết Video";
+}
+
+<section id="video-details" class="section">
+    <div class="container" data-aos="fade-up">
+        <div class="row">
+            <!-- Video Content -->
+            <div class="col-lg-8 col-md-12 mb-4">
+                <div class="video-wrapper position-relative">
+                    <video class="w-100 rounded shadow-sm" controls poster="@Url.Content("~/img/video-2.jpg")">
+                        <source src="@Url.Content("~/img/videoplayback.mp4")" type="video/mp4">
+                        Trình duyệt của bạn không hỗ trợ video.
+                    </video>
+                </div>
+
+                <div class="video-title mt-3">
+                    <h2 class="text-success">Nhập môn AI qua Video</h2>
+                </div>
+
+                <div class="video-description mt-2">
+                    <p class="lead">
+                        Khám phá các khái niệm cơ bản về trí tuệ nhân tạo thông qua video minh họa dễ hiểu, phù hợp cho người mới bắt đầu.
+                    </p>
+                    <p>
+                        Video này giúp bạn tiếp cận các ứng dụng thực tế của AI, chẳng hạn như ChatGPT, một trong những sản phẩm nổi bật được phát triển bởi OpenAI và đang được thế hệ Gen Z ứng dụng trong công việc và học tập hàng ngày.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Sidebar Info -->
+            <div class="col-lg-4 col-md-12">
+                <div class="sidebar-box p-3 border rounded shadow-sm">
+                    <h5 class="mb-3">Thông tin video</h5>
+                    <ul class="list-unstyled course-info-list">
+                        <li class="mb-2">
+                            <strong>Người đăng:</strong> <a href="#">Admin</a>
+                        </li>
+                        <li class="mb-2">
+                            <strong>Lượt xem:</strong> 120
+                        </li>
+                        <li class="mb-2">
+                            <strong>Thời lượng:</strong> 10 phút
+                        </li>
+                        <li class="mb-2">
+                            <strong>Cấp độ:</strong> Cơ bản
+                        </li>
+                        <li class="mb-2">
+                            <strong>Ngày đăng:</strong> 24/05/2025
+                        </li>
+                    </ul>
+                    <div class="mt-3">
+                        <button class="btn btn-success w-100"><i class="bi bi-hand-thumbs-up"></i> Thích</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

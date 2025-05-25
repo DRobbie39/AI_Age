@@ -26,6 +26,7 @@
     <!-- Main CSS File -->
     <link href="~/css/main.css" rel="stylesheet">
     <link href="~/css/auth.css" rel="stylesheet">
+    <link href="~/css/article.css" rel="stylesheet">
 
 </head>
 <body class="index-page">
@@ -36,9 +37,30 @@
             </a>
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a asp-controller="Home" asp-action="Index" class="@(ViewContext.RouteData.Values["Controller"]?.ToString() == "Home" && ViewContext.RouteData.Values["Action"]?.ToString() == "Index" ? "active" : "")">Trang chủ</a></li>
-                    <li><a href="/Home/About">Về chúng tôi</a></li>
-                    <li><a asp-controller="Course" asp-action="Index" class="@(ViewContext.RouteData.Values["Controller"]?.ToString() == "Course" && ViewContext.RouteData.Values["Action"]?.ToString() == "Index" ? "active" : "")">Khóa học</a></li>
+                    <li>
+                        <a asp-controller="Home" asp-action="Index" 
+                            class="@(ViewContext.RouteData.Values["Controller"]?.ToString() == "Home" && ViewContext.RouteData.Values["Action"]?.ToString() == "Index" ? "active" : "")">
+                            Trang chủ
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-controller="About" asp-action="Index"
+                           class="@(ViewContext.RouteData.Values["Controller"]?.ToString() == "About" && ViewContext.RouteData.Values["Action"]?.ToString() == "Index" ? "active" : "")">
+                           Về chúng tôi
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-controller="Course" asp-action="Index"
+                           class="@(ViewContext.RouteData.Values["Controller"]?.ToString() == "Course" ? "active" : "")">
+                            Bài hướng dẫn
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-controller="VideoArticle" asp-action="Index"
+                           class="@(ViewContext.RouteData.Values["Controller"]?.ToString() == "VideoArticle" ? "active" : "")">
+                            Video hướng dẫn
+                        </a>
+                    </li>
                     @* <li><a href="/Home/Trainers">Trainers</a></li> *@
                     <li><a href="/Home/Events">Diễn đàn</a></li>
                     @* <li><a href="/Home/Pricing">Pricing</a></li> *@
