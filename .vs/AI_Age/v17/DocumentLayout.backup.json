@@ -3,56 +3,8 @@
   "WorkspaceRootPath": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|d:\\study\\hk2 2024-2025\\\u0111\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\ai_age\\ai_age_frontend\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|solutionrelative:ai_age_frontend\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|d:\\study\\hk2 2024-2025\\\u0111\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\ai_age\\ai_age_frontend\\views\\videoarticle\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|solutionrelative:ai_age_frontend\\views\\videoarticle\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|d:\\study\\hk2 2024-2025\\\u0111\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\ai_age\\ai_age_frontend\\views\\course\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|solutionrelative:ai_age_frontend\\views\\course\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|d:\\study\\hk2 2024-2025\\\u0111\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\ai_age\\ai_age_frontend\\controllers\\videoarticlecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|solutionrelative:ai_age_frontend\\controllers\\videoarticlecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|d:\\study\\hk2 2024-2025\\\u0111\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\ai_age\\ai_age_frontend\\views\\videoarticle\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|solutionrelative:ai_age_frontend\\views\\videoarticle\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|d:\\study\\hk2 2024-2025\\\u0111\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\ai_age\\ai_age_frontend\\views\\course\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|solutionrelative:ai_age_frontend\\views\\course\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|d:\\study\\hk2 2024-2025\\\u0111\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\ai_age\\ai_age_frontend\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|solutionrelative:ai_age_frontend\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|d:\\study\\hk2 2024-2025\\\u0111\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\ai_age\\ai_age_frontend\\wwwroot\\css\\auth.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|solutionrelative:ai_age_frontend\\wwwroot\\css\\auth.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|d:\\study\\hk2 2024-2025\\\u0111\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\ai_age\\ai_age_frontend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|solutionrelative:ai_age_frontend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|d:\\study\\hk2 2024-2025\\\u0111\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\ai_age\\ai_age_frontend\\controllers\\aboutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|solutionrelative:ai_age_frontend\\controllers\\aboutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|d:\\study\\hk2 2024-2025\\\u0111\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\ai_age\\ai_age_frontend\\views\\auth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|solutionrelative:ai_age_frontend\\views\\auth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|d:\\study\\hk2 2024-2025\\\u0111\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\ai_age\\ai_age_frontend\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|solutionrelative:ai_age_frontend\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|d:\\study\\hk2 2024-2025\\\u0111\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\ai_age\\ai_age_frontend\\models\\userviewmodel\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|solutionrelative:ai_age_frontend\\models\\userviewmodel\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|d:\\study\\hk2 2024-2025\\\u0111\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\ai_age\\ai_age_backend\\controllers\\usercontroller\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|solutionrelative:ai_age_backend\\controllers\\usercontroller\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,8 +14,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 15,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_BackEnd\\Controllers\\UserController\\AuthController.cs",
+              "RelativeDocumentMoniker": "AI_Age_BackEnd\\Controllers\\UserController\\AuthController.cs",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_BackEnd\\Controllers\\UserController\\AuthController.cs",
+              "RelativeToolTip": "AI_Age_BackEnd\\Controllers\\UserController\\AuthController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAuwCIAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T06:15:14.305Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -107,164 +72,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_FrontEnd\\Views\\VideoArticle\\Details.cshtml",
-              "RelativeDocumentMoniker": "AI_Age_FrontEnd\\Views\\VideoArticle\\Details.cshtml",
-              "ToolTip": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_FrontEnd\\Views\\VideoArticle\\Details.cshtml",
-              "RelativeToolTip": "AI_Age_FrontEnd\\Views\\VideoArticle\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-24T13:32:01.49Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_FrontEnd\\Views\\VideoArticle\\Index.cshtml",
-              "RelativeDocumentMoniker": "AI_Age_FrontEnd\\Views\\VideoArticle\\Index.cshtml",
-              "ToolTip": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_FrontEnd\\Views\\VideoArticle\\Index.cshtml",
-              "RelativeToolTip": "AI_Age_FrontEnd\\Views\\VideoArticle\\Index.cshtml",
-              "ViewState": "AgIAAB0AAAAAAAAAAADgvz4AAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-24T13:02:19.748Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_FrontEnd\\Views\\Course\\Index.cshtml",
-              "RelativeDocumentMoniker": "AI_Age_FrontEnd\\Views\\Course\\Index.cshtml",
-              "ToolTip": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_FrontEnd\\Views\\Course\\Index.cshtml",
-              "RelativeToolTip": "AI_Age_FrontEnd\\Views\\Course\\Index.cshtml",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAADMAAABdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-24T11:23:32.52Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "VideoArticleController.cs",
-              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_FrontEnd\\Controllers\\VideoArticleController.cs",
-              "RelativeDocumentMoniker": "AI_Age_FrontEnd\\Controllers\\VideoArticleController.cs",
-              "ToolTip": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_FrontEnd\\Controllers\\VideoArticleController.cs",
-              "RelativeToolTip": "AI_Age_FrontEnd\\Controllers\\VideoArticleController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T13:01:35.08Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_FrontEnd\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "AI_Age_FrontEnd\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_FrontEnd\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "AI_Age_FrontEnd\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAC4AAAAAAAAAAADwvzsAAAB8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-24T11:47:29.481Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_FrontEnd\\Views\\Course\\Details.cshtml",
-              "RelativeDocumentMoniker": "AI_Age_FrontEnd\\Views\\Course\\Details.cshtml",
-              "ToolTip": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_FrontEnd\\Views\\Course\\Details.cshtml",
-              "RelativeToolTip": "AI_Age_FrontEnd\\Views\\Course\\Details.cshtml",
-              "ViewState": "AgIAABsAAAAAAAAAAADwvzEAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-24T11:44:59.58Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CourseController.cs",
-              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_FrontEnd\\Controllers\\CourseController.cs",
-              "RelativeDocumentMoniker": "AI_Age_FrontEnd\\Controllers\\CourseController.cs",
-              "ToolTip": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_FrontEnd\\Controllers\\CourseController.cs",
-              "RelativeToolTip": "AI_Age_FrontEnd\\Controllers\\CourseController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T11:30:05.872Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_FrontEnd\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "AI_Age_FrontEnd\\Controllers\\AuthController.cs",
-              "ToolTip": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_FrontEnd\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "AI_Age_FrontEnd\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAswD4AAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T08:01:10.888Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "auth.css",
-              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\auth.css",
-              "RelativeDocumentMoniker": "AI_Age_FrontEnd\\wwwroot\\css\\auth.css",
-              "ToolTip": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\auth.css",
-              "RelativeToolTip": "AI_Age_FrontEnd\\wwwroot\\css\\auth.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-05-24T10:14:34.805Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AboutController.cs",
-              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_FrontEnd\\Controllers\\AboutController.cs",
-              "RelativeDocumentMoniker": "AI_Age_FrontEnd\\Controllers\\AboutController.cs",
-              "ToolTip": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_FrontEnd\\Controllers\\AboutController.cs",
-              "RelativeToolTip": "AI_Age_FrontEnd\\Controllers\\AboutController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T12:10:07.411Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_FrontEnd\\Views\\Auth\\Register.cshtml",
-              "RelativeDocumentMoniker": "AI_Age_FrontEnd\\Views\\Auth\\Register.cshtml",
-              "ToolTip": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_FrontEnd\\Views\\Auth\\Register.cshtml",
-              "RelativeToolTip": "AI_Age_FrontEnd\\Views\\Auth\\Register.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-24T08:02:55.407Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_FrontEnd\\Views\\Auth\\Login.cshtml",
-              "RelativeDocumentMoniker": "AI_Age_FrontEnd\\Views\\Auth\\Login.cshtml",
-              "ToolTip": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_FrontEnd\\Views\\Auth\\Login.cshtml",
-              "RelativeToolTip": "AI_Age_FrontEnd\\Views\\Auth\\Login.cshtml",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-24T10:14:24.535Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "RegisterViewModel.cs",
-              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_FrontEnd\\Models\\UserViewModel\\RegisterViewModel.cs",
-              "RelativeDocumentMoniker": "AI_Age_FrontEnd\\Models\\UserViewModel\\RegisterViewModel.cs",
-              "ToolTip": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_FrontEnd\\Models\\UserViewModel\\RegisterViewModel.cs",
-              "RelativeToolTip": "AI_Age_FrontEnd\\Models\\UserViewModel\\RegisterViewModel.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAiwBEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T08:00:02.166Z"
             }
           ]
         }

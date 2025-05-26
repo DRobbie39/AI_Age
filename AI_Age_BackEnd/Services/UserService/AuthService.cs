@@ -2,14 +2,14 @@
 using AI_Age_BackEnd.Models;
 using AI_Age_BackEnd.Repositories;
 
-namespace AI_Age_BackEnd.Services
+namespace AI_Age_BackEnd.Services.UserService
 {
-    public class UserService
+    public class AuthService
     {
         private readonly AI_Age_HelpContext _context;
         private readonly UserRepository _userRepository;
 
-        public UserService(AI_Age_HelpContext context)
+        public AuthService(AI_Age_HelpContext context)
         {
             _context = context;
             _userRepository = new UserRepository(_context);

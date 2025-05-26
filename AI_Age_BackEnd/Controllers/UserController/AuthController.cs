@@ -1,16 +1,16 @@
 ﻿using AI_Age_BackEnd.DTOs.UserDTO;
-using AI_Age_BackEnd.Services;
+using AI_Age_BackEnd.Services.UserService;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AI_Age_BackEnd.Controllers
+namespace AI_Age_BackEnd.Controllers.UserController
 {
     [Route("api/[controller]")]
     [ApiController]
     public class AuthController : Controller
     {
-        private readonly UserService _userService;
+        private readonly AuthService _userService;
 
-        public AuthController(UserService userService)
+        public AuthController(AuthService userService)
         {
             _userService = userService;
         }
@@ -21,11 +21,11 @@ namespace AI_Age_BackEnd.Controllers
             try
             {
                 var user = await _userService.RegisterUserAsync(registerDto);
-                return Ok(new { Message = "Đăng ký thành công", UserId = user?.UserId });
+                return Ok(new { Message = "Đăng ký thành công", user?.UserId });
             }
             catch (Exception ex)
             {
-                return BadRequest(new { Message = ex.Message });
+                return BadRequest(new { ex.Message });
             }
         }
 
@@ -35,11 +35,11 @@ namespace AI_Age_BackEnd.Controllers
             try
             {
                 var user = await _userService.LoginUserAsync(loginDto);
-                return Ok(new { Message = "Đăng nhập thành công", UserId = user?.UserId });
+                return Ok(new { Message = "Đăng nhập thành công", user?.UserId });
             }
             catch (Exception ex)
             {
-                return BadRequest(new { Message = ex.Message });
+                return BadRequest(new { ex.Message });
             }
         }
     }
