@@ -2,8 +2,8 @@
 using AI_Age_BackEnd.Models;
 using AI_Age_BackEnd.Repositories.Interfaces;
 using AI_Age_BackEnd.Repositories;
-using AI_Age_BackEnd.Services;
 using Microsoft.EntityFrameworkCore;
+using AI_Age_BackEnd.Services.UserService;
 
 namespace AI_Age_BackEnd
 {
@@ -21,7 +21,7 @@ namespace AI_Age_BackEnd
             builder.Services.AddScoped<IUserRepository, UserRepository>();
 
             // Đăng ký các service
-            builder.Services.AddScoped<UserService>();
+            builder.Services.AddScoped<AuthService>();
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
