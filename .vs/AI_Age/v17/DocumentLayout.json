@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|d:\\study\\hk2 2024-2025\\\u0111\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\ai_age\\ai_age_backend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|solutionrelative:ai_age_backend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|d:\\study\\hk2 2024-2025\\\u0111\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\ai_age\\ai_age_backend\\models\\ai_age_helpcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|solutionrelative:ai_age_backend\\models\\ai_age_helpcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|d:\\study\\hk2 2024-2025\\\u0111\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\ai_age\\ai_age_backend\\controllers\\usercontroller\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|solutionrelative:ai_age_backend\\controllers\\usercontroller\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -19,14 +27,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_BackEnd\\Controllers\\UserController\\AuthController.cs",
-              "RelativeDocumentMoniker": "AI_Age_BackEnd\\Controllers\\UserController\\AuthController.cs",
-              "ToolTip": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_BackEnd\\Controllers\\UserController\\AuthController.cs",
-              "RelativeToolTip": "AI_Age_BackEnd\\Controllers\\UserController\\AuthController.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAuwCIAAAAPAAAAAAAAAA==",
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_BackEnd\\Models\\User.cs",
+              "RelativeDocumentMoniker": "AI_Age_BackEnd\\Models\\User.cs",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_BackEnd\\Models\\User.cs",
+              "RelativeToolTip": "AI_Age_BackEnd\\Models\\User.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA5wBUAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T06:15:14.305Z",
+              "WhenOpened": "2025-05-27T16:35:04.823Z",
               "EditorCaption": ""
             },
             {
@@ -72,6 +80,32 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AI_Age_HelpContext.cs",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_BackEnd\\Models\\AI_Age_HelpContext.cs",
+              "RelativeDocumentMoniker": "AI_Age_BackEnd\\Models\\AI_Age_HelpContext.cs",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_BackEnd\\Models\\AI_Age_HelpContext.cs",
+              "RelativeToolTip": "AI_Age_BackEnd\\Models\\AI_Age_HelpContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T16:38:11.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_BackEnd\\Controllers\\UserController\\AuthController.cs",
+              "RelativeDocumentMoniker": "AI_Age_BackEnd\\Controllers\\UserController\\AuthController.cs",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_BackEnd\\Controllers\\UserController\\AuthController.cs",
+              "RelativeToolTip": "AI_Age_BackEnd\\Controllers\\UserController\\AuthController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAwAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T06:15:14.305Z",
+              "EditorCaption": ""
             }
           ]
         }

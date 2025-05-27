@@ -14,21 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 11,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_BackEnd\\Controllers\\UserController\\AuthController.cs",
-              "RelativeDocumentMoniker": "AI_Age_BackEnd\\Controllers\\UserController\\AuthController.cs",
-              "ToolTip": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_BackEnd\\Controllers\\UserController\\AuthController.cs",
-              "RelativeToolTip": "AI_Age_BackEnd\\Controllers\\UserController\\AuthController.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAuwCIAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T06:15:14.305Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -72,6 +59,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_BackEnd\\Controllers\\UserController\\AuthController.cs",
+              "RelativeDocumentMoniker": "AI_Age_BackEnd\\Controllers\\UserController\\AuthController.cs",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_BackEnd\\Controllers\\UserController\\AuthController.cs",
+              "RelativeToolTip": "AI_Age_BackEnd\\Controllers\\UserController\\AuthController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAwAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T06:15:14.305Z",
+              "EditorCaption": ""
             }
           ]
         }
