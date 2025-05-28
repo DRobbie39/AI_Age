@@ -17,11 +17,11 @@ namespace AI_Age_BackEnd.Services.UserService
 
         public async Task<User?> RegisterUserAsync(RegisterDto registerDto)
         {
-            // Kiểm tra email đã tồn tại chưa
-            var existingUser = await _userRepository.GetUserByEmailAsync(registerDto.Email);
+            // Kiểm tra tên đăng nhập đã tồn tại chưa
+            var existingUser = await _userRepository.GetUserByUsernameAsync(registerDto.Username);
             if (existingUser != null)
             {
-                throw new Exception("Email đã tồn tại.");
+                throw new Exception("Tên đăng nhập đã tồn tại.");
             }
 
             // Mã hóa mật khẩu
@@ -30,7 +30,7 @@ namespace AI_Age_BackEnd.Services.UserService
             var newUser = new User
             {
                 FullName = registerDto.FullName,
-                Email = registerDto.Email,
+                Username = registerDto.Username,
                 Password = hashedPassword,
                 RoleId = 3,
                 RegistrationDate = DateTime.Now,
@@ -43,10 +43,10 @@ namespace AI_Age_BackEnd.Services.UserService
 
         public async Task<User?> LoginUserAsync(LoginDto loginDto)
         {
-            var user = await _userRepository.GetUserByEmailAsync(loginDto.Email);
+            var user = await _userRepository.GetUserByUsernameAsync(loginDto.Username);
             if (user == null || !BCrypt.Net.BCrypt.Verify(loginDto.Password, user.Password))
             {
-                throw new Exception("Email hoặc mật khẩu không đúng.");
+                throw new Exception("Tên đăng nhập hoặc mật khẩu không đúng.");
             }
 
             return user;

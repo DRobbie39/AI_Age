@@ -7,9 +7,9 @@ namespace AI_Age_FrontEnd.Models.UserViewModel
         [Required(ErrorMessage = "Họ và tên là bắt buộc")]
         public string FullName { get; set; }
 
-        [Required(ErrorMessage = "Email là bắt buộc")]
-        [EmailAddress(ErrorMessage = "Email không hợp lệ")]
-        public string Email { get; set; }
+        [Required(ErrorMessage = "Tên đăng nhập là bắt buộc")]
+        [RegularExpression(@"^[a-zA-Z0-9_]{3,50}$", ErrorMessage = "Tên đăng nhập chỉ được chứa chữ cái, số, dấu gạch dưới và dài từ 3 đến 50 ký tự")]
+        public string Username { get; set; }
 
         [Required(ErrorMessage = "Mật khẩu là bắt buộc")]
         [DataType(DataType.Password)]

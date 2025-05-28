@@ -32,7 +32,7 @@ namespace AI_Age_FrontEnd.Controllers
             var registerDto = new
             {
                 model.FullName,
-                model.Email,
+                model.Username,
                 model.Password
             };
 
@@ -65,7 +65,7 @@ namespace AI_Age_FrontEnd.Controllers
 
             var loginDto = new
             {
-                model.Email,
+                model.Username,
                 model.Password
             };
 

@@ -73,7 +73,7 @@
       "LoginDto": {
         "type": "object",
         "properties": {
-          "email": {
+          "username": {
             "type": "string",
             "nullable": true
           },
@@ -91,7 +91,7 @@
             "type": "string",
             "nullable": true
           },
-          "email": {
+          "username": {
             "type": "string",
             "nullable": true
           },

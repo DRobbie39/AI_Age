@@ -13,11 +13,11 @@ namespace AI_Age_BackEnd.Repositories
             _context = context;
         }
 
-        public async Task<User?> GetUserByEmailAsync(string email)
+        public async Task<User?> GetUserByUsernameAsync(string username)
         {
             return await _context.Users
                 .Include(u => u.Role)
-                .FirstOrDefaultAsync(u => u.Email == email);
+                .FirstOrDefaultAsync(u => u.Username == username);
         }
 
         public async Task AddUserAsync(User user)
