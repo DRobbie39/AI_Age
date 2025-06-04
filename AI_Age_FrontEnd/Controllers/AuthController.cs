@@ -72,12 +72,21 @@ namespace AI_Age_FrontEnd.Controllers
             var response = await _httpClient.PostAsJsonAsync("Auth/login", loginDto);
             if (response.IsSuccessStatusCode)
             {
+                // Store username in session
+                HttpContext.Session.SetString("Username", model.Username);
                 return RedirectToAction("Index", "Home");
             }
 
             var error = await response.Content.ReadAsStringAsync();
             ModelState.AddModelError(string.Empty, "Đăng nhập thất bại: " + error);
             return View(model);
+        }
+
+        [HttpGet]
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Index", "Home");
         }
     }
 }

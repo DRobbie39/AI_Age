@@ -1876,3 +1876,18 @@ section,
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.dropdown-menu {
+    min-width: 150px;
+}
+
+.dropdown-toggle::after {
+    vertical-align: middle;
+}
