@@ -1,5 +1,4 @@
-﻿/* Forum Section Styles */
-.forum {
+﻿.forum {
     padding: 2rem 0;
 }
 
@@ -10,18 +9,23 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-    .new-post h2, .forum-posts h2 {
-        font-size: 1.5rem;
-        color: #333;
-        margin-bottom: 1rem;
-    }
+.new-post h2, .forum-posts h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
 
-    .new-post form textarea, .comments form textarea {
-        font-size: 1.2rem;
-        padding: 0.75rem;
-        min-height: 150px;
-        border-color: #5fcf80;
-    }
+.new-post form textarea, .comments form textarea {
+    font-size: 1.2rem;
+    padding: 0.75rem;
+    min-height: 150px;
+    border-color: #5fcf80;
+}
+
+.new-post form input, .new-post form select {
+    font-size: 1.2rem;
+    padding: 0.75rem;
+}
 
 .comments form textarea {
     min-height: 100px;
@@ -34,6 +38,14 @@
     font-size: 1.2rem;
     width: 150px;
     align-self: flex-end;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.comments form button.comment-btn:hover {
+    background-color: #f8f9fa;
+    color: #333;
 }
 
 .post-card {
@@ -45,14 +57,23 @@
     transition: all 0.3s;
 }
 
-    .post-card:hover {
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    }
+.post-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
 
 .post-header h3 {
     font-size: 1.3rem;
     color: #000;
     margin: 0;
+}
+
+.post-header h3 a {
+    color: #000;
+    text-decoration: none;
+}
+
+.post-header h3 a:hover {
+    color: #5fcf80;
 }
 
 .post-header span {
@@ -64,6 +85,11 @@
     font-size: 1.1rem;
     color: #444;
     margin-bottom: 1rem;
+}
+
+.post-meta span {
+    font-size: 1rem;
+    color: #666;
 }
 
 .comments h4 {
@@ -80,19 +106,17 @@
     transition: all 0.3s;
 }
 
-    .comments .comment:hover {
-        background-color: #e9ecef;
-    }
+.comments .comment:hover {
+    background-color: #e9ecef;
+}
 
-    .comments .comment p {
-        font-size: 1.1rem;
-        color: #444;
-        margin: 0;
-    }
+.comments .comment p {
+    font-size: 1.1rem;
+    color: #444;
+    margin: 0;
+}
 
-    .comments .comment span {
-        font-size: 1rem;
-        color: #666;
-    }
-
-
+.comments .comment span {
+    font-size: 1rem;
+    color: #666;
+}
