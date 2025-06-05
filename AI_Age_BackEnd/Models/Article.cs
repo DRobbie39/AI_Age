@@ -29,6 +29,8 @@ public partial class Article
 
     public virtual ICollection<ArticleComment> ArticleComments { get; set; } = new List<ArticleComment>();
 
+    public virtual ICollection<ArticleImage> ArticleImages { get; set; } = new List<ArticleImage>();
+
     public virtual Admin AuthorNavigation { get; set; } = null!;
 
     public virtual ArticleCategory Category { get; set; } = null!;
