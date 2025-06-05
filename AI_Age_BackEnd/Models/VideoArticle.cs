@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace AI_Age_BackEnd.Models;
 
-public partial class TutorialVideo
+public partial class VideoArticle
 {
     public int VideoId { get; set; }
 
@@ -29,11 +29,9 @@ public partial class TutorialVideo
 
     public int? Level { get; set; }
 
-    public bool? Status { get; set; }
-
-    public virtual VideoCategory Category { get; set; } = null!;
+    public virtual VideoArticleCategory Category { get; set; } = null!;
 
     public virtual Admin UploaderNavigation { get; set; } = null!;
 
-    public virtual ICollection<VideoComment> VideoComments { get; set; } = new List<VideoComment>();
+    public virtual ICollection<VideoArticleComment> VideoArticleComments { get; set; } = new List<VideoArticleComment>();
 }

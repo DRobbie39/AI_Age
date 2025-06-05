@@ -6,10 +6,10 @@ namespace AI_Age_BackEnd.Services.UserService
 {
     public class AuthService
     {
-        private readonly AI_Age_HelpContext _context;
+        private readonly AI_AgeContext _context;
         private readonly UserRepository _userRepository;
 
-        public AuthService(AI_Age_HelpContext context)
+        public AuthService(AI_AgeContext context)
         {
             _context = context;
             _userRepository = new UserRepository(_context);

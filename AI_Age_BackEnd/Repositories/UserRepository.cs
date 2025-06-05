@@ -6,9 +6,9 @@ namespace AI_Age_BackEnd.Repositories
 {
     public class UserRepository : IUserRepository
     {
-        private readonly AI_Age_HelpContext _context;
+        private readonly AI_AgeContext _context;
 
-        public UserRepository(AI_Age_HelpContext context)
+        public UserRepository(AI_AgeContext context)
         {
             _context = context;
         }

@@ -39,5 +39,5 @@ public partial class User
 
     public virtual ICollection<UserPost> UserPosts { get; set; } = new List<UserPost>();
 
-    public virtual ICollection<VideoComment> VideoComments { get; set; } = new List<VideoComment>();
+    public virtual ICollection<VideoArticleComment> VideoArticleComments { get; set; } = new List<VideoArticleComment>();
 }

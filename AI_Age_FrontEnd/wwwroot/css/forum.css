@@ -1,0 +1,98 @@
+﻿/* Forum Section Styles */
+.forum {
+    padding: 2rem 0;
+}
+
+.new-post, .forum-posts {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+    .new-post h2, .forum-posts h2 {
+        font-size: 1.5rem;
+        color: #333;
+        margin-bottom: 1rem;
+    }
+
+    .new-post form textarea, .comments form textarea {
+        font-size: 1.2rem;
+        padding: 0.75rem;
+        min-height: 150px;
+        border-color: #5fcf80;
+    }
+
+.comments form textarea {
+    min-height: 100px;
+}
+
+.new-post form button, .comments form button {
+    background-color: #5fcf80;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    width: 150px;
+    align-self: flex-end;
+}
+
+.post-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+    .post-card:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+.post-header h3 {
+    font-size: 1.3rem;
+    color: #000;
+    margin: 0;
+}
+
+.post-header span {
+    font-size: 1rem;
+    color: #666;
+}
+
+.post-item p {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+.comments h4 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.comments .comment {
+    background-color: #f8f9fa;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 0.75rem;
+    transition: all 0.3s;
+}
+
+    .comments .comment:hover {
+        background-color: #e9ecef;
+    }
+
+    .comments .comment p {
+        font-size: 1.1rem;
+        color: #444;
+        margin: 0;
+    }
+
+    .comments .comment span {
+        font-size: 1rem;
+        color: #666;
+    }
+
+

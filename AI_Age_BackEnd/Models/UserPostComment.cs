@@ -15,8 +15,6 @@ public partial class UserPostComment
 
     public DateTime? CommentDate { get; set; }
 
-    public bool? Status { get; set; }
-
     public virtual UserPost Post { get; set; } = null!;
 
     public virtual User User { get; set; } = null!;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace AI_Age_BackEnd.Models;
 
-public partial class UserPostCategory
+public partial class VideoArticleCategory
 {
     public int CategoryId { get; set; }
 
@@ -11,5 +11,7 @@ public partial class UserPostCategory
 
     public DateTime? CreatedDate { get; set; }
 
-    public virtual ICollection<UserPost> UserPosts { get; set; } = new List<UserPost>();
+    public bool? Status { get; set; }
+
+    public virtual ICollection<VideoArticle> VideoArticles { get; set; } = new List<VideoArticle>();
 }

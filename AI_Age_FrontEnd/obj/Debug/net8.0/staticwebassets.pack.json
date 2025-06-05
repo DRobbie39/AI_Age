@@ -13,8 +13,16 @@
       "PackagePath": "staticwebassets\\css\\auth.css"
     },
     {
+      "Id": "D:\\Study\\HK2 2024-2025\\Đồ án tốt nghiệp\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\forum.css",
+      "PackagePath": "staticwebassets\\css\\forum.css"
+    },
+    {
       "Id": "D:\\Study\\HK2 2024-2025\\Đồ án tốt nghiệp\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\main.css",
       "PackagePath": "staticwebassets\\css\\main.css"
+    },
+    {
+      "Id": "D:\\Study\\HK2 2024-2025\\Đồ án tốt nghiệp\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\video-article.css",
+      "PackagePath": "staticwebassets\\css\\video-article.css"
     },
     {
       "Id": "D:\\Study\\HK2 2024-2025\\Đồ án tốt nghiệp\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\favicon.ico",
