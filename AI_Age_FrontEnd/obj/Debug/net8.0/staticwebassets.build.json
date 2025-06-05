@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "AqZcQreIbdev/SKc5lddjwF8DxLDK8rv2WMEaD4dzgI=",
+  "Hash": "FqKkxLJ8Zth7POwJd/mHtpDNeFhB0tu0NLP59bV9WoA=",
   "Source": "AI_Age_FrontEnd",
   "BasePath": "_content/AI_Age_FrontEnd",
   "Mode": "Default",
@@ -115,8 +115,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ew06jo7ox2",
-      "Integrity": "Dg2TWyQ/lt8JOKIUlKE0BpGo4tm7QRXLqC/fRqn4yQk=",
+      "Fingerprint": "93l9wa516d",
+      "Integrity": "BevYybiwIdQEyovxbtX8cT587+tJTCrYPwL1xj7CtuU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\forum.css"
@@ -2636,6 +2636,51 @@
       ]
     },
     {
+      "Route": "css/forum.93l9wa516d.css",
+      "AssetFile": "D:\\Study\\HK2 2024-2025\\Đồ án tốt nghiệp\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\forum.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2167"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BevYybiwIdQEyovxbtX8cT587+tJTCrYPwL1xj7CtuU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Jun 2025 13:59:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "93l9wa516d"
+        },
+        {
+          "Name": "label",
+          "Value": "css/forum.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-BevYybiwIdQEyovxbtX8cT587+tJTCrYPwL1xj7CtuU="
+        }
+      ]
+    },
+    {
       "Route": "css/forum.css",
       "AssetFile": "D:\\Study\\HK2 2024-2025\\Đồ án tốt nghiệp\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\forum.css",
       "Selectors": [],
@@ -2646,7 +2691,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1833"
+          "Value": "2167"
         },
         {
           "Name": "Content-Type",
@@ -2654,11 +2699,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Dg2TWyQ/lt8JOKIUlKE0BpGo4tm7QRXLqC/fRqn4yQk=\""
+          "Value": "\"BevYybiwIdQEyovxbtX8cT587+tJTCrYPwL1xj7CtuU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 05 Jun 2025 11:35:42 GMT"
+          "Value": "Thu, 05 Jun 2025 13:59:19 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2668,52 +2713,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Dg2TWyQ/lt8JOKIUlKE0BpGo4tm7QRXLqC/fRqn4yQk="
-        }
-      ]
-    },
-    {
-      "Route": "css/forum.ew06jo7ox2.css",
-      "AssetFile": "D:\\Study\\HK2 2024-2025\\Đồ án tốt nghiệp\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\forum.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1833"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Dg2TWyQ/lt8JOKIUlKE0BpGo4tm7QRXLqC/fRqn4yQk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 05 Jun 2025 11:35:42 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ew06jo7ox2"
-        },
-        {
-          "Name": "label",
-          "Value": "css/forum.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Dg2TWyQ/lt8JOKIUlKE0BpGo4tm7QRXLqC/fRqn4yQk="
+          "Value": "sha256-BevYybiwIdQEyovxbtX8cT587+tJTCrYPwL1xj7CtuU="
         }
       ]
     },
