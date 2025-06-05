@@ -44,12 +44,6 @@
                         </a>
                     </li>
                     <li>
-                        <a asp-controller="About" asp-action="Index"
-                           class="@(ViewContext.RouteData.Values["Controller"]?.ToString() == "About" && ViewContext.RouteData.Values["Action"]?.ToString() == "Index" ? "active" : "")">
-                           Về chúng tôi
-                        </a>
-                    </li>
-                    <li>
                         <a asp-controller="Course" asp-action="Index"
                            class="@(ViewContext.RouteData.Values["Controller"]?.ToString() == "Course" ? "active" : "")">
                             Bài hướng dẫn
@@ -61,7 +55,6 @@
                             Video hướng dẫn
                         </a>
                     </li>
-                    @* <li><a href="/Home/Trainers">Trainers</a></li> *@
                     <li><a href="/Home/Events">Diễn đàn</a></li>
                     @* <li><a href="/Home/Pricing">Pricing</a></li> *@
                     @* <li class="dropdown"> *@
@@ -72,7 +65,12 @@
                     @*         <li><a href="#">Dropdown 3</a></li> *@
                     @*     </ul> *@
                     @* </li> *@
-                    <li><a href="/Home/Contact">Liên hệ</a></li>
+                    <li>
+                        <a asp-controller="About" asp-action="Index"
+                           class="@(ViewContext.RouteData.Values["Controller"]?.ToString() == "About" && ViewContext.RouteData.Values["Action"]?.ToString() == "Index" ? "active" : "")">
+                            Về chúng tôi
+                        </a>
+                    </li>
                     @if (Context.Session.GetString("Username") != null)
                     {
                         <li class="dropdown">

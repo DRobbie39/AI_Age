@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "Courses";
+    ViewData["Title"] = "Bài hướng dẫn";
 }
 
 <!-- Page Title -->
@@ -26,19 +26,14 @@
 <!-- Courses Section -->
 <section id="courses" class="courses section">
     <div class="container">
-        <div class="row mb-4">
-            <div class="col-lg-8 offset-lg-2">
-                <div class="input-group">
-                    <input type="text" id="searchInput" class="form-control" placeholder="Tìm kiếm bài hướng dẫn..." aria-label="Tìm kiếm bài hướng dẫn">
-                    <select id="categoryFilter" class="form-select">
-                        <option value="">Tất cả thể loại</option>
-                        <option value="AI Cơ bản">AI Cơ bản</option>
-                        <option value="Công cụ AI">Công cụ AI</option>
-                        <option value="AI Nâng cao">AI Nâng cao</option>
-                    </select>
-                    <button class="btn btn-primary" type="button" onclick="filterCourses()">Lọc</button>
-                </div>
-            </div>
+        <!-- Search Bar -->
+        <div class="search-bar mb-4" data-aos="fade-up" data-aos-delay="100">
+            <form asp-controller="Course" asp-action="Search" method="get" class="d-flex align-items-center">
+                <input type="text" name="query" class="form-control" placeholder="Tìm kiếm bài hướng dẫn (ví dụ: Nhập môn AI)" aria-label="Tìm kiếm bài hướng dẫn" style="width: 500px; margin-right: 1rem; border-color: #5fcf80; padding: 0.375rem 0.75rem;">
+                <button type="submit" class="btn" style="background-color: #5fcf80; color: white; border: none; padding: 0.375rem 0.75rem;">
+                    <i class="bi bi-search"></i> Tìm kiếm
+                </button>
+            </form>
         </div>
         <div class="row">
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
@@ -46,8 +41,7 @@
                     <img src="~/img/course-1.jpg" class="img-fluid" alt="Khóa học cơ bản về AI cho người cao tuổi">
                     <div class="course-content">
                         <div class="d-flex justify-content-between align-items-center mb-3">
-                            <p class="category">AI Cơ bản</p>
-                            @* <p class="price">1.500.000 VNĐ</p> *@
+                            <p class="category">AI Cơ bản</p>               
                         </div>
                         <h3><a asp-controller="Course" asp-action="Details" asp-route-id="1">Nhập môn AI</a></h3>
                         <p class="description">Tìm hiểu các khái niệm cơ bản về trí tuệ nhân tạo, cách AI hoạt động và ứng dụng trong cuộc sống hàng ngày.</p>
@@ -72,7 +66,6 @@
                     <div class="course-content">
                         <div class="d-flex justify-content-between align-items-center mb-3">
                             <p class="category">Công cụ AI</p>
-                            @* <p class="price">2.000.000 VNĐ</p> *@
                         </div>
                         <h3><a asp-controller="Course" asp-action="Details" asp-route-id="2">Công cụ AI thực hành</a></h3>
                         <p class="description">Học cách sử dụng các công cụ AI phổ biến như chatbot, trợ lý ảo và ứng dụng tự động hóa đơn giản.</p>
@@ -97,7 +90,6 @@
                     <div class="course-content">
                         <div class="d-flex justify-content-between align-items-center mb-3">
                             <p class="category">AI Nâng cao</p>
-                            @* <p class="price">2.500.000 VNĐ</p> *@
                         </div>
                         <h3><a asp-controller="Course" asp-action="Details" asp-route-id="3">AI Nâng cao</a></h3>
                         <p class="description">Khám phá các ứng dụng AI phức tạp hơn như phân tích dữ liệu và tự động hóa thông minh.</p>
