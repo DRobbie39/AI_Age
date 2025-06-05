@@ -27,6 +27,8 @@
     <link href="~/css/main.css" rel="stylesheet">
     <link href="~/css/auth.css" rel="stylesheet">
     <link href="~/css/article.css" rel="stylesheet">
+    <link href="~/css/video-article.css" rel="stylesheet">
+    <link href="~/css/forum.css" rel="stylesheet">
 
 </head>
 <body class="index-page">
@@ -44,8 +46,8 @@
                         </a>
                     </li>
                     <li>
-                        <a asp-controller="Course" asp-action="Index"
-                           class="@(ViewContext.RouteData.Values["Controller"]?.ToString() == "Course" ? "active" : "")">
+                        <a asp-controller="Article" asp-action="Index"
+                           class="@(ViewContext.RouteData.Values["Controller"]?.ToString() == "Article" ? "active" : "")">
                             Bài hướng dẫn
                         </a>
                     </li>
@@ -55,8 +57,12 @@
                             Video hướng dẫn
                         </a>
                     </li>
-                    <li><a href="/Home/Events">Diễn đàn</a></li>
-                    @* <li><a href="/Home/Pricing">Pricing</a></li> *@
+                    <li>
+                        <a asp-controller="Forum" asp-action="Index"
+                           class="@(ViewContext.RouteData.Values["Controller"]?.ToString() == "Forum" ? "active" : "")">
+                            Diễn đàn
+                        </a>
+                    </li>         
                     @* <li class="dropdown"> *@
                     @*     <a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a> *@
                     @*     <ul> *@
@@ -74,17 +80,14 @@
                     @if (Context.Session.GetString("Username") != null)
                     {
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown">
+                            <a href="#">
                                 <img src="~/img/profile.png" alt="Avatar" class="user-avatar" />
                                 <span>@Context.Session.GetString("Username")</span>
+                                <i class="bi bi-chevron-down toggle-dropdown"></i>
                             </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item" asp-controller="Auth" asp-action="Profile">Thông tin người dùng</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" asp-controller="Auth" asp-action="Logout">Đăng xuất</a>
-                                </li>
+                            <ul>
+                                <li><a asp-controller="Auth" asp-action="Profile">Thông tin người dùng</a></li>
+                                <li><a asp-controller="Auth" asp-action="Logout">Đăng xuất</a></li>
                             </ul>
                         </li>
                     }

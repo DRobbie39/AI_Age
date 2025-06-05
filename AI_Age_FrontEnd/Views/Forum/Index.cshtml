@@ -1,0 +1,85 @@
+﻿@{
+    ViewData["Title"] = "Diễn đàn";
+}
+
+<!-- Page Title -->
+<div class="page-title" data-aos="fade">
+    <div class="heading">
+        <div class="container">
+            <div class="row d-flex justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h1>Diễn đàn</h1>
+                    <p class="mb-0">Chia sẻ và thảo luận về công nghệ AI cùng cộng đồng người lớn tuổi.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="breadcrumbs">
+        <div class="container">
+            <ol>
+                <li><a asp-controller="Home" asp-action="Index">Trang chủ</a></li>
+                <li class="current">Diễn đàn</li>
+            </ol>
+        </div>
+    </nav>
+</div><!-- End Page Title -->
+<!-- Forum Section -->
+<section id="forum" class="forum section">
+    <div class="container">
+        <!-- New Post Form -->
+        <div class="new-post mb-5" data-aos="fade-up" data-aos-delay="100">
+            <h2>Đăng bài viết mới</h2>
+            <form asp-controller="Forum" asp-action="CreatePost" method="post" class="d-flex flex-column">
+                <textarea name="content" class="form-control mb-3" placeholder="Viết bài của bạn ở đây..."></textarea>
+                <button type="submit" class="btn btn-primary">Đăng bài</button>
+            </form>
+        </div>
+
+        <!-- Forum Posts -->
+        <div class="forum-posts" data-aos="fade-up" data-aos-delay="200">
+            <h2>Các bài viết</h2>
+            <div class="post-item mb-4" data-aos="zoom-in">
+                <div class="post-card">
+                    <div class="post-header d-flex justify-content-between align-items-center mb-2">
+                        <h3>Hỏi về cách dùng chatbot</h3>
+                        <span>Đăng bởi: Admin - 05/06/2025</span>
+                    </div>
+                    <p>Mình mới bắt đầu học dùng chatbot, ai có kinh nghiệm chia sẻ giúp mình với?</p>
+                    <div class="comments">
+                        <h4>Bình luận</h4>
+                        <div class="comment mb-2" data-aos="fade-up" data-aos-delay="100">
+                            <p>Cảm ơn bạn, mình cũng đang học, có thể dùng thử Grok 3 để tập nhé! - Người dùng 1</p>
+                            <span>05/06/2025</span>
+                        </div>
+                        <form asp-controller="Forum" asp-action="AddComment" method="post" class="d-flex flex-column mt-2">
+                            <input type="hidden" name="postId" value="1" />
+                            <textarea name="content" class="form-control mb-2" placeholder="Viết bình luận của bạn..."></textarea>
+                            <button type="submit" class="btn btn-primary">Gửi bình luận</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="post-item mb-4" data-aos="zoom-in" data-aos-delay="200">
+                <div class="post-card">
+                    <div class="post-header d-flex justify-content-between align-items-center mb-2">
+                        <h3>AI có thể giúp gì cho sức khỏe?</h3>
+                        <span>Đăng bởi: Người dùng 2 - 04/06/2025</span>
+                    </div>
+                    <p>Mình muốn biết AI hỗ trợ sức khỏe như thế nào, ai biết chỉ mình với!</p>
+                    <div class="comments">
+                        <h4>Bình luận</h4>
+                        <div class="comment mb-2" data-aos="fade-up" data-aos-delay="100">
+                            <p>AI có thể theo dõi sức khỏe qua wearable devices, rất tiện! - Admin</p>
+                            <span>05/06/2025</span>
+                        </div>
+                        <form asp-controller="Forum" asp-action="AddComment" method="post" class="d-flex flex-column mt-2">
+                            <input type="hidden" name="postId" value="2" />
+                            <textarea name="content" class="form-control mb-2" placeholder="Viết bình luận của bạn..."></textarea>
+                            <button type="submit" class="btn btn-primary">Gửi bình luận</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!-- /Forum Section -->

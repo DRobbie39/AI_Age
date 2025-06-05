@@ -14,7 +14,7 @@ namespace AI_Age_BackEnd
             var builder = WebApplication.CreateBuilder(args);
 
             // Đăng ký database
-            builder.Services.AddDbContext<AI_Age_HelpContext>(options =>
+            builder.Services.AddDbContext<AI_AgeContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             // Đăng ký các repository

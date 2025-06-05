@@ -27,13 +27,9 @@ public partial class Admin
 
     public bool? Status { get; set; }
 
-    public virtual ICollection<ArticleCategory> ArticleCategories { get; set; } = new List<ArticleCategory>();
+    public virtual ICollection<Article> Articles { get; set; } = new List<Article>();
 
     public virtual Role Role { get; set; } = null!;
 
-    public virtual ICollection<TutorialArticle> TutorialArticles { get; set; } = new List<TutorialArticle>();
-
-    public virtual ICollection<TutorialVideo> TutorialVideos { get; set; } = new List<TutorialVideo>();
-
-    public virtual ICollection<VideoCategory> VideoCategories { get; set; } = new List<VideoCategory>();
+    public virtual ICollection<VideoArticle> VideoArticles { get; set; } = new List<VideoArticle>();
 }

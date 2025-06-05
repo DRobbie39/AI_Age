@@ -9,17 +9,9 @@ public partial class ArticleCategory
 
     public string CategoryName { get; set; } = null!;
 
-    public string? Description { get; set; }
-
-    public string? Image { get; set; }
-
     public DateTime? CreatedDate { get; set; }
-
-    public int? CreatedBy { get; set; }
 
     public bool? Status { get; set; }
 
-    public virtual Admin? CreatedByNavigation { get; set; }
-
-    public virtual ICollection<TutorialArticle> TutorialArticles { get; set; } = new List<TutorialArticle>();
+    public virtual ICollection<Article> Articles { get; set; } = new List<Article>();
 }

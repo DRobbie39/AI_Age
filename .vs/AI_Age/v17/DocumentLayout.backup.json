@@ -7,24 +7,8 @@
       "RelativeMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|solutionrelative:ai_age_frontend\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|d:\\study\\hk2 2024-2025\\\u0111\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\ai_age\\ai_age_frontend\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|solutionrelative:ai_age_frontend\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|d:\\study\\hk2 2024-2025\\\u0111\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\ai_age\\ai_age_frontend\\views\\about\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|solutionrelative:ai_age_frontend\\views\\about\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|d:\\study\\hk2 2024-2025\\\u0111\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\ai_age\\ai_age_frontend\\views\\videoarticle\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|solutionrelative:ai_age_frontend\\views\\videoarticle\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|d:\\study\\hk2 2024-2025\\\u0111\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\ai_age\\ai_age_frontend\\views\\course\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|solutionrelative:ai_age_frontend\\views\\course\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|d:\\study\\hk2 2024-2025\\\u0111\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\ai_age\\ai_age_frontend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|solutionrelative:ai_age_frontend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|d:\\study\\hk2 2024-2025\\\u0111\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\ai_age\\ai_age_backend\\services\\userservice\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|solutionrelative:ai_age_backend\\services\\userservice\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -88,74 +72,22 @@
               "RelativeDocumentMoniker": "AI_Age_FrontEnd\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_FrontEnd\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "AI_Age_FrontEnd\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAAEgAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAFUAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-05T10:16:27.817Z",
+              "WhenOpened": "2025-06-05T12:48:05.773Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_FrontEnd\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "AI_Age_FrontEnd\\Views\\Home\\Index.cshtml",
-              "ToolTip": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_FrontEnd\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "AI_Age_FrontEnd\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-05T10:15:33.941Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_FrontEnd\\Views\\About\\Index.cshtml",
-              "RelativeDocumentMoniker": "AI_Age_FrontEnd\\Views\\About\\Index.cshtml",
-              "ToolTip": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_FrontEnd\\Views\\About\\Index.cshtml",
-              "RelativeToolTip": "AI_Age_FrontEnd\\Views\\About\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-05T10:15:18.663Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_FrontEnd\\Views\\VideoArticle\\Index.cshtml",
-              "RelativeDocumentMoniker": "AI_Age_FrontEnd\\Views\\VideoArticle\\Index.cshtml",
-              "ToolTip": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_FrontEnd\\Views\\VideoArticle\\Index.cshtml",
-              "RelativeToolTip": "AI_Age_FrontEnd\\Views\\VideoArticle\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-05T10:02:13.843Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_FrontEnd\\Views\\Course\\Index.cshtml",
-              "RelativeDocumentMoniker": "AI_Age_FrontEnd\\Views\\Course\\Index.cshtml",
-              "ToolTip": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_FrontEnd\\Views\\Course\\Index.cshtml",
-              "RelativeToolTip": "AI_Age_FrontEnd\\Views\\Course\\Index.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACAAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-05T09:22:17.99Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_FrontEnd\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "AI_Age_FrontEnd\\Controllers\\AuthController.cs",
-              "ToolTip": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_FrontEnd\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "AI_Age_FrontEnd\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAkwFYAAAAJAAAAAAAAAA==",
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_BackEnd\\Services\\UserService\\AuthService.cs",
+              "RelativeDocumentMoniker": "AI_Age_BackEnd\\Services\\UserService\\AuthService.cs",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_BackEnd\\Services\\UserService\\AuthService.cs",
+              "RelativeToolTip": "AI_Age_BackEnd\\Services\\UserService\\AuthService.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T16:36:38.435Z",
+              "WhenOpened": "2025-06-05T12:46:03.245Z",
               "EditorCaption": ""
             }
           ]

@@ -15,9 +15,7 @@ public partial class ArticleComment
 
     public DateTime? CommentDate { get; set; }
 
-    public bool? Status { get; set; }
-
-    public virtual TutorialArticle Article { get; set; } = null!;
+    public virtual Article Article { get; set; } = null!;
 
     public virtual User User { get; set; } = null!;
 }

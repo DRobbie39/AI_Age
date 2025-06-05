@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace AI_Age_BackEnd.Models;
 
-public partial class TutorialArticle
+public partial class Article
 {
     public int ArticleId { get; set; }
 
@@ -26,8 +26,6 @@ public partial class TutorialArticle
     public int? Views { get; set; }
 
     public int? Level { get; set; }
-
-    public bool? Status { get; set; }
 
     public virtual ICollection<ArticleComment> ArticleComments { get; set; } = new List<ArticleComment>();
 

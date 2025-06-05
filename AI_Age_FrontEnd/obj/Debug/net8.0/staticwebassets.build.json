@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/0G/R7S5cm04kQCiRKypW1IBeAj032caT0JFGhl+6/U=",
+  "Hash": "AqZcQreIbdev/SKc5lddjwF8DxLDK8rv2WMEaD4dzgI=",
   "Source": "AI_Age_FrontEnd",
   "BasePath": "_content/AI_Age_FrontEnd",
   "Mode": "Default",
@@ -101,6 +101,27 @@
       "OriginalItemSpec": "wwwroot\\css\\auth.css"
     },
     {
+      "Identity": "D:\\Study\\HK2 2024-2025\\Đồ án tốt nghiệp\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\forum.css",
+      "SourceId": "AI_Age_FrontEnd",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Study\\HK2 2024-2025\\Đồ án tốt nghiệp\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\",
+      "BasePath": "_content/AI_Age_FrontEnd",
+      "RelativePath": "css/forum#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ew06jo7ox2",
+      "Integrity": "Dg2TWyQ/lt8JOKIUlKE0BpGo4tm7QRXLqC/fRqn4yQk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\forum.css"
+    },
+    {
       "Identity": "D:\\Study\\HK2 2024-2025\\Đồ án tốt nghiệp\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\main.css",
       "SourceId": "AI_Age_FrontEnd",
       "SourceType": "Discovered",
@@ -120,6 +141,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\main.css"
+    },
+    {
+      "Identity": "D:\\Study\\HK2 2024-2025\\Đồ án tốt nghiệp\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\video-article.css",
+      "SourceId": "AI_Age_FrontEnd",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Study\\HK2 2024-2025\\Đồ án tốt nghiệp\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\",
+      "BasePath": "_content/AI_Age_FrontEnd",
+      "RelativePath": "css/video-article#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "odmu7p0ylb",
+      "Integrity": "NEhnsfQWbqOoHbL5ct0H5zOAvie+YabK7IILETviM04=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\video-article.css"
     },
     {
       "Identity": "D:\\Study\\HK2 2024-2025\\Đồ án tốt nghiệp\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\favicon.ico",
@@ -2288,7 +2330,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 16:20:21 GMT"
+          "Value": "Thu, 05 Jun 2025 12:42:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2325,7 +2367,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 16:20:21 GMT"
+          "Value": "Thu, 05 Jun 2025 12:42:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2370,7 +2412,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 16:20:21 GMT"
+          "Value": "Thu, 05 Jun 2025 12:42:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2415,7 +2457,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 16:20:21 GMT"
+          "Value": "Thu, 05 Jun 2025 12:42:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2594,6 +2636,88 @@
       ]
     },
     {
+      "Route": "css/forum.css",
+      "AssetFile": "D:\\Study\\HK2 2024-2025\\Đồ án tốt nghiệp\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\forum.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1833"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Dg2TWyQ/lt8JOKIUlKE0BpGo4tm7QRXLqC/fRqn4yQk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Jun 2025 11:35:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Dg2TWyQ/lt8JOKIUlKE0BpGo4tm7QRXLqC/fRqn4yQk="
+        }
+      ]
+    },
+    {
+      "Route": "css/forum.ew06jo7ox2.css",
+      "AssetFile": "D:\\Study\\HK2 2024-2025\\Đồ án tốt nghiệp\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\forum.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1833"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Dg2TWyQ/lt8JOKIUlKE0BpGo4tm7QRXLqC/fRqn4yQk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Jun 2025 11:35:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ew06jo7ox2"
+        },
+        {
+          "Name": "label",
+          "Value": "css/forum.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Dg2TWyQ/lt8JOKIUlKE0BpGo4tm7QRXLqC/fRqn4yQk="
+        }
+      ]
+    },
+    {
       "Route": "css/main.css",
       "AssetFile": "D:\\Study\\HK2 2024-2025\\Đồ án tốt nghiệp\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\main.css",
       "Selectors": [],
@@ -2672,6 +2796,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-ZIQm4VcyQsnfXn4y6Krccd5dxXFl19HPZwbHE0hntJQ="
+        }
+      ]
+    },
+    {
+      "Route": "css/video-article.css",
+      "AssetFile": "D:\\Study\\HK2 2024-2025\\Đồ án tốt nghiệp\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\video-article.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "62"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NEhnsfQWbqOoHbL5ct0H5zOAvie+YabK7IILETviM04=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Jun 2025 11:31:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-NEhnsfQWbqOoHbL5ct0H5zOAvie+YabK7IILETviM04="
+        }
+      ]
+    },
+    {
+      "Route": "css/video-article.odmu7p0ylb.css",
+      "AssetFile": "D:\\Study\\HK2 2024-2025\\Đồ án tốt nghiệp\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\video-article.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "62"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NEhnsfQWbqOoHbL5ct0H5zOAvie+YabK7IILETviM04=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Jun 2025 11:31:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "odmu7p0ylb"
+        },
+        {
+          "Name": "label",
+          "Value": "css/video-article.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-NEhnsfQWbqOoHbL5ct0H5zOAvie+YabK7IILETviM04="
         }
       ]
     },

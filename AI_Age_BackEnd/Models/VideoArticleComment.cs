@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace AI_Age_BackEnd.Models;
 
-public partial class VideoComment
+public partial class VideoArticleComment
 {
     public int CommentId { get; set; }
 
@@ -15,9 +15,7 @@ public partial class VideoComment
 
     public DateTime? CommentDate { get; set; }
 
-    public bool? Status { get; set; }
-
     public virtual User User { get; set; } = null!;
 
-    public virtual TutorialVideo Video { get; set; } = null!;
+    public virtual VideoArticle Video { get; set; } = null!;
 }
