@@ -1,5 +1,6 @@
 wwwroot\css\article.css
 wwwroot\css\auth.css
+wwwroot\css\chat.css
 wwwroot\css\forum.css
 wwwroot\css\main.css
 wwwroot\css\video-article.css

@@ -1,0 +1,90 @@
+﻿.chat-container {
+    width: 400px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+}
+
+.chat-header {
+    background-color: #5fcf80;
+    color: white;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.chat-body {
+    height: 300px;
+    overflow-y: auto;
+    padding: 15px;
+    display: none;
+}
+
+.chat-message {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 80%;
+}
+
+.user-message {
+    background-color: #e6f3ff;
+    text-align: right;
+    margin-left: auto;
+}
+
+.bot-message {
+    background-color: #f0f0f0;
+    text-align: left;
+}
+.chat-input {
+    flex-direction: row; /* Đảm bảo các phần tử con xếp theo hàng ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    padding: 15px;
+    display: none; /* Ẩn mặc định */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+    .chat-input input {
+        flex: 1; /* Ô input chiếm toàn bộ không gian còn lại */
+        padding: 12px;
+        font-size: 18px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-right: 10px; /* Khoảng cách giữa ô input và nút */
+        box-sizing: border-box; /* Đảm bảo padding không làm tăng kích thước */
+    }
+
+    .chat-input button {
+        padding: 12px 20px;
+        font-size: 18px;
+        background-color: #5fcf80;
+        color: white;
+        border面对: none;
+        border-radius: 5px;
+        cursor: pointer;
+        flex-shrink: 0; /* Ngăn nút bị co lại */
+        white-space: nowrap; /* Đảm bảo nút không bị xuống dòng */
+    }
+
+        .chat-input button:hover {
+            background-color: #4ab266;
+        }
+
+        .chat-container.open .chat-input {
+    display: flex; /* Khi mở chat, hiện và dùng flex để xếp ngang */
+}
+.chat-container.open .chat-body,
+.chat-container.open .chat-input {
+    display: block;
+}
