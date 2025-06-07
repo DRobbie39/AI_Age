@@ -9,69 +9,69 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AI_Age_FrontEnd
 build_property.RootNamespace = AI_Age_FrontEnd
-build_property.ProjectDir = D:\Study\HK2 2024-2025\Đồ án tốt nghiệp\AI_Age\AI_Age_FrontEnd\
+build_property.ProjectDir = D:\Study\HK2 2024-2025\DoAnTotNghiep\AI_Age\AI_Age_FrontEnd\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Study\HK2 2024-2025\Đồ án tốt nghiệp\AI_Age\AI_Age_FrontEnd
+build_property.MSBuildProjectDirectory = D:\Study\HK2 2024-2025\DoAnTotNghiep\AI_Age\AI_Age_FrontEnd
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[D:/Study/HK2 2024-2025/Đồ án tốt nghiệp/AI_Age/AI_Age_FrontEnd/Views/About/Index.cshtml]
+[D:/Study/HK2 2024-2025/DoAnTotNghiep/AI_Age/AI_Age_FrontEnd/Views/About/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Study/HK2 2024-2025/Đồ án tốt nghiệp/AI_Age/AI_Age_FrontEnd/Views/Article/Details.cshtml]
+[D:/Study/HK2 2024-2025/DoAnTotNghiep/AI_Age/AI_Age_FrontEnd/Views/Article/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWNsZVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Study/HK2 2024-2025/Đồ án tốt nghiệp/AI_Age/AI_Age_FrontEnd/Views/Article/Index.cshtml]
+[D:/Study/HK2 2024-2025/DoAnTotNghiep/AI_Age/AI_Age_FrontEnd/Views/Article/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWNsZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Study/HK2 2024-2025/Đồ án tốt nghiệp/AI_Age/AI_Age_FrontEnd/Views/Auth/Login.cshtml]
+[D:/Study/HK2 2024-2025/DoAnTotNghiep/AI_Age/AI_Age_FrontEnd/Views/Auth/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Study/HK2 2024-2025/Đồ án tốt nghiệp/AI_Age/AI_Age_FrontEnd/Views/Auth/Register.cshtml]
+[D:/Study/HK2 2024-2025/DoAnTotNghiep/AI_Age/AI_Age_FrontEnd/Views/Auth/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Study/HK2 2024-2025/Đồ án tốt nghiệp/AI_Age/AI_Age_FrontEnd/Views/Forum/Index.cshtml]
+[D:/Study/HK2 2024-2025/DoAnTotNghiep/AI_Age/AI_Age_FrontEnd/Views/Forum/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ydW1cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Study/HK2 2024-2025/Đồ án tốt nghiệp/AI_Age/AI_Age_FrontEnd/Views/Home/Index.cshtml]
+[D:/Study/HK2 2024-2025/DoAnTotNghiep/AI_Age/AI_Age_FrontEnd/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Study/HK2 2024-2025/Đồ án tốt nghiệp/AI_Age/AI_Age_FrontEnd/Views/Home/Privacy.cshtml]
+[D:/Study/HK2 2024-2025/DoAnTotNghiep/AI_Age/AI_Age_FrontEnd/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Study/HK2 2024-2025/Đồ án tốt nghiệp/AI_Age/AI_Age_FrontEnd/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Study/HK2 2024-2025/DoAnTotNghiep/AI_Age/AI_Age_FrontEnd/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Study/HK2 2024-2025/Đồ án tốt nghiệp/AI_Age/AI_Age_FrontEnd/Views/VideoArticle/Details.cshtml]
+[D:/Study/HK2 2024-2025/DoAnTotNghiep/AI_Age/AI_Age_FrontEnd/Views/VideoArticle/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlkZW9BcnRpY2xlXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Study/HK2 2024-2025/Đồ án tốt nghiệp/AI_Age/AI_Age_FrontEnd/Views/VideoArticle/Index.cshtml]
+[D:/Study/HK2 2024-2025/DoAnTotNghiep/AI_Age/AI_Age_FrontEnd/Views/VideoArticle/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlkZW9BcnRpY2xlXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Study/HK2 2024-2025/Đồ án tốt nghiệp/AI_Age/AI_Age_FrontEnd/Views/_ViewImports.cshtml]
+[D:/Study/HK2 2024-2025/DoAnTotNghiep/AI_Age/AI_Age_FrontEnd/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Study/HK2 2024-2025/Đồ án tốt nghiệp/AI_Age/AI_Age_FrontEnd/Views/_ViewStart.cshtml]
+[D:/Study/HK2 2024-2025/DoAnTotNghiep/AI_Age/AI_Age_FrontEnd/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Study/HK2 2024-2025/Đồ án tốt nghiệp/AI_Age/AI_Age_FrontEnd/Views/Shared/_Layout.cshtml]
+[D:/Study/HK2 2024-2025/DoAnTotNghiep/AI_Age/AI_Age_FrontEnd/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-huqdngskov

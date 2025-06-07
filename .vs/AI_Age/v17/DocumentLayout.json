@@ -1,18 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\",
+  "WorkspaceRootPath": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|d:\\study\\hk2 2024-2025\\\u0111\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\ai_age\\ai_age_backend\\services\\articleservice\\articleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|solutionrelative:ai_age_backend\\services\\articleservice\\articleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_backend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|solutionrelative:ai_age_backend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|d:\\study\\hk2 2024-2025\\\u0111\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\ai_age\\ai_age_backend\\controllers\\articlecontroller\\articlecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|solutionrelative:ai_age_backend\\controllers\\articlecontroller\\articlecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|solutionrelative:ai_age_backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|d:\\study\\hk2 2024-2025\\\u0111\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\ai_age\\ai_age_backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|solutionrelative:ai_age_backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_backend\\services\\chatservice\\chatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|solutionrelative:ai_age_backend\\services\\chatservice\\chatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_backend\\controllers\\chatcontroller\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|solutionrelative:ai_age_backend\\controllers\\chatcontroller\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,41 +78,64 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ArticleService.cs",
-              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_BackEnd\\Services\\ArticleService\\ArticleService.cs",
-              "RelativeDocumentMoniker": "AI_Age_BackEnd\\Services\\ArticleService\\ArticleService.cs",
-              "ToolTip": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_BackEnd\\Services\\ArticleService\\ArticleService.cs",
-              "RelativeToolTip": "AI_Age_BackEnd\\Services\\ArticleService\\ArticleService.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAYwDcAAABZAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Program.cs",
+              "RelativeDocumentMoniker": "AI_Age_BackEnd\\Program.cs",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Program.cs",
+              "RelativeToolTip": "AI_Age_BackEnd\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABQAAABfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T19:56:11.563Z",
+              "WhenOpened": "2025-06-07T16:11:01.797Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "AI_Age_BackEnd\\appsettings.Development.json",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\appsettings.Development.json",
+              "RelativeToolTip": "AI_Age_BackEnd\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-07T16:08:37.448Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_BackEnd\\Program.cs",
-              "RelativeDocumentMoniker": "AI_Age_BackEnd\\Program.cs",
-              "ToolTip": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_BackEnd\\Program.cs",
-              "RelativeToolTip": "AI_Age_BackEnd\\Program.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "ChatController.cs",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Controllers\\ChatController\\ChatController.cs",
+              "RelativeDocumentMoniker": "AI_Age_BackEnd\\Controllers\\ChatController\\ChatController.cs",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Controllers\\ChatController\\ChatController.cs",
+              "RelativeToolTip": "AI_Age_BackEnd\\Controllers\\ChatController\\ChatController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T19:09:47.791Z"
+              "WhenOpened": "2025-06-07T15:57:05.183Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ChatService.cs",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Services\\ChatService\\ChatService.cs",
+              "RelativeDocumentMoniker": "AI_Age_BackEnd\\Services\\ChatService\\ChatService.cs",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Services\\ChatService\\ChatService.cs",
+              "RelativeToolTip": "AI_Age_BackEnd\\Services\\ChatService\\ChatService.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAADkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T15:57:11.285Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ArticleController.cs",
-              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_BackEnd\\Controllers\\ArticleController\\ArticleController.cs",
-              "RelativeDocumentMoniker": "AI_Age_BackEnd\\Controllers\\ArticleController\\ArticleController.cs",
-              "ToolTip": "D:\\Study\\HK2 2024-2025\\\u0110\u1ED3 \u00E1n t\u1ED1t nghi\u1EC7p\\AI_Age\\AI_Age_BackEnd\\Controllers\\ArticleController\\ArticleController.cs",
-              "RelativeToolTip": "AI_Age_BackEnd\\Controllers\\ArticleController\\ArticleController.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAA1wFoAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T18:13:36.028Z",
-              "EditorCaption": ""
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\appsettings.json",
+              "RelativeDocumentMoniker": "AI_Age_BackEnd\\appsettings.json",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\appsettings.json",
+              "RelativeToolTip": "AI_Age_BackEnd\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-07T15:54:51.923Z"
             }
           ]
         }

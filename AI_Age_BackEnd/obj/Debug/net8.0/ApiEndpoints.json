@@ -174,5 +174,21 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AI_Age_BackEnd.Controllers.ChatController.ChatController",
+    "Method": "Ask",
+    "RelativePath": "api/Chat/ask",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "chatDto",
+        "Type": "AI_Age_BackEnd.DTOs.ChatDTO.ChatDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]
