@@ -72,9 +72,11 @@ namespace AI_Age_FrontEnd.Controllers
             var response = await _httpClient.PostAsJsonAsync("Auth/login", loginDto);
             if (response.IsSuccessStatusCode)
             {
-                // Store username in session
-                HttpContext.Session.SetString("Username", model.Username);
-                return RedirectToAction("Index", "Home");
+                var result = await response.Content.ReadFromJsonAsync<LoginResponse>();
+                // Truyền token và username sang view để lưu vào localStorage
+                ViewBag.Token = result.Token;
+                ViewBag.Username = model.Username;
+                return View("Login");
             }
 
             var error = await response.Content.ReadAsStringAsync();
@@ -87,6 +89,13 @@ namespace AI_Age_FrontEnd.Controllers
         {
             HttpContext.Session.Clear();
             return RedirectToAction("Index", "Home");
+        }
+
+        public class LoginResponse
+        {
+            public string Message { get; set; }
+            public int UserId { get; set; }
+            public string Token { get; set; }
         }
     }
 }
