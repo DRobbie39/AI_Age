@@ -1,6 +1,10 @@
 ﻿using AI_Age_BackEnd.DTOs.UserDTO;
 using AI_Age_BackEnd.Models;
 using AI_Age_BackEnd.Repositories;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 
 namespace AI_Age_BackEnd.Services.UserService
 {
@@ -8,11 +12,13 @@ namespace AI_Age_BackEnd.Services.UserService
     {
         private readonly AI_AgeContext _context;
         private readonly UserRepository _userRepository;
+        private readonly IConfiguration _configuration;
 
-        public AuthService(AI_AgeContext context)
+        public AuthService(AI_AgeContext context, IConfiguration configuration)
         {
             _context = context;
             _userRepository = new UserRepository(_context);
+            _configuration = configuration;
         }
 
         public async Task<User?> RegisterUserAsync(RegisterDto registerDto)
@@ -41,7 +47,7 @@ namespace AI_Age_BackEnd.Services.UserService
             return newUser;
         }
 
-        public async Task<User?> LoginUserAsync(LoginDto loginDto)
+        public async Task<(User? User, string? Token)> LoginUserAsync(LoginDto loginDto)
         {
             var user = await _userRepository.GetUserByUsernameAsync(loginDto.Username);
             if (user == null || !BCrypt.Net.BCrypt.Verify(loginDto.Password, user.Password))
@@ -49,7 +55,32 @@ namespace AI_Age_BackEnd.Services.UserService
                 throw new Exception("Tên đăng nhập hoặc mật khẩu không đúng.");
             }
 
-            return user;
+            var token = GenerateJwtToken(user);
+            return (user, token);
+        }
+
+        private string GenerateJwtToken(User user)
+        {
+            var claims = new[]
+            {
+            new Claim(JwtRegisteredClaimNames.Sub, user.Username),
+            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+            new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),
+            new Claim(ClaimTypes.Role, user.RoleId.ToString())
+        };
+
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+            var token = new JwtSecurityToken(
+                issuer: _configuration["Jwt:Issuer"],
+                audience: _configuration["Jwt:Audience"],
+                claims: claims,
+                expires: DateTime.Now.AddMinutes(Convert.ToDouble(_configuration["Jwt:ExpiryMinutes"])),
+                signingCredentials: creds
+            );
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
         }
     }
 }

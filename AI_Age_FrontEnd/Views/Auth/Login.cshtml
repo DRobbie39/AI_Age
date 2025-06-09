@@ -38,3 +38,16 @@
         </div>
     </div>
 </section>
+
+@section Scripts {
+    @if (ViewBag.Token != null && ViewBag.Username != null)
+    {
+        <script>
+            // Lưu token và username vào localStorage
+            localStorage.setItem('jwtToken', '@ViewBag.Token');
+            localStorage.setItem('username', '@ViewBag.Username');
+            // Chuyển hướng ngay đến trang chủ
+            window.location.href = '/Home/Index';
+        </script>
+    }
+}

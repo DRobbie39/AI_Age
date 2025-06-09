@@ -16,6 +16,7 @@ namespace AI_Age_BackEnd.Controllers.ChatController
             _chatService = chatService;
         }
 
+        [Authorize]
         [HttpPost("ask")]
         public async Task<IActionResult> Ask([FromBody] ChatDto chatDto)
         {

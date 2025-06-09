@@ -9,6 +9,9 @@ using Google.Apis.Auth.OAuth2;
 using Google.Apis.Drive.v3;
 using Google.Apis.Services;
 using AI_Age_BackEnd.Services.ChatService;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace AI_Age_BackEnd
 {
@@ -17,13 +20,6 @@ namespace AI_Age_BackEnd
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-
-            // Cấu hình đọc đọc đúng file theo môi trường (đọc theo development để lấy key api)
-            builder.Configuration
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-                .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true, reloadOnChange: true)
-                .AddEnvironmentVariables();
 
             // Đăng ký database
             builder.Services.AddDbContext<AI_AgeContext>(options =>
@@ -50,6 +46,26 @@ namespace AI_Age_BackEnd
                            .AllowAnyHeader();
                 });
             });
+
+            // Cấu hình JWT Authentication
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = builder.Configuration["Jwt:Issuer"],
+                    ValidAudience = builder.Configuration["Jwt:Audience"],
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+                };
+            });
+
             // Đăng ký Google Drive Service
             builder.Services.AddSingleton(provider =>
             {
@@ -79,9 +95,8 @@ namespace AI_Age_BackEnd
             // Cho phép CORS
             app.UseCors("AllowAll");
             app.UseHttpsRedirection();
-
+            app.UseAuthentication();
             app.UseAuthorization();
-
             app.MapControllers();
 
             app.Run();
