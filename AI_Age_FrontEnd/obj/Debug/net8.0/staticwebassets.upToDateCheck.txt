@@ -43,6 +43,7 @@ wwwroot\img\trainers\trainer-3.jpg
 wwwroot\img\trainers\trainer-3-2.jpg
 wwwroot\img\videoplayback.mp4
 wwwroot\js\main.js
+wwwroot\js\toastrNotification.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
 wwwroot\lib\bootstrap\dist\css\bootstrap.min.css

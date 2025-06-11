@@ -30,7 +30,6 @@ namespace AI_Age_BackEnd.Services.UserService
                 throw new Exception("Tên đăng nhập đã tồn tại.");
             }
 
-            // Mã hóa mật khẩu
             string hashedPassword = BCrypt.Net.BCrypt.HashPassword(registerDto.Password);
 
             var newUser = new User
