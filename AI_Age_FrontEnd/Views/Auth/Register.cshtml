@@ -56,3 +56,22 @@
         </div>
     </div>
 </section>
+
+@section Scripts {
+    @if (ViewBag.Success == true)
+    {
+        <script>
+            handleRegisterSuccess();  
+            setTimeout(() => {
+                window.location.href = '/Auth/Login';
+            }, 3000);
+        </script>
+    }
+    @if (ViewBag.Error != null)
+    {
+        <script>
+            // Hiển thị thông báo lỗi nếu đăng ký thất bại
+            showToastrNotification('error', '@ViewBag.Error');
+        </script>
+    }
+}

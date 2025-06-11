@@ -1,5 +1,6 @@
 ﻿using AI_Age_FrontEnd.Models.UserViewModel;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.Json;
 
 namespace AI_Age_FrontEnd.Controllers
 {
@@ -10,7 +11,7 @@ namespace AI_Age_FrontEnd.Controllers
         public AuthController(IHttpClientFactory httpClientFactory)
         {
             _httpClient = httpClientFactory.CreateClient();
-            _httpClient.BaseAddress = new Uri("https://localhost:7022/api/"); // URL của backend API
+            _httpClient.BaseAddress = new Uri("https://localhost:7022/api/");
         }
 
         // GET: Đăng ký
@@ -26,6 +27,7 @@ namespace AI_Age_FrontEnd.Controllers
         {
             if (!ModelState.IsValid)
             {
+                ViewBag.Error = "Vui lòng kiểm tra lại thông tin nhập vào.";
                 return View(model);
             }
 
@@ -39,11 +41,14 @@ namespace AI_Age_FrontEnd.Controllers
             var response = await _httpClient.PostAsJsonAsync("Auth/register", registerDto);
             if (response.IsSuccessStatusCode)
             {
-                return RedirectToAction("Login");
+                ViewBag.Success = true;
+                return View(model);
             }
 
-            var error = await response.Content.ReadAsStringAsync();
-            ModelState.AddModelError(string.Empty, "Đăng ký thất bại: " + error);
+            var errorJson = await response.Content.ReadAsStringAsync();
+            var errorResult = JsonSerializer.Deserialize<Dictionary<string, object>>(errorJson);
+            string errorMessage = errorResult.ContainsKey("message") ? errorResult["message"].ToString() : "Đăng ký thất bại. Vui lòng thử lại.";
+            ViewBag.Error = errorMessage;
             return View(model);
         }
 
@@ -60,6 +65,7 @@ namespace AI_Age_FrontEnd.Controllers
         {
             if (!ModelState.IsValid)
             {
+                ViewBag.Error = "Vui lòng kiểm tra lại thông tin nhập vào.";
                 return View(model);
             }
 
@@ -72,15 +78,17 @@ namespace AI_Age_FrontEnd.Controllers
             var response = await _httpClient.PostAsJsonAsync("Auth/login", loginDto);
             if (response.IsSuccessStatusCode)
             {
-                var result = await response.Content.ReadFromJsonAsync<LoginResponse>();
-                // Truyền token và username sang view để lưu vào localStorage
-                ViewBag.Token = result.Token;
+                var jsonResponse = await response.Content.ReadAsStringAsync();
+                var result = JsonSerializer.Deserialize<Dictionary<string, object>>(jsonResponse);
+                ViewBag.Token = result.ContainsKey("token") ? result["token"].ToString() : null;
                 ViewBag.Username = model.Username;
                 return View("Login");
             }
 
-            var error = await response.Content.ReadAsStringAsync();
-            ModelState.AddModelError(string.Empty, "Đăng nhập thất bại: " + error);
+            var errorJson = await response.Content.ReadAsStringAsync();
+            var errorResult = JsonSerializer.Deserialize<Dictionary<string, object>>(errorJson);
+            string errorMessage = errorResult.ContainsKey("message") ? errorResult["message"].ToString() : "Đăng nhập thất bại. Vui lòng thử lại.";
+            ViewBag.Error = errorMessage;
             return View(model);
         }
 
@@ -89,13 +97,6 @@ namespace AI_Age_FrontEnd.Controllers
         {
             HttpContext.Session.Clear();
             return RedirectToAction("Index", "Home");
-        }
-
-        public class LoginResponse
-        {
-            public string Message { get; set; }
-            public int UserId { get; set; }
-            public string Token { get; set; }
         }
     }
 }

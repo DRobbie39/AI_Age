@@ -185,6 +185,10 @@
       "PackagePath": "staticwebassets\\js\\main.js"
     },
     {
+      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\js\\toastrNotification.js",
+      "PackagePath": "staticwebassets\\js\\toastrNotification.js"
+    },
+    {
       "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\lib\\bootstrap-icons\\bootstrap-icons.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\bootstrap-icons.css"
     },

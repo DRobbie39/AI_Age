@@ -46,8 +46,17 @@
             // Lưu token và username vào localStorage
             localStorage.setItem('jwtToken', '@ViewBag.Token');
             localStorage.setItem('username', '@ViewBag.Username');
-            // Chuyển hướng ngay đến trang chủ
-            window.location.href = '/Home/Index';
+            handleLoginSuccess('@ViewBag.Username');
+            setTimeout(() => {
+                window.location.href = '/Home/Index';
+            }, 3000);
+        </script>
+    }
+    @if (ViewBag.Error != null)
+    {
+        <script>
+            // Hiển thị thông báo lỗi nếu đăng nhập thất bại
+            showToastrNotification('error', '@ViewBag.Error');
         </script>
     }
 }
