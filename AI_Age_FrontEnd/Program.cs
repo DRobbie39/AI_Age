@@ -12,7 +12,6 @@ namespace AI_Age_FrontEnd
 
             var app = builder.Build();
 
-
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {

@@ -1,4 +1,6 @@
-﻿@{
+﻿@model List<AI_Age_FrontEnd.DTOs.ArticleDto>
+
+@{
     ViewData["Title"] = "Bài hướng dẫn";
 }
 
@@ -23,7 +25,7 @@
         </div>
     </nav>
 </div><!-- End Page Title -->
-<!-- Courses Section -->
+
 <section id="courses" class="courses section">
     <div class="container">
         <!-- Search Bar -->
@@ -36,77 +38,30 @@
             </form>
         </div>
         <div class="row">
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                <div class="course-item">
-                    <img src="~/img/chatgpt.jpg" class="img-fluid" alt="Khóa học cơ bản về AI cho người cao tuổi">
-                    <div class="course-content">
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <p class="category">AI Cơ bản</p>               
-                        </div>
-                        <h3><a asp-controller="Article" asp-action="Details" asp-route-id="1">Nhập môn AI</a></h3>
-                        <p class="description">Tìm hiểu các khái niệm cơ bản về trí tuệ nhân tạo, cách AI hoạt động và ứng dụng trong cuộc sống hàng ngày.</p>
-                        <div class="trainer d-flex justify-content-between align-items-center">
-                            <div class="trainer-profile d-flex align-items-center">
-                                <img src="~/img/profile.png" class="img-fluid" alt="Admin">
-                                <a href="#" class="trainer-link">Admin</a>
+            @foreach (var article in Model)
+            {
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="course-item">
+                        <img src="@article.Image" class="img-fluid" alt="@article.Title" style="width: 100%; height: 200px; object-fit: cover;">
+                        <div class="course-content">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <p class="category">@article.CategoryName</p>
                             </div>
-                            <div class="trainer-rank d-flex align-items-center">
-                                <i class="bi bi-person user-icon"></i>&nbsp;50
-                                &nbsp;&nbsp;
-                                @* <i class="bi bi-heart heart-icon"></i>&nbsp;65 *@
+                            <h3><a asp-controller="Article" asp-action="Details" asp-route-id="@article.ArticleId">@article.Title</a></h3>
+                            <p class="description">@article.Summary</p>
+                            <div class="trainer d-flex justify-content-between align-items-center">
+                                <div class="trainer-profile d-flex align-items-center">
+                                    <img src="~/img/profile.png" class="img-fluid" alt="Author">
+                                    <a href="#" class="trainer-link">@article.AuthorName</a>
+                                </div>
+                                <div class="trainer-rank d-flex align-items-center">
+                                    <i class="bi bi-person user-icon"></i>&nbsp;@article.Views
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div> <!-- End Course Item -->
-
-            @* <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200"> *@
-            @*     <div class="course-item"> *@
-            @*         <img src="~/img/course-2.jpg" class="img-fluid" alt="Khóa học công cụ AI thực hành"> *@
-            @*         <div class="course-content"> *@
-            @*             <div class="d-flex justify-content-between align-items-center mb-3"> *@
-            @*                 <p class="category">Công cụ AI</p> *@
-            @*             </div> *@
-            @*             <h3><a asp-controller="Article" asp-action="Details" asp-route-id="2">Công cụ AI thực hành</a></h3> *@
-            @*             <p class="description">Học cách sử dụng các công cụ AI phổ biến như chatbot, trợ lý ảo và ứng dụng tự động hóa đơn giản.</p> *@
-            @*             <div class="trainer d-flex justify-content-between align-items-center"> *@
-            @*                 <div class="trainer-profile d-flex align-items-center"> *@
-            @*                     <img src="~/img/profile.png" class="img-fluid" alt="Admin"> *@
-            @*                     <a href="#" class="trainer-link">Admin</a> *@
-            @*                 </div> *@
-            @*                 <div class="trainer-rank d-flex align-items-center"> *@
-            @*                     <i class="bi bi-person user-icon"></i>&nbsp;35 *@
-            @*                     &nbsp;&nbsp; *@
-            @*                     <i class="bi bi-heart heart-icon"></i>&nbsp;42 *@
-            @*                 </div> *@
-            @*             </div> *@
-            @*         </div> *@
-            @*     </div> *@
-            @* </div> *@
-
-            @* <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300"> *@
-            @*     <div class="course-item"> *@
-            @*         <img src="~/img/course-3.jpg" class="img-fluid" alt="Khóa học AI nâng cao"> *@
-            @*         <div class="course-content"> *@
-            @*             <div class="d-flex justify-content-between align-items-center mb-3"> *@
-            @*                 <p class="category">AI Nâng cao</p> *@
-            @*             </div> *@
-            @*             <h3><a asp-controller="Article" asp-action="Details" asp-route-id="3">AI Nâng cao</a></h3> *@
-            @*             <p class="description">Khám phá các ứng dụng AI phức tạp hơn như phân tích dữ liệu và tự động hóa thông minh.</p> *@
-            @*             <div class="trainer d-flex justify-content-between align-items-center"> *@
-            @*                 <div class="trainer-profile d-flex align-items-center"> *@
-            @*                     <img src="~/img/profile.png" class="img-fluid" alt="Admin"> *@
-            @*                     <a href="#" class="trainer-link">Admin</a> *@
-            @*                 </div> *@
-            @*                 <div class="trainer-rank d-flex align-items-center"> *@
-            @*                     <i class="bi bi-person user-icon"></i>&nbsp;20 *@
-            @*                     &nbsp;&nbsp; *@
-            @*                     <i class="bi bi-heart heart-icon"></i>&nbsp;85 *@
-            @*                 </div> *@
-            @*             </div> *@
-            @*         </div> *@
-            @*     </div> *@
-            @* </div> *@
+            }
         </div>
     </div>
-</section><!-- /Courses Section -->
+</section>

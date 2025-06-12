@@ -69,8 +69,11 @@ namespace AI_Age_BackEnd.Services.ArticleService
             await _driveService.Permissions.Create(permission, fileId).ExecuteAsync();
 
             // Retrieve file metadata to get WebViewLink
-            var file = await _driveService.Files.Get(fileId).ExecuteAsync();
-            return file.WebViewLink;
+            //var file = await _driveService.Files.Get(fileId).ExecuteAsync();
+            //return file.WebViewLink;
+
+            return $"https://drive.google.com/thumbnail?id={fileId}";
+            //return $"https://drive.google.com/uc?export=view&id={fileId}";
         }
 
         public async Task<ArticleDto> CreateArticleAsync(ArticleCreateDto dto)
