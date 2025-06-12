@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JhPm9fOWlaxN074K3G5TOKUmbYgQHbrj496qKyoe/04=",
+  "Hash": "/W8qXRJFWSR5KsWjS5m5zhwKXZyUvVZ16NHj/6oqu5k=",
   "Source": "AI_Age_FrontEnd",
   "BasePath": "_content/AI_Age_FrontEnd",
   "Mode": "Default",
@@ -1018,8 +1018,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "cx57ovos7u",
-      "Integrity": "QHLi4RlTBC24OTMJDgTXrrlaAbV8rSlKLYyQkUt8lg8=",
+      "Fingerprint": "tcvn0z3y01",
+      "Integrity": "fRpL16ryZ3sz/5rVM5QyEzvnsfKz6k5n+nlLHrwumr0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\toastrNotification.js"
@@ -2372,7 +2372,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 02:29:21 GMT"
+          "Value": "Thu, 12 Jun 2025 08:11:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2409,7 +2409,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 02:29:21 GMT"
+          "Value": "Thu, 12 Jun 2025 08:11:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2454,7 +2454,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 02:29:21 GMT"
+          "Value": "Thu, 12 Jun 2025 08:11:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2499,7 +2499,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 02:29:21 GMT"
+          "Value": "Thu, 12 Jun 2025 08:11:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2536,7 +2536,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 05 Jun 2025 14:07:54 GMT"
+          "Value": "Thu, 12 Jun 2025 22:22:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2573,7 +2573,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 05 Jun 2025 14:07:54 GMT"
+          "Value": "Thu, 12 Jun 2025 22:22:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6204,51 +6204,6 @@
       ]
     },
     {
-      "Route": "js/toastrNotification.cx57ovos7u.js",
-      "AssetFile": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\js\\toastrNotification.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "857"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"QHLi4RlTBC24OTMJDgTXrrlaAbV8rSlKLYyQkUt8lg8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 02:30:18 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "cx57ovos7u"
-        },
-        {
-          "Name": "label",
-          "Value": "js/toastrNotification.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-QHLi4RlTBC24OTMJDgTXrrlaAbV8rSlKLYyQkUt8lg8="
-        }
-      ]
-    },
-    {
       "Route": "js/toastrNotification.js",
       "AssetFile": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\js\\toastrNotification.js",
       "Selectors": [],
@@ -6259,7 +6214,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "857"
+          "Value": "859"
         },
         {
           "Name": "Content-Type",
@@ -6267,11 +6222,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"QHLi4RlTBC24OTMJDgTXrrlaAbV8rSlKLYyQkUt8lg8=\""
+          "Value": "\"fRpL16ryZ3sz/5rVM5QyEzvnsfKz6k5n+nlLHrwumr0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 02:30:18 GMT"
+          "Value": "Wed, 11 Jun 2025 02:56:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6281,7 +6236,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-QHLi4RlTBC24OTMJDgTXrrlaAbV8rSlKLYyQkUt8lg8="
+          "Value": "sha256-fRpL16ryZ3sz/5rVM5QyEzvnsfKz6k5n+nlLHrwumr0="
+        }
+      ]
+    },
+    {
+      "Route": "js/toastrNotification.tcvn0z3y01.js",
+      "AssetFile": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\js\\toastrNotification.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "859"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fRpL16ryZ3sz/5rVM5QyEzvnsfKz6k5n+nlLHrwumr0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 11 Jun 2025 02:56:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tcvn0z3y01"
+        },
+        {
+          "Name": "label",
+          "Value": "js/toastrNotification.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-fRpL16ryZ3sz/5rVM5QyEzvnsfKz6k5n+nlLHrwumr0="
         }
       ]
     },

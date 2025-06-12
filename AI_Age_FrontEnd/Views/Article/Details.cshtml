@@ -1,50 +1,72 @@
-﻿@{
+﻿@model AI_Age_FrontEnd.DTOs.ArticleDto
+
+@{
     ViewData["Title"] = "Chi tiết khóa học";
 }
 
 <!-- Article Section -->
 <section id="course-article" class="course-article section">
     <div class="container" data-aos="fade-up">
-        <div class="row">
-            <!-- Main Content -->
-            <div class="col-lg-8 col-md-12 article-content">
-                <header class="article-header">
-                    <h1>Giới thiệu về ChatGPT</h1>
-                    <img src="~/img/chatgpt.jpg" class="img-fluid article-hero" alt="Course Image">
-                </header>
-
-                <div class="article-body">
-                    <p class="lead">
-                        Chào mừng bạn đến với kỷ nguyên mà trí tuệ nhân tạo (AI) không còn là một khái niệm khoa học viễn tưởng xa vời, mà đã len lỏi vào từng ngóc ngách của đời sống!
-
-                        Trong đó, ChatGPT của OpenAI nổi lên như một hiện tượng, đặc biệt thu hút một lực lượng người dùng đông đảo và năng động, đó là gen Z. Không chỉ dừng lại ở việc soạn email hay tìm kiếm thông tin, thế hệ trẻ này đang sử dụng ChatGPT theo những cách khiến nhiều người phải kinh ngạc - biến nó thành một "cố vấn cuộc đời" thực thụ.
-                    </p>
-                    <p>
-                        Từ góc độ kinh tế, sự trỗi dậy của AI và cách gen Z đón nhận nó mang nhiều hàm ý quan trọng. Khoản đầu tư của các quỹ lớn như Sequoia Capital vào OpenAI (Sequoia lần đầu đầu tư năm 2021 khi OpenAI được định giá 14 tỷ USD, và hiện công ty được cho là có định giá lên đến hàng trăm tỷ USD sau các vòng gọi vốn) cho thấy niềm tin và kỳ vọng khổng lồ vào tiềm năng của công nghệ này.
-                    </p>          
+        @if (Model != null)
+        {
+            <div class="row">
+                <!-- Main Content -->
+                <div class="col-lg-8 col-md-12 article-content">
+                    <header class="article-header">
+                        <h1>@Model.Title</h1>
+                        @if (Model.AdditionalImages != null && Model.AdditionalImages.Any())
+                        {
+                            foreach (var imageUrl in Model.AdditionalImages)
+                            {
+                                <img src="@imageUrl" class="img-fluid article-hero mb-3" alt="@Model.Title" style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 10px;">
+                            }
+                        }
+                    </header>
+                    <div class="article-body">
+                        @Html.Raw(Model.Content)
+                    </div>
+                </div>
+                <!-- Sidebar -->
+                <div class="col-lg-4 col-md-12 article-sidebar">
+                    <div class="sidebar-box">
+                        <h3>Chi tiết về bài viết</h3>
+                        <ul class="course-info-list">
+                            <li>
+                                <h5>Người viết</h5>
+                                <p><a href="#">@Model.AuthorName</a></p>
+                            </li>
+                            <li>
+                                <h5>Lượt xem</h5>
+                                <p>@Model.Views</p>
+                            </li>
+                            <li>
+                                <h5>Cấp độ</h5>
+                                <p>
+                                    @switch (Model.Level)
+                                    {
+                                        case 1:
+                                            <span>Cơ bản</span>
+                                            ; break;
+                                        case 2:
+                                            <span>Trung bình</span>
+                                            ; break;
+                                        case 3:
+                                            <span>Nâng cao</span>
+                                            ; break;
+                                        default:
+                                            <span>Không xác định</span>
+                                            ; break;
+                                    }
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-
-            <!-- Sidebar -->
-            <div class="col-lg-4 col-md-12 article-sidebar">
-                <div class="sidebar-box">
-                    <h3>Chi tiết về bài viết</h3>
-                    <ul class="course-info-list">
-                        <li>
-                            <h5>Người viết</h5>
-                            <p><a href="#">Admin</a></p>
-                        </li>
-                        <li>
-                            <h5>Lượt xem</h5>
-                            <p>151</p>
-                        </li>
-                        <li>
-                            <h5>Cấp độ</h5>
-                            <p>Dễ</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        }
+        else
+        {
+            <p>Bài viết không tồn tại hoặc có lỗi khi tải dữ liệu.</p>
+        }
     </div>
 </section><!-- /Article Section -->
