@@ -96,13 +96,6 @@
                   "AuthorId": {
                     "type": "integer",
                     "format": "int32"
-                  },
-                  "AdditionalImages": {
-                    "type": "array",
-                    "items": {
-                      "type": "string",
-                      "format": "binary"
-                    }
                   }
                 }
               },
@@ -126,9 +119,6 @@
                   "style": "form"
                 },
                 "AuthorId": {
-                  "style": "form"
-                },
-                "AdditionalImages": {
                   "style": "form"
                 }
               }
@@ -177,13 +167,6 @@
                   "Level": {
                     "type": "integer",
                     "format": "int32"
-                  },
-                  "AdditionalImages": {
-                    "type": "array",
-                    "items": {
-                      "type": "string",
-                      "format": "binary"
-                    }
                   }
                 }
               },
@@ -207,9 +190,6 @@
                   "style": "form"
                 },
                 "Level": {
-                  "style": "form"
-                },
-                "AdditionalImages": {
                   "style": "form"
                 }
               }

@@ -5,10 +5,10 @@ using AI_Age_BackEnd.Repositories;
 using Microsoft.EntityFrameworkCore;
 using AI_Age_BackEnd.Services.UserService;
 using AI_Age_BackEnd.Services.ArticleService;
+using AI_Age_BackEnd.Services.ChatService;
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.Drive.v3;
 using Google.Apis.Services;
-using AI_Age_BackEnd.Services.ChatService;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
@@ -29,7 +29,6 @@ namespace AI_Age_BackEnd
             builder.Services.AddScoped<IUserRepository, UserRepository>();
             builder.Services.AddScoped<IArticleRepository, ArticleRepository>();
             builder.Services.AddScoped<IArticleCategoryRepository, ArticleCategoryRepository>();
-            builder.Services.AddScoped<IArticleImageRepository, ArticleImageRepository>();
 
             // Đăng ký các service
             builder.Services.AddScoped<AuthService>();

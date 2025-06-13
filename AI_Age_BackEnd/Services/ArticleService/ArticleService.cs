@@ -11,18 +11,15 @@ namespace AI_Age_BackEnd.Services.ArticleService
     {
         private readonly IArticleRepository _articleRepository;
         private readonly IArticleCategoryRepository _categoryRepository;
-        private readonly IArticleImageRepository _imageRepository;
         private readonly DriveService _driveService;
 
         public ArticleService(
             IArticleRepository articleRepository,
             IArticleCategoryRepository categoryRepository,
-            IArticleImageRepository imageRepository,
             DriveService driveService)
         {
             _articleRepository = articleRepository;
             _categoryRepository = categoryRepository;
-            _imageRepository = imageRepository;
             _driveService = driveService;
         }
 
@@ -45,14 +42,12 @@ namespace AI_Age_BackEnd.Services.ArticleService
             request.Fields = "id, webViewLink";
 
             var uploadedFile = await request.UploadAsync();
-
             if (uploadedFile.Status != Google.Apis.Upload.UploadStatus.Completed)
             {
                 throw new Exception($"Upload failed: {uploadedFile.Exception?.Message ?? "Unknown error"}");
             }
 
             var uploadedFileMetadata = request.ResponseBody;
-            // File ID is available in fileMetadata after successful upload
             if (uploadedFileMetadata == null || string.IsNullOrEmpty(uploadedFileMetadata.Id))
             {
                 throw new Exception("Failed to retrieve file ID after upload.");
@@ -68,12 +63,7 @@ namespace AI_Age_BackEnd.Services.ArticleService
             };
             await _driveService.Permissions.Create(permission, fileId).ExecuteAsync();
 
-            // Retrieve file metadata to get WebViewLink
-            //var file = await _driveService.Files.Get(fileId).ExecuteAsync();
-            //return file.WebViewLink;
-
-            return $"https://drive.google.com/thumbnail?id={fileId}";
-            //return $"https://drive.google.com/uc?export=view&id={fileId}";
+            return $"https://drive.google.com/thumbnail?id={fileId}&sz=w1200";
         }
 
         public async Task<ArticleDto> CreateArticleAsync(ArticleCreateDto dto)
@@ -99,22 +89,6 @@ namespace AI_Age_BackEnd.Services.ArticleService
 
             await _articleRepository.AddArticleAsync(article);
 
-            if (dto.AdditionalImages != null && dto.AdditionalImages.Any())
-            {
-                foreach (var additionalImage in dto.AdditionalImages)
-                {
-                    var additionalImageUrl = await UploadImageToGoogleDrive(additionalImage);
-                    if (additionalImageUrl != null)
-                    {
-                        await _imageRepository.AddArticleImageAsync(new ArticleImage
-                        {
-                            ArticleId = article.ArticleId,
-                            ImageUrl = additionalImageUrl
-                        });
-                    }
-                }
-            }
-
             return await GetArticleByIdAsync(article.ArticleId);
         }
 
@@ -138,8 +112,7 @@ namespace AI_Age_BackEnd.Services.ArticleService
                 PostedDate = article.PostedDate,
                 UpdatedDate = article.UpdatedDate,
                 Views = article.Views,
-                Level = article.Level,
-                AdditionalImages = article.ArticleImages?.Select(img => img.ImageUrl).ToList()
+                Level = article.Level
             };
         }
 
@@ -160,8 +133,7 @@ namespace AI_Age_BackEnd.Services.ArticleService
                 PostedDate = article.PostedDate,
                 UpdatedDate = article.UpdatedDate,
                 Views = article.Views,
-                Level = article.Level,
-                AdditionalImages = article.ArticleImages?.Select(img => img.ImageUrl).ToList()
+                Level = article.Level
             }).ToList();
         }
 
@@ -187,23 +159,6 @@ namespace AI_Age_BackEnd.Services.ArticleService
 
             await _articleRepository.UpdateArticleAsync(article);
 
-            if (dto.AdditionalImages != null && dto.AdditionalImages.Any())
-            {
-                await _imageRepository.DeleteArticleImagesByArticleIdAsync(article.ArticleId);
-                foreach (var additionalImage in dto.AdditionalImages)
-                {
-                    var additionalImageUrl = await UploadImageToGoogleDrive(additionalImage);
-                    if (additionalImageUrl != null)
-                    {
-                        await _imageRepository.AddArticleImageAsync(new ArticleImage
-                        {
-                            ArticleId = article.ArticleId,
-                            ImageUrl = additionalImageUrl
-                        });
-                    }
-                }
-            }
-
             return await GetArticleByIdAsync(article.ArticleId);
         }
 
@@ -213,7 +168,6 @@ namespace AI_Age_BackEnd.Services.ArticleService
             if (article == null)
                 throw new Exception("Bài viết không tồn tại.");
 
-            await _imageRepository.DeleteArticleImagesByArticleIdAsync(id);
             await _articleRepository.DeleteArticleAsync(id);
         }
     }

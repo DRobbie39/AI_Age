@@ -3,28 +3,32 @@
   "WorkspaceRootPath": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_backend\\dtos\\articledto\\articlecreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|solutionrelative:ai_age_backend\\dtos\\articledto\\articlecreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_frontend\\views\\article\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|solutionrelative:ai_age_frontend\\views\\article\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_frontend\\views\\article\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|solutionrelative:ai_age_frontend\\views\\article\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_backend\\dtos\\articledto\\articledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|solutionrelative:ai_age_backend\\dtos\\articledto\\articledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_frontend\\dtos\\articledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|solutionrelative:ai_age_frontend\\dtos\\articledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_backend\\dtos\\articledto\\articleupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|solutionrelative:ai_age_backend\\dtos\\articledto\\articleupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_frontend\\controllers\\articlecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|solutionrelative:ai_age_frontend\\controllers\\articlecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_backend\\controllers\\articlecontroller\\articlecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|solutionrelative:ai_age_backend\\controllers\\articlecontroller\\articlecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_frontend\\dtos\\articledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|solutionrelative:ai_age_frontend\\dtos\\articledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_backend\\services\\articleservice\\articleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|solutionrelative:ai_age_backend\\services\\articleservice\\articleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_frontend\\views\\article\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|solutionrelative:ai_age_frontend\\views\\article\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,8 +38,60 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ArticleCreateDto.cs",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\DTOs\\ArticleDTO\\ArticleCreateDto.cs",
+              "RelativeDocumentMoniker": "AI_Age_BackEnd\\DTOs\\ArticleDTO\\ArticleCreateDto.cs",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\DTOs\\ArticleDTO\\ArticleCreateDto.cs",
+              "RelativeToolTip": "AI_Age_BackEnd\\DTOs\\ArticleDTO\\ArticleCreateDto.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAgwAkAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T19:09:03.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ArticleUpdateDto.cs",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\DTOs\\ArticleDTO\\ArticleUpdateDto.cs",
+              "RelativeDocumentMoniker": "AI_Age_BackEnd\\DTOs\\ArticleDTO\\ArticleUpdateDto.cs",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\DTOs\\ArticleDTO\\ArticleUpdateDto.cs",
+              "RelativeToolTip": "AI_Age_BackEnd\\DTOs\\ArticleDTO\\ArticleUpdateDto.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwAwAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T19:08:57.408Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ArticleDto.cs",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\DTOs\\ArticleDTO\\ArticleDto.cs",
+              "RelativeDocumentMoniker": "AI_Age_BackEnd\\DTOs\\ArticleDTO\\ArticleDto.cs",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\DTOs\\ArticleDTO\\ArticleDto.cs",
+              "RelativeToolTip": "AI_Age_BackEnd\\DTOs\\ArticleDTO\\ArticleDto.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAswBAAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T19:08:50.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ArticleDto.cs",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\DTOs\\ArticleDto.cs",
+              "RelativeDocumentMoniker": "AI_Age_FrontEnd\\DTOs\\ArticleDto.cs",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\DTOs\\ArticleDto.cs",
+              "RelativeToolTip": "AI_Age_FrontEnd\\DTOs\\ArticleDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T18:56:22.556Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -82,80 +138,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\Views\\Article\\Index.cshtml",
               "RelativeDocumentMoniker": "AI_Age_FrontEnd\\Views\\Article\\Index.cshtml",
               "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\Views\\Article\\Index.cshtml",
               "RelativeToolTip": "AI_Age_FrontEnd\\Views\\Article\\Index.cshtml",
-              "ViewState": "AgIAACIAAAAAAAAAAAAqwDgAAABUAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAowEMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-12T07:16:54.548Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ArticleDto.cs",
-              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\DTOs\\ArticleDto.cs",
-              "RelativeDocumentMoniker": "AI_Age_FrontEnd\\DTOs\\ArticleDto.cs",
-              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\DTOs\\ArticleDto.cs",
-              "RelativeToolTip": "AI_Age_FrontEnd\\DTOs\\ArticleDto.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAwAcAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T22:15:39.884Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\Views\\Article\\Details.cshtml",
-              "RelativeDocumentMoniker": "AI_Age_FrontEnd\\Views\\Article\\Details.cshtml",
-              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\Views\\Article\\Details.cshtml",
-              "RelativeToolTip": "AI_Age_FrontEnd\\Views\\Article\\Details.cshtml",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAqwBQAAAC7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-12T22:13:49.113Z",
+              "WhenOpened": "2025-06-13T18:56:36.282Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "ArticleController.cs",
-              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Controllers\\ArticleController\\ArticleController.cs",
-              "RelativeDocumentMoniker": "AI_Age_BackEnd\\Controllers\\ArticleController\\ArticleController.cs",
-              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Controllers\\ArticleController\\ArticleController.cs",
-              "RelativeToolTip": "AI_Age_BackEnd\\Controllers\\ArticleController\\ArticleController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T04:48:13.745Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ArticleService.cs",
-              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Services\\ArticleService\\ArticleService.cs",
-              "RelativeDocumentMoniker": "AI_Age_BackEnd\\Services\\ArticleService\\ArticleService.cs",
-              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Services\\ArticleService\\ArticleService.cs",
-              "RelativeToolTip": "AI_Age_BackEnd\\Services\\ArticleService\\ArticleService.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAIwE8AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T04:15:30.405Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ArticleController.cs",
               "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\Controllers\\ArticleController.cs",
               "RelativeDocumentMoniker": "AI_Age_FrontEnd\\Controllers\\ArticleController.cs",
               "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\Controllers\\ArticleController.cs",
               "RelativeToolTip": "AI_Age_FrontEnd\\Controllers\\ArticleController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T04:25:10.164Z",
+              "WhenOpened": "2025-06-13T18:56:09.024Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\Views\\Article\\Details.cshtml",
+              "RelativeDocumentMoniker": "AI_Age_FrontEnd\\Views\\Article\\Details.cshtml",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\Views\\Article\\Details.cshtml*",
+              "RelativeToolTip": "AI_Age_FrontEnd\\Views\\Article\\Details.cshtml*",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-13T18:55:02.769Z",
               "EditorCaption": ""
             }
           ]
