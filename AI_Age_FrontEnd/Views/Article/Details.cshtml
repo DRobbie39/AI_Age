@@ -14,13 +14,10 @@
                 <div class="col-lg-8 col-md-12 article-content">
                     <header class="article-header">
                         <h1>@Model.Title</h1>
-                        @if (Model.AdditionalImages != null && Model.AdditionalImages.Any())
-                        {
-                            foreach (var imageUrl in Model.AdditionalImages)
-                            {
-                                <img src="@imageUrl" class="img-fluid article-hero mb-3" alt="@Model.Title" style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 10px;">
-                            }
-                        }
+                        @* @if (!string.IsNullOrEmpty(Model.Image)) *@
+                        @* { *@
+                        @*     <img src="@Model.Image" class="img-fluid article-hero mb-3" alt="@Model.Title" style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 10px;"> *@
+                        @* } *@
                     </header>
                     <div class="article-body">
                         @Html.Raw(Model.Content)

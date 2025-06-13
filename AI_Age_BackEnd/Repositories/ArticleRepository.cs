@@ -18,7 +18,6 @@ namespace AI_Age_BackEnd.Repositories
             return await _context.Articles
                 .Include(a => a.Category)
                 .Include(a => a.AuthorNavigation)
-                .Include(a => a.ArticleImages)
                 .FirstOrDefaultAsync(a => a.ArticleId == id);
         }
 
@@ -27,7 +26,6 @@ namespace AI_Age_BackEnd.Repositories
             return await _context.Articles
                 .Include(a => a.Category)
                 .Include(a => a.AuthorNavigation)
-                .Include(a => a.ArticleImages)
                 .ToListAsync();
         }
 

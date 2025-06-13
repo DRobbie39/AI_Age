@@ -15,6 +15,5 @@
         public DateTime? UpdatedDate { get; set; }
         public int? Views { get; set; }
         public int? Level { get; set; }
-        public List<string> AdditionalImages { get; set; }
     }
 }
