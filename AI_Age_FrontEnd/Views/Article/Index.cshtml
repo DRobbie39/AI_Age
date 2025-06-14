@@ -38,29 +38,38 @@
             </form>
         </div>
         <div class="row">
-            @foreach (var article in Model)
+            @if (Model == null || !Model.Any())
             {
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="course-item">
-                        <img src="@article.Image" class="img-fluid" alt="@article.Title" style="width: 100%; height: 200px; object-fit: cover;">
-                        <div class="course-content">
-                            <div class="d-flex justify-content-between align-items-center mb-3">
-                                <p class="category">@article.CategoryName</p>
-                            </div>
-                            <h3><a asp-controller="Article" asp-action="Details" asp-route-id="@article.ArticleId">@article.Title</a></h3>
-                            <p class="description">@article.Summary</p>
-                            <div class="trainer d-flex justify-content-between align-items-center">
-                                <div class="trainer-profile d-flex align-items-center">
-                                    <img src="~/img/profile.png" class="img-fluid" alt="Author">
-                                    <a href="#" class="trainer-link">@article.AuthorName</a>
+                <div class="col-12 text-center">
+                    <p class="text-muted">Không có bài viết nào.</p>
+                </div>
+            }
+            else
+            {
+                @foreach (var article in Model)
+                {
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="course-item">
+                            <img src="@article.Image" class="img-fluid" alt="@article.Title" style="width: 100%; height: 200px; object-fit: cover;">
+                            <div class="course-content">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <p class="category">@article.CategoryName</p>
                                 </div>
-                                <div class="trainer-rank d-flex align-items-center">
-                                    <i class="bi bi-person user-icon"></i>&nbsp;@article.Views
+                                <h3><a asp-controller="Article" asp-action="Details" asp-route-id="@article.ArticleId">@article.Title</a></h3>
+                                <p class="description">@article.Summary</p>
+                                <div class="trainer d-flex justify-content-between align-items-center">
+                                    <div class="trainer-profile d-flex align-items-center">
+                                        <img src="~/img/profile.png" class="img-fluid" alt="Author">
+                                        <a href="#" class="trainer-link">@article.AuthorName</a>
+                                    </div>
+                                    <div class="trainer-rank d-flex align-items-center">
+                                        <i class="bi bi-person user-icon"></i>&nbsp;@article.Views
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                }
             }
         </div>
     </div>

@@ -1,4 +1,5 @@
 ﻿using AI_Age_BackEnd.DTOs.ArticleDTO;
+using AI_Age_BackEnd.DTOs.RatingDTO;
 using AI_Age_BackEnd.Models;
 using AI_Age_BackEnd.Repositories.Interfaces;
 using Google.Apis.Drive.v3;
@@ -11,15 +12,18 @@ namespace AI_Age_BackEnd.Services.ArticleService
     {
         private readonly IArticleRepository _articleRepository;
         private readonly IArticleCategoryRepository _categoryRepository;
+        private readonly IRatingRepository _ratingRepository;
         private readonly DriveService _driveService;
 
         public ArticleService(
             IArticleRepository articleRepository,
             IArticleCategoryRepository categoryRepository,
+            IRatingRepository ratingRepository,
             DriveService driveService)
         {
             _articleRepository = articleRepository;
             _categoryRepository = categoryRepository;
+            _ratingRepository = ratingRepository;
             _driveService = driveService;
         }
 
@@ -84,7 +88,8 @@ namespace AI_Age_BackEnd.Services.ArticleService
                 Author = dto.AuthorId,
                 PostedDate = DateTime.Now,
                 Level = dto.Level,
-                Views = 0
+                Views = 0,
+                AverageRating = 0.0m
             };
 
             await _articleRepository.AddArticleAsync(article);
@@ -112,7 +117,8 @@ namespace AI_Age_BackEnd.Services.ArticleService
                 PostedDate = article.PostedDate,
                 UpdatedDate = article.UpdatedDate,
                 Views = article.Views,
-                Level = article.Level
+                Level = article.Level,
+                AverageRating = article.AverageRating ?? 0.0m
             };
         }
 
@@ -133,7 +139,8 @@ namespace AI_Age_BackEnd.Services.ArticleService
                 PostedDate = article.PostedDate,
                 UpdatedDate = article.UpdatedDate,
                 Views = article.Views,
-                Level = article.Level
+                Level = article.Level,
+                AverageRating = article.AverageRating ?? 0.0m
             }).ToList();
         }
 
@@ -170,5 +177,28 @@ namespace AI_Age_BackEnd.Services.ArticleService
 
             await _articleRepository.DeleteArticleAsync(id);
         }
+        public async Task AddRatingAsync(RatingCreateDto dto)
+        {
+            if (dto.RatingValue < 1 || dto.RatingValue > 5)
+                throw new Exception("Rating must be between 1 and 5.");
+
+            var article = await _articleRepository.GetArticleByIdAsync(dto.ArticleId);
+            if (article == null)
+                throw new Exception("Bài viết không tồn tại.");
+
+            var rating = new Rating
+            {
+                ArticleId = dto.ArticleId,
+                UserId = dto.UserId,
+                RatingValue = dto.RatingValue,
+                CreatedDate = DateTime.Now
+            };
+
+            await _ratingRepository.AddRatingAsync(rating);
+
+            article.AverageRating = await _ratingRepository.GetAverageRatingAsync(dto.ArticleId);
+            await _articleRepository.UpdateArticleAsync(article);
+        }
+
     }
 }

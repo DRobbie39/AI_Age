@@ -89,6 +89,22 @@
   },
   {
     "ContainingType": "AI_Age_BackEnd.Controllers.ArticleController.ArticleController",
+    "Method": "AddRating",
+    "RelativePath": "api/Article/rate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "AI_Age_BackEnd.DTOs.RatingDTO.RatingCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AI_Age_BackEnd.Controllers.ArticleController.ArticleController",
     "Method": "UpdateArticle",
     "RelativePath": "api/Article/updatearticle",
     "HttpMethod": "PUT",

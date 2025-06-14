@@ -1,4 +1,5 @@
 ﻿using AI_Age_BackEnd.DTOs.ArticleDTO;
+using AI_Age_BackEnd.DTOs.RatingDTO;
 using AI_Age_BackEnd.Services.ArticleService;
 using Microsoft.AspNetCore.Mvc;
 
@@ -88,6 +89,25 @@ namespace AI_Age_BackEnd.Controllers.ArticleController
             {
                 await _articleService.DeleteArticleAsync(id);
                 return Ok(new { Message = "Xóa bài viết thành công" });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { Message = ex.Message });
+            }
+        }
+
+        [HttpPost("rate")]
+        public async Task<IActionResult> AddRating([FromBody] RatingCreateDto dto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                await _articleService.AddRatingAsync(dto);
+                return Ok(new { Message = "Đánh giá bài viết thành công" });
             }
             catch (Exception ex)
             {

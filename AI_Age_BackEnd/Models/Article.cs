@@ -27,9 +27,13 @@ public partial class Article
 
     public int? Level { get; set; }
 
+    public decimal? AverageRating { get; set; }
+
     public virtual ICollection<ArticleComment> ArticleComments { get; set; } = new List<ArticleComment>();
 
     public virtual Admin AuthorNavigation { get; set; } = null!;
 
     public virtual ArticleCategory Category { get; set; } = null!;
+
+    public virtual ICollection<Rating> Ratings { get; set; } = new List<Rating>();
 }

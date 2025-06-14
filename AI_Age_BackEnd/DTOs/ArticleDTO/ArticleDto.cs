@@ -15,5 +15,6 @@
         public DateTime? UpdatedDate { get; set; }
         public int? Views { get; set; }
         public int? Level { get; set; }
+        public decimal AverageRating { get; set; }
     }
 }
