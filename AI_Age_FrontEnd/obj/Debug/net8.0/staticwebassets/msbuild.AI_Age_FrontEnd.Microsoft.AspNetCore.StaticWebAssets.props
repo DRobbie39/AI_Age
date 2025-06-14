@@ -30,8 +30,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>nfkhobb848</Fingerprint>
-      <Integrity>s1Xk5prs3i4ga8n0JNlz9sFXCo9BvouWy48YA4GZ8WY=</Integrity>
+      <Fingerprint>e6ekk23w2d</Fingerprint>
+      <Integrity>xpDfR8baeFMiyLNwnIGVwhC21DqeAunYrW0R6+ZN/mw=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\article.css'))</OriginalItemSpec>
@@ -840,8 +840,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>o80fqtepas</Fingerprint>
-      <Integrity>CEOFKAKcf/LhOX2OEAO+RK5Fh4IuXiQCnZ4N1x6zDTk=</Integrity>
+      <Fingerprint>tcvn0z3y01</Fingerprint>
+      <Integrity>fRpL16ryZ3sz/5rVM5QyEzvnsfKz6k5n+nlLHrwumr0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\toastrNotification.js'))</OriginalItemSpec>

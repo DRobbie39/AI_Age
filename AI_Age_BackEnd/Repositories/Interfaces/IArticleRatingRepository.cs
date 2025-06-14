@@ -2,9 +2,9 @@
 
 namespace AI_Age_BackEnd.Repositories.Interfaces
 {
-    public interface IRatingRepository
+    public interface IArticleRatingRepository
     {
-        Task AddRatingAsync(Rating rating); 
+        Task AddRatingAsync(ArticleRating articleRating); 
         Task<decimal> GetAverageRatingAsync(int articleId);
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace AI_Age_BackEnd.Models;
 
-public partial class Rating
+public partial class ArticleRating
 {
     public int RatingId { get; set; }
 

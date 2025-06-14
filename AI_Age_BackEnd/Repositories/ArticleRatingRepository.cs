@@ -4,24 +4,24 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AI_Age_BackEnd.Repositories
 {
-    public class RatingRepository : IRatingRepository
+    public class ArticleRatingRepository : IArticleRatingRepository
     {
         private readonly AI_AgeContext _context;
 
-        public RatingRepository(AI_AgeContext context)
+        public ArticleRatingRepository(AI_AgeContext context)
         {
             _context = context;
         }
 
-        public async Task AddRatingAsync(Rating rating)
+        public async Task AddRatingAsync(ArticleRating articleRating)
         {
-            await _context.Ratings.AddAsync(rating);
+            await _context.ArticleRatings.AddAsync(articleRating);
             await _context.SaveChangesAsync();
         }
 
         public async Task<decimal> GetAverageRatingAsync(int articleId)
         {
-            return await _context.Ratings
+            return await _context.ArticleRatings
                 .Where(r => r.ArticleId == articleId)
                 .AverageAsync(r => (decimal?)r.RatingValue) ?? 0.0m;
         }

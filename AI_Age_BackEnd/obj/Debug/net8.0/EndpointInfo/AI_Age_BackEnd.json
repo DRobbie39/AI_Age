@@ -212,17 +212,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RatingCreateDto"
+                "$ref": "#/components/schemas/ArticleRatingCreateDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/RatingCreateDto"
+                "$ref": "#/components/schemas/ArticleRatingCreateDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/RatingCreateDto"
+                "$ref": "#/components/schemas/ArticleRatingCreateDto"
               }
             }
           }
@@ -330,6 +330,25 @@
   },
   "components": {
     "schemas": {
+      "ArticleRatingCreateDto": {
+        "type": "object",
+        "properties": {
+          "articleId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "ratingValue": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
       "ChatDto": {
         "type": "object",
         "properties": {
@@ -350,25 +369,6 @@
           "password": {
             "type": "string",
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "RatingCreateDto": {
-        "type": "object",
-        "properties": {
-          "articleId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "userId": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "ratingValue": {
-            "type": "integer",
-            "format": "int32"
           }
         },
         "additionalProperties": false
