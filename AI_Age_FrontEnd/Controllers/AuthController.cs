@@ -14,14 +14,12 @@ namespace AI_Age_FrontEnd.Controllers
             _httpClient.BaseAddress = new Uri("https://localhost:7022/api/");
         }
 
-        // GET: Đăng ký
         [HttpGet]
         public IActionResult Register()
         {
             return View();
         }
 
-        // POST: Đăng ký
         [HttpPost]
         public async Task<IActionResult> Register(RegisterViewModel model)
         {
@@ -44,22 +42,19 @@ namespace AI_Age_FrontEnd.Controllers
                 ViewBag.Success = true;
                 return View(model);
             }
-
-            var errorJson = await response.Content.ReadAsStringAsync();
-            var errorResult = JsonSerializer.Deserialize<Dictionary<string, object>>(errorJson);
-            string errorMessage = errorResult.ContainsKey("message") ? errorResult["message"].ToString() : "Đăng ký thất bại. Vui lòng thử lại.";
-            ViewBag.Error = errorMessage;
-            return View(model);
+            else
+            {
+                ViewBag.Error = true;
+                return View(model);
+            }
         }
 
-        // GET: Đăng nhập
         [HttpGet]
         public IActionResult Login()
         {
             return View();
         }
 
-        // POST: Đăng nhập
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel model)
         {
@@ -80,16 +75,17 @@ namespace AI_Age_FrontEnd.Controllers
             {
                 var jsonResponse = await response.Content.ReadAsStringAsync();
                 var result = JsonSerializer.Deserialize<Dictionary<string, object>>(jsonResponse);
+
                 ViewBag.Token = result.ContainsKey("token") ? result["token"].ToString() : null;
                 ViewBag.Username = model.Username;
+
                 return View("Login");
             }
-
-            var errorJson = await response.Content.ReadAsStringAsync();
-            var errorResult = JsonSerializer.Deserialize<Dictionary<string, object>>(errorJson);
-            string errorMessage = errorResult.ContainsKey("message") ? errorResult["message"].ToString() : "Đăng nhập thất bại. Vui lòng thử lại.";
-            ViewBag.Error = errorMessage;
-            return View(model);
+            else
+            {
+                ViewBag.Error = true;
+                return View(model);
+            }
         }
 
         [HttpGet]

@@ -16,12 +16,18 @@
     }
 }
 
-// Hàm hiển thị thông báo đăng ký thành công
 function handleRegisterSuccess() {
     showToastrNotification('success', 'Đăng ký thành công! Vui lòng đăng nhập.');
 }
 
-// Hàm hiển thị thông báo đăng nhập thành công
 function handleLoginSuccess(username) {
     showToastrNotification('success', `Đăng nhập thành công! Chào mừng ${username}!`);
+}
+
+function handleRegisterError(message) {
+    showToastrNotification('error', 'Đăng ký thất bại. Vui lòng thử lại.');
+}
+
+function handleLoginError(message) {
+    showToastrNotification('error', 'Đăng nhập thất bại. Vui lòng thử lại.');
 }
