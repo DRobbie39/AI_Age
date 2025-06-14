@@ -77,6 +77,7 @@ namespace AI_Age_FrontEnd.Controllers
                 var result = JsonSerializer.Deserialize<Dictionary<string, object>>(jsonResponse);
 
                 ViewBag.Token = result.ContainsKey("token") ? result["token"].ToString() : null;
+                ViewBag.UserId = result.ContainsKey("userId") ? result["userId"].ToString() : null;
                 ViewBag.Username = model.Username;
 
                 return View("Login");
