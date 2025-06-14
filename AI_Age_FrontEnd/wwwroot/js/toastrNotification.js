@@ -31,3 +31,11 @@ function handleRegisterError(message) {
 function handleLoginError(message) {
     showToastrNotification('error', 'Đăng nhập thất bại. Vui lòng thử lại.');
 }
+
+function handleRatingSuccess(message) {
+    showToastrNotification('success', 'Đánh giá thành công.');
+}
+
+function handleRatingError(message) {
+    showToastrNotification('error', 'Đánh giá thất bại.');
+}
