@@ -52,11 +52,11 @@
             }, 3000);
         </script>
     }
-    @if (ViewBag.Error != null)
+
+    @if (ViewBag.Error == true)
     {
         <script>
-            // Hiển thị thông báo lỗi nếu đăng nhập thất bại
-            showToastrNotification('error', '@ViewBag.Error');
+            handleLoginError();
         </script>
     }
 }

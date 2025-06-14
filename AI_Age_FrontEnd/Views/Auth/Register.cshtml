@@ -61,17 +61,17 @@
     @if (ViewBag.Success == true)
     {
         <script>
-            handleRegisterSuccess();  
+            handleRegisterSuccess();
             setTimeout(() => {
                 window.location.href = '/Auth/Login';
             }, 3000);
         </script>
     }
-    @if (ViewBag.Error != null)
+
+    @if (ViewBag.Error == true)
     {
         <script>
-            // Hiển thị thông báo lỗi nếu đăng ký thất bại
-            showToastrNotification('error', '@ViewBag.Error');
+            handleRegisterError();
         </script>
     }
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AI_Age_FrontEnd")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8d587b3da94de030c95669e5e989d752002e44e0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a332152754db5b359f6a22d9ea9dfcd2423db7d6")]
 [assembly: System.Reflection.AssemblyProductAttribute("AI_Age_FrontEnd")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AI_Age_FrontEnd")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
