@@ -29,6 +29,7 @@ namespace AI_Age_BackEnd
             builder.Services.AddScoped<IUserRepository, UserRepository>();
             builder.Services.AddScoped<IArticleRepository, ArticleRepository>();
             builder.Services.AddScoped<IArticleCategoryRepository, ArticleCategoryRepository>();
+            builder.Services.AddScoped<IRatingRepository, RatingRepository>();
 
             // Đăng ký các service
             builder.Services.AddScoped<AuthService>();

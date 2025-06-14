@@ -23,6 +23,8 @@ public partial class AI_AgeContext : DbContext
 
     public virtual DbSet<ArticleComment> ArticleComments { get; set; }
 
+    public virtual DbSet<Rating> Ratings { get; set; }
+
     public virtual DbSet<Role> Roles { get; set; }
 
     public virtual DbSet<User> Users { get; set; }
@@ -82,6 +84,9 @@ public partial class AI_AgeContext : DbContext
             entity.HasKey(e => e.ArticleId).HasName("PK__Articles__9C6270C8F9761DEB");
 
             entity.Property(e => e.ArticleId).HasColumnName("ArticleID");
+            entity.Property(e => e.AverageRating)
+                .HasDefaultValue(0m)
+                .HasColumnType("decimal(3, 1)");
             entity.Property(e => e.CategoryId).HasColumnName("CategoryID");
             entity.Property(e => e.Content).HasColumnType("ntext");
             entity.Property(e => e.Image).HasMaxLength(255);
@@ -138,6 +143,27 @@ public partial class AI_AgeContext : DbContext
                 .HasForeignKey(d => d.UserId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__ArticleCo__UserI__7A672E12");
+        });
+
+        modelBuilder.Entity<Rating>(entity =>
+        {
+            entity.HasKey(e => e.RatingId).HasName("PK__Ratings__FCCDF85C5062029C");
+
+            entity.Property(e => e.RatingId).HasColumnName("RatingID");
+            entity.Property(e => e.ArticleId).HasColumnName("ArticleID");
+            entity.Property(e => e.CreatedDate)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+            entity.Property(e => e.UserId).HasColumnName("UserID");
+
+            entity.HasOne(d => d.Article).WithMany(p => p.Ratings)
+                .HasForeignKey(d => d.ArticleId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__Ratings__Article__17F790F9");
+
+            entity.HasOne(d => d.User).WithMany(p => p.Ratings)
+                .HasForeignKey(d => d.UserId)
+                .HasConstraintName("FK__Ratings__UserID__18EBB532");
         });
 
         modelBuilder.Entity<Role>(entity =>

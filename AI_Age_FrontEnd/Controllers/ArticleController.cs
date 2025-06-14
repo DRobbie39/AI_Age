@@ -1,6 +1,5 @@
 ﻿using AI_Age_FrontEnd.DTOs;
 using Microsoft.AspNetCore.Mvc;
-using System.Net.Http;
 using System.Text.Json;
 
 namespace AI_Age_FrontEnd.Controllers
@@ -31,7 +30,9 @@ namespace AI_Age_FrontEnd.Controllers
         {
             var response = await _httpClient.GetAsync($"Article/{id}");
             response.EnsureSuccessStatusCode();
+
             var jsonString = await response.Content.ReadAsStringAsync();
+
             var article = JsonSerializer.Deserialize<ArticleDto>(jsonString, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 
             return View(article);

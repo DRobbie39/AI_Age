@@ -33,6 +33,8 @@ public partial class User
 
     public virtual ICollection<ArticleComment> ArticleComments { get; set; } = new List<ArticleComment>();
 
+    public virtual ICollection<Rating> Ratings { get; set; } = new List<Rating>();
+
     public virtual Role Role { get; set; } = null!;
 
     public virtual ICollection<UserPostComment> UserPostComments { get; set; } = new List<UserPostComment>();
