@@ -12,13 +12,13 @@ namespace AI_Age_BackEnd.Services.ArticleService
     {
         private readonly IArticleRepository _articleRepository;
         private readonly IArticleCategoryRepository _categoryRepository;
-        private readonly IRatingRepository _ratingRepository;
+        private readonly IArticleRatingRepository _ratingRepository;
         private readonly DriveService _driveService;
 
         public ArticleService(
             IArticleRepository articleRepository,
             IArticleCategoryRepository categoryRepository,
-            IRatingRepository ratingRepository,
+            IArticleRatingRepository ratingRepository,
             DriveService driveService)
         {
             _articleRepository = articleRepository;
@@ -177,7 +177,8 @@ namespace AI_Age_BackEnd.Services.ArticleService
 
             await _articleRepository.DeleteArticleAsync(id);
         }
-        public async Task AddRatingAsync(RatingCreateDto dto)
+
+        public async Task AddRatingAsync(ArticleRatingCreateDto dto)
         {
             if (dto.RatingValue < 1 || dto.RatingValue > 5)
                 throw new Exception("Rating must be between 1 and 5.");
@@ -186,7 +187,7 @@ namespace AI_Age_BackEnd.Services.ArticleService
             if (article == null)
                 throw new Exception("Bài viết không tồn tại.");
 
-            var rating = new Rating
+            var rating = new ArticleRating
             {
                 ArticleId = dto.ArticleId,
                 UserId = dto.UserId,

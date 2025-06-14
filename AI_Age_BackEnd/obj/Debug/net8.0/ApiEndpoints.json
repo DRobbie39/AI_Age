@@ -97,7 +97,7 @@
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "AI_Age_BackEnd.DTOs.RatingDTO.RatingCreateDto",
+        "Type": "AI_Age_BackEnd.DTOs.RatingDTO.ArticleRatingCreateDto",
         "IsRequired": true
       }
     ],

@@ -31,9 +31,9 @@ public partial class Article
 
     public virtual ICollection<ArticleComment> ArticleComments { get; set; } = new List<ArticleComment>();
 
+    public virtual ICollection<ArticleRating> ArticleRatings { get; set; } = new List<ArticleRating>();
+
     public virtual Admin AuthorNavigation { get; set; } = null!;
 
     public virtual ArticleCategory Category { get; set; } = null!;
-
-    public virtual ICollection<Rating> Ratings { get; set; } = new List<Rating>();
 }

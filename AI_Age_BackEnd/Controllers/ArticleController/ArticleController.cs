@@ -97,7 +97,7 @@ namespace AI_Age_BackEnd.Controllers.ArticleController
         }
 
         [HttpPost("rate")]
-        public async Task<IActionResult> AddRating([FromBody] RatingCreateDto dto)
+        public async Task<IActionResult> AddRating([FromBody] ArticleRatingCreateDto dto)
         {
             if (!ModelState.IsValid)
             {
