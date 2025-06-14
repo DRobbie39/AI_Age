@@ -22,6 +22,7 @@
     <link href="~/assets/vendor/aos/aos.css" rel="stylesheet">
     <link href="~/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="~/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- Toastr CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
 
@@ -281,6 +282,7 @@
         // Xử lý đăng xuất
         function logout() {
             localStorage.removeItem('jwtToken');
+            localStorage.removeItem('userId');
             localStorage.removeItem('username');
             window.location.href = '/Home/Index';
         }

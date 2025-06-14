@@ -45,6 +45,7 @@
         <script>
             // Lưu token và username vào localStorage
             localStorage.setItem('jwtToken', '@ViewBag.Token');
+            localStorage.setItem('userId', '@ViewBag.UserId');
             localStorage.setItem('username', '@ViewBag.Username');
             handleLoginSuccess('@ViewBag.Username');
             setTimeout(() => {
