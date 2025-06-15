@@ -9,7 +9,7 @@
         @if (Model != null)
         {
             <div class="row">
-                <!-- Main Content -->
+                <!-- Article Content -->
                 <div class="col-lg-8 col-md-12 mb-4">
                     <div class="article-detail__title mt-3">
                         <h2 class="text-success">@Model.Title</h2>
@@ -32,6 +32,7 @@
                         <span id="average-rating">(@Model.AverageRating.ToString("F1"))</span>
                     </div>
                 </div>
+
                 <!-- Sidebar -->
                 <div class="col-lg-4 col-md-12 article-detail__sidebar">
                     <div class="article-detail__sidebar-box p-3 border rounded shadow-sm">

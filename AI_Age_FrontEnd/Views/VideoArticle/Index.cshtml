@@ -2,7 +2,6 @@
     ViewData["Title"] = "Video hướng dẫn";
 }
 
-<!-- Page Title -->
 <div class="page-title" data-aos="fade">
     <div class="heading">
         <div class="container">
@@ -22,91 +21,53 @@
             </ol>
         </div>
     </nav>
-</div><!-- End Page Title -->
-<!-- Courses Section -->
-<section id="courses" class="courses section">
+</div>
+
+<section id="video-list" class="video-list section">
     <div class="container">
         <!-- Search Bar -->
-        <div class="search-bar mb-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="video-list__search-bar mb-4" data-aos="fade-up" data-aos-delay="100">
             <form asp-controller="Course" asp-action="Search" method="get" class="d-flex align-items-center">
-                <input type="text" name="query" class="form-control" placeholder="Tìm kiếm video hướng dẫn (ví dụ: Nhập môn AI)" aria-label="Tìm kiếm bài hướng dẫn" style="width: 500px; margin-right: 1rem; border-color: #5fcf80; padding: 0.375rem 0.75rem;">
+                <input type="text" name="query" class="video-list__form-control" placeholder="Tìm kiếm video hướng dẫn (ví dụ: Nhập môn AI)" aria-label="Tìm kiếm bài hướng dẫn" style="width: 500px; margin-right: 1rem; padding: 0.375rem 0.75rem;">
                 <button type="submit" class="btn" style="background-color: #5fcf80; color: white; border: none; padding: 0.375rem 0.75rem;">
                     <i class="bi bi-search"></i> Tìm kiếm
                 </button>
             </form>
         </div>
         <div class="row">
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                <div class="course-item">
-                    <img src="~/img/course-1.jpg" class="img-fluid" alt="Khóa học cơ bản về AI cho người cao tuổi">
-                    <div class="course-content">
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <p class="category">AI Cơ bản</p>
-                        </div>
-                        <h3><a asp-controller="VideoArticle" asp-action="Details" asp-route-id="1">Nhập môn AI</a></h3>
-                        <p class="description">Tìm hiểu các khái niệm cơ bản về trí tuệ nhân tạo, cách AI hoạt động và ứng dụng trong cuộc sống hàng ngày.</p>
-                        <div class="trainer d-flex justify-content-between align-items-center">
-                            <div class="trainer-profile d-flex align-items-center">
-                                <img src="~/img/profile.png" class="img-fluid" alt="Giảng viên Nguyễn Văn A">
-                                <a href="#" class="trainer-link">Admin</a>
-                            </div>
-                            <div class="trainer-rank d-flex align-items-center">
-                                <i class="bi bi-person user-icon"></i>&nbsp;50
-                                &nbsp;&nbsp;
-                                @* <i class="bi bi-heart heart-icon"></i>&nbsp;65 *@
+            @if (Model == null || !Model.Any())
+            {
+                <div class="col-12 text-center">
+                    <p class="text-muted">Không có video nào.</p>
+                </div>
+            }
+            else
+            {
+                @foreach (var video in Model)
+                {
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="@(100 * (video.Id % 3 + 1))">
+                        <div class="video-list__item">
+                            <img src="@video.Thumbnail" class="img-fluid" alt="@video.Title" style="width: 100%; height: 200px; object-fit: cover;">
+                            <div class="video-list__content">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <p class="video-list__content-category">@video.CategoryName</p>
+                                </div>
+                                <h3 class="video-list__content-title"><a class="video-list__content-title-link" asp-controller="VideoArticle" asp-action="Details" asp-route-id="@video.Id">@video.Title</a></h3>
+                                <p class="video-list__content-description">@video.Description</p>
+                                <div class="video-list__trainer d-flex justify-content-between align-items-center">
+                                    <div class="video-list__trainer-profile d-flex align-items-center">
+                                        <img src="~/img/profile.png" class="video-list__trainer-profile-img" alt="Author">
+                                        <a href="#" class="video-list__trainer-profile-link">@video.AuthorName</a>
+                                    </div>
+                                    <div class="video-list__trainer-rank d-flex align-items-center">
+                                        <i class="bi bi-person video-list__trainer-rank-icon"></i> @video.Views
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div> <!-- End Course Item -->
-
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-                <div class="course-item">
-                    <img src="~/img/course-2.jpg" class="img-fluid" alt="Khóa học công cụ AI thực hành">
-                    <div class="course-content">
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <p class="category">Công cụ AI</p>
-                        </div>
-                        <h3><a asp-controller="VideoArticle" asp-action="Details" asp-route-id="2">Công cụ AI thực hành</a></h3>
-                        <p class="description">Học cách sử dụng các công cụ AI phổ biến như chatbot, trợ lý ảo và ứng dụng tự động hóa đơn giản.</p>
-                        <div class="trainer d-flex justify-content-between align-items-center">
-                            <div class="trainer-profile d-flex align-items-center">
-                                <img src="~/img/profile.png" class="img-fluid" alt="Giảng viên Trần Thị B">
-                                <a href="#" class="trainer-link">Admin</a>
-                            </div>
-                            <div class="trainer-rank d-flex align-items-center">
-                                <i class="bi bi-person user-icon"></i>&nbsp;35
-                                &nbsp;&nbsp;
-                                @* <i class="bi bi-heart heart-icon"></i>&nbsp;42 *@
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- End Course Item -->
-
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
-                <div class="course-item">
-                    <img src="~/img/course-3.jpg" class="img-fluid" alt="Khóa học AI nâng cao">
-                    <div class="course-content">
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <p class="category">AI Nâng cao</p>
-                        </div>
-                        <h3><a asp-controller="VideoArticle" asp-action="Details" asp-route-id="3">AI Nâng cao</a></h3>
-                        <p class="description">Khám phá các ứng dụng AI phức tạp hơn như phân tích dữ liệu và tự động hóa thông minh.</p>
-                        <div class="trainer d-flex justify-content-between align-items-center">
-                            <div class="trainer-profile d-flex align-items-center">
-                                <img src="~/img/profile.png" class="img-fluid" alt="Giảng viên Lê Văn C">
-                                <a href="#" class="trainer-link">Admin</a>
-                            </div>
-                            <div class="trainer-rank d-flex align-items-center">
-                                <i class="bi bi-person user-icon"></i>&nbsp;20
-                                &nbsp;&nbsp;
-                                @* <i class="bi bi-heart heart-icon"></i>&nbsp;85 *@
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- End Course Item -->
+                }
+            }
         </div>
     </div>
-</section><!-- /Courses Section -->
+</section>
