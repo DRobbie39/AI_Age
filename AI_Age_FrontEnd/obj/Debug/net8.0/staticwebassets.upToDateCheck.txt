@@ -1,9 +1,9 @@
-wwwroot\css\article.css
-wwwroot\css\auth.css
-wwwroot\css\chat.css
-wwwroot\css\forum.css
 wwwroot\css\main.css
-wwwroot\css\video-article.css
+wwwroot\css\user\article.css
+wwwroot\css\user\auth.css
+wwwroot\css\user\chat.css
+wwwroot\css\user\forum.css
+wwwroot\css\user\video-article.css
 wwwroot\favicon.ico
 wwwroot\img\about.jpg
 wwwroot\img\about-2.jpg
