@@ -1,14 +1,89 @@
-﻿.search-bar .form-control {
+﻿/*--------------------------------------------------------------
+# Article Index
+--------------------------------------------------------------*/
+.article-list__search-bar .article-list__form-control {
     transition: all 0.3s;
 }
 
-.fas.fa-star {
+.article-list__item {
+    background-color: var(--surface-color);
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    border-radius: 5px;
+}
+
+.article-list__content {
+    padding: 15px;
+}
+
+.article-list__content-title {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.article-list__content-title-link {
+    color: var(--heading-color);
+    transition: 0.3s;
+}
+
+.article-list__content-title-link:hover {
+    color: var(--accent-color);
+}
+
+.article-list__content-category {
+    background: var(--accent-color);
+    color: var(--contrast-color);
+    font-size: 14px;
+    padding: 6px 14px;
+    margin: 0;
+    border-radius: 5px;
+}
+
+.article-list__content-description {
+    font-size: 14px;
+    color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+
+.article-list__trainer {
+    padding-top: 15px;
+    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.article-list__trainer-profile-img {
+    max-width: 50px;
+    border-radius: 50px;
+}
+
+.article-list__trainer-profile-link {
+    padding-left: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    color: color-mix(in srgb, var(--default-color), transparent 20%);
+    transition: 0.3s;
+}
+
+.article-list__trainer-profile-link:hover {
+    color: var(--accent-color);
+}
+
+.article-list__trainer-rank {
+    font-size: 18px;
+    color: color-mix(in srgb, var(--default-color), transparent 60%);
+}
+
+.article-list__trainer-rank-icon {
+    font-size: 22px;
+}
+
+/*--------------------------------------------------------------
+# Article Details
+--------------------------------------------------------------*/
+.article-detail__star {
     color: #ddd;
     cursor: pointer;
     transition: color 0.2s;
 }
 
-.fas.fa-star.hovered,
-.fas.fa-star.selected {
+.article-detail__star--hovered,
+.article-detail__star--selected {
     color: #f1c40f;
 }
