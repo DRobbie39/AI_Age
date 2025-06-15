@@ -26,12 +26,12 @@
     </nav>
 </div><!-- End Page Title -->
 
-<section id="courses" class="courses section">
+<section id="article-list" class="article-list section">
     <div class="container">
         <!-- Search Bar -->
-        <div class="search-bar mb-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="article-list__search-bar mb-4" data-aos="fade-up" data-aos-delay="100">
             <form asp-controller="Course" asp-action="Search" method="get" class="d-flex align-items-center">
-                <input type="text" name="query" class="form-control" placeholder="Tìm kiếm bài hướng dẫn (ví dụ: Nhập môn AI)" aria-label="Tìm kiếm bài hướng dẫn" style="width: 500px; margin-right: 1rem; border-color: #5fcf80; padding: 0.375rem 0.75rem;">
+                <input type="text" name="query" class="article-list__form-control" placeholder="Tìm kiếm bài hướng dẫn (ví dụ: Nhập môn AI)" aria-label="Tìm kiếm bài hướng dẫn" style="width: 500px; margin-right: 1rem; border-color: #5fcf80; padding: 0.375rem 0.75rem;">
                 <button type="submit" class="btn" style="background-color: #5fcf80; color: white; border: none; padding: 0.375rem 0.75rem;">
                     <i class="bi bi-search"></i> Tìm kiếm
                 </button>
@@ -49,21 +49,21 @@
                 @foreach (var article in Model)
                 {
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="course-item">
+                        <div class="article-list__item">
                             <img src="@article.Image" class="img-fluid" alt="@article.Title" style="width: 100%; height: 200px; object-fit: cover;">
-                            <div class="course-content">
+                            <div class="article-list__content">
                                 <div class="d-flex justify-content-between align-items-center mb-3">
-                                    <p class="category">@article.CategoryName</p>
+                                    <p class="article-list__content-category">@article.CategoryName</p>
                                 </div>
-                                <h3><a asp-controller="Article" asp-action="Details" asp-route-id="@article.ArticleId">@article.Title</a></h3>
-                                <p class="description">@article.Summary</p>
-                                <div class="trainer d-flex justify-content-between align-items-center">
-                                    <div class="trainer-profile d-flex align-items-center">
-                                        <img src="~/img/profile.png" class="img-fluid" alt="Author">
-                                        <a href="#" class="trainer-link">@article.AuthorName</a>
+                                <h3 class="article-list__content-title"><a class="article-list__content-title-link" asp-controller="Article" asp-action="Details" asp-route-id="@article.ArticleId">@article.Title</a></h3>
+                                <p class="article-list__content-description">@article.Summary</p>
+                                <div class="article-list__trainer d-flex justify-content-between align-items-center">
+                                    <div class="article-list__trainer-profile d-flex align-items-center">
+                                        <img src="~/img/profile.png" class="article-list__trainer-profile-img" alt="Author">
+                                        <a href="#" class="article-list__trainer-profile-link">@article.AuthorName</a>
                                     </div>
-                                    <div class="trainer-rank d-flex align-items-center">
-                                        <i class="bi bi-person user-icon"></i>&nbsp;@article.Views
+                                    <div class="article-list__trainer-rank d-flex align-items-center">
+                                        <i class="bi bi-person article-list__trainer-rank-icon"></i> @article.Views
                                     </div>
                                 </div>
                             </div>

@@ -4,39 +4,39 @@
     ViewData["Title"] = "Chi tiết khóa học";
 }
 
-<section id="course-article" class="course-article section">
+<section id="article-detail" class="article-detail section">
     <div class="container" data-aos="fade-up">
         @if (Model != null)
         {
             <div class="row">
                 <!-- Main Content -->
                 <div class="col-lg-8 col-md-12 mb-4">
-                    <div class="article-title mt-3">
+                    <div class="article-detail__title mt-3">
                         <h2 class="text-success">@Model.Title</h2>
                     </div>
 
-                    <div class="article-content mt-2">
+                    <div class="article-detail__content mt-2">
                         <p class="lead">
                             @Html.Raw(Model.Content)
                         </p>
                     </div>
-                    <div class="star-rating">
+                    <div class="article-detail__star-rating">
                         <span>Đánh giá: </span>
-                        <span class="stars" data-article-id="@Model.ArticleId">
-                            <i class="fas fa-star" data-value="1"></i>
-                            <i class="fas fa-star" data-value="2"></i>
-                            <i class="fas fa-star" data-value="3"></i>
-                            <i class="fas fa-star" data-value="4"></i>
-                            <i class="fas fa-star" data-value="5"></i>
+                        <span class="article-detail__stars" data-article-id="@Model.ArticleId">
+                            <i class="fas fa-star article-detail__star" data-value="1"></i>
+                            <i class="fas fa-star article-detail__star" data-value="2"></i>
+                            <i class="fas fa-star article-detail__star" data-value="3"></i>
+                            <i class="fas fa-star article-detail__star" data-value="4"></i>
+                            <i class="fas fa-star article-detail__star" data-value="5"></i>
                         </span>
                         <span id="average-rating">(@Model.AverageRating.ToString("F1"))</span>
                     </div>
                 </div>
                 <!-- Sidebar -->
-                <div class="col-lg-4 col-md-12 article-sidebar">
-                    <div class="sidebar-box p-3 border rounded shadow-sm">
+                <div class="col-lg-4 col-md-12 article-detail__sidebar">
+                    <div class="article-detail__sidebar-box p-3 border rounded shadow-sm">
                         <h3>Chi tiết về bài viết</h3>
-                        <ul class="course-info-list">
+                        <ul class="article-detail__info-list">
                             <li>
                                 <h5>Người viết</h5>
                                 <p><a href="#">@Model.AuthorName</a></p>
@@ -67,7 +67,7 @@
                             </li>
                             <li>
                                 <h5>Đánh giá</h5>
-                                <p>@Model.AverageRating</p>
+                                <p id="sidebar-rating">@Model.AverageRating</p>
                             </li>
                         </ul>
                     </div>
@@ -84,17 +84,17 @@
 @section Scripts {
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const stars = document.querySelectorAll('.stars .fas.fa-star');
+            const stars = document.querySelectorAll('.article-detail__stars .article-detail__star');
 
             stars.forEach((star, index) => {
                 star.addEventListener('mouseover', () => {
                     for (let i = 0; i <= index; i++) {
-                        stars[i].classList.add('hovered');
+                        stars[i].classList.add('article-detail__star--hovered');
                     }
                 });
 
                 star.addEventListener('mouseout', () => {
-                    stars.forEach(s => s.classList.remove('hovered'));
+                    stars.forEach(s => s.classList.remove('article-detail__star--hovered'));
                 });
 
                 star.addEventListener('click', async () => {
@@ -124,8 +124,8 @@
                             document.getElementById('sidebar-rating').textContent = article.averageRating.toFixed(1);
                         }
                         stars.forEach((s, i) => {
-                            s.classList.remove('selected');
-                            if (i < ratingValue) s.classList.add('selected');
+                            s.classList.remove('article-detail__star--selected');
+                            if (i < ratingValue) s.classList.add('article-detail__star--selected');
                         });
                     } else {
                         handleRatingError();
