@@ -5,28 +5,28 @@
       "PackagePath": "staticwebassets\\AI_Age_FrontEnd.mxsp8nmk67.bundle.scp.css"
     },
     {
-      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\article.css",
-      "PackagePath": "staticwebassets\\css\\article.css"
-    },
-    {
-      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\auth.css",
-      "PackagePath": "staticwebassets\\css\\auth.css"
-    },
-    {
-      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\chat.css",
-      "PackagePath": "staticwebassets\\css\\chat.css"
-    },
-    {
-      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\forum.css",
-      "PackagePath": "staticwebassets\\css\\forum.css"
-    },
-    {
       "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\main.css",
       "PackagePath": "staticwebassets\\css\\main.css"
     },
     {
-      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\video-article.css",
-      "PackagePath": "staticwebassets\\css\\video-article.css"
+      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\user\\article.css",
+      "PackagePath": "staticwebassets\\css\\user\\article.css"
+    },
+    {
+      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\user\\auth.css",
+      "PackagePath": "staticwebassets\\css\\user\\auth.css"
+    },
+    {
+      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\user\\chat.css",
+      "PackagePath": "staticwebassets\\css\\user\\chat.css"
+    },
+    {
+      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\user\\forum.css",
+      "PackagePath": "staticwebassets\\css\\user\\forum.css"
+    },
+    {
+      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\user\\video-article.css",
+      "PackagePath": "staticwebassets\\css\\user\\video-article.css"
     },
     {
       "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\favicon.ico",

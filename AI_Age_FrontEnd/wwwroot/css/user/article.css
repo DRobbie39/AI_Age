@@ -1,0 +1,14 @@
+﻿.search-bar .form-control {
+    transition: all 0.3s;
+}
+
+.fas.fa-star {
+    color: #ddd;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.fas.fa-star.hovered,
+.fas.fa-star.selected {
+    color: #f1c40f;
+}

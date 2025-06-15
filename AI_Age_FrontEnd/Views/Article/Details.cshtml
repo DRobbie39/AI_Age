@@ -4,31 +4,21 @@
     ViewData["Title"] = "Chi tiết khóa học";
 }
 
-<style>
-    .fas.fa-star {
-        color: #ddd;
-        cursor: pointer;
-        transition: color 0.2s;
-    }
-
-        .fas.fa-star.hovered,
-        .fas.fa-star.selected {
-            color: #f1c40f;
-        }
-</style>
-<!-- Article Section -->
 <section id="course-article" class="course-article section">
     <div class="container" data-aos="fade-up">
         @if (Model != null)
         {
             <div class="row">
                 <!-- Main Content -->
-                <div class="col-lg-8 col-md-12 article-content">
-                    <header class="article-header">
-                        <h1>@Model.Title</h1>
-                    </header>
-                    <div class="article-body">
-                        @Html.Raw(Model.Content)
+                <div class="col-lg-8 col-md-12 mb-4">
+                    <div class="article-title mt-3">
+                        <h2 class="text-success">@Model.Title</h2>
+                    </div>
+
+                    <div class="article-content mt-2">
+                        <p class="lead">
+                            @Html.Raw(Model.Content)
+                        </p>
                     </div>
                     <div class="star-rating">
                         <span>Đánh giá: </span>
@@ -44,7 +34,7 @@
                 </div>
                 <!-- Sidebar -->
                 <div class="col-lg-4 col-md-12 article-sidebar">
-                    <div class="sidebar-box">
+                    <div class="sidebar-box p-3 border rounded shadow-sm">
                         <h3>Chi tiết về bài viết</h3>
                         <ul class="course-info-list">
                             <li>
@@ -90,7 +80,6 @@
         }
     </div>
 </section>
-<!-- /Article Section -->
 
 @section Scripts {
     <script>
