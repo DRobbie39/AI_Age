@@ -4,7 +4,6 @@
     ViewData["Title"] = "Bài hướng dẫn";
 }
 
-<!-- Page Title -->
 <div class="page-title" data-aos="fade">
     <div class="heading">
         <div class="container">
@@ -24,14 +23,14 @@
             </ol>
         </div>
     </nav>
-</div><!-- End Page Title -->
+</div>
 
 <section id="article-list" class="article-list section">
     <div class="container">
         <!-- Search Bar -->
         <div class="article-list__search-bar mb-4" data-aos="fade-up" data-aos-delay="100">
             <form asp-controller="Course" asp-action="Search" method="get" class="d-flex align-items-center">
-                <input type="text" name="query" class="article-list__form-control" placeholder="Tìm kiếm bài hướng dẫn (ví dụ: Nhập môn AI)" aria-label="Tìm kiếm bài hướng dẫn" style="width: 500px; margin-right: 1rem; border-color: #5fcf80; padding: 0.375rem 0.75rem;">
+                <input type="text" name="query" class="article-list__form-control" placeholder="Tìm kiếm bài hướng dẫn (ví dụ: Nhập môn AI)" aria-label="Tìm kiếm bài hướng dẫn" style="width: 500px; margin-right: 1rem; padding: 0.375rem 0.75rem;">
                 <button type="submit" class="btn" style="background-color: #5fcf80; color: white; border: none; padding: 0.375rem 0.75rem;">
                     <i class="bi bi-search"></i> Tìm kiếm
                 </button>

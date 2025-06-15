@@ -1,3 +1,121 @@
-﻿.search-bar .form-control {
+﻿/*--------------------------------------------------------------
+# Video List Section
+--------------------------------------------------------------*/
+.video-list__search-bar .video-list__form-control {
     transition: all 0.3s;
+}
+
+.video-list__item {
+    background-color: var(--surface-color);
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    border-radius: 5px;
+}
+
+.video-list__content {
+    padding: 15px;
+}
+
+.video-list__content-title {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.video-list__content-title-link {
+    color: var(--heading-color);
+    transition: 0.3s;
+}
+
+.video-list__content-title-link:hover {
+    color: var(--accent-color);
+}
+
+.video-list__content-category {
+    background: var(--accent-color);
+    color: var(--contrast-color);
+    font-size: 14px;
+    padding: 6px 14px;
+    margin: 0;
+    border-radius: 5px;
+}
+
+.video-list__content-description {
+    font-size: 14px;
+    color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+
+.video-list__trainer {
+    padding-top: 15px;
+    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.video-list__trainer-profile-img {
+    max-width: 50px;
+    border-radius: 50px;
+}
+
+.video-list__trainer-profile-link {
+    padding-left: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    color: color-mix(in srgb, var(--default-color), transparent 20%);
+    transition: 0.3s;
+}
+
+.video-list__trainer-profile-link:hover {
+    color: var(--accent-color);
+}
+
+.video-list__trainer-rank {
+    font-size: 18px;
+    color: color-mix(in srgb, var(--default-color), transparent 60%);
+}
+
+.video-list__trainer-rank-icon {
+    font-size: 22px;
+}
+
+/*--------------------------------------------------------------
+# Video Detail Section
+--------------------------------------------------------------*/
+.video-detail__video {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.video-detail__title {
+    margin-top: 1rem;
+}
+
+.video-detail__title h2 {
+    color: #5fcf80;
+}
+
+.video-detail__description {
+    margin-top: 0.5rem;
+}
+
+.video-detail__description p {
+    font-size: 1rem;
+    color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+
+.video-detail__sidebar-box {
+    padding: 1rem;
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.video-detail__info-list {
+    list-style: none;
+    padding: 0;
+}
+
+.video-detail__info-list li {
+    margin-bottom: 0.5rem;
+}
+
+.video-detail__info-list li strong {
+    font-weight: 600;
 }
