@@ -1,4 +1,6 @@
-﻿@{
+﻿@model List<AI_Age_FrontEnd.DTOs.VideoArticleDto>
+
+@{
     ViewData["Title"] = "Video hướng dẫn";
 }
 
@@ -45,19 +47,19 @@
             {
                 @foreach (var video in Model)
                 {
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="@(100 * (video.Id % 3 + 1))">
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="@(100 * (video.VideoId % 3 + 1))">
                         <div class="video-list__item">
                             <img src="@video.Thumbnail" class="img-fluid video-list__item-img" alt="@video.Title">
                             <div class="video-list__content">
                                 <div class="d-flex justify-content-between align-items-center mb-3">
                                     <p class="video-list__content-category">@video.CategoryName</p>
                                 </div>
-                                <h3 class="video-list__content-title"><a class="video-list__content-title-link" asp-controller="VideoArticle" asp-action="Details" asp-route-id="@video.Id">@video.Title</a></h3>
+                                <h3 class="video-list__content-title"><a class="video-list__content-title-link" asp-controller="VideoArticle" asp-action="Details" asp-route-id="@video.VideoId">@video.Title</a></h3>
                                 <p class="video-list__content-description">@video.Description</p>
                                 <div class="video-list__trainer d-flex justify-content-between align-items-center">
                                     <div class="video-list__trainer-profile d-flex align-items-center">
                                         <img src="~/img/profile.png" class="video-list__trainer-profile-img" alt="Author">
-                                        <a href="#" class="video-list__trainer-profile-link">@video.AuthorName</a>
+                                        <a href="#" class="video-list__trainer-profile-link">@video.UploaderName</a>
                                     </div>
                                     <div class="video-list__trainer-rank d-flex align-items-center">
                                         <i class="bi bi-person video-list__trainer-rank-icon"></i> @video.Views

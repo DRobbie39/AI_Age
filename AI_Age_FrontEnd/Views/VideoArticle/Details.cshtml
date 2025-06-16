@@ -1,4 +1,6 @@
-﻿@{
+﻿@model AI_Age_FrontEnd.DTOs.VideoArticleDto
+
+@{
     ViewData["Title"] = "Chi tiết Video";
 }
 
@@ -11,7 +13,7 @@
                 <div class="col-lg-8 col-md-12 mb-4">
                     <div class="video-detail__wrapper position-relative">
                         <video class="video-detail__video" controls poster="@Url.Content(Model.Thumbnail)">
-                            <source src="@Url.Content(Model.VideoUrl)" type="video/mp4">
+                            <source src="@Model.VideoUrl" type="video/mp4">
                         </video>
                     </div>
 
@@ -21,7 +23,6 @@
 
                     <div class="video-detail__description mt-2">
                         <p class="lead">@Model.Description</p>
-                        <p>@Model.AdditionalInfo</p>
                     </div>
                 </div>
 
@@ -31,7 +32,7 @@
                         <h5 class="mb-3">Thông tin video</h5>
                         <ul class="video-detail__info-list">
                             <li class="mb-2">
-                                <strong>Người đăng:</strong> <a href="#">@Model.AuthorName</a>
+                                <strong>Người đăng:</strong> <a href="#">@Model.UploaderName</a>
                             </li>
                             <li class="mb-2">
                                 <strong>Lượt xem:</strong> @Model.Views
@@ -58,7 +59,7 @@
                                 }
                             </li>
                             <li class="mb-2">
-                                <strong>Ngày đăng:</strong> @Model.PublishDate.ToString("dd/MM/yyyy")
+                                <strong>Ngày đăng:</strong> @Model.PostedDate.ToString("dd/MM/yyyy")
                             </li>
                         </ul>
                     </div>
