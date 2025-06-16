@@ -12,6 +12,7 @@ using Google.Apis.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using AI_Age_BackEnd.Services.VideoArticleService;
 
 namespace AI_Age_BackEnd
 {
@@ -30,10 +31,13 @@ namespace AI_Age_BackEnd
             builder.Services.AddScoped<IArticleRepository, ArticleRepository>();
             builder.Services.AddScoped<IArticleCategoryRepository, ArticleCategoryRepository>();
             builder.Services.AddScoped<IArticleRatingRepository, ArticleRatingRepository>();
+            builder.Services.AddScoped<IVideoArticleRepository, VideoArticleRepository>();
+            builder.Services.AddScoped<IVideoArticleCategoryRepository, VideoArticleCategoryRepository>();
 
             // Đăng ký các service
             builder.Services.AddScoped<AuthService>();
             builder.Services.AddScoped<ArticleService>();
+            builder.Services.AddScoped<VideoArticleService>();
             builder.Services.AddScoped<ChatService>();
 
             // Cấu hình CORS

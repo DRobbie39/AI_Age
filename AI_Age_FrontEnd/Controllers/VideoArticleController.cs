@@ -1,17 +1,39 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AI_Age_FrontEnd.DTOs;
+using Microsoft.AspNetCore.Mvc;
+using System.Text.Json;
 
 namespace AI_Age_FrontEnd.Controllers
 {
     public class VideoArticleController : Controller
     {
-        public IActionResult Index()
+        private readonly HttpClient _httpClient;
+
+        public VideoArticleController(IHttpClientFactory httpClientFactory)
         {
-            return View();
+            _httpClient = httpClientFactory.CreateClient();
+            _httpClient.BaseAddress = new Uri("https://localhost:7022/api/");
         }
 
-        public IActionResult Details()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var response = await _httpClient.GetAsync("VideoArticle/getallvideoarticles");
+            response.EnsureSuccessStatusCode();
+
+            var jsonString = await response.Content.ReadAsStringAsync();
+            var videoArticles = JsonSerializer.Deserialize<List<VideoArticleDto>>(jsonString, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+
+            return View(videoArticles);
+        }
+
+        public async Task<IActionResult> Details(int id)
+        {
+            var response = await _httpClient.GetAsync($"VideoArticle/{id}");
+            response.EnsureSuccessStatusCode();
+
+            var jsonString = await response.Content.ReadAsStringAsync();
+            var videoArticle = JsonSerializer.Deserialize<VideoArticleDto>(jsonString, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+
+            return View(videoArticle);
         }
     }
 }
