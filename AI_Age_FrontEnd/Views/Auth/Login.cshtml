@@ -15,12 +15,12 @@
             <div class="col-lg-6 col-md-8">
                 <form asp-action="Login" method="post" class="login-form" data-aos="fade-up" data-aos-delay="100">
                     <div class="mb-4">
-                        <label asp-for="Username" class="form-label" style="font-size: 1.2em;">Tên đăng nhập</label>
+                        <label asp-for="Username" class="form-label login-form__label">Tên đăng nhập</label>
                         <input asp-for="Username" class="form-control form-control-lg" placeholder="Nhập tên đăng nhập của bạn" aria-label="Username" required>
                         <span asp-validation-for="Username" class="field-validation-error"></span>
                     </div>
                     <div class="mb-4">
-                        <label asp-for="Password" class="form-label" style="font-size: 1.2em;">Mật khẩu</label>
+                        <label asp-for="Password" class="form-label login-form__label">Mật khẩu</label>
                         <input asp-for="Password" type="password" class="form-control form-control-lg" placeholder="Nhập mật khẩu" aria-label="Mật khẩu" required>
                         <span asp-validation-for="Password" class="field-validation-error"></span>
                     </div>
@@ -28,10 +28,10 @@
                         <button type="submit" class="btn btn-primary btn-get-started">Đăng nhập</button>
                     </div>
                     <div class="text-center mt-3">
-                        <a href="/Account/ForgotPassword" class="text-muted" style="font-size: 1.1em;">Quên mật khẩu?</a>
+                        <a href="/Account/ForgotPassword" class="text-muted login-form__link">Quên mật khẩu?</a>
                     </div>
                     <div class="text-center mt-3">
-                        <p style="font-size: 1.1em;">Chưa có tài khoản? <a asp-controller="Auth" asp-action="Register" class="text-primary">Đăng ký ngay</a></p>
+                        <p class="login-form__text">Chưa có tài khoản? <a asp-controller="Auth" asp-action="Register" class="text-primary">Đăng ký ngay</a></p>
                     </div>
                 </form>
             </div>
