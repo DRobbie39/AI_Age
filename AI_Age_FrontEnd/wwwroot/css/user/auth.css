@@ -1,4 +1,16 @@
-﻿#register a {
+﻿.login-form__label {
+    font-size: 1.2em;
+}
+
+.login-form__link {
+    font-size: 1.1em;
+}
+
+.login-form__text {
+    font-size: 1.1em;
+}
+
+#register a {
     color: #1e7e34 !important;
 }
 

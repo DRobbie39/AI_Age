@@ -48,8 +48,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>yjo4dl6lbu</Fingerprint>
-      <Integrity>TpZYBEvSeM5jFV6Pvek/ky3zCI3MX4PzUntulFann0M=</Integrity>
+      <Fingerprint>26traqmzid</Fingerprint>
+      <Integrity>at5coPHsngRq5pLp6DeO3+Cos3xSHAdi56Vg63ze0y8=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\user\article.css'))</OriginalItemSpec>
@@ -66,8 +66,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>emhtznseuv</Fingerprint>
-      <Integrity>dv1h41JxnChEHmOHGI79FnSC6MRwO+81JsYh35fCGg0=</Integrity>
+      <Fingerprint>riud9lgk5s</Fingerprint>
+      <Integrity>w/gSTTZ/4m4TDf8BxbnMC/5kcEmV9LvukD4jDq21Ids=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\user\auth.css'))</OriginalItemSpec>
@@ -102,8 +102,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>93l9wa516d</Fingerprint>
-      <Integrity>BevYybiwIdQEyovxbtX8cT587+tJTCrYPwL1xj7CtuU=</Integrity>
+      <Fingerprint>73owmat9b6</Fingerprint>
+      <Integrity>84/9eqAmKj4AisfrRxj/qzHXjDTkXTa5PuN5bo8rngc=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\user\forum.css'))</OriginalItemSpec>
@@ -120,8 +120,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ifmv16no0o</Fingerprint>
-      <Integrity>spNv+iYMMiGpF3uT3XROqzGlCKqfgid+7X/o6l0hGtg=</Integrity>
+      <Fingerprint>n37tvxkaiv</Fingerprint>
+      <Integrity>MyxoQu9Zd8BwT4svYUjtbQ/NUwxqxgdE/t9w+ohju5k=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\user\video-article.css'))</OriginalItemSpec>
