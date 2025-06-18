@@ -54,9 +54,9 @@
               "target": "Package",
               "version": "[4.0.3, )"
             },
-            "Google.Apis.Drive.v3": {
+            "CloudinaryDotNet": {
               "target": "Package",
-              "version": "[1.69.0.3783, )"
+              "version": "[1.27.6, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",

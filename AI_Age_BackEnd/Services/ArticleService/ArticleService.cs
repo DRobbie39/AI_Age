@@ -2,9 +2,8 @@
 using AI_Age_BackEnd.DTOs.RatingDTO;
 using AI_Age_BackEnd.Models;
 using AI_Age_BackEnd.Repositories.Interfaces;
-using Google.Apis.Drive.v3;
-using GoogleFile = Google.Apis.Drive.v3.Data.File;
-using GooglePermission = Google.Apis.Drive.v3.Data.Permission;
+using CloudinaryDotNet;
+using CloudinaryDotNet.Actions;
 
 namespace AI_Age_BackEnd.Services.ArticleService
 {
@@ -13,61 +12,42 @@ namespace AI_Age_BackEnd.Services.ArticleService
         private readonly IArticleRepository _articleRepository;
         private readonly IArticleCategoryRepository _categoryRepository;
         private readonly IArticleRatingRepository _ratingRepository;
-        private readonly DriveService _driveService;
+        private readonly Cloudinary _cloudinary;
 
         public ArticleService(
             IArticleRepository articleRepository,
             IArticleCategoryRepository categoryRepository,
             IArticleRatingRepository ratingRepository,
-            DriveService driveService)
+            Cloudinary cloudinary)
         {
             _articleRepository = articleRepository;
             _categoryRepository = categoryRepository;
             _ratingRepository = ratingRepository;
-            _driveService = driveService;
+            _cloudinary = cloudinary;
         }
 
-        private async Task<string> UploadImageToGoogleDrive(IFormFile image)
+        private async Task<string> UploadImageToCloudinary(IFormFile image)
         {
             if (image == null || image.Length == 0)
                 return null;
 
-            using var stream = new MemoryStream();
-            await image.CopyToAsync(stream);
-            stream.Position = 0;
+            var allowedExtensions = new[] { ".jpg", ".jpeg", ".png" };
+            var extension = Path.GetExtension(image.FileName).ToLower();
+            if (!allowedExtensions.Contains(extension))
+                throw new Exception("Định dạng hình ảnh không hợp lệ. Chỉ hỗ trợ JPG, PNG.");
 
-            var fileMetadata = new GoogleFile
+            using var stream = image.OpenReadStream();
+            var uploadParams = new ImageUploadParams
             {
-                Name = image.FileName,
-                Parents = new List<string> { "122TaaCDX_cc1w9dezs5PdxBU784z3GVX" }
+                File = new FileDescription(image.FileName, stream),
+                Transformation = new Transformation().Width(1200).Crop("fit")
             };
 
-            var request = _driveService.Files.Create(fileMetadata, stream, image.ContentType);
-            request.Fields = "id, webViewLink";
+            var uploadResult = await _cloudinary.UploadAsync(uploadParams);
+            if (uploadResult.StatusCode != System.Net.HttpStatusCode.OK)
+                throw new Exception($"Upload failed: {uploadResult.Error?.Message ?? "Unknown error"}");
 
-            var uploadedFile = await request.UploadAsync();
-            if (uploadedFile.Status != Google.Apis.Upload.UploadStatus.Completed)
-            {
-                throw new Exception($"Upload failed: {uploadedFile.Exception?.Message ?? "Unknown error"}");
-            }
-
-            var uploadedFileMetadata = request.ResponseBody;
-            if (uploadedFileMetadata == null || string.IsNullOrEmpty(uploadedFileMetadata.Id))
-            {
-                throw new Exception("Failed to retrieve file ID after upload.");
-            }
-
-            var fileId = uploadedFileMetadata.Id;
-
-            // Set file permissions to public
-            var permission = new GooglePermission
-            {
-                Type = "anyone",
-                Role = "reader"
-            };
-            await _driveService.Permissions.Create(permission, fileId).ExecuteAsync();
-
-            return $"https://drive.google.com/thumbnail?id={fileId}&sz=w1200";
+            return uploadResult.SecureUrl.ToString();
         }
 
         public async Task<ArticleDto> CreateArticleAsync(ArticleCreateDto dto)
@@ -76,7 +56,7 @@ namespace AI_Age_BackEnd.Services.ArticleService
             if (category == null)
                 throw new Exception("Danh mục không tồn tại.");
 
-            var imageUrl = await UploadImageToGoogleDrive(dto.Image);
+            var imageUrl = await UploadImageToCloudinary(dto.Image);
 
             var article = new Article
             {
@@ -154,7 +134,7 @@ namespace AI_Age_BackEnd.Services.ArticleService
             if (category == null)
                 throw new Exception("Danh mục không tồn tại.");
 
-            var imageUrl = dto.Image != null ? await UploadImageToGoogleDrive(dto.Image) : article.Image;
+            var imageUrl = dto.Image != null ? await UploadImageToCloudinary(dto.Image) : article.Image;
 
             article.Title = dto.Title;
             article.Summary = dto.Summary;

@@ -1,9 +1,8 @@
 ﻿using AI_Age_BackEnd.DTOs.VideoArticleDTO;
 using AI_Age_BackEnd.Models;
 using AI_Age_BackEnd.Repositories.Interfaces;
-using Google.Apis.Drive.v3;
-using GoogleFile = Google.Apis.Drive.v3.Data.File;
-using GooglePermission = Google.Apis.Drive.v3.Data.Permission;
+using CloudinaryDotNet;
+using CloudinaryDotNet.Actions;
 
 namespace AI_Age_BackEnd.Services.VideoArticleService
 {
@@ -11,58 +10,62 @@ namespace AI_Age_BackEnd.Services.VideoArticleService
     {
         private readonly IVideoArticleRepository _videoArticleRepository;
         private readonly IVideoArticleCategoryRepository _categoryRepository;
-        private readonly DriveService _driveService;
+        private readonly Cloudinary _cloudinary;
 
         public VideoArticleService(
             IVideoArticleRepository videoArticleRepository,
             IVideoArticleCategoryRepository categoryRepository,
-            DriveService driveService)
+            Cloudinary cloudinary)
         {
             _videoArticleRepository = videoArticleRepository;
             _categoryRepository = categoryRepository;
-            _driveService = driveService;
+            _cloudinary = cloudinary;
         }
 
-        private async Task<string> UploadFileToGoogleDrive(IFormFile file, string contentType)
+        private async Task<string> UploadFileToCloudinary(IFormFile file, string contentType)
         {
             if (file == null || file.Length == 0)
                 return null;
 
-            using var stream = new MemoryStream();
-            await file.CopyToAsync(stream);
-            stream.Position = 0;
+            var allowedVideoExtensions = new[] { ".mp4", ".mov", ".avi" };
+            var allowedImageExtensions = new[] { ".jpg", ".jpeg", ".png" };
+            var extension = Path.GetExtension(file.FileName).ToLower();
 
-            var fileMetadata = new GoogleFile
+            if (contentType.StartsWith("video") && !allowedVideoExtensions.Contains(extension))
+                throw new Exception("Định dạng video không hợp lệ. Chỉ hỗ trợ MP4, MOV, AVI.");
+            if (contentType.StartsWith("image") && !allowedImageExtensions.Contains(extension))
+                throw new Exception("Định dạng hình ảnh không hợp lệ. Chỉ hỗ trợ JPG, PNG.");
+
+            using var stream = file.OpenReadStream();
+
+            if (contentType.StartsWith("video"))
             {
-                Name = file.FileName,
-                Parents = new List<string> { "122TaaCDX_cc1w9dezs5PdxBU784z3GVX" }
-            };
+                var uploadParams = new VideoUploadParams
+                {
+                    File = new FileDescription(file.FileName, stream),
+                    Transformation = new Transformation().Width(1280).Quality("auto:low").Crop("fit")
+                };
 
-            var request = _driveService.Files.Create(fileMetadata, stream, contentType);
-            request.Fields = "id, webViewLink";
+                var uploadResult = await _cloudinary.UploadAsync(uploadParams);
+                if (uploadResult.StatusCode != System.Net.HttpStatusCode.OK)
+                    throw new Exception($"Upload failed: {uploadResult.Error?.Message ?? "Unknown error"}");
 
-            var uploadedFile = await request.UploadAsync();
-            if (uploadedFile.Status != Google.Apis.Upload.UploadStatus.Completed)
-            {
-                throw new Exception($"Upload failed: {uploadedFile.Exception?.Message ?? "Unknown error"}");
+                return uploadResult.SecureUrl.ToString();
             }
-
-            var uploadedFileMetadata = request.ResponseBody;
-            if (uploadedFileMetadata == null || string.IsNullOrEmpty(uploadedFileMetadata.Id))
+            else
             {
-                throw new Exception("Failed to retrieve file ID after upload.");
+                var uploadParams = new ImageUploadParams
+                {
+                    File = new FileDescription(file.FileName, stream),
+                    Transformation = new Transformation().Width(800).Quality("auto").Crop("fit")
+                };
+
+                var uploadResult = await _cloudinary.UploadAsync(uploadParams);
+                if (uploadResult.StatusCode != System.Net.HttpStatusCode.OK)
+                    throw new Exception($"Upload failed: {uploadResult.Error?.Message ?? "Unknown error"}");
+
+                return uploadResult.SecureUrl.ToString();
             }
-
-            var fileId = uploadedFileMetadata.Id;
-
-            var permission = new GooglePermission
-            {
-                Type = "anyone",
-                Role = "reader"
-            };
-            await _driveService.Permissions.Create(permission, fileId).ExecuteAsync();
-
-            return $"https://drive.google.com/thumbnail?id={fileId}&sz=w1200";
         }
 
         public async Task<VideoArticleDto> CreateVideoArticleAsync(VideoArticleCreateDto dto)
@@ -71,8 +74,8 @@ namespace AI_Age_BackEnd.Services.VideoArticleService
             if (category == null)
                 throw new Exception("Danh mục không tồn tại.");
 
-            var videoUrl = await UploadFileToGoogleDrive(dto.Video, "video/mp4");
-            var thumbnailUrl = dto.Thumbnail != null ? await UploadFileToGoogleDrive(dto.Thumbnail, "image/jpeg") : null;
+            var videoUrl = await UploadFileToCloudinary(dto.Video, "video/mp4");
+            var thumbnailUrl = dto.Thumbnail != null ? await UploadFileToCloudinary(dto.Thumbnail, "image/jpeg") : null;
 
             var videoArticle = new VideoArticle
             {
@@ -150,8 +153,8 @@ namespace AI_Age_BackEnd.Services.VideoArticleService
             if (category == null)
                 throw new Exception("Danh mục không tồn tại.");
 
-            var videoUrl = dto.Video != null ? await UploadFileToGoogleDrive(dto.Video, "video/mp4") : videoArticle.VideoUrl;
-            var thumbnailUrl = dto.Thumbnail != null ? await UploadFileToGoogleDrive(dto.Thumbnail, "image/jpeg") : videoArticle.Thumbnail;
+            var videoUrl = dto.Video != null ? await UploadFileToCloudinary(dto.Video, "video/mp4") : videoArticle.VideoUrl;
+            var thumbnailUrl = dto.Thumbnail != null ? await UploadFileToCloudinary(dto.Thumbnail, "image/jpeg") : videoArticle.Thumbnail;
 
             videoArticle.Title = dto.Title;
             videoArticle.Description = dto.Description;

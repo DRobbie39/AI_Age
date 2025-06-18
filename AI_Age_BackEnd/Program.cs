@@ -6,13 +6,11 @@ using Microsoft.EntityFrameworkCore;
 using AI_Age_BackEnd.Services.UserService;
 using AI_Age_BackEnd.Services.ArticleService;
 using AI_Age_BackEnd.Services.ChatService;
-using Google.Apis.Auth.OAuth2;
-using Google.Apis.Drive.v3;
-using Google.Apis.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using AI_Age_BackEnd.Services.VideoArticleService;
+using CloudinaryDotNet;
 
 namespace AI_Age_BackEnd
 {
@@ -70,16 +68,15 @@ namespace AI_Age_BackEnd
                 };
             });
 
-            // Đăng ký Google Drive Service
+            // Đăng ký Cloudinary
             builder.Services.AddSingleton(provider =>
             {
-                var credential = GoogleCredential.FromFile("Credentials/ai-age-462018-57c9706af6d2.json")
-                    .CreateScoped(DriveService.Scope.Drive);
-                return new DriveService(new BaseClientService.Initializer
-                {
-                    HttpClientInitializer = credential,
-                    ApplicationName = "AI Age Support"
-                });
+                var configuration = provider.GetRequiredService<IConfiguration>();
+                var cloudName = configuration["Cloudinary:CloudName"];
+                var apiKey = configuration["Cloudinary:ApiKey"];
+                var apiSecret = configuration["Cloudinary:ApiSecret"];
+                var account = new Account(cloudName, apiKey, apiSecret);
+                return new Cloudinary(account);
             });
 
             builder.Services.AddControllers();
