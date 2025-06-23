@@ -1,6 +1,7 @@
 ﻿using AI_Age_BackEnd.DTOs.ChatDTO;
 using OpenAI.Chat;
 using System.Text;
+using System.Text.Json;
 
 namespace AI_Age_BackEnd.Services.ChatService
 {
@@ -8,50 +9,69 @@ namespace AI_Age_BackEnd.Services.ChatService
     {
         private readonly HttpClient _httpClient;
         private readonly string _apiKey;
-        private readonly string _baseUrl;
 
         public ChatService(IConfiguration configuration)
         {
-            _apiKey = configuration["OpenAI:ApiKey"];
-            _baseUrl = configuration["OpenAI:BaseUrl"];
+            _apiKey = configuration["GoogleGemini:ApiKey"];
+            Console.WriteLine($"API Key: {_apiKey}");
             _httpClient = new HttpClient();
         }
 
         public async Task<string> GetChatResponseAsync(ChatDto chatDto)
         {
+            // Endpoint của Google Gemini Pro
+            var url = $"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key={_apiKey}";
+
+            // Cấu trúc request body theo chuẩn của Gemini
             var requestBody = new
             {
-                model = "llama3-70b-8192",
-                messages = new object[]
+                // "contents" là một mảng, chứa lịch sử cuộc trò chuyện
+                contents = new object[]
                 {
-                new { role = "system", content = "trả lời bằng tiếng Việt và tập trung vào việc giúp người lớn tuổi tiếp cận công nghệ AI. Hãy cung cấp câu trả lời đơn giản, dễ hiểu, và phù hợp với nhu cầu của người lớn tuổi, giải thích các khái niệm công nghệ một cách gần gũi." },
-                new { role = "user", content = chatDto.Question }
+                    // Vai trò của người dùng
+                    new {
+                        role = "user",
+                        parts = new object[] {
+                            // System prompt được lồng vào câu hỏi đầu tiên để định hướng cho AI
+                            new { text = "Bối cảnh: Bạn là một trợ lý AI thân thiện, chuyên giúp đỡ người lớn tuổi ở Việt Nam. Hãy trả lời mọi câu hỏi bằng tiếng Việt, dùng từ ngữ đơn giản, dễ hiểu, kiên nhẫn và gần gũi như đang nói chuyện với ông bà, cha mẹ. Mục tiêu của bạn là giúp họ làm quen với công nghệ và cảm thấy tự tin hơn khi sử dụng. Dưới đây là câu hỏi của họ:" },
+                            new { text = chatDto.Question }
+                        }
+                    }
                 },
-                temperature = 0.7,
-                max_tokens = 200
+                // Cấu hình an toàn và các tham số khác
+                generationConfig = new
+                {
+                    temperature = 0.7,
+                    maxOutputTokens = 400 // Tăng lên một chút để có câu trả lời dài hơn nếu cần
+                }
             };
 
-            var request = new HttpRequestMessage(HttpMethod.Post, $"{_baseUrl}/v1/chat/completions");
-            request.Headers.Add("Authorization", $"Bearer {_apiKey}");
-            request.Content = new StringContent(System.Text.Json.JsonSerializer.Serialize(requestBody), Encoding.UTF8, "application/json");
+            var request = new HttpRequestMessage(HttpMethod.Post, url);
+            request.Content = new StringContent(JsonSerializer.Serialize(requestBody), Encoding.UTF8, "application/json");
 
             var response = await _httpClient.SendAsync(request);
 
             if (!response.IsSuccessStatusCode)
             {
                 var error = await response.Content.ReadAsStringAsync();
-                throw new Exception($"Groq API error: {error}");
+                // Ghi log lỗi để debug dễ hơn
+                Console.WriteLine($"Gemini API error: {error}");
+                throw new Exception("Lỗi khi kết nối đến trợ lý AI.");
             }
 
             var responseString = await response.Content.ReadAsStringAsync();
-            using var jsonDoc = System.Text.Json.JsonDocument.Parse(responseString);
-            var content = jsonDoc.RootElement
-                .GetProperty("choices")[0]
-                .GetProperty("message")
-                .GetProperty("content")
-                .GetString();
 
-            return content;
+            // Phân tích JSON response của Gemini
+            using var jsonDoc = JsonDocument.Parse(responseString);
+            // Cấu trúc response của Gemini: candidates[0] -> content -> parts[0] -> text
+            var content = jsonDoc.RootElement
+                                 .GetProperty("candidates")[0]
+                                 .GetProperty("content")
+                                 .GetProperty("parts")[0]
+                                 .GetProperty("text")
+                                 .GetString();
+
+            return content ?? "Xin lỗi, tôi chưa thể trả lời câu hỏi này.";
         }
     }
 }
