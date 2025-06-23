@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "widD8CI4phhfJeKo7EDnFzJX/uOn46ETyMZJRLOb92w=",
+  "Hash": "QBiEUupRinyzJKb9XhBCYrQeGrvQg1MjTKKblB62y5w=",
   "Source": "AI_Age_FrontEnd",
   "BasePath": "_content/AI_Age_FrontEnd",
   "Mode": "Default",
@@ -136,8 +136,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "onfyygvi26",
-      "Integrity": "PGponTt4ztGHx41qbepFNzgTF7nV7wmWx/Vm3+DeiOU=",
+      "Fingerprint": "rsv7u6up5w",
+      "Integrity": "u3JjMEy5omgMUCybMimXl0Xm6PmARAMMDBm6u3r3wdo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\user\\chat.css"
@@ -2372,7 +2372,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 23 Jun 2025 20:13:46 GMT"
+          "Value": "Mon, 23 Jun 2025 22:29:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2409,7 +2409,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 23 Jun 2025 20:13:46 GMT"
+          "Value": "Mon, 23 Jun 2025 22:29:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2454,7 +2454,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 23 Jun 2025 20:13:46 GMT"
+          "Value": "Mon, 23 Jun 2025 22:29:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2499,7 +2499,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 23 Jun 2025 20:13:46 GMT"
+          "Value": "Mon, 23 Jun 2025 22:29:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2770,7 +2770,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2252"
+          "Value": "4798"
         },
         {
           "Name": "Content-Type",
@@ -2778,11 +2778,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"PGponTt4ztGHx41qbepFNzgTF7nV7wmWx/Vm3+DeiOU=\""
+          "Value": "\"u3JjMEy5omgMUCybMimXl0Xm6PmARAMMDBm6u3r3wdo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 06 Jun 2025 12:38:59 GMT"
+          "Value": "Mon, 23 Jun 2025 21:33:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2792,12 +2792,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-PGponTt4ztGHx41qbepFNzgTF7nV7wmWx/Vm3+DeiOU="
+          "Value": "sha256-u3JjMEy5omgMUCybMimXl0Xm6PmARAMMDBm6u3r3wdo="
         }
       ]
     },
     {
-      "Route": "css/user/chat.onfyygvi26.css",
+      "Route": "css/user/chat.rsv7u6up5w.css",
       "AssetFile": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\user\\chat.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2807,7 +2807,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2252"
+          "Value": "4798"
         },
         {
           "Name": "Content-Type",
@@ -2815,11 +2815,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"PGponTt4ztGHx41qbepFNzgTF7nV7wmWx/Vm3+DeiOU=\""
+          "Value": "\"u3JjMEy5omgMUCybMimXl0Xm6PmARAMMDBm6u3r3wdo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 06 Jun 2025 12:38:59 GMT"
+          "Value": "Mon, 23 Jun 2025 21:33:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2829,7 +2829,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "onfyygvi26"
+          "Value": "rsv7u6up5w"
         },
         {
           "Name": "label",
@@ -2837,7 +2837,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-PGponTt4ztGHx41qbepFNzgTF7nV7wmWx/Vm3+DeiOU="
+          "Value": "sha256-u3JjMEy5omgMUCybMimXl0Xm6PmARAMMDBm6u3r3wdo="
         }
       ]
     },
