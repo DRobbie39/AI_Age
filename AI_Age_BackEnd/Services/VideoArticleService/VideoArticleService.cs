@@ -1,4 +1,5 @@
 ﻿using AI_Age_BackEnd.DTOs.VideoArticleDTO;
+using AI_Age_BackEnd.DTOs.VideoArticleRatingDTO;
 using AI_Age_BackEnd.Models;
 using AI_Age_BackEnd.Repositories.Interfaces;
 using CloudinaryDotNet;
@@ -10,15 +11,18 @@ namespace AI_Age_BackEnd.Services.VideoArticleService
     {
         private readonly IVideoArticleRepository _videoArticleRepository;
         private readonly IVideoArticleCategoryRepository _categoryRepository;
+        private readonly IVideoArticleRatingRepository _ratingRepository;
         private readonly Cloudinary _cloudinary;
 
         public VideoArticleService(
             IVideoArticleRepository videoArticleRepository,
             IVideoArticleCategoryRepository categoryRepository,
+            IVideoArticleRatingRepository ratingRepository,
             Cloudinary cloudinary)
         {
             _videoArticleRepository = videoArticleRepository;
             _categoryRepository = categoryRepository;
+            _ratingRepository = ratingRepository;
             _cloudinary = cloudinary;
         }
 
@@ -117,7 +121,8 @@ namespace AI_Age_BackEnd.Services.VideoArticleService
                 UpdatedDate = videoArticle.UpdatedDate,
                 Views = videoArticle.Views,
                 Level = videoArticle.Level,
-                Duration = videoArticle.Duration
+                Duration = videoArticle.Duration,
+                AverageRating = videoArticle.AverageRating ?? 0.0m
             };
         }
 
@@ -139,7 +144,8 @@ namespace AI_Age_BackEnd.Services.VideoArticleService
                 UpdatedDate = video.UpdatedDate,
                 Views = video.Views,
                 Level = video.Level,
-                Duration = video.Duration
+                Duration = video.Duration,
+                AverageRating = video.AverageRating ?? 0.0m
             }).ToList();
         }
 
@@ -177,6 +183,35 @@ namespace AI_Age_BackEnd.Services.VideoArticleService
                 throw new Exception("Video không tồn tại.");
 
             await _videoArticleRepository.DeleteVideoArticleAsync(id);
+        }
+
+        public async Task AddRatingAsync(VideoArticleRatingCreateDto dto)
+        {
+            if (dto.RatingValue < 1 || dto.RatingValue > 5)
+                throw new Exception("Rating must be between 1 and 5.");
+
+            var video = await _videoArticleRepository.GetVideoArticleByIdAsync(dto.VideoId);
+            if (video == null)
+                throw new Exception("Video không tồn tại.");
+
+            var rating = new VideoArticleRating
+            {
+                VideoId = dto.VideoId,
+                UserId = dto.UserId,
+                RatingValue = dto.RatingValue,
+                CreatedDate = DateTime.Now
+            };
+
+            await _ratingRepository.AddRatingAsync(rating);
+
+            video.AverageRating = await _ratingRepository.GetAverageRatingAsync(dto.VideoId);
+            await _videoArticleRepository.UpdateVideoArticleAsync(video);
+        }
+
+        public async Task<int?> GetUserRatingAsync(int videoId, int userId)
+        {
+            var rating = await _ratingRepository.GetUserRatingAsync(videoId, userId);
+            return rating?.RatingValue;
         }
     }
 }
