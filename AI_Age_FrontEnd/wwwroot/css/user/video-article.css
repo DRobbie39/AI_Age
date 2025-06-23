@@ -138,3 +138,14 @@
 .video-detail__info-list li strong {
     font-weight: 600;
 }
+
+.video-detail__star {
+    color: #ddd;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.video-detail__star--hovered,
+.video-detail__star--selected {
+    color: #f1c40f;
+}

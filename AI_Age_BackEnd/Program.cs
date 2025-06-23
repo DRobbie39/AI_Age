@@ -6,10 +6,10 @@ using Microsoft.EntityFrameworkCore;
 using AI_Age_BackEnd.Services.UserService;
 using AI_Age_BackEnd.Services.ArticleService;
 using AI_Age_BackEnd.Services.ChatService;
+using AI_Age_BackEnd.Services.VideoArticleService;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using AI_Age_BackEnd.Services.VideoArticleService;
 using CloudinaryDotNet;
 
 namespace AI_Age_BackEnd
@@ -31,6 +31,7 @@ namespace AI_Age_BackEnd
             builder.Services.AddScoped<IArticleRatingRepository, ArticleRatingRepository>();
             builder.Services.AddScoped<IVideoArticleRepository, VideoArticleRepository>();
             builder.Services.AddScoped<IVideoArticleCategoryRepository, VideoArticleCategoryRepository>();
+            builder.Services.AddScoped<IVideoArticleRatingRepository, VideoArticleRatingRepository>();
 
             // Đăng ký các service
             builder.Services.AddScoped<AuthService>();

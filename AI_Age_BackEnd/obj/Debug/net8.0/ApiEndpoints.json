@@ -308,6 +308,22 @@
   },
   {
     "ContainingType": "AI_Age_BackEnd.Controllers.VideoArticleController.VideoArticleController",
+    "Method": "AddRating",
+    "RelativePath": "api/VideoArticle/rate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "AI_Age_BackEnd.DTOs.VideoArticleRatingDTO.VideoArticleRatingCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AI_Age_BackEnd.Controllers.VideoArticleController.VideoArticleController",
     "Method": "UpdateVideoArticle",
     "RelativePath": "api/VideoArticle/updatevideoarticle",
     "HttpMethod": "PUT",
@@ -353,6 +369,22 @@
         "Name": "Level",
         "Type": "System.Int32",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AI_Age_BackEnd.Controllers.VideoArticleController.VideoArticleController",
+    "Method": "GetUserRating",
+    "RelativePath": "api/VideoArticle/user-rating/{videoId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "videoId",
+        "Type": "System.Int32",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

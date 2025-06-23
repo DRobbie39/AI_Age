@@ -1,6 +1,8 @@
 ﻿using AI_Age_BackEnd.DTOs.VideoArticleDTO;
+using AI_Age_BackEnd.DTOs.VideoArticleRatingDTO;
 using AI_Age_BackEnd.Services.VideoArticleService;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace AI_Age_BackEnd.Controllers.VideoArticleController
 {
@@ -88,6 +90,41 @@ namespace AI_Age_BackEnd.Controllers.VideoArticleController
             {
                 await _videoArticleService.DeleteVideoArticleAsync(id);
                 return Ok(new { Message = "Xóa video thành công" });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { Message = ex.Message });
+            }
+        }
+
+        [HttpPost("rate")]
+        public async Task<IActionResult> AddRating([FromBody] VideoArticleRatingCreateDto dto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                await _videoArticleService.AddRatingAsync(dto);
+                var video = await _videoArticleService.GetVideoArticleByIdAsync(dto.VideoId);
+                return Ok(new { Message = "Đánh giá video thành công", AverageRating = video.AverageRating });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { Message = ex.Message });
+            }
+        }
+
+        [HttpGet("user-rating/{videoId}")]
+        public async Task<IActionResult> GetUserRating(int videoId)
+        {
+            try
+            {
+                var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+                var rating = await _videoArticleService.GetUserRatingAsync(videoId, userId);
+                return Ok(new { RatingValue = rating });
             }
             catch (Exception ex)
             {

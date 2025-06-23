@@ -43,6 +43,8 @@ public partial class AI_AgeContext : DbContext
 
     public virtual DbSet<VideoArticleComment> VideoArticleComments { get; set; }
 
+    public virtual DbSet<VideoArticleRating> VideoArticleRatings { get; set; }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
         => optionsBuilder.UseSqlServer("Server=LAPTOP-UTPMHK27\\SQLEXPRESS;Database=AI_Age;Trusted_Connection=True;TrustServerCertificate=True;");
@@ -296,6 +298,9 @@ public partial class AI_AgeContext : DbContext
             entity.HasKey(e => e.VideoId).HasName("PK__VideoArt__BAE5124A2211909D");
 
             entity.Property(e => e.VideoId).HasColumnName("VideoID");
+            entity.Property(e => e.AverageRating)
+                .HasDefaultValue(0m)
+                .HasColumnType("decimal(3, 1)");
             entity.Property(e => e.CategoryId).HasColumnName("CategoryID");
             entity.Property(e => e.Description).HasMaxLength(500);
             entity.Property(e => e.Level).HasDefaultValue(1);
@@ -354,6 +359,25 @@ public partial class AI_AgeContext : DbContext
                 .HasForeignKey(d => d.VideoId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__VideoArti__Video__04E4BC85");
+        });
+
+        modelBuilder.Entity<VideoArticleRating>(entity =>
+        {
+            entity.HasKey(e => e.RatingId).HasName("PK__VideoArt__FCCDF85CEF9FC0F3");
+
+            entity.Property(e => e.RatingId).HasColumnName("RatingID");
+            entity.Property(e => e.CreatedDate)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+
+            entity.HasOne(d => d.User).WithMany(p => p.VideoArticleRatings)
+                .HasForeignKey(d => d.UserId)
+                .HasConstraintName("FK__VideoArti__UserI__18EBB532");
+
+            entity.HasOne(d => d.Video).WithMany(p => p.VideoArticleRatings)
+                .HasForeignKey(d => d.VideoId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__VideoArti__Video__17F790F9");
         });
 
         OnModelCreatingPartial(modelBuilder);

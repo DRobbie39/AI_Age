@@ -29,9 +29,13 @@ public partial class VideoArticle
 
     public int? Level { get; set; }
 
+    public decimal? AverageRating { get; set; }
+
     public virtual VideoArticleCategory Category { get; set; } = null!;
 
     public virtual Admin UploaderNavigation { get; set; } = null!;
 
     public virtual ICollection<VideoArticleComment> VideoArticleComments { get; set; } = new List<VideoArticleComment>();
+
+    public virtual ICollection<VideoArticleRating> VideoArticleRatings { get; set; } = new List<VideoArticleRating>();
 }
