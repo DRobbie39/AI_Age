@@ -181,5 +181,11 @@ namespace AI_Age_BackEnd.Services.ArticleService
             await _articleRepository.UpdateArticleAsync(article);
         }
 
+        public async Task<int?> GetUserRatingAsync(int articleId, int userId)
+        {
+            var rating = await _ratingRepository.GetUserRatingAsync(articleId, userId);
+            return rating?.RatingValue;
+        }
+
     }
 }

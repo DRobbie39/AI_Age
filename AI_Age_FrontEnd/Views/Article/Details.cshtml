@@ -84,14 +84,45 @@
 
 @section Scripts {
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
+                document.addEventListener('DOMContentLoaded', async () => {
             const stars = document.querySelectorAll('.article-detail__stars .article-detail__star');
+            const starsContainer = document.querySelector('.article-detail__stars');
+            const articleId = starsContainer.getAttribute('data-article-id');
+            const jwtToken = localStorage.getItem('jwtToken');
+
+            async function loadUserRating() {
+                if (!jwtToken || !articleId) return;
+
+                try {
+                    const response = await fetch(`https://localhost:7022/api/Article/user-rating/${articleId}`, {
+                        headers: { 'Authorization': `Bearer ${jwtToken}` }
+                    });
+                    if (response.ok) {
+                        const result = await response.json();
+                        const userRating = result.ratingValue;
+                        localStorage.setItem(`rating_${articleId}`, userRating);
+                        applyRating(userRating);
+                    }
+                } catch {}
+            }
+
+            function applyRating(rating) {
+                stars.forEach((star, i) => {
+                    star.classList.remove('article-detail__star--selected');
+                    if (i < (rating || 0)) star.classList.add('article-detail__star--selected');
+                });
+            }
+
+            // Load persisted rating on page load
+            const savedRating = localStorage.getItem(`rating_${articleId}`);
+            if (savedRating) applyRating(parseInt(savedRating));
+
+            await loadUserRating();
 
             stars.forEach((star, index) => {
                 star.addEventListener('mouseover', () => {
-                    for (let i = 0; i <= index; i++) {
-                        stars[i].classList.add('article-detail__star--hovered');
-                    }
+                    stars.forEach(s => s.classList.remove('article-detail__star--hovered'));
+                    for (let i = 0; i <= index; i++) stars[i].classList.add('article-detail__star--hovered');
                 });
 
                 star.addEventListener('mouseout', () => {
@@ -99,37 +130,31 @@
                 });
 
                 star.addEventListener('click', async () => {
-                    const ratingValue = star.getAttribute('data-value');
-                    const articleId = star.parentElement.getAttribute('data-article-id');
+                    if (!jwtToken) {
+                        alert('Vui lòng đăng nhập để đánh giá bài viết');
+                        return;
+                    }
+
+                    const ratingValue = parseInt(star.getAttribute('data-value'));
                     const userId = localStorage.getItem('userId');
 
-                    const response = await fetch('https://localhost:7022/api/Article/rate', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                            'Authorization': `Bearer ${localStorage.getItem('jwtToken')}`
-                        },
-                        body: JSON.stringify({
-                            articleId: parseInt(articleId),
-                            userId: userId ? parseInt(userId) : null,
-                            ratingValue: parseInt(ratingValue)
-                        })
-                    });
-
-                    if (response.ok) {
-                        handleRatingSuccess();
-                        const articleResponse = await fetch(`https://localhost:7022/api/Article/${articleId}`);
-                        if (articleResponse.ok) {
-                            const article = await articleResponse.json();
-                            document.getElementById('average-rating').textContent = `(${article.averageRating.toFixed(1)})`;
-                            document.getElementById('sidebar-rating').textContent = article.averageRating.toFixed(1);
-                        }
-                        stars.forEach((s, i) => {
-                            s.classList.remove('article-detail__star--selected');
-                            if (i < ratingValue) s.classList.add('article-detail__star--selected');
+                    try {
+                        const response = await fetch('https://localhost:7022/api/Article/rate', {
+                            method: 'POST',
+                            headers: { 'Authorization': `Bearer ${jwtToken}`, 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ articleId: parseInt(articleId), userId: userId ? parseInt(userId) : null, ratingValue })
                         });
-                    } else {
-                        handleRatingError();
+
+                        if (response.ok) {
+                            const result = await response.json();
+                            localStorage.setItem(`rating_${articleId}`, ratingValue);
+                            applyRating(ratingValue);
+                            document.getElementById('average-rating').textContent = `(${result.averageRating.toFixed(1)})`;
+                            document.getElementById('sidebar-rating').textContent = result.averageRating.toFixed(1);
+                            handleRatingSuccess();
+                        }
+                    } catch (error) {
+                        handleRatingError('Đánh giá thất bại.');
                     }
                 });
             });

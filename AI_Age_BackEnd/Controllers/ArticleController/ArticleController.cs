@@ -2,6 +2,7 @@
 using AI_Age_BackEnd.DTOs.RatingDTO;
 using AI_Age_BackEnd.Services.ArticleService;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace AI_Age_BackEnd.Controllers.ArticleController
 {
@@ -107,7 +108,23 @@ namespace AI_Age_BackEnd.Controllers.ArticleController
             try
             {
                 await _articleService.AddRatingAsync(dto);
-                return Ok(new { Message = "Đánh giá bài viết thành công" });
+                var article = await _articleService.GetArticleByIdAsync(dto.ArticleId);
+                return Ok(new { Message = "Đánh giá bài viết thành công", AverageRating = article.AverageRating });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { Message = ex.Message });
+            }
+        }
+
+        [HttpGet("user-rating/{articleId}")]
+        public async Task<IActionResult> GetUserRating(int articleId)
+        {
+            try
+            {
+                var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+                var rating = await _articleService.GetUserRatingAsync(articleId, userId);
+                return Ok(new { RatingValue = rating });
             }
             catch (Exception ex)
             {

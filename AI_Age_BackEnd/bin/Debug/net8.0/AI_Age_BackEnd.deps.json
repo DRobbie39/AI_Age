@@ -10,7 +10,6 @@
         "dependencies": {
           "BCrypt.Net-Next": "4.0.3",
           "CloudinaryDotNet": "1.27.6",
-          "Google.Apis.Drive.v3": "1.69.0.3783",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.16",
           "Microsoft.EntityFrameworkCore.Design": "9.0.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.5",
@@ -76,53 +75,6 @@
           "lib/netstandard2.0/CloudinaryDotNet.dll": {
             "assemblyVersion": "1.27.6.0",
             "fileVersion": "1.27.6.0"
-          }
-        }
-      },
-      "Google.Apis/1.69.0": {
-        "dependencies": {
-          "Google.Apis.Core": "1.69.0"
-        },
-        "runtime": {
-          "lib/net6.0/Google.Apis.dll": {
-            "assemblyVersion": "1.69.0.0",
-            "fileVersion": "1.69.0.0"
-          }
-        }
-      },
-      "Google.Apis.Auth/1.69.0": {
-        "dependencies": {
-          "Google.Apis": "1.69.0",
-          "Google.Apis.Core": "1.69.0",
-          "System.Management": "7.0.2"
-        },
-        "runtime": {
-          "lib/net6.0/Google.Apis.Auth.dll": {
-            "assemblyVersion": "1.69.0.0",
-            "fileVersion": "1.69.0.0"
-          }
-        }
-      },
-      "Google.Apis.Core/1.69.0": {
-        "dependencies": {
-          "Newtonsoft.Json": "13.0.3"
-        },
-        "runtime": {
-          "lib/net6.0/Google.Apis.Core.dll": {
-            "assemblyVersion": "1.69.0.0",
-            "fileVersion": "1.69.0.0"
-          }
-        }
-      },
-      "Google.Apis.Drive.v3/1.69.0.3783": {
-        "dependencies": {
-          "Google.Apis": "1.69.0",
-          "Google.Apis.Auth": "1.69.0"
-        },
-        "runtime": {
-          "lib/net6.0/Google.Apis.Drive.v3.dll": {
-            "assemblyVersion": "1.69.0.3783",
-            "fileVersion": "1.69.0.3783"
           }
         }
       },
@@ -824,7 +776,7 @@
       },
       "Mono.TextTemplating/3.0.0": {
         "dependencies": {
-          "System.CodeDom": "7.0.0"
+          "System.CodeDom": "6.0.0"
         },
         "runtime": {
           "lib/net6.0/Mono.TextTemplating.dll": {
@@ -945,11 +897,11 @@
           }
         }
       },
-      "System.CodeDom/7.0.0": {
+      "System.CodeDom/6.0.0": {
         "runtime": {
-          "lib/net7.0/System.CodeDom.dll": {
-            "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.0.22.51805"
+          "lib/net6.0/System.CodeDom.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
           }
         }
       },
@@ -1180,25 +1132,6 @@
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.1",
           "System.Runtime.Extensions": "4.3.0"
-        }
-      },
-      "System.Management/7.0.2": {
-        "dependencies": {
-          "System.CodeDom": "7.0.0"
-        },
-        "runtime": {
-          "lib/net7.0/System.Management.dll": {
-            "assemblyVersion": "7.0.0.2",
-            "fileVersion": "7.0.723.27404"
-          }
-        },
-        "runtimeTargets": {
-          "runtimes/win/lib/net7.0/System.Management.dll": {
-            "rid": "win",
-            "assetType": "runtime",
-            "assemblyVersion": "7.0.0.2",
-            "fileVersion": "7.0.723.27404"
-          }
         }
       },
       "System.Memory/4.5.4": {},
@@ -1597,34 +1530,6 @@
       "sha512": "sha512-oMb6wsbbb3DkereP6pIcVVUHbuMSPvEmH/brqN4zz647iFg6bRnhS442+fQr9ACYwfK0lXJlMamzQLV2e6MbiA==",
       "path": "cloudinarydotnet/1.27.6",
       "hashPath": "cloudinarydotnet.1.27.6.nupkg.sha512"
-    },
-    "Google.Apis/1.69.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-1TfjsXFejwIf7iWaE7A0FbnOEsk8FPlbdFAt1r+I8aSMQfLLdSVWCLdZz6TzuWVwoCGEuJUHTZ/FXdptdU3qWw==",
-      "path": "google.apis/1.69.0",
-      "hashPath": "google.apis.1.69.0.nupkg.sha512"
-    },
-    "Google.Apis.Auth/1.69.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-ar07yxn/s41jdqQ3sMh8EAehiSvXQ9yE1MS4McmZINeSWvolnLHmIZ9Yxj4tHVIYYz0c7H/lpToVqm7C2aYx9g==",
-      "path": "google.apis.auth/1.69.0",
-      "hashPath": "google.apis.auth.1.69.0.nupkg.sha512"
-    },
-    "Google.Apis.Core/1.69.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-SXUcurNUPxYMtOnawvB2Av18VrPBC9W7So9q9ikmXIXLGiv4RX7Zbu4kc+8PbwTdd8wLt54r0PBGOT5RaKoTjQ==",
-      "path": "google.apis.core/1.69.0",
-      "hashPath": "google.apis.core.1.69.0.nupkg.sha512"
-    },
-    "Google.Apis.Drive.v3/1.69.0.3783": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-ey9szbRuGbpX9Cee0gJ4vWPJmYUNrFhUpx3AlOwErE/LOh7rti+gPa+3AVGq1/S9cYsnTxs6iv0sH7UdKrkL3g==",
-      "path": "google.apis.drive.v3/1.69.0.3783",
-      "hashPath": "google.apis.drive.v3.1.69.0.3783.nupkg.sha512"
     },
     "Humanizer.Core/2.14.1": {
       "type": "package",
@@ -2095,12 +2000,12 @@
       "path": "system.clientmodel/1.2.1",
       "hashPath": "system.clientmodel.1.2.1.nupkg.sha512"
     },
-    "System.CodeDom/7.0.0": {
+    "System.CodeDom/6.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-GLltyqEsE5/3IE+zYRP5sNa1l44qKl9v+bfdMcwg+M9qnQf47wK3H0SUR/T+3N4JEQXF3vV4CSuuo0rsg+nq2A==",
-      "path": "system.codedom/7.0.0",
-      "hashPath": "system.codedom.7.0.0.nupkg.sha512"
+      "sha512": "sha512-CPc6tWO1LAer3IzfZufDBRL+UZQcj5uS207NHALQzP84Vp/z6wF0Aa0YZImOQY8iStY0A2zI/e3ihKNPfUm8XA==",
+      "path": "system.codedom/6.0.0",
+      "hashPath": "system.codedom.6.0.0.nupkg.sha512"
     },
     "System.Collections/4.3.0": {
       "type": "package",
@@ -2269,13 +2174,6 @@
       "sha512": "sha512-5DbqIUpsDp0dFftytzuMmc0oeMdQwjcP/EWxsksIz/w1TcFRkZ3yKKz0PqiYFMmEwPSWw+qNVqD7PJ889JzHbw==",
       "path": "system.linq/4.3.0",
       "hashPath": "system.linq.4.3.0.nupkg.sha512"
-    },
-    "System.Management/7.0.2": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-/qEUN91mP/MUQmJnM5y5BdT7ZoPuVrtxnFlbJ8a3kBJGhe2wCzBfnPFtK2wTtEEcf3DMGR9J00GZZfg6HRI6yA==",
-      "path": "system.management/7.0.2",
-      "hashPath": "system.management.7.0.2.nupkg.sha512"
     },
     "System.Memory/4.5.4": {
       "type": "package",

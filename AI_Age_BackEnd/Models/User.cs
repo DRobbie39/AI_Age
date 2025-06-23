@@ -35,6 +35,8 @@ public partial class User
 
     public virtual ICollection<ArticleRating> ArticleRatings { get; set; } = new List<ArticleRating>();
 
+    public virtual ICollection<ChatHistory> ChatHistories { get; set; } = new List<ChatHistory>();
+
     public virtual Role Role { get; set; } = null!;
 
     public virtual ICollection<UserPostComment> UserPostComments { get; set; } = new List<UserPostComment>();
