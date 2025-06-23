@@ -25,5 +25,11 @@ namespace AI_Age_BackEnd.Repositories
                 .Where(r => r.ArticleId == articleId)
                 .AverageAsync(r => (decimal?)r.RatingValue) ?? 0.0m;
         }
+
+        public async Task<ArticleRating> GetUserRatingAsync(int articleId, int userId)
+        {
+            return await _context.ArticleRatings
+                .FirstOrDefaultAsync(r => r.ArticleId == articleId && r.UserId == userId);
+        }
     }
 }

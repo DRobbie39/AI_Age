@@ -6,5 +6,6 @@ namespace AI_Age_BackEnd.Repositories.Interfaces
     {
         Task AddRatingAsync(ArticleRating articleRating); 
         Task<decimal> GetAverageRatingAsync(int articleId);
+        Task<ArticleRating> GetUserRatingAsync(int articleId, int userId);
     }
 }

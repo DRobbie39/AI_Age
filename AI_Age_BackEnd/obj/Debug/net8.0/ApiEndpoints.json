@@ -150,6 +150,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "AI_Age_BackEnd.Controllers.ArticleController.ArticleController",
+    "Method": "GetUserRating",
+    "RelativePath": "api/Article/user-rating/{articleId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "articleId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AI_Age_BackEnd.Controllers.UserController.AuthController",
     "Method": "Login",
     "RelativePath": "api/Auth/login",
