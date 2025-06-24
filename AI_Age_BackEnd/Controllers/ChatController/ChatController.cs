@@ -28,11 +28,16 @@ namespace AI_Age_BackEnd.Controllers.ChatController
             try
             {
                 var response = await _chatService.GetChatResponseAsync(chatDto);
-                return Ok(new { message = response });
+                return Ok(response);
             }
             catch (Exception ex)
             {
-                return BadRequest(new { Message = "Có lỗi xảy ra. Vui lòng thử lại." });
+                return BadRequest(new AIResponseDto
+                {
+                    Action = "talk",
+                    Response = "Có lỗi xảy ra. Vui lòng thử lại.",
+                    Url = null
+                });
             }
         }
     }

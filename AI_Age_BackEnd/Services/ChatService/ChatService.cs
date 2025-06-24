@@ -1,10 +1,16 @@
 ﻿using AI_Age_BackEnd.DTOs.ChatDTO;
-using OpenAI.Chat;
 using System.Text;
 using System.Text.Json;
 
 namespace AI_Age_BackEnd.Services.ChatService
 {
+    public class AIResponseDto
+    {
+        public string Action { get; set; }
+        public string Response { get; set; }
+        public string Url { get; set; }
+    }
+
     public class ChatService
     {
         private readonly HttpClient _httpClient;
@@ -13,36 +19,60 @@ namespace AI_Age_BackEnd.Services.ChatService
         public ChatService(IConfiguration configuration)
         {
             _apiKey = configuration["GoogleGemini:ApiKey"];
-            Console.WriteLine($"API Key: {_apiKey}");
             _httpClient = new HttpClient();
         }
 
-        public async Task<string> GetChatResponseAsync(ChatDto chatDto)
+        public async Task<AIResponseDto> GetChatResponseAsync(ChatDto chatDto)
         {
-            // Endpoint của Google Gemini Pro
             var url = $"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key={_apiKey}";
 
-            // Cấu trúc request body theo chuẩn của Gemini
+            var systemInstruction = @"
+                Bối cảnh: Bạn là một trợ lý AI thân thiện, chuyên giúp đỡ người lớn tuổi ở Việt Nam.
+                Hãy trả lời mọi câu hỏi bằng tiếng Việt, dùng từ ngữ đơn giản, dễ hiểu, kiên nhẫn và gần gũi.
+
+                Bạn có 3 khả năng chính:
+                1. 'talk': Trả lời câu hỏi thông thường.
+                2. 'navigate': Điều hướng trong trang web. Các trang có sẵn:
+                    - Trang chủ: /Home/Index
+                    - Bài viết hướng dẫn: /Article/Index
+                    - Video hướng dẫn: /VideoArticle/Index
+                    - Diễn đàn: /Forum/Index
+                3. 'open_external': Mở một trang web bên ngoài.
+
+                DỰA VÀO CÂU HỎI CỦA NGƯỜI DÙNG, BẠN PHẢI LUÔN LUÔN TRẢ VỀ MỘT ĐỐI TƯỢNG JSON VỚI CẤU TRÚC SAU:
+                {
+                  ""action"": ""[tên_hành_động]"",
+                  ""response"": ""[câu trả lời thân thiện cho người dùng]"",
+                  ""url"": ""[đường dẫn nếu có]""
+                }
+
+                VÍ DỤ:
+                - Người dùng hỏi: 'Thời tiết hôm nay thế nào?' -> {""action"": ""talk"", ""response"": ""Dạ, thời tiết hôm nay ở [địa điểm] là..."", ""url"": null}
+                - Người dùng hỏi: 'Mở cho tôi trang tin tức' -> {""action"": ""navigate"", ""response"": ""Dạ được, con đang mở trang tin tức cho ông/bà."", ""url"": ""/News/Index""}
+                - Người dùng hỏi: 'Mở trang Youtube' -> {""action"": ""open_external"", ""response"": ""Vâng ạ, con sẽ mở trang YouTube trong một thẻ mới."", ""url"": ""https://www.youtube.com""}
+                - Người dùng hỏi: 'chỉ cho tôi cách dùng Zalo' -> {""action"": ""navigate"", ""response"": ""Dạ đây là bài hướng dẫn dùng Zalo ạ."", ""url"": ""/Tutorial/Zalo""}
+
+                Nếu không chắc chắn, hãy chọn action là 'talk'. Chỉ trả về DUY NHẤT đối tượng JSON, không thêm bất kỳ văn bản nào khác.
+                Dưới đây là câu hỏi của họ:
+            ";
+
             var requestBody = new
             {
-                // "contents" là một mảng, chứa lịch sử cuộc trò chuyện
                 contents = new object[]
                 {
-                    // Vai trò của người dùng
                     new {
                         role = "user",
                         parts = new object[] {
-                            // System prompt được lồng vào câu hỏi đầu tiên để định hướng cho AI
-                            new { text = "Bối cảnh: Bạn là một trợ lý AI thân thiện, chuyên giúp đỡ người lớn tuổi ở Việt Nam. Hãy trả lời mọi câu hỏi bằng tiếng Việt, dùng từ ngữ đơn giản, dễ hiểu, kiên nhẫn và gần gũi như đang nói chuyện với ông bà, cha mẹ. Mục tiêu của bạn là giúp họ làm quen với công nghệ và cảm thấy tự tin hơn khi sử dụng. Dưới đây là câu hỏi của họ:" },
+                            new { text = systemInstruction },
                             new { text = chatDto.Question }
                         }
                     }
                 },
-                // Cấu hình an toàn và các tham số khác
                 generationConfig = new
                 {
-                    temperature = 0.7,
-                    maxOutputTokens = 400 // Tăng lên một chút để có câu trả lời dài hơn nếu cần
+                    temperature = 0.5,
+                    maxOutputTokens = 400,
+                    response_mime_type = "application/json"
                 }
             };
 
@@ -54,24 +84,37 @@ namespace AI_Age_BackEnd.Services.ChatService
             if (!response.IsSuccessStatusCode)
             {
                 var error = await response.Content.ReadAsStringAsync();
-                // Ghi log lỗi để debug dễ hơn
                 Console.WriteLine($"Gemini API error: {error}");
                 throw new Exception("Lỗi khi kết nối đến trợ lý AI.");
             }
 
             var responseString = await response.Content.ReadAsStringAsync();
 
-            // Phân tích JSON response của Gemini
-            using var jsonDoc = JsonDocument.Parse(responseString);
-            // Cấu trúc response của Gemini: candidates[0] -> content -> parts[0] -> text
-            var content = jsonDoc.RootElement
-                                 .GetProperty("candidates")[0]
-                                 .GetProperty("content")
-                                 .GetProperty("parts")[0]
-                                 .GetProperty("text")
-                                 .GetString();
+            try
+            {
+                using var jsonDoc = JsonDocument.Parse(responseString);
+                var aiResponseText = jsonDoc.RootElement
+                                            .GetProperty("candidates")[0]
+                                            .GetProperty("content")
+                                            .GetProperty("parts")[0]
+                                            .GetProperty("text")
+                                            .GetString();
 
-            return content ?? "Xin lỗi, tôi chưa thể trả lời câu hỏi này.";
+                var aiResponse = JsonSerializer.Deserialize<AIResponseDto>(aiResponseText, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+
+                return aiResponse ?? throw new Exception("Không thể phân tích phản hồi từ AI.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error parsing AI response: {ex.Message}");
+
+                return new AIResponseDto
+                {
+                    Action = "talk",
+                    Response = "Con xin lỗi, đã có lỗi xảy ra. Ông/Bà vui lòng thử lại sau ạ.",
+                    Url = null
+                };
+            }
         }
     }
 }
