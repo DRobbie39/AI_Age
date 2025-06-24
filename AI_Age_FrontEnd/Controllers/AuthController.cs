@@ -92,7 +92,6 @@ namespace AI_Age_FrontEnd.Controllers
         [HttpGet]
         public IActionResult Logout()
         {
-            HttpContext.Session.Clear();
             return RedirectToAction("Index", "Home");
         }
     }

@@ -42,6 +42,7 @@ wwwroot\img\trainers\trainer-2-2.jpg
 wwwroot\img\trainers\trainer-3.jpg
 wwwroot\img\trainers\trainer-3-2.jpg
 wwwroot\img\videoplayback.mp4
+wwwroot\js\chatbox.js
 wwwroot\js\main.js
 wwwroot\js\toastrNotification.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css

@@ -1,4 +1,4 @@
-(function() {
+﻿(function() {
   "use strict";
 
   /**
@@ -35,7 +35,6 @@
         mobileNavToogle();
       }
     });
-
   });
 
   /**
@@ -126,3 +125,29 @@
   window.addEventListener("load", initSwiper);
 
 })();
+
+
+// Đăng xuất
+function performLogout() {
+    // Dừng tất cả speech synthesis nếu có
+    if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+    }
+
+    localStorage.removeItem('jwtToken');
+    localStorage.removeItem('userId');
+    localStorage.removeItem('username');
+
+    window.location.href = '/Home/Index';
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('a[href="/Auth/Logout"]').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+
+            performLogout();
+        });
+    });
+});
