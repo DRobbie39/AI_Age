@@ -12,6 +12,7 @@ wwwroot\img\course-1.jpg
 wwwroot\img\course-2.jpg
 wwwroot\img\course-3.jpg
 wwwroot\img\course-details.jpg
+wwwroot\img\chatbox.jpg
 wwwroot\img\chatgpt.jpg
 wwwroot\img\events-item-1.jpg
 wwwroot\img\events-item-2.jpg

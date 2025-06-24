@@ -45,6 +45,10 @@
       "PackagePath": "staticwebassets\\img\\apple-touch-icon.png"
     },
     {
+      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\chatbox.jpg",
+      "PackagePath": "staticwebassets\\img\\chatbox.jpg"
+    },
+    {
       "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\chatgpt.jpg",
       "PackagePath": "staticwebassets\\img\\chatgpt.jpg"
     },

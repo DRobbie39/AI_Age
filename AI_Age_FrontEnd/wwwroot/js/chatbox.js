@@ -7,6 +7,10 @@
     const sendBtn = document.getElementById('send-btn');
     const micBtn = document.getElementById('mic-btn');
 
+    // Ảnh đại diện
+    const userAvatarUrl = '/img/profile.png';
+    const botAvatarUrl = '/img/chatbox.jpg';
+
     const token = localStorage.getItem('jwtToken');
     if (!token) {
         const chatWidget = document.querySelector('.chat-widget-container');
@@ -56,9 +60,13 @@
     const toggleChat = () => chatContainer.classList.toggle('open');
 
     const addMessageToChat = (text, sender) => {
+        const avatarUrl = sender === 'user' ? userAvatarUrl : botAvatarUrl;
         const messageDiv = document.createElement('div');
         messageDiv.className = `chat-message ${sender}`;
-        messageDiv.innerHTML = `<p>${text}</p>`;
+        messageDiv.innerHTML = `
+            <img src="${avatarUrl}" alt="${sender} Avatar" class="chat-avatar">
+            <p>${text}</p>
+        `;
         chatBody.appendChild(messageDiv);
         chatBody.scrollTop = chatBody.scrollHeight;
     };
@@ -66,7 +74,11 @@
     const showTypingIndicator = () => {
         const typingDiv = document.createElement('div');
         typingDiv.className = 'chat-message bot typing-indicator';
-        typingDiv.innerHTML = `<p><span>.</span><span>.</span><span>.</span></p>`;
+        // THAY ĐỔI: Thêm avatar cho chỉ báo "đang gõ"
+        typingDiv.innerHTML = `
+            <img src="${botAvatarUrl}" alt="Bot Avatar" class="chat-avatar">
+            <p><span>.</span><span>.</span><span>.</span></p>
+        `;
         chatBody.appendChild(typingDiv);
         chatBody.scrollTop = chatBody.scrollHeight;
     };
