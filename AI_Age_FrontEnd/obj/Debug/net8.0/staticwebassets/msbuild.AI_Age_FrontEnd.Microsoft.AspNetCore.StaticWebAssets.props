@@ -840,8 +840,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>d9iko83jym</Fingerprint>
-      <Integrity>ccHwJwhtz/BMr05Z3bXfzfuT7jMLapMByZNdU46Stb8=</Integrity>
+      <Fingerprint>20v60nt3q4</Fingerprint>
+      <Integrity>ci5z7wVY1aAGp/PKGOh16ymmyQmhgTFEmjtYr4Tkfsw=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\chatbox.js'))</OriginalItemSpec>
