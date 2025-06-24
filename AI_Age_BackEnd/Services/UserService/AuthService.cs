@@ -1,6 +1,7 @@
 ﻿using AI_Age_BackEnd.DTOs.UserDTO;
 using AI_Age_BackEnd.Models;
 using AI_Age_BackEnd.Repositories;
+using AI_Age_BackEnd.Repositories.Interfaces;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -10,14 +11,13 @@ namespace AI_Age_BackEnd.Services.UserService
 {
     public class AuthService
     {
-        private readonly AI_AgeContext _context;
-        private readonly UserRepository _userRepository;
+        //private readonly AI_AgeContext _context;
+        private readonly IUserRepository _userRepository;
         private readonly IConfiguration _configuration;
 
-        public AuthService(AI_AgeContext context, IConfiguration configuration)
+        public AuthService(IUserRepository userRepository, IConfiguration configuration)
         {
-            _context = context;
-            _userRepository = new UserRepository(_context);
+            _userRepository = userRepository;
             _configuration = configuration;
         }
 
@@ -62,9 +62,10 @@ namespace AI_Age_BackEnd.Services.UserService
         {
             var claims = new[]
             {
-            new Claim(JwtRegisteredClaimNames.Sub, user.Username),
+            new Claim(JwtRegisteredClaimNames.Sub, user.UserId.ToString()),
+            new Claim(JwtRegisteredClaimNames.Name, user.Username),
             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-            new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),
+            //new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),
             new Claim(ClaimTypes.Role, user.RoleId.ToString())
         };
 
