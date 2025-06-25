@@ -14,9 +14,19 @@ namespace AI_Age_FrontEnd.Controllers
             _httpClient.BaseAddress = new Uri("https://localhost:7022/api/");
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string? query)
         {
-            var response = await _httpClient.GetAsync("VideoArticle/getallvideoarticles");
+            ViewData["CurrentFilter"] = query;
+
+            var requestUri = "VideoArticle/getallvideoarticles";
+
+            if (!string.IsNullOrEmpty(query))
+            {
+                // Uri.EscapeDataString để mã hóa các ký tự đặc biệt trong query (ví dụ: dấu cách)
+                requestUri += $"?query={Uri.EscapeDataString(query)}";
+            }
+
+            var response = await _httpClient.GetAsync(requestUri);
             response.EnsureSuccessStatusCode();
 
             var jsonString = await response.Content.ReadAsStringAsync();

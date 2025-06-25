@@ -5,7 +5,7 @@ namespace AI_Age_BackEnd.Repositories.Interfaces
     public interface IVideoArticleRepository
     {
         Task<VideoArticle> GetVideoArticleByIdAsync(int id);
-        Task<List<VideoArticle>> GetAllVideoArticlesAsync();
+        Task<List<VideoArticle>> GetAllVideoArticlesAsync(string? searchQuery = null);
         Task AddVideoArticleAsync(VideoArticle videoArticle);
         Task UpdateVideoArticleAsync(VideoArticle videoArticle);
         Task DeleteVideoArticleAsync(int id);

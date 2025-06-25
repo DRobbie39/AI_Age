@@ -29,8 +29,8 @@
     <div class="container">
         <!-- Search Bar -->
         <div class="article-list__search-bar mb-4" data-aos="fade-up" data-aos-delay="100">
-            <form asp-controller="Course" asp-action="Search" method="get" class="d-flex align-items-center">
-                <input type="text" name="query" class="article-list__form-control article-list__search-input" placeholder="Tìm kiếm bài hướng dẫn (ví dụ: Nhập môn AI)" aria-label="Tìm kiếm bài hướng dẫn">
+            <form asp-controller="Article" asp-action="Index" method="get" class="d-flex align-items-center">
+                <input type="text" name="query" value="@ViewData["CurrentFilter"]" class="article-list__form-control article-list__search-input" placeholder="Tìm kiếm bài hướng dẫn (ví dụ: Nhập môn AI)" aria-label="Tìm kiếm bài hướng dẫn">
                 <button type="submit" class="btn article-list__search-button">
                     <i class="bi bi-search"></i> Tìm kiếm
                 </button>
@@ -40,7 +40,14 @@
             @if (Model == null || !Model.Any())
             {
                 <div class="col-12 text-center">
-                    <p class="text-muted">Không có bài viết nào.</p>
+                    @if (ViewData["CurrentFilter"] != null && !string.IsNullOrEmpty(ViewData["CurrentFilter"].ToString()))
+                    {
+                        <p class="text-muted fs-5 mt-4">Không tìm thấy bài viết nào phù hợp với từ khóa "<strong>@ViewData["CurrentFilter"]</strong>".</p>
+                    }
+                    else
+                    {
+                        <p class="text-muted fs-5 mt-4">Hiện chưa có bài viết nào.</p>
+                    }
                 </div>
             }
             else

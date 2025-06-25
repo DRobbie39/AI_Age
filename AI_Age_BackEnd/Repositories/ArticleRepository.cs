@@ -21,12 +21,24 @@ namespace AI_Age_BackEnd.Repositories
                 .FirstOrDefaultAsync(a => a.ArticleId == id);
         }
 
-        public async Task<List<Article>> GetAllArticlesAsync()
+        public async Task<List<Article>> GetAllArticlesAsync(string? searchQuery = null)
         {
-            return await _context.Articles
-                .Include(a => a.Category)
-                .Include(a => a.AuthorNavigation)
-                .ToListAsync();
+            var query = _context.Articles
+               .Include(a => a.Category)
+               .Include(a => a.AuthorNavigation)
+               .AsQueryable();
+
+            // Nếu có từ khóa tìm kiếm, thêm điều kiện Where vào truy vấn
+            if (!string.IsNullOrEmpty(searchQuery))
+            {
+                // ToLower() để tìm kiếm không phân biệt hoa thường
+                var lowerCaseSearchQuery = searchQuery.ToLower();
+                query = query.Where(a =>
+                    a.Title.ToLower().Contains(lowerCaseSearchQuery) ||
+                    a.Summary.ToLower().Contains(lowerCaseSearchQuery));
+            }
+
+            return await query.OrderByDescending(a => a.PostedDate).ToListAsync();
         }
 
         public async Task AddArticleAsync(Article article)
