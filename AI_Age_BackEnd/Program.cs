@@ -38,6 +38,7 @@ namespace AI_Age_BackEnd
             builder.Services.AddScoped<ArticleService>();
             builder.Services.AddScoped<VideoArticleService>();
             builder.Services.AddScoped<ChatService>();
+            builder.Services.AddScoped<UserService>();
 
             // Cấu hình CORS
             builder.Services.AddCors(options =>
