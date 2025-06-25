@@ -45,7 +45,7 @@
 }
 
 .video-list__content-title-link:hover {
-    color: var(--accent-color);
+/*    color: var(--accent-color);*/
 }
 
 .video-list__content-category {

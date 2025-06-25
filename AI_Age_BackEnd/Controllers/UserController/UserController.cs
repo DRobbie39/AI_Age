@@ -1,37 +1,71 @@
 ﻿using AI_Age_BackEnd.DTOs.UserDTO;
 using AI_Age_BackEnd.Services.UserService;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace AI_Age_BackEnd.Controllers.UserController
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UserController : Controller
+    [Authorize]
+    public class UsersController : ControllerBase
     {
-        //[Authorize(Roles = "Admin")] // Bật dòng này để chỉ Admin mới có quyền truy cập
         private readonly UserService _userService;
 
-        public UserController(UserService userService)
+        public UsersController(UserService userService)
         {
             _userService = userService;
         }
 
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<UserDto>>> GetAllUsers()
+        // Lấy UserID từ token
+        private int GetCurrentUserId()
         {
-            var users = await _userService.GetAllUsersAsync();
-            return Ok(users);
+            var userIdString = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (int.TryParse(userIdString, out var userId))
+            {
+                return userId;
+            }
+
+            throw new UnauthorizedAccessException("UserID không hợp lệ trong token.");
         }
 
-        [HttpGet("{id}")]
-        public async Task<ActionResult<UserDto>> GetUserById(int id)
+        [HttpGet("profile")]
+        public async Task<IActionResult> GetUserProfile()
         {
-            var user = await _userService.GetUserByIdAsync(id);
-            if (user == null)
+            var userId = GetCurrentUserId();
+            var userProfile = await _userService.GetUserProfileByIdAsync(userId);
+            if (userProfile == null)
             {
-                return NotFound();
+                return NotFound(new { message = "Không tìm thấy người dùng." });
             }
-            return Ok(user);
+            return Ok(userProfile);
+        }
+
+        [HttpPut("profile")]
+        public async Task<IActionResult> UpdateUserProfile([FromForm] UserUpdateDto userUpdateDto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                var userId = GetCurrentUserId();
+                var updatedProfile = await _userService.UpdateUserProfileAsync(userId, userUpdateDto);
+
+                if (updatedProfile == null)
+                {
+                    return NotFound(new { message = "Không tìm thấy người dùng để cập nhật." });
+                }
+
+                return Ok(new { message = "Cập nhật thông tin thành công!", profile = updatedProfile });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = $"Lỗi máy chủ: {ex.Message}" });
+            }
         }
     }
 }
