@@ -35,7 +35,12 @@ namespace AI_Age_BackEnd.Controllers.UserController
             try
             {
                 var (user, token) = await _userService.LoginUserAsync(loginDto);
-                return Ok(new { Message = "Đăng nhập thành công", user?.UserId, Token = token });
+                return Ok(new {
+                    Message = "Đăng nhập thành công",
+                    user?.UserId,
+                    user?.RoleId,
+                    Token = token
+                });
             }
             catch (Exception ex)
             {

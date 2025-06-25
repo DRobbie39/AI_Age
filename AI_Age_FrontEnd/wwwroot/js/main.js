@@ -136,6 +136,7 @@ function performLogout() {
 
     localStorage.removeItem('jwtToken');
     localStorage.removeItem('userId');
+    localStorage.removeItem('roleId');
     localStorage.removeItem('username');
 
     window.location.href = '/Home/Index';

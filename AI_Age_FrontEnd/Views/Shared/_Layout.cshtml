@@ -84,6 +84,7 @@
                     <script>
                         document.addEventListener('DOMContentLoaded', function() {
                             const username = localStorage.getItem('username');
+                            const roleId = localStorage.getItem('roleId');
                             const navMenu = document.querySelector('#navmenu ul');
 
                             if (username && navMenu) {
@@ -94,21 +95,35 @@
                                 }
 
                                 // Tạo dropdown user menu
-                                const userDropdown = document.createElement('li');
-                                userDropdown.className = 'dropdown';
-                                userDropdown.innerHTML = `
-                                    <a href="#" onclick="return false;">
-                                        <img src="/img/profile.png" alt="Avatar" class="user-avatar" />
-                                        <span>${username}</span>
-                                        <i class="bi bi-chevron-down toggle-dropdown"></i>
-                                    </a>
-                                    <ul>
-                                        <li><a href="/Auth/Profile">Thông tin người dùng</a></li>
-                                        <li><a href="#" onclick="performLogout(); return false;">Đăng xuất</a></li>
-                                    </ul>
-                                `;
+                                            let dropdownMenuItems = `
+                            <ul>
+                                <li><a href="/Auth/Profile">Thông tin người dùng</a></li>`;
 
-                                navMenu.appendChild(userDropdown);
+                        // KIỂM TRA ROLEID Ở ĐÂY
+                        // localStorage lưu giá trị dưới dạng chuỗi, nên so sánh với chuỗi '1'
+                        if (roleId === '1') {
+                            // Nếu là admin (RoleID = 1), thêm link Quản trị
+                            dropdownMenuItems += `<li><a href="/Admin/Dashboard">Quản trị</a></li>`; // Thay /Admin/Dashboard bằng link trang quản trị của bạn
+                        }
+
+                        dropdownMenuItems += `
+                                <li><a href="#" onclick="performLogout(); return false;">Đăng xuất</a></li>
+                            </ul>`;
+
+                        // Tạo thẻ <li> chứa dropdown
+                        const userDropdown = document.createElement('li');
+                        userDropdown.className = 'dropdown';
+                        userDropdown.innerHTML = `
+                            <a href="#" onclick="return false;">
+                                <img src="/img/profile.png" alt="Avatar" class="user-avatar" />
+                                <span>${username}</span>
+                                <i class="bi bi-chevron-down toggle-dropdown"></i>
+                            </a>
+                            ${dropdownMenuItems}
+                        `;
+                        // --- KẾT THÚC PHẦN LOGIC MỚI ---
+
+                        navMenu.appendChild(userDropdown);
                             } else if (navMenu) {
                                 // Người dùng chưa đăng nhập
                                 const loginBtn = navMenu.querySelector('a.btn-getstarted[href="/Auth/Login"]');

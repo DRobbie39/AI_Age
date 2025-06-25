@@ -78,6 +78,7 @@ namespace AI_Age_FrontEnd.Controllers
 
                 ViewBag.Token = result.ContainsKey("token") ? result["token"].ToString() : null;
                 ViewBag.UserId = result.ContainsKey("userId") ? result["userId"].ToString() : null;
+                ViewBag.RoleId = result.ContainsKey("roleId") ? result["roleId"].ToString() : null;
                 ViewBag.Username = model.Username;
 
                 return View("Login");
