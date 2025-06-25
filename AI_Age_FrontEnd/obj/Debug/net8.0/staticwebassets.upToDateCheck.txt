@@ -599,6 +599,7 @@ wwwroot\css\user\article.css
 wwwroot\css\user\auth.css
 wwwroot\css\user\chat.css
 wwwroot\css\user\forum.css
+wwwroot\css\user\profile.css
 wwwroot\css\user\video-article.css
 wwwroot\favicon.ico
 wwwroot\img\about.jpg

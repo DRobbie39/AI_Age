@@ -29,7 +29,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 25 Jun 2025 04:59:48 GMT"
+          "Value": "Wed, 25 Jun 2025 07:05:17 GMT"
         }
       ],
       "EndpointProperties": [
@@ -74,7 +74,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 25 Jun 2025 04:59:48 GMT"
+          "Value": "Wed, 25 Jun 2025 07:05:17 GMT"
         }
       ],
       "EndpointProperties": [
@@ -49363,6 +49363,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-84/9eqAmKj4AisfrRxj/qzHXjDTkXTa5PuN5bo8rngc="
+        }
+      ]
+    },
+    {
+      "Route": "css/user/profile.css",
+      "AssetFile": "css/user/profile.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2745"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yb057E5gtCnqTYlrWbD6/b3eGQMOUJz+4CaGWLZaYvA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 25 Jun 2025 07:02:20 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-yb057E5gtCnqTYlrWbD6/b3eGQMOUJz+4CaGWLZaYvA="
+        }
+      ]
+    },
+    {
+      "Route": "css/user/profile.f6lgryvzvm.css",
+      "AssetFile": "css/user/profile.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2745"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yb057E5gtCnqTYlrWbD6/b3eGQMOUJz+4CaGWLZaYvA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 25 Jun 2025 07:02:20 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "f6lgryvzvm"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-yb057E5gtCnqTYlrWbD6/b3eGQMOUJz+4CaGWLZaYvA="
+        },
+        {
+          "Name": "label",
+          "Value": "css/user/profile.css"
         }
       ]
     },

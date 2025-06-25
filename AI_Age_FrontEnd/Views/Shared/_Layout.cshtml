@@ -90,45 +90,42 @@
                             if (username && navMenu) {
                                 // Tìm và xóa nút đăng nhập nếu có
                                 const loginBtn = navMenu.querySelector('a.btn-getstarted[href="/Auth/Login"]');
+
                                 if (loginBtn) {
                                     loginBtn.remove();
                                 }
 
                                 // Tạo dropdown user menu
-                                            let dropdownMenuItems = `
-                            <ul>
-                                <li><a href="/Auth/Profile">Thông tin người dùng</a></li>`;
+                                let dropdownMenuItems = `<ul><li><a href="/Profile/Index">Thông tin người dùng</a></li>`;
 
-                        // KIỂM TRA ROLEID Ở ĐÂY
-                        // localStorage lưu giá trị dưới dạng chuỗi, nên so sánh với chuỗi '1'
-                        if (roleId === '1') {
-                            // Nếu là admin (RoleID = 1), thêm link Quản trị
-                            dropdownMenuItems += `<li><a href="/Admin/Dashboard">Quản trị</a></li>`; // Thay /Admin/Dashboard bằng link trang quản trị của bạn
-                        }
+                                if (roleId === '1') {
+                                    // Nếu là admin (RoleID = 1), thêm link Quản trị
+                                    dropdownMenuItems += `<li><a href="/Admin/Dashboard">Quản trị</a></li>`;
+                                }
 
-                        dropdownMenuItems += `
-                                <li><a href="#" onclick="performLogout(); return false;">Đăng xuất</a></li>
-                            </ul>`;
+                                dropdownMenuItems += `<li><a href="#" onclick="performLogout(); return false;">Đăng xuất</a></li></ul>`;
 
-                        // Tạo thẻ <li> chứa dropdown
-                        const userDropdown = document.createElement('li');
-                        userDropdown.className = 'dropdown';
-                        userDropdown.innerHTML = `
-                            <a href="#" onclick="return false;">
-                                <img src="/img/profile.png" alt="Avatar" class="user-avatar" />
-                                <span>${username}</span>
-                                <i class="bi bi-chevron-down toggle-dropdown"></i>
-                            </a>
-                            ${dropdownMenuItems}
-                        `;
-                        // --- KẾT THÚC PHẦN LOGIC MỚI ---
+                                // Tạo thẻ <li> chứa dropdown
+                                const userDropdown = document.createElement('li');
 
-                        navMenu.appendChild(userDropdown);
+                                userDropdown.className = 'dropdown';
+                                userDropdown.innerHTML = `
+                                    <a href="#" onclick="return false;">
+                                        <img src="/img/profile.png" alt="Avatar" class="user-avatar" />
+                                        <span>${username}</span>
+                                        <i class="bi bi-chevron-down toggle-dropdown"></i>
+                                    </a>
+                                    ${dropdownMenuItems}
+                                `;
+
+                                navMenu.appendChild(userDropdown);
                             } else if (navMenu) {
                                 // Người dùng chưa đăng nhập
                                 const loginBtn = navMenu.querySelector('a.btn-getstarted[href="/Auth/Login"]');
+
                                 if (!loginBtn) {
                                     const loginLi = document.createElement('li');
+
                                     loginLi.innerHTML = '<a class="btn-getstarted" href="/Auth/Login">Đăng nhập</a>';
                                     navMenu.appendChild(loginLi);
                                 }
@@ -138,7 +135,6 @@
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
-
         </div>
     </header>
 
