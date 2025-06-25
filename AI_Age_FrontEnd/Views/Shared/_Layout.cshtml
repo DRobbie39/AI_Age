@@ -33,6 +33,7 @@
     <link href="~/css/user/video-article.css" rel="stylesheet">
     <link href="~/css/user/forum.css" rel="stylesheet">
     <link href="~/css/user/chat.css" rel="stylesheet">
+    <link href="~/css/user/profile.css" rel="stylesheet">
 </head>
 
 <body class="index-page">
@@ -85,7 +86,11 @@
                         document.addEventListener('DOMContentLoaded', function() {
                             const username = localStorage.getItem('username');
                             const roleId = localStorage.getItem('roleId');
+                            const avatarUrl = localStorage.getItem('avatar');
                             const navMenu = document.querySelector('#navmenu ul');
+
+                            const defaultAvatar = '/img/profile.png';
+                            const displayAvatar = avatarUrl || defaultAvatar;
 
                             if (username && navMenu) {
                                 // Tìm và xóa nút đăng nhập nếu có
@@ -105,13 +110,12 @@
 
                                 dropdownMenuItems += `<li><a href="#" onclick="performLogout(); return false;">Đăng xuất</a></li></ul>`;
 
-                                // Tạo thẻ <li> chứa dropdown
                                 const userDropdown = document.createElement('li');
 
                                 userDropdown.className = 'dropdown';
                                 userDropdown.innerHTML = `
                                     <a href="#" onclick="return false;">
-                                        <img src="/img/profile.png" alt="Avatar" class="user-avatar" />
+                                        <img src="${displayAvatar}" alt="Avatar" class="user-avatar" id="layoutUserAvatar" />
                                         <span>${username}</span>
                                         <i class="bi bi-chevron-down toggle-dropdown"></i>
                                     </a>
@@ -129,6 +133,16 @@
                                     loginLi.innerHTML = '<a class="btn-getstarted" href="/Auth/Login">Đăng nhập</a>';
                                     navMenu.appendChild(loginLi);
                                 }
+                            }
+                        });
+
+                        // Lắng nghe sự kiện "avatarUpdated" được bắn ra từ trang Profile
+                        window.addEventListener('avatarUpdated', function(event) {
+                            const newAvatarUrl = event.detail.newAvatarUrl;
+                            const avatarImg = document.getElementById('layoutUserAvatar');
+
+                            if (avatarImg) {                             
+                                avatarImg.src = newAvatarUrl || '/img/profile.png';
                             }
                         });
                     </script>

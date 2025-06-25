@@ -43,11 +43,12 @@
     @if (ViewBag.Token != null && ViewBag.Username != null)
     {
         <script>
-            // Lưu token và username vào localStorage
+            // Lưu các thông tin vào local storage
             localStorage.setItem('jwtToken', '@ViewBag.Token');
             localStorage.setItem('userId', '@ViewBag.UserId');
             localStorage.setItem('roleId', '@ViewBag.RoleId');
             localStorage.setItem('username', '@ViewBag.Username');
+
             handleLoginSuccess('@ViewBag.Username');
             setTimeout(() => {
                 window.location.href = '/Home/Index';

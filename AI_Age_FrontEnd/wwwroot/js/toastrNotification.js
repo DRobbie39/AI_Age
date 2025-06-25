@@ -39,3 +39,7 @@ function handleRatingSuccess(message) {
 function handleRatingError(message) {
     showToastrNotification('error', 'Đánh giá thất bại.');
 }
+
+function handleUpdateProfileSuccess(message) {
+    showToastrNotification('success', 'Cập nhật thông tin thành công.');
+}

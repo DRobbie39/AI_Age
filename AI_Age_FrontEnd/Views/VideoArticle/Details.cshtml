@@ -57,21 +57,23 @@
                             </li>
                             <li>
                                 <h5>Cấp độ</h5>
-                                @switch (Model.Level)
-                                {
-                                    case 1:
-                                        <span>Cơ bản</span>
-                                        break;
-                                    case 2:
-                                        <span>Trung bình</span>
-                                        break;
-                                    case 3:
-                                        <span>Nâng cao</span>
-                                        break;
-                                    default:
-                                        <span>Không xác định</span>
-                                        break;
-                                }
+                                <p>
+                                    @switch (Model.Level)
+                                    {
+                                        case 1:
+                                            <span>Cơ bản</span>
+                                            break;
+                                        case 2:
+                                            <span>Trung bình</span>
+                                            break;
+                                        case 3:
+                                            <span>Nâng cao</span>
+                                            break;
+                                        default:
+                                            <span>Không xác định</span>
+                                            break;
+                                    }
+                                </p>
                             </li>
                             <li>
                                 <h5>Ngày đăng</h5>
