@@ -26,8 +26,8 @@ namespace AI_Age_FrontEnd
             app.UseAuthorization();
 
             app.MapControllerRoute(
-                name: "Admin",
-                pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+                name: "areas",
+                pattern: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}");
 
             app.MapControllerRoute(
                 name: "default",

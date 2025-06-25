@@ -6,5 +6,7 @@ namespace AI_Age_BackEnd.Repositories.Interfaces
     {
         Task<User> GetUserByUsernameAsync(string username);
         Task AddUserAsync(User user);
+        Task<IEnumerable<User>> GetAllUsersAsync();
+        Task<User?> GetUserByIdAsync(int id);
     }
 }
