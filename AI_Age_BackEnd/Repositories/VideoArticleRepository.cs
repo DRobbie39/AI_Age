@@ -21,12 +21,22 @@ namespace AI_Age_BackEnd.Repositories
                 .FirstOrDefaultAsync(v => v.VideoId == id);
         }
 
-        public async Task<List<VideoArticle>> GetAllVideoArticlesAsync()
+        public async Task<List<VideoArticle>> GetAllVideoArticlesAsync(string? searchQuery = null)
         {
-            return await _context.VideoArticles
+            var query = _context.VideoArticles
                 .Include(v => v.Category)
                 .Include(v => v.UploaderNavigation)
-                .ToListAsync();
+                .AsQueryable();
+
+            if (!string.IsNullOrEmpty(searchQuery))
+            {
+                // ToLower() để tìm kiếm không phân biệt hoa thường
+                var lowerCaseSearchQuery = searchQuery.ToLower();
+                query = query.Where(a =>
+                    a.Title.ToLower().Contains(lowerCaseSearchQuery));
+            }
+
+            return await query.OrderByDescending(a => a.PostedDate).ToListAsync();
         }
 
         public async Task AddVideoArticleAsync(VideoArticle videoArticle)

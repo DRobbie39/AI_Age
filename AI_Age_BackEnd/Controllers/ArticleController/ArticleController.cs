@@ -18,11 +18,11 @@ namespace AI_Age_BackEnd.Controllers.ArticleController
         }
 
         [HttpGet("getallarticles")]
-        public async Task<IActionResult> GetAllArticles()
+        public async Task<IActionResult> GetAllArticles([FromQuery] string? query)
         {
             try
             {
-                var articles = await _articleService.GetAllArticlesAsync();
+                var articles = await _articleService.GetAllArticlesAsync(query);
                 return Ok(articles);
             }
             catch (Exception)

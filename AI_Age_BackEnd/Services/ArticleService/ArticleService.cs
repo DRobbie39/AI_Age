@@ -102,9 +102,9 @@ namespace AI_Age_BackEnd.Services.ArticleService
             };
         }
 
-        public async Task<List<ArticleDto>> GetAllArticlesAsync()
+        public async Task<List<ArticleDto>> GetAllArticlesAsync(string? searchQuery = null)
         {
-            var articles = await _articleRepository.GetAllArticlesAsync();
+            var articles = await _articleRepository.GetAllArticlesAsync(searchQuery);
             return articles.Select(article => new ArticleDto
             {
                 ArticleId = article.ArticleId,

@@ -126,9 +126,9 @@ namespace AI_Age_BackEnd.Services.VideoArticleService
             };
         }
 
-        public async Task<List<VideoArticleDto>> GetAllVideoArticlesAsync()
+        public async Task<List<VideoArticleDto>> GetAllVideoArticlesAsync(string? searchQuery = null)
         {
-            var videoArticles = await _videoArticleRepository.GetAllVideoArticlesAsync();
+            var videoArticles = await _videoArticleRepository.GetAllVideoArticlesAsync(searchQuery);
             return videoArticles.Select(video => new VideoArticleDto
             {
                 VideoId = video.VideoId,
