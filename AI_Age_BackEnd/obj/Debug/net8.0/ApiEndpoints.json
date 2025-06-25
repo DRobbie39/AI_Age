@@ -95,6 +95,22 @@
   },
   {
     "ContainingType": "AI_Age_BackEnd.Controllers.ArticleController.ArticleController",
+    "Method": "IncrementView",
+    "RelativePath": "api/Article/increment-view/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AI_Age_BackEnd.Controllers.ArticleController.ArticleController",
     "Method": "AddRating",
     "RelativePath": "api/Article/rate",
     "HttpMethod": "POST",
@@ -360,6 +376,22 @@
         "Name": "query",
         "Type": "System.String",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AI_Age_BackEnd.Controllers.VideoArticleController.VideoArticleController",
+    "Method": "IncrementView",
+    "RelativePath": "api/VideoArticle/increment-view/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

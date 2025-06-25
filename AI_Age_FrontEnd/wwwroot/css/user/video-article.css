@@ -96,49 +96,6 @@
 /*--------------------------------------------------------------
 # Video Detail Section
 --------------------------------------------------------------*/
-.video-detail__video {
-    width: 100%;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.video-detail__title {
-    margin-top: 1rem;
-}
-
-.video-detail__title h2 {
-    color: #5fcf80;
-}
-
-.video-detail__description {
-    margin-top: 0.5rem;
-}
-
-.video-detail__description p {
-    font-size: 1rem;
-    color: color-mix(in srgb, var(--default-color), transparent 20%);
-}
-
-.video-detail__sidebar-box {
-    padding: 1rem;
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.video-detail__info-list {
-    list-style: none;
-    padding: 0;
-}
-
-.video-detail__info-list li {
-    margin-bottom: 0.5rem;
-}
-
-.video-detail__info-list li strong {
-    font-weight: 600;
-}
-
 .video-detail__star {
     color: #ddd;
     cursor: pointer;

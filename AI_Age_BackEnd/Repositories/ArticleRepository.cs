@@ -62,5 +62,15 @@ namespace AI_Age_BackEnd.Repositories
                 await _context.SaveChangesAsync();
             }
         }
+
+        public async Task IncrementViewCountAsync(int id)
+        {
+            var article = await _context.Articles.FindAsync(id);
+            if (article != null)
+            {
+                article.Views = (article.Views ?? 0) + 1;
+                await _context.SaveChangesAsync();
+            }
+        }
     }
 }

@@ -44,7 +44,7 @@
                             </li>
                             <li>
                                 <h5>Lượt xem</h5>
-                                <p>@Model.Views</p>
+                                <p id="view-count">@Model.Views</p>
                             </li>
                             <li>
                                 <h5>Cấp độ</h5>
@@ -90,6 +90,28 @@
             const articleId = starsContainer.getAttribute('data-article-id');
             const jwtToken = localStorage.getItem('jwtToken');
 
+            // Hàm gọi API để tăng view
+            async function incrementViewCount() {
+                if (!articleId) return;
+
+                const viewCountElement = document.getElementById('view-count');
+                if (viewCountElement) {
+                    let currentViews = parseInt(viewCountElement.textContent) || 0;
+                    viewCountElement.textContent = currentViews + 1;
+                }
+
+                try {
+                    await fetch(`https://localhost:7022/api/Article/increment-view/${articleId}`, {
+                        method: 'POST'
+                    });
+                } catch (error) {
+                    console.error('Lỗi khi tăng lượt xem:', error);
+                }
+            }
+
+            incrementViewCount();
+
+            // Hàm gọi API để tải dữ liệu đánh giá
             async function loadUserRating() {
                 if (!jwtToken || !articleId) return;
 
@@ -113,7 +135,6 @@
                 });
             }
 
-            // Load persisted rating on page load
             const savedRating = localStorage.getItem(`rating_${articleId}`);
             if (savedRating) applyRating(parseInt(savedRating));
 

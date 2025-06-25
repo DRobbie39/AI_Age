@@ -41,19 +41,22 @@
                 <!-- Sidebar -->
                 <div class="col-lg-4 col-md-12 video-detail__sidebar">
                     <div class="video-detail__sidebar-box p-3 border rounded shadow-sm">
-                        <h5 class="mb-3">Thông tin video</h5>
+                        <h3>Chi tiết về video</h3>
                         <ul class="video-detail__info-list">
-                            <li class="mb-2">
-                                <strong>Người đăng:</strong> <a href="#">@Model.UploaderName</a>
+                            <li>
+                                <h5>Người đăng</h5>
+                                <p><a href="#">@Model.UploaderName</a></p>
                             </li>
-                            <li class="mb-2">
-                                <strong>Lượt xem:</strong> @Model.Views
+                            <li>
+                                <h5>Lượt xem</h5>
+                                <p id="view-count">@Model.Views</p>
                             </li>
-                            <li class="mb-2">
-                                <strong>Thời lượng:</strong> @Model.Duration
+                            <li>
+                                <h5>Thời lượng</h5>
+                                <p>@Model.Duration</p>
                             </li>
-                            <li class="mb-2">
-                                <strong>Cấp độ:</strong>
+                            <li>
+                                <h5>Cấp độ</h5>
                                 @switch (Model.Level)
                                 {
                                     case 1:
@@ -70,11 +73,13 @@
                                         break;
                                 }
                             </li>
-                            <li class="mb-2">
-                                <strong>Ngày đăng:</strong> @Model.PostedDate.ToString("dd/MM/yyyy")
+                            <li>
+                                <h5>Ngày đăng</h5>
+                                <p>@Model.PostedDate.ToString("dd/MM/yyyy")</p>
                             </li>
-                            <li class="mb-2">
-                                <strong>Đánh giá:</strong> <span id="sidebar-rating">@Model.AverageRating?.ToString("F1")</span>
+                            <li>
+                                <h5>Đánh giá</h5>
+                                <p id="sidebar-rating">@Model.AverageRating?.ToString("F1")</p>
                             </li>
                         </ul>
                     </div>
@@ -96,6 +101,28 @@
             const videoId = starsContainer.getAttribute('data-video-id');
             const jwtToken = localStorage.getItem('jwtToken');
 
+             // Hàm gọi API để tăng view
+            async function incrementViewCount() {
+                if (!videoId) return;
+
+                const viewCountElement = document.getElementById('view-count');
+                if (viewCountElement) {
+                    let currentViews = parseInt(viewCountElement.textContent) || 0;
+                    viewCountElement.textContent = currentViews + 1;
+                }
+
+                try {
+                    await fetch(`https://localhost:7022/api/VideoArticle/increment-view/${videoId}`, {
+                        method: 'POST'
+                    });
+                } catch (error) {
+                    console.error('Lỗi khi tăng lượt xem:', error);
+                }
+            }
+
+            incrementViewCount();
+
+            // Hàm gọi API để tải dữ liệu đánh giá
             async function loadUserRating() {
                 if (!jwtToken || !videoId) return;
 
