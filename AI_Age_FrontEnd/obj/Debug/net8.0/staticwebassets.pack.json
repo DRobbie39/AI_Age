@@ -5,6 +5,38 @@
       "PackagePath": "staticwebassets\\AI_Age_FrontEnd.mxsp8nmk67.bundle.scp.css"
     },
     {
+      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\admin-assets\\assets\\demo\\chart-area-demo.js",
+      "PackagePath": "staticwebassets\\admin-assets\\assets\\demo\\chart-area-demo.js"
+    },
+    {
+      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\admin-assets\\assets\\demo\\chart-bar-demo.js",
+      "PackagePath": "staticwebassets\\admin-assets\\assets\\demo\\chart-bar-demo.js"
+    },
+    {
+      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\admin-assets\\assets\\demo\\chart-pie-demo.js",
+      "PackagePath": "staticwebassets\\admin-assets\\assets\\demo\\chart-pie-demo.js"
+    },
+    {
+      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\admin-assets\\assets\\demo\\datatables-demo.js",
+      "PackagePath": "staticwebassets\\admin-assets\\assets\\demo\\datatables-demo.js"
+    },
+    {
+      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\admin-assets\\assets\\img\\error-404-monochrome.svg",
+      "PackagePath": "staticwebassets\\admin-assets\\assets\\img\\error-404-monochrome.svg"
+    },
+    {
+      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\admin-assets\\css\\styles.css",
+      "PackagePath": "staticwebassets\\admin-assets\\css\\styles.css"
+    },
+    {
+      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\admin-assets\\js\\datatables-simple-demo.js",
+      "PackagePath": "staticwebassets\\admin-assets\\js\\datatables-simple-demo.js"
+    },
+    {
+      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\admin-assets\\js\\scripts.js",
+      "PackagePath": "staticwebassets\\admin-assets\\js\\scripts.js"
+    },
+    {
       "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\main.css",
       "PackagePath": "staticwebassets\\css\\main.css"
     },

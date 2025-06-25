@@ -1,3 +1,11 @@
+wwwroot\admin-assets\assets\demo\chart-area-demo.js
+wwwroot\admin-assets\assets\demo\chart-bar-demo.js
+wwwroot\admin-assets\assets\demo\chart-pie-demo.js
+wwwroot\admin-assets\assets\demo\datatables-demo.js
+wwwroot\admin-assets\assets\img\error-404-monochrome.svg
+wwwroot\admin-assets\css\styles.css
+wwwroot\admin-assets\js\datatables-simple-demo.js
+wwwroot\admin-assets\js\scripts.js
 wwwroot\css\main.css
 wwwroot\css\user\article.css
 wwwroot\css\user\auth.css
