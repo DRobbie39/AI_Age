@@ -120,8 +120,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>awgs8u64x4</Fingerprint>
-      <Integrity>iuQUfrndbXoQtg/XDpLDV+e7KRyO1EPd/zxgyRKx4h0=</Integrity>
+      <Fingerprint>w2hileo0po</Fingerprint>
+      <Integrity>+NPubwgVXKYpwcmC3JM304TQ791IvoPp+Q3Vr37PVdw=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\user\video-article.css'))</OriginalItemSpec>

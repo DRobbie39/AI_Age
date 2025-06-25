@@ -187,5 +187,10 @@ namespace AI_Age_BackEnd.Services.ArticleService
             return rating?.RatingValue;
         }
 
+        public async Task IncrementViewCountAsync(int id)
+        {
+            await _articleRepository.IncrementViewCountAsync(id);
+        }
+
     }
 }

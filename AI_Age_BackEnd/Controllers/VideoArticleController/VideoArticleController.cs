@@ -1,5 +1,6 @@
 ﻿using AI_Age_BackEnd.DTOs.VideoArticleDTO;
 using AI_Age_BackEnd.DTOs.VideoArticleRatingDTO;
+using AI_Age_BackEnd.Services.ArticleService;
 using AI_Age_BackEnd.Services.VideoArticleService;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
@@ -129,6 +130,21 @@ namespace AI_Age_BackEnd.Controllers.VideoArticleController
             catch (Exception ex)
             {
                 return BadRequest(new { Message = ex.Message });
+            }
+        }
+
+        [HttpPost("increment-view/{id}")]
+        public async Task<IActionResult> IncrementView(int id)
+        {
+            try
+            {
+                await _videoArticleService.IncrementViewCountAsync(id);
+
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { Message = "Không thể cập nhật lượt xem." });
             }
         }
     }

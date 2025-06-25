@@ -9,5 +9,6 @@ namespace AI_Age_BackEnd.Repositories.Interfaces
         Task AddVideoArticleAsync(VideoArticle videoArticle);
         Task UpdateVideoArticleAsync(VideoArticle videoArticle);
         Task DeleteVideoArticleAsync(int id);
+        Task IncrementViewCountAsync(int id);
     }
 }

@@ -1,6 +1,7 @@
 ﻿using AI_Age_BackEnd.DTOs.VideoArticleDTO;
 using AI_Age_BackEnd.DTOs.VideoArticleRatingDTO;
 using AI_Age_BackEnd.Models;
+using AI_Age_BackEnd.Repositories;
 using AI_Age_BackEnd.Repositories.Interfaces;
 using CloudinaryDotNet;
 using CloudinaryDotNet.Actions;
@@ -212,6 +213,11 @@ namespace AI_Age_BackEnd.Services.VideoArticleService
         {
             var rating = await _ratingRepository.GetUserRatingAsync(videoId, userId);
             return rating?.RatingValue;
+        }
+
+        public async Task IncrementViewCountAsync(int id)
+        {
+            await _videoArticleRepository.IncrementViewCountAsync(id);
         }
     }
 }

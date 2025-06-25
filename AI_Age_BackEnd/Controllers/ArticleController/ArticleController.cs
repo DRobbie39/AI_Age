@@ -131,5 +131,19 @@ namespace AI_Age_BackEnd.Controllers.ArticleController
                 return BadRequest(new { Message = ex.Message });
             }
         }
+
+        [HttpPost("increment-view/{id}")]
+        public async Task<IActionResult> IncrementView(int id)
+        {
+            try
+            {
+                await _articleService.IncrementViewCountAsync(id);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { Message = "Không thể cập nhật lượt xem." });
+            }
+        }
     }
 }
