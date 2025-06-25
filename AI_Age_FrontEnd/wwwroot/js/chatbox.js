@@ -74,7 +74,6 @@
     const showTypingIndicator = () => {
         const typingDiv = document.createElement('div');
         typingDiv.className = 'chat-message bot typing-indicator';
-        // THAY ĐỔI: Thêm avatar cho chỉ báo "đang gõ"
         typingDiv.innerHTML = `
             <img src="${botAvatarUrl}" alt="Bot Avatar" class="chat-avatar">
             <p><span>.</span><span>.</span><span>.</span></p>
@@ -125,9 +124,32 @@
             }
 
             const data = await response.json();
-            const botResponse = data.message || 'Xin lỗi, đã có lỗi xảy ra.';
-            addMessageToChat(botResponse, 'bot');
-            speak(botResponse);
+            const botResponseText = data.response || 'Xin lỗi, đã có lỗi xảy ra.';
+            addMessageToChat(botResponseText, 'bot');
+            speak(botResponseText);
+
+            setTimeout(() => {
+                switch (data.action) {
+                    case 'navigate':
+                        if (data.url) {
+                            console.log(`Navigating to: ${data.url}`);
+                            window.location.href = data.url;
+                        }
+                        break;
+
+                    case 'open_external':
+                        if (data.url) {
+                            console.log(`Opening external URL: ${data.url}`);
+                            window.open(data.url, '_blank');
+                        }
+                        break;
+
+                    case 'talk':
+                    default:
+                        console.log('Action: Talk');
+                        break;
+                }
+            }, 1500);
 
         } catch (error) {
             console.error('Fetch error:', error);

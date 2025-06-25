@@ -552,17 +552,17 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-j5jXVMLaehuPbhy5hfycwrmcb3ZxaG7dOtaegweWPos="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"2371873"},{"Name":"Content-Type","Value":"video/mp4"},{"Name":"ETag","Value":"\u0022j5jXVMLaehuPbhy5hfycwrmcb3ZxaG7dOtaegweWPos=\u0022"},{"Name":"Last-Modified","Value":"Thu, 05 Jun 2025 14:07:54 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/AI_Age_FrontEnd/js/chatbox.d9iko83jym.js">
+    <StaticWebAssetEndpoint Include="_content/AI_Age_FrontEnd/js/chatbox.20v60nt3q4.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\chatbox.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"d9iko83jym"},{"Name":"integrity","Value":"sha256-ccHwJwhtz/BMr05Z3bXfzfuT7jMLapMByZNdU46Stb8="},{"Name":"label","Value":"_content/AI_Age_FrontEnd/js/chatbox.js"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"6064"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022ccHwJwhtz/BMr05Z3bXfzfuT7jMLapMByZNdU46Stb8=\u0022"},{"Name":"Last-Modified","Value":"Tue, 24 Jun 2025 22:56:44 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"20v60nt3q4"},{"Name":"integrity","Value":"sha256-ci5z7wVY1aAGp/PKGOh16ymmyQmhgTFEmjtYr4Tkfsw="},{"Name":"label","Value":"_content/AI_Age_FrontEnd/js/chatbox.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"6959"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022ci5z7wVY1aAGp/PKGOh16ymmyQmhgTFEmjtYr4Tkfsw=\u0022"},{"Name":"Last-Modified","Value":"Tue, 24 Jun 2025 23:48:53 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/AI_Age_FrontEnd/js/chatbox.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\chatbox.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-ccHwJwhtz/BMr05Z3bXfzfuT7jMLapMByZNdU46Stb8="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"6064"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022ccHwJwhtz/BMr05Z3bXfzfuT7jMLapMByZNdU46Stb8=\u0022"},{"Name":"Last-Modified","Value":"Tue, 24 Jun 2025 22:56:44 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-ci5z7wVY1aAGp/PKGOh16ymmyQmhgTFEmjtYr4Tkfsw="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"6959"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022ci5z7wVY1aAGp/PKGOh16ymmyQmhgTFEmjtYr4Tkfsw=\u0022"},{"Name":"Last-Modified","Value":"Tue, 24 Jun 2025 23:48:53 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/AI_Age_FrontEnd/js/main.bdwyddtz8v.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\main.js'))</AssetFile>
