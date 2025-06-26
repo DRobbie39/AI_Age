@@ -129,7 +129,6 @@
 
 // Đăng xuất
 function performLogout() {
-    // Dừng tất cả speech synthesis nếu có
     if ('speechSynthesis' in window) {
         window.speechSynthesis.cancel();
     }
@@ -138,8 +137,11 @@ function performLogout() {
     localStorage.removeItem('userId');
     localStorage.removeItem('roleId');
     localStorage.removeItem('username');
+    localStorage.removeItem('avatar');
 
-    window.location.href = '/Home/Index';
+    setTimeout(() => {
+        window.location.href = '/Home/Index';
+    }, 1000);
 }
 
 document.addEventListener('DOMContentLoaded', () => {

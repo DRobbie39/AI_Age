@@ -40,6 +40,10 @@ function handleRatingError(message) {
     showToastrNotification('error', 'Đánh giá thất bại.');
 }
 
+function handleNotLoginRating(message) {
+    showToastrNotification('error', 'Vui lòng đăng nhập để đánh giá video');
+}
+
 function handleUpdateProfileSuccess(message) {
     showToastrNotification('success', 'Cập nhật thông tin thành công.');
 }

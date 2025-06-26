@@ -106,3 +106,10 @@
 .video-detail__star--selected {
     color: #f1c40f;
 }
+
+.video-detail__video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
