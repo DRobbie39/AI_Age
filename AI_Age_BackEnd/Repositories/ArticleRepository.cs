@@ -18,6 +18,7 @@ namespace AI_Age_BackEnd.Repositories
             return await _context.Articles
                 .Include(a => a.Category)
                 .Include(a => a.AuthorNavigation)
+                .Include(a => a.Tool)
                 .FirstOrDefaultAsync(a => a.ArticleId == id);
         }
 
@@ -26,6 +27,7 @@ namespace AI_Age_BackEnd.Repositories
             var query = _context.Articles
                .Include(a => a.Category)
                .Include(a => a.AuthorNavigation)
+               .Include(a => a.Tool)
                .AsQueryable();
 
             // Nếu có từ khóa tìm kiếm, thêm điều kiện Where vào truy vấn

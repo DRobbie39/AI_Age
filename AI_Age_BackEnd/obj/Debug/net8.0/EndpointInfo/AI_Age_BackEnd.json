@@ -105,6 +105,10 @@
                   "AuthorId": {
                     "type": "integer",
                     "format": "int32"
+                  },
+                  "ToolID": {
+                    "type": "integer",
+                    "format": "int32"
                   }
                 }
               },
@@ -128,6 +132,9 @@
                   "style": "form"
                 },
                 "AuthorId": {
+                  "style": "form"
+                },
+                "ToolID": {
                   "style": "form"
                 }
               }
@@ -176,6 +183,10 @@
                   "Level": {
                     "type": "integer",
                     "format": "int32"
+                  },
+                  "ToolID": {
+                    "type": "integer",
+                    "format": "int32"
                   }
                 }
               },
@@ -199,6 +210,9 @@
                   "style": "form"
                 },
                 "Level": {
+                  "style": "form"
+                },
+                "ToolID": {
                   "style": "form"
                 }
               }
@@ -566,6 +580,10 @@
                   "Level": {
                     "type": "integer",
                     "format": "int32"
+                  },
+                  "ToolID": {
+                    "type": "integer",
+                    "format": "int32"
                   }
                 }
               },
@@ -592,6 +610,9 @@
                   "style": "form"
                 },
                 "Level": {
+                  "style": "form"
+                },
+                "ToolID": {
                   "style": "form"
                 }
               }
@@ -645,6 +666,10 @@
                   "Level": {
                     "type": "integer",
                     "format": "int32"
+                  },
+                  "ToolID": {
+                    "type": "integer",
+                    "format": "int32"
                   }
                 }
               },
@@ -671,6 +696,9 @@
                   "style": "form"
                 },
                 "Level": {
+                  "style": "form"
+                },
+                "ToolID": {
                   "style": "form"
                 }
               }

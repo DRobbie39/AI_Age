@@ -93,7 +93,9 @@ namespace AI_Age_BackEnd.Services.VideoArticleService
                 PostedDate = DateTime.Now,
                 Level = dto.Level,
                 Duration = dto.Duration,
-                Views = 0
+                Views = 0,
+                AverageRating = 0.0m,
+                ToolId = dto.ToolID
             };
 
             await _videoArticleRepository.AddVideoArticleAsync(videoArticle);
@@ -123,7 +125,9 @@ namespace AI_Age_BackEnd.Services.VideoArticleService
                 Views = videoArticle.Views,
                 Level = videoArticle.Level,
                 Duration = videoArticle.Duration,
-                AverageRating = videoArticle.AverageRating ?? 0.0m
+                AverageRating = videoArticle.AverageRating ?? 0.0m,
+                ToolId = videoArticle.ToolId,
+                ToolName = videoArticle.Tool?.ToolName
             };
         }
 
@@ -146,7 +150,9 @@ namespace AI_Age_BackEnd.Services.VideoArticleService
                 Views = video.Views,
                 Level = video.Level,
                 Duration = video.Duration,
-                AverageRating = video.AverageRating ?? 0.0m
+                AverageRating = video.AverageRating ?? 0.0m,
+                ToolId = video.ToolId,
+                ToolName = video.Tool?.ToolName
             }).ToList();
         }
 
@@ -171,6 +177,7 @@ namespace AI_Age_BackEnd.Services.VideoArticleService
             videoArticle.Level = dto.Level;
             videoArticle.Duration = dto.Duration;
             videoArticle.UpdatedDate = DateTime.Now;
+            videoArticle.ToolId = dto.ToolID;
 
             await _videoArticleRepository.UpdateVideoArticleAsync(videoArticle);
 

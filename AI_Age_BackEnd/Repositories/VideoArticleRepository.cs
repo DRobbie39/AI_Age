@@ -18,6 +18,7 @@ namespace AI_Age_BackEnd.Repositories
             return await _context.VideoArticles
                 .Include(v => v.Category)
                 .Include(v => v.UploaderNavigation)
+                .Include(a => a.Tool)
                 .FirstOrDefaultAsync(v => v.VideoId == id);
         }
 
@@ -26,6 +27,7 @@ namespace AI_Age_BackEnd.Repositories
             var query = _context.VideoArticles
                 .Include(v => v.Category)
                 .Include(v => v.UploaderNavigation)
+                .Include(a => a.Tool)
                 .AsQueryable();
 
             if (!string.IsNullOrEmpty(searchQuery))
