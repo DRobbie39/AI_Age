@@ -15,7 +15,5 @@ public partial class Role
 
     public bool? Status { get; set; }
 
-    public virtual ICollection<Admin> Admins { get; set; } = new List<Admin>();
-
     public virtual ICollection<User> Users { get; set; } = new List<User>();
 }
