@@ -69,48 +69,12 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\about-2.jpg",
-      "PackagePath": "staticwebassets\\img\\about-2.jpg"
-    },
-    {
-      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\about.jpg",
-      "PackagePath": "staticwebassets\\img\\about.jpg"
-    },
-    {
       "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\apple-touch-icon.png",
       "PackagePath": "staticwebassets\\img\\apple-touch-icon.png"
     },
     {
       "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\chatbox.jpg",
       "PackagePath": "staticwebassets\\img\\chatbox.jpg"
-    },
-    {
-      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\chatgpt.jpg",
-      "PackagePath": "staticwebassets\\img\\chatgpt.jpg"
-    },
-    {
-      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\course-1.jpg",
-      "PackagePath": "staticwebassets\\img\\course-1.jpg"
-    },
-    {
-      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\course-2.jpg",
-      "PackagePath": "staticwebassets\\img\\course-2.jpg"
-    },
-    {
-      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\course-3.jpg",
-      "PackagePath": "staticwebassets\\img\\course-3.jpg"
-    },
-    {
-      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\course-details.jpg",
-      "PackagePath": "staticwebassets\\img\\course-details.jpg"
-    },
-    {
-      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\events-item-1.jpg",
-      "PackagePath": "staticwebassets\\img\\events-item-1.jpg"
-    },
-    {
-      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\events-item-2.jpg",
-      "PackagePath": "staticwebassets\\img\\events-item-2.jpg"
     },
     {
       "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\favicon.png",
@@ -127,98 +91,6 @@
     {
       "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\profile.png",
       "PackagePath": "staticwebassets\\img\\profile.png"
-    },
-    {
-      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\tabs\\tab-1.png",
-      "PackagePath": "staticwebassets\\img\\tabs\\tab-1.png"
-    },
-    {
-      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\tabs\\tab-2.png",
-      "PackagePath": "staticwebassets\\img\\tabs\\tab-2.png"
-    },
-    {
-      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\tabs\\tab-3.png",
-      "PackagePath": "staticwebassets\\img\\tabs\\tab-3.png"
-    },
-    {
-      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\tabs\\tab-4.png",
-      "PackagePath": "staticwebassets\\img\\tabs\\tab-4.png"
-    },
-    {
-      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\tabs\\tab-5.png",
-      "PackagePath": "staticwebassets\\img\\tabs\\tab-5.png"
-    },
-    {
-      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\team\\team-1.jpg",
-      "PackagePath": "staticwebassets\\img\\team\\team-1.jpg"
-    },
-    {
-      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\team\\team-2.jpg",
-      "PackagePath": "staticwebassets\\img\\team\\team-2.jpg"
-    },
-    {
-      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\team\\team-3.jpg",
-      "PackagePath": "staticwebassets\\img\\team\\team-3.jpg"
-    },
-    {
-      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\team\\team-4.jpg",
-      "PackagePath": "staticwebassets\\img\\team\\team-4.jpg"
-    },
-    {
-      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\team\\team-5.jpg",
-      "PackagePath": "staticwebassets\\img\\team\\team-5.jpg"
-    },
-    {
-      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\team\\team-6.jpg",
-      "PackagePath": "staticwebassets\\img\\team\\team-6.jpg"
-    },
-    {
-      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\testimonials\\testimonials-1.jpg",
-      "PackagePath": "staticwebassets\\img\\testimonials\\testimonials-1.jpg"
-    },
-    {
-      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\testimonials\\testimonials-2.jpg",
-      "PackagePath": "staticwebassets\\img\\testimonials\\testimonials-2.jpg"
-    },
-    {
-      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\testimonials\\testimonials-3.jpg",
-      "PackagePath": "staticwebassets\\img\\testimonials\\testimonials-3.jpg"
-    },
-    {
-      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\testimonials\\testimonials-4.jpg",
-      "PackagePath": "staticwebassets\\img\\testimonials\\testimonials-4.jpg"
-    },
-    {
-      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\testimonials\\testimonials-5.jpg",
-      "PackagePath": "staticwebassets\\img\\testimonials\\testimonials-5.jpg"
-    },
-    {
-      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\trainers\\trainer-1-2.jpg",
-      "PackagePath": "staticwebassets\\img\\trainers\\trainer-1-2.jpg"
-    },
-    {
-      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\trainers\\trainer-1.jpg",
-      "PackagePath": "staticwebassets\\img\\trainers\\trainer-1.jpg"
-    },
-    {
-      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\trainers\\trainer-2-2.jpg",
-      "PackagePath": "staticwebassets\\img\\trainers\\trainer-2-2.jpg"
-    },
-    {
-      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\trainers\\trainer-2.jpg",
-      "PackagePath": "staticwebassets\\img\\trainers\\trainer-2.jpg"
-    },
-    {
-      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\trainers\\trainer-3-2.jpg",
-      "PackagePath": "staticwebassets\\img\\trainers\\trainer-3-2.jpg"
-    },
-    {
-      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\trainers\\trainer-3.jpg",
-      "PackagePath": "staticwebassets\\img\\trainers\\trainer-3.jpg"
-    },
-    {
-      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\img\\videoplayback.mp4",
-      "PackagePath": "staticwebassets\\img\\videoplayback.mp4"
     },
     {
       "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\js\\chatbox.js",
