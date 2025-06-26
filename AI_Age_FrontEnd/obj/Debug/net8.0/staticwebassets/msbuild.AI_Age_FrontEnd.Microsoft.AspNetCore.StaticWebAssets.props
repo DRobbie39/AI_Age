@@ -192,8 +192,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>26traqmzid</Fingerprint>
-      <Integrity>at5coPHsngRq5pLp6DeO3+Cos3xSHAdi56Vg63ze0y8=</Integrity>
+      <Fingerprint>sb9e7dnhe9</Fingerprint>
+      <Integrity>SG4pXfVdnWjzSmx5e/Cc7UGAXLcXhfE5PfTUhS10KgU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\user\article.css'))</OriginalItemSpec>
@@ -282,8 +282,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>qhu38ivvi1</Fingerprint>
-      <Integrity>Hv1xNbbTSF9VRLw+VCw7MjqoB293mvOCm1jt1lZizok=</Integrity>
+      <Fingerprint>sqobglkde7</Fingerprint>
+      <Integrity>/Kk9S4GDzSGgn/LhvAwTyW0fBr+7UkR4zHF9LJu3MvA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\user\video-article.css'))</OriginalItemSpec>
@@ -1020,8 +1020,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>z28itvjcal</Fingerprint>
-      <Integrity>a0L1Eh34K55v7uKaGErxmYkfh8FzxXoWv5cymePP3bg=</Integrity>
+      <Fingerprint>ldbu9zfzsk</Fingerprint>
+      <Integrity>56Ue8FL0KKHayaeZ9+LeXI5wZG7ZnbulvK8ctrJ/FQ8=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\main.js'))</OriginalItemSpec>
@@ -1038,8 +1038,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>c9016oj7j2</Fingerprint>
-      <Integrity>kM2miT0J7kYsXwbVD1ZQZbYmTmV3vC+ciuMOAH7QUQo=</Integrity>
+      <Fingerprint>xjkr94lhhh</Fingerprint>
+      <Integrity>M5bHzIPnkCDRFcBEwORvRU5eXGj2Nz7xNPPDXKPConU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\toastrNotification.js'))</OriginalItemSpec>

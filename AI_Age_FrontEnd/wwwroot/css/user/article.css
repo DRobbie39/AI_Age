@@ -106,3 +106,15 @@
 .article-detail__star--selected {
     color: #f1c40f;
 }
+
+.article-detail__content img {
+    max-width: 100% !important;
+    height: auto !important; /* Dùng !important để ghi đè inline style */
+    object-fit: unset !important; /* Hủy bỏ object-fit */
+    max-height: none !important; /* Hủy bỏ max-height */
+
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
