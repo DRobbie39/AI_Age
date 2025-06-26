@@ -35,6 +35,8 @@ public partial class User
 
     public virtual ICollection<ArticleRating> ArticleRatings { get; set; } = new List<ArticleRating>();
 
+    public virtual ICollection<Article> Articles { get; set; } = new List<Article>();
+
     public virtual ICollection<ChatHistory> ChatHistories { get; set; } = new List<ChatHistory>();
 
     public virtual Role Role { get; set; } = null!;
@@ -46,4 +48,6 @@ public partial class User
     public virtual ICollection<VideoArticleComment> VideoArticleComments { get; set; } = new List<VideoArticleComment>();
 
     public virtual ICollection<VideoArticleRating> VideoArticleRatings { get; set; } = new List<VideoArticleRating>();
+
+    public virtual ICollection<VideoArticle> VideoArticles { get; set; } = new List<VideoArticle>();
 }

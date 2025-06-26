@@ -33,7 +33,7 @@ public partial class VideoArticle
 
     public virtual VideoArticleCategory Category { get; set; } = null!;
 
-    public virtual Admin UploaderNavigation { get; set; } = null!;
+    public virtual User UploaderNavigation { get; set; } = null!;
 
     public virtual ICollection<VideoArticleComment> VideoArticleComments { get; set; } = new List<VideoArticleComment>();
 
