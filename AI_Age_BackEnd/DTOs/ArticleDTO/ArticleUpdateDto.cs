@@ -11,5 +11,6 @@ namespace AI_Age_BackEnd.DTOs.ArticleDTO
         public IFormFile Image { get; set; }
         public int CategoryId { get; set; }
         public int Level { get; set; }
+        public int? ToolID { get; set; }
     }
 }

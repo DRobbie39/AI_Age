@@ -69,7 +69,8 @@ namespace AI_Age_BackEnd.Services.ArticleService
                 PostedDate = DateTime.Now,
                 Level = dto.Level,
                 Views = 0,
-                AverageRating = 0.0m
+                AverageRating = 0.0m,
+                ToolId = dto.ToolID
             };
 
             await _articleRepository.AddArticleAsync(article);
@@ -98,7 +99,9 @@ namespace AI_Age_BackEnd.Services.ArticleService
                 UpdatedDate = article.UpdatedDate,
                 Views = article.Views,
                 Level = article.Level,
-                AverageRating = article.AverageRating ?? 0.0m
+                AverageRating = article.AverageRating ?? 0.0m,
+                ToolId = article.ToolId,
+                ToolName = article.Tool?.ToolName
             };
         }
 
@@ -120,7 +123,9 @@ namespace AI_Age_BackEnd.Services.ArticleService
                 UpdatedDate = article.UpdatedDate,
                 Views = article.Views,
                 Level = article.Level,
-                AverageRating = article.AverageRating ?? 0.0m
+                AverageRating = article.AverageRating ?? 0.0m,
+                ToolId = article.ToolId,
+                ToolName = article.Tool?.ToolName
             }).ToList();
         }
 
@@ -143,6 +148,7 @@ namespace AI_Age_BackEnd.Services.ArticleService
             article.CategoryId = dto.CategoryId;
             article.Level = dto.Level;
             article.UpdatedDate = DateTime.Now;
+            article.ToolId = dto.ToolID;
 
             await _articleRepository.UpdateArticleAsync(article);
 

@@ -12,5 +12,6 @@ namespace AI_Age_BackEnd.DTOs.VideoArticleDTO
         public int CategoryId { get; set; }
         public int UploaderId { get; set; }
         public int Level { get; set; }
+        public int? ToolID { get; set; }
     }
 }

@@ -16,5 +16,7 @@
         public int? Views { get; set; }
         public int? Level { get; set; }
         public decimal AverageRating { get; set; }
+        public int? ToolId { get; set; }
+        public string? ToolName { get; set; }
     }
 }
