@@ -21,6 +21,8 @@ public partial class VideoArticle
 
     public int Uploader { get; set; }
 
+    public int? ToolId { get; set; }
+
     public DateTime? PostedDate { get; set; }
 
     public DateTime? UpdatedDate { get; set; }
@@ -32,6 +34,8 @@ public partial class VideoArticle
     public decimal? AverageRating { get; set; }
 
     public virtual VideoArticleCategory Category { get; set; } = null!;
+
+    public virtual Aitool? Tool { get; set; }
 
     public virtual User UploaderNavigation { get; set; } = null!;
 

@@ -19,6 +19,8 @@ public partial class Article
 
     public int Author { get; set; }
 
+    public int? ToolId { get; set; }
+
     public DateTime? PostedDate { get; set; }
 
     public DateTime? UpdatedDate { get; set; }
@@ -36,4 +38,6 @@ public partial class Article
     public virtual User AuthorNavigation { get; set; } = null!;
 
     public virtual ArticleCategory Category { get; set; } = null!;
+
+    public virtual Aitool? Tool { get; set; }
 }
