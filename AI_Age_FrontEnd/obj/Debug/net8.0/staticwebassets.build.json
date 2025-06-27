@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "TD1iN4SsTWfkTTkA/sbor/lrZPIkkFIfFtl9wva4tIY=",
+  "Hash": "rw8z1W+Hx/Y0LfBMg/d6sU5J047RyHjhQrMax2LRd7U=",
   "Source": "AI_Age_FrontEnd",
   "BasePath": "_content/AI_Age_FrontEnd",
   "Mode": "Default",
@@ -367,8 +367,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "20zme1p944",
-      "Integrity": "TmPhW9KASA60zCywvutZHdsohuU60gkJuLjZoG8MhOs=",
+      "Fingerprint": "mz6cs2ykip",
+      "Integrity": "nk0htjFvXLq06aKEhZE0wzgb8o2juWhZ2qGscsmkGFQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\user\\tool.css"
@@ -2608,7 +2608,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 27 Jun 2025 01:15:52 GMT"
+          "Value": "Fri, 27 Jun 2025 02:37:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2645,7 +2645,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 27 Jun 2025 01:15:52 GMT"
+          "Value": "Fri, 27 Jun 2025 02:37:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2690,7 +2690,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 27 Jun 2025 01:15:52 GMT"
+          "Value": "Fri, 27 Jun 2025 02:37:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2735,7 +2735,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 27 Jun 2025 01:15:52 GMT"
+          "Value": "Fri, 27 Jun 2025 02:37:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3242,51 +3242,6 @@
       ]
     },
     {
-      "Route": "css/user/tool.20zme1p944.css",
-      "AssetFile": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\user\\tool.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "3614"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"TmPhW9KASA60zCywvutZHdsohuU60gkJuLjZoG8MhOs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 27 Jun 2025 01:15:48 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "20zme1p944"
-        },
-        {
-          "Name": "label",
-          "Value": "css/user/tool.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-TmPhW9KASA60zCywvutZHdsohuU60gkJuLjZoG8MhOs="
-        }
-      ]
-    },
-    {
       "Route": "css/user/tool.css",
       "AssetFile": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\user\\tool.css",
       "Selectors": [],
@@ -3297,7 +3252,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3614"
+          "Value": "8421"
         },
         {
           "Name": "Content-Type",
@@ -3305,11 +3260,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"TmPhW9KASA60zCywvutZHdsohuU60gkJuLjZoG8MhOs=\""
+          "Value": "\"nk0htjFvXLq06aKEhZE0wzgb8o2juWhZ2qGscsmkGFQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 27 Jun 2025 01:15:48 GMT"
+          "Value": "Fri, 27 Jun 2025 02:55:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3319,7 +3274,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-TmPhW9KASA60zCywvutZHdsohuU60gkJuLjZoG8MhOs="
+          "Value": "sha256-nk0htjFvXLq06aKEhZE0wzgb8o2juWhZ2qGscsmkGFQ="
+        }
+      ]
+    },
+    {
+      "Route": "css/user/tool.mz6cs2ykip.css",
+      "AssetFile": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\user\\tool.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8421"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nk0htjFvXLq06aKEhZE0wzgb8o2juWhZ2qGscsmkGFQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 27 Jun 2025 02:55:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mz6cs2ykip"
+        },
+        {
+          "Name": "label",
+          "Value": "css/user/tool.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nk0htjFvXLq06aKEhZE0wzgb8o2juWhZ2qGscsmkGFQ="
         }
       ]
     },

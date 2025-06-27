@@ -36,5 +36,10 @@ namespace AI_Age_FrontEnd.Controllers
 
             return View(viewModel);
         }
+
+        public IActionResult Details()
+        {
+            return View();
+        }
     }
 }
