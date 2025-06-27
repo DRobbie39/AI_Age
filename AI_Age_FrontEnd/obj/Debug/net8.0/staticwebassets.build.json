@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Sko6LCkf8unIl546RDRnKSD8Q5SyWsVLzu0EgUTOqhg=",
+  "Hash": "TlxsJYFqM8y47IJP18zmN6TWnEG09N/2QZllfalSAY0=",
   "Source": "AI_Age_FrontEnd",
   "BasePath": "_content/AI_Age_FrontEnd",
   "Mode": "Default",
@@ -304,8 +304,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "h00ce5xxh2",
-      "Integrity": "7yL7UMpAZlLKYTnjMk7vrXT1ggBUDZkVbuQiDPGdgeg=",
+      "Fingerprint": "5orp80v0vn",
+      "Integrity": "q68CFIfIiIC7PoTg0TS85Mv5/2HueQM1dsDML+9lvJc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\user\\chat.css"
@@ -556,8 +556,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "idjv37jlsf",
-      "Integrity": "Kr1QOjRLYePDZV2rHv3lvqxBledXeTrLX6KBelpMR14=",
+      "Fingerprint": "tdojl0q2io",
+      "Integrity": "z6jRNT487bTO7pecDyKNtlz98rueFwqAnQ3l549Cuxw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\chatbox.js"
@@ -2608,7 +2608,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 27 Jun 2025 12:14:18 GMT"
+          "Value": "Fri, 27 Jun 2025 16:29:05 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2645,7 +2645,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 27 Jun 2025 12:14:18 GMT"
+          "Value": "Fri, 27 Jun 2025 16:29:05 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2690,7 +2690,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 27 Jun 2025 12:14:18 GMT"
+          "Value": "Fri, 27 Jun 2025 16:29:05 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2735,7 +2735,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 27 Jun 2025 12:14:18 GMT"
+          "Value": "Fri, 27 Jun 2025 16:29:05 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2996,6 +2996,51 @@
       ]
     },
     {
+      "Route": "css/user/chat.5orp80v0vn.css",
+      "AssetFile": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\user\\chat.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5639"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"q68CFIfIiIC7PoTg0TS85Mv5/2HueQM1dsDML+9lvJc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 27 Jun 2025 16:10:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5orp80v0vn"
+        },
+        {
+          "Name": "label",
+          "Value": "css/user/chat.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-q68CFIfIiIC7PoTg0TS85Mv5/2HueQM1dsDML+9lvJc="
+        }
+      ]
+    },
+    {
       "Route": "css/user/chat.css",
       "AssetFile": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\user\\chat.css",
       "Selectors": [],
@@ -3006,7 +3051,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4691"
+          "Value": "5639"
         },
         {
           "Name": "Content-Type",
@@ -3014,11 +3059,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"7yL7UMpAZlLKYTnjMk7vrXT1ggBUDZkVbuQiDPGdgeg=\""
+          "Value": "\"q68CFIfIiIC7PoTg0TS85Mv5/2HueQM1dsDML+9lvJc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 25 Jun 2025 18:11:21 GMT"
+          "Value": "Fri, 27 Jun 2025 16:10:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3028,52 +3073,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-7yL7UMpAZlLKYTnjMk7vrXT1ggBUDZkVbuQiDPGdgeg="
-        }
-      ]
-    },
-    {
-      "Route": "css/user/chat.h00ce5xxh2.css",
-      "AssetFile": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\user\\chat.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4691"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"7yL7UMpAZlLKYTnjMk7vrXT1ggBUDZkVbuQiDPGdgeg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 25 Jun 2025 18:11:21 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "h00ce5xxh2"
-        },
-        {
-          "Name": "label",
-          "Value": "css/user/chat.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-7yL7UMpAZlLKYTnjMk7vrXT1ggBUDZkVbuQiDPGdgeg="
+          "Value": "sha256-q68CFIfIiIC7PoTg0TS85Mv5/2HueQM1dsDML+9lvJc="
         }
       ]
     },
@@ -3980,51 +3980,6 @@
       ]
     },
     {
-      "Route": "js/chatbox.idjv37jlsf.js",
-      "AssetFile": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\js\\chatbox.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "8055"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Kr1QOjRLYePDZV2rHv3lvqxBledXeTrLX6KBelpMR14=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 27 Jun 2025 12:28:56 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "idjv37jlsf"
-        },
-        {
-          "Name": "label",
-          "Value": "js/chatbox.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Kr1QOjRLYePDZV2rHv3lvqxBledXeTrLX6KBelpMR14="
-        }
-      ]
-    },
-    {
       "Route": "js/chatbox.js",
       "AssetFile": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\js\\chatbox.js",
       "Selectors": [],
@@ -4035,7 +3990,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8055"
+          "Value": "9035"
         },
         {
           "Name": "Content-Type",
@@ -4043,11 +3998,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Kr1QOjRLYePDZV2rHv3lvqxBledXeTrLX6KBelpMR14=\""
+          "Value": "\"z6jRNT487bTO7pecDyKNtlz98rueFwqAnQ3l549Cuxw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 27 Jun 2025 12:28:56 GMT"
+          "Value": "Fri, 27 Jun 2025 16:16:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4057,7 +4012,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Kr1QOjRLYePDZV2rHv3lvqxBledXeTrLX6KBelpMR14="
+          "Value": "sha256-z6jRNT487bTO7pecDyKNtlz98rueFwqAnQ3l549Cuxw="
+        }
+      ]
+    },
+    {
+      "Route": "js/chatbox.tdojl0q2io.js",
+      "AssetFile": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\js\\chatbox.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9035"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"z6jRNT487bTO7pecDyKNtlz98rueFwqAnQ3l549Cuxw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 27 Jun 2025 16:16:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tdojl0q2io"
+        },
+        {
+          "Name": "label",
+          "Value": "js/chatbox.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-z6jRNT487bTO7pecDyKNtlz98rueFwqAnQ3l549Cuxw="
         }
       ]
     },

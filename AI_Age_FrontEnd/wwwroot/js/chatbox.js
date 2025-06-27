@@ -131,6 +131,30 @@
 
     loadChatHistory();
 
+    const displaySuggestions = (suggestions) => {
+        const suggestionsContainer = document.createElement('div');
+        suggestionsContainer.className = 'chat-suggestions';
+
+        let suggestionHtml = '<p>Đây là một số nội dung con tìm được ạ:</p><ul>';
+
+        suggestions.forEach(item => {
+            // Icon dựa trên loại nội dung
+            const icon = item.type === 'Article' ? 'fas fa-newspaper' : 'fas fa-video';
+            suggestionHtml += `
+                <li>
+                    <a href="${item.url}" target="_blank">
+                        <i class="${icon}"></i> ${item.title}
+                    </a>
+                </li>
+            `;
+        });
+
+        suggestionHtml += '</ul>';
+        suggestionsContainer.innerHTML = suggestionHtml;
+        chatBody.appendChild(suggestionsContainer);
+        chatBody.scrollTop = chatBody.scrollHeight;
+    };
+
     const handleSendMessage = async () => {
         const question = chatInput.value.trim();
         if (!question) return;
@@ -160,25 +184,28 @@
             addMessageToChat(botResponseText, 'bot');
             speak(botResponseText);
 
+            // Kiểm tra và hiển thị các gợi ý nếu có
+            if (data.suggestions && data.suggestions.length > 0) {
+                displaySuggestions(data.suggestions);
+            }
+
             setTimeout(() => {
                 switch (data.action) {
                     case 'navigate':
                         if (data.url) {
-                            console.log(`Navigating to: ${data.url}`);
                             window.location.href = data.url;
                         }
                         break;
 
                     case 'open_external':
                         if (data.url) {
-                            console.log(`Opening external URL: ${data.url}`);
                             window.open(data.url, '_blank');
                         }
                         break;
 
                     case 'talk':
+                    case 'suggest_content':
                     default:
-                        console.log('Action: Talk');
                         break;
                 }
             }, 1500);

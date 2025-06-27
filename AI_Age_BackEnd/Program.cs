@@ -37,6 +37,7 @@ namespace AI_Age_BackEnd
             builder.Services.AddScoped<IAIToolCategoryRepository, AIToolCategoryRepository>();
             builder.Services.AddScoped<IAIToolRepository, AIToolRepository>();
             builder.Services.AddScoped<IChatHistoryRepository, ChatHistoryRepository>();
+            builder.Services.AddScoped<ISearchRepository, SearchRepository>();
 
             // Đăng ký các service
             builder.Services.AddScoped<AuthService>();
