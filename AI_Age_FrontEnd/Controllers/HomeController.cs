@@ -37,9 +37,46 @@ namespace AI_Age_FrontEnd.Controllers
             return View(viewModel);
         }
 
-        public IActionResult Details()
+        public async Task<IActionResult> Details(int id)
         {
-            return View();
+            if (id <= 0)
+            {
+                return BadRequest();
+            }
+
+            var jsonOptions = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+            var viewModel = new AIToolDetailViewModel();
+
+            // 1. Lấy thông tin chi tiết của công cụ
+            var toolResponse = await _httpClient.GetAsync($"AITool/{id}");
+            if (toolResponse.IsSuccessStatusCode)
+            {
+                var toolJson = await toolResponse.Content.ReadAsStringAsync();
+                viewModel.Tool = JsonSerializer.Deserialize<AIToolViewModel>(toolJson, jsonOptions);
+            }
+            else
+            {
+                // Nếu không tìm thấy công cụ, có thể chuyển hướng về trang lỗi hoặc trang chủ
+                return NotFound();
+            }
+
+            // 2. Lấy danh sách bài viết liên quan
+            var articlesResponse = await _httpClient.GetAsync($"Article/ByTool/{id}");
+            if (articlesResponse.IsSuccessStatusCode)
+            {
+                var articlesJson = await articlesResponse.Content.ReadAsStringAsync();
+                viewModel.Articles = JsonSerializer.Deserialize<List<ArticleViewModel>>(articlesJson, jsonOptions) ?? new List<ArticleViewModel>();
+            }
+
+            // 3. Lấy danh sách video liên quan
+            var videosResponse = await _httpClient.GetAsync($"VideoArticle/ByTool/{id}");
+            if (videosResponse.IsSuccessStatusCode)
+            {
+                var videosJson = await videosResponse.Content.ReadAsStringAsync();
+                viewModel.Videos = JsonSerializer.Deserialize<List<VideoArticleViewModel>>(videosJson, jsonOptions) ?? new List<VideoArticleViewModel>();
+            }
+
+            return View(viewModel);
         }
     }
 }

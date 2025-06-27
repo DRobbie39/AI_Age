@@ -147,5 +147,16 @@ namespace AI_Age_BackEnd.Controllers.VideoArticleController
                 return BadRequest(new { Message = "Không thể cập nhật lượt xem." });
             }
         }
+
+        [HttpGet("ByTool/{toolId}")]
+        public async Task<IActionResult> GetVideoArticlesByTool(int toolId)
+        {
+            var videos = await _videoArticleService.GetVideoArticlesByToolIdAsync(toolId);
+            if (videos == null || !videos.Any())
+            {
+                return NotFound(new { Message = "Không tìm thấy video nào cho công cụ này." });
+            }
+            return Ok(videos);
+        }
     }
 }

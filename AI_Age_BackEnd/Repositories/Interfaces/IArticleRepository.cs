@@ -10,5 +10,6 @@ namespace AI_Age_BackEnd.Repositories.Interfaces
         Task UpdateArticleAsync(Article article);
         Task DeleteArticleAsync(int id);
         Task IncrementViewCountAsync(int id);
+        Task<List<Article>> GetByToolIdAsync(int toolId);
     }
 }

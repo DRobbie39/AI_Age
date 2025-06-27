@@ -145,5 +145,16 @@ namespace AI_Age_BackEnd.Controllers.ArticleController
                 return BadRequest(new { Message = "Không thể cập nhật lượt xem." });
             }
         }
+
+        [HttpGet("ByTool/{toolId}")]
+        public async Task<IActionResult> GetArticlesByTool(int toolId)
+        {
+            var articles = await _articleService.GetArticlesByToolIdAsync(toolId);
+            if (articles == null || !articles.Any())
+            {
+                return NotFound(new { Message = "Không tìm thấy bài viết nào cho công cụ này." });
+            }
+            return Ok(articles);
+        }
     }
 }

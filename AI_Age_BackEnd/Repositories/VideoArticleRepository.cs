@@ -72,5 +72,13 @@ namespace AI_Age_BackEnd.Repositories
                 await _context.SaveChangesAsync();
             }
         }
+
+        public async Task<List<VideoArticle>> GetByToolIdAsync(int toolId)
+        {
+            return await _context.VideoArticles
+                .Where(a => a.ToolId == toolId)
+                .OrderByDescending(a => a.PostedDate)
+                .ToListAsync();
+        }
     }
 }
