@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "PxmoQXFHUNHz4o5MWRT+wp3xHD9WVyVaAAOM/LgnqOM=",
+  "Hash": "Sko6LCkf8unIl546RDRnKSD8Q5SyWsVLzu0EgUTOqhg=",
   "Source": "AI_Age_FrontEnd",
   "BasePath": "_content/AI_Age_FrontEnd",
   "Mode": "Default",
@@ -556,8 +556,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "dtoailxsrr",
-      "Integrity": "342UIad7OjbT+MgsrYBec0cjN1qfHFfIf6Cd1seojaw=",
+      "Fingerprint": "idjv37jlsf",
+      "Integrity": "Kr1QOjRLYePDZV2rHv3lvqxBledXeTrLX6KBelpMR14=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\chatbox.js"
@@ -2608,7 +2608,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 27 Jun 2025 10:18:15 GMT"
+          "Value": "Fri, 27 Jun 2025 12:14:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2645,7 +2645,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 27 Jun 2025 10:18:15 GMT"
+          "Value": "Fri, 27 Jun 2025 12:14:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2690,7 +2690,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 27 Jun 2025 10:18:15 GMT"
+          "Value": "Fri, 27 Jun 2025 12:14:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2735,7 +2735,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 27 Jun 2025 10:18:15 GMT"
+          "Value": "Fri, 27 Jun 2025 12:14:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3980,7 +3980,7 @@
       ]
     },
     {
-      "Route": "js/chatbox.dtoailxsrr.js",
+      "Route": "js/chatbox.idjv37jlsf.js",
       "AssetFile": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\js\\chatbox.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3990,7 +3990,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6838"
+          "Value": "8055"
         },
         {
           "Name": "Content-Type",
@@ -3998,11 +3998,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"342UIad7OjbT+MgsrYBec0cjN1qfHFfIf6Cd1seojaw=\""
+          "Value": "\"Kr1QOjRLYePDZV2rHv3lvqxBledXeTrLX6KBelpMR14=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 24 Jun 2025 23:56:50 GMT"
+          "Value": "Fri, 27 Jun 2025 12:28:56 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4012,7 +4012,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "dtoailxsrr"
+          "Value": "idjv37jlsf"
         },
         {
           "Name": "label",
@@ -4020,7 +4020,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-342UIad7OjbT+MgsrYBec0cjN1qfHFfIf6Cd1seojaw="
+          "Value": "sha256-Kr1QOjRLYePDZV2rHv3lvqxBledXeTrLX6KBelpMR14="
         }
       ]
     },
@@ -4035,7 +4035,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6838"
+          "Value": "8055"
         },
         {
           "Name": "Content-Type",
@@ -4043,11 +4043,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"342UIad7OjbT+MgsrYBec0cjN1qfHFfIf6Cd1seojaw=\""
+          "Value": "\"Kr1QOjRLYePDZV2rHv3lvqxBledXeTrLX6KBelpMR14=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 24 Jun 2025 23:56:50 GMT"
+          "Value": "Fri, 27 Jun 2025 12:28:56 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4057,7 +4057,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-342UIad7OjbT+MgsrYBec0cjN1qfHFfIf6Cd1seojaw="
+          "Value": "sha256-Kr1QOjRLYePDZV2rHv3lvqxBledXeTrLX6KBelpMR14="
         }
       ]
     },

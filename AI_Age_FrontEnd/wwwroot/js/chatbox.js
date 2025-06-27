@@ -99,6 +99,38 @@
         }
     };
 
+    const loadChatHistory = async () => {
+        try {
+            const response = await fetch('https://localhost:7022/api/Chat/history', {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            });
+
+            if (!response.ok) {
+                throw new Error('Không thể tải lịch sử trò chuyện.');
+            }
+
+            const history = await response.json();
+            chatBody.innerHTML = '';
+
+            if (history.length === 0) {
+                addMessageToChat('Xin chào! Ông/Bà có cần con giúp gì không ạ? Hãy hỏi con bất cứ điều gì nhé!', 'bot');
+            } else {
+                history.forEach(item => {
+                    addMessageToChat(item.question, 'user');
+                    addMessageToChat(item.response, 'bot');
+                });
+            }
+        } catch (error) {
+            console.error('Lỗi tải lịch sử chat:', error);
+            addMessageToChat('Xin chào! Ông/Bà có cần con giúp gì không ạ? Hãy hỏi con bất cứ điều gì nhé!', 'bot');
+        }
+    };
+
+    loadChatHistory();
+
     const handleSendMessage = async () => {
         const question = chatInput.value.trim();
         if (!question) return;

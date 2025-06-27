@@ -1,4 +1,6 @@
 ﻿using AI_Age_BackEnd.DTOs.ChatDTO;
+using AI_Age_BackEnd.Models;
+using AI_Age_BackEnd.Repositories.Interfaces;
 using System.Text;
 using System.Text.Json;
 
@@ -15,14 +17,16 @@ namespace AI_Age_BackEnd.Services.ChatService
     {
         private readonly HttpClient _httpClient;
         private readonly string _apiKey;
+        private readonly IChatHistoryRepository _chatHistoryRepository;
 
-        public ChatService(IConfiguration configuration)
+        public ChatService(IConfiguration configuration, IChatHistoryRepository chatHistoryRepository)
         {
             _apiKey = configuration["GoogleGemini:ApiKey"];
             _httpClient = new HttpClient();
+            _chatHistoryRepository = chatHistoryRepository;
         }
 
-        public async Task<AIResponseDto> GetChatResponseAsync(ChatDto chatDto)
+        public async Task<AIResponseDto> GetChatResponseAsync(ChatDto chatDto, int userId)
         {
             var url = $"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key={_apiKey}";
 
@@ -102,12 +106,25 @@ namespace AI_Age_BackEnd.Services.ChatService
 
                 var aiResponse = JsonSerializer.Deserialize<AIResponseDto>(aiResponseText, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 
+                if (aiResponse == null || string.IsNullOrWhiteSpace(aiResponse.Response))
+                {
+                    throw new Exception("Phản hồi từ Gemini không hợp lệ hoặc rỗng.");
+                }
+
+                var chatHistory = new ChatHistory
+                {
+                    UserId = userId,
+                    Question = chatDto.Question,
+                    Response = aiResponse.Response,
+                    ChatDate = DateTime.UtcNow
+                };
+ 
+                await _chatHistoryRepository.AddChatHistoryAsync(chatHistory);
+
                 return aiResponse ?? throw new Exception("Không thể phân tích phản hồi từ AI.");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error parsing AI response: {ex.Message}");
-
                 return new AIResponseDto
                 {
                     Action = "talk",
@@ -115,6 +132,20 @@ namespace AI_Age_BackEnd.Services.ChatService
                     Url = null
                 };
             }
+        }
+
+        public async Task<List<ChatDto>> GetChatHistoryAsync(int userId)
+        {
+            var history = await _chatHistoryRepository.GetChatHistoryByUserIdAsync(userId);
+
+            var historyDto = history.Select(h => new ChatDto
+            {
+                Question = h.Question,
+                Response = h.Response,
+                ChatDate = h.ChatDate
+            }).ToList();
+
+            return historyDto;
         }
     }
 }

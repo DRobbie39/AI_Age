@@ -66,6 +66,7 @@ namespace AI_Age_BackEnd.Services.UserService
             new Claim(JwtRegisteredClaimNames.Name, user.Username),
             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
             //new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),
+            new Claim("UserId", user.UserId.ToString()),
             new Claim(ClaimTypes.Role, user.RoleId.ToString())
         };
 

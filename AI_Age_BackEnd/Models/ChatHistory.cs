@@ -11,7 +11,7 @@ public partial class ChatHistory
 
     public string Question { get; set; } = null!;
 
-    public string Response { get; set; } = null!;
+    public string? Response { get; set; }
 
     public DateTime? ChatDate { get; set; }
 

@@ -475,6 +475,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "AI_Age_BackEnd.Controllers.ChatController.ChatController",
+    "Method": "GetHistory",
+    "RelativePath": "api/Chat/history",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AI_Age_BackEnd.Controllers.UserController.UsersController",
     "Method": "GetUserProfile",
     "RelativePath": "api/Users/profile",
