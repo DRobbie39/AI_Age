@@ -740,6 +740,18 @@
         }
       }
     },
+    "/api/Chat/history": {
+      "get": {
+        "tags": [
+          "Chat"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Users/profile": {
       "get": {
         "tags": [
@@ -1221,6 +1233,15 @@
         "properties": {
           "question": {
             "type": "string",
+            "nullable": true
+          },
+          "response": {
+            "type": "string",
+            "nullable": true
+          },
+          "chatDate": {
+            "type": "string",
+            "format": "date-time",
             "nullable": true
           }
         },

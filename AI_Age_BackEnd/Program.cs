@@ -36,6 +36,7 @@ namespace AI_Age_BackEnd
             builder.Services.AddScoped<IVideoArticleRatingRepository, VideoArticleRatingRepository>();
             builder.Services.AddScoped<IAIToolCategoryRepository, AIToolCategoryRepository>();
             builder.Services.AddScoped<IAIToolRepository, AIToolRepository>();
+            builder.Services.AddScoped<IChatHistoryRepository, ChatHistoryRepository>();
 
             // Đăng ký các service
             builder.Services.AddScoped<AuthService>();
@@ -45,6 +46,7 @@ namespace AI_Age_BackEnd
             builder.Services.AddScoped<UserService>();
             builder.Services.AddScoped<AIToolCategoryService>();
             builder.Services.AddScoped<AIToolService>();
+            builder.Services.AddScoped<ChatService>();
 
             // Cấu hình CORS
             builder.Services.AddCors(options =>

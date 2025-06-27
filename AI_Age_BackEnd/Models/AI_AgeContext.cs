@@ -55,7 +55,7 @@ public partial class AI_AgeContext : DbContext
     {
         modelBuilder.Entity<Aitool>(entity =>
         {
-            entity.HasKey(e => e.ToolId).HasName("PK__AITools__CC0CEBB18995718B");
+            entity.HasKey(e => e.ToolId).HasName("PK__AITools__CC0CEBB18FABEBB4");
 
             entity.ToTable("AITools");
 
@@ -81,7 +81,7 @@ public partial class AI_AgeContext : DbContext
 
         modelBuilder.Entity<AitoolCategory>(entity =>
         {
-            entity.HasKey(e => e.CategoryId).HasName("PK__AIToolCa__19093A2B22015CBD");
+            entity.HasKey(e => e.CategoryId).HasName("PK__AIToolCa__19093A2B5E07392D");
 
             entity.ToTable("AIToolCategories");
 
@@ -96,7 +96,7 @@ public partial class AI_AgeContext : DbContext
 
         modelBuilder.Entity<Article>(entity =>
         {
-            entity.HasKey(e => e.ArticleId).HasName("PK__Articles__9C6270C88B185B3E");
+            entity.HasKey(e => e.ArticleId).HasName("PK__Articles__9C6270C82BF31F6A");
 
             entity.Property(e => e.ArticleId).HasColumnName("ArticleID");
             entity.Property(e => e.AverageRating)
@@ -132,7 +132,7 @@ public partial class AI_AgeContext : DbContext
 
         modelBuilder.Entity<ArticleCategory>(entity =>
         {
-            entity.HasKey(e => e.CategoryId).HasName("PK__ArticleC__19093A2BC82E2A3A");
+            entity.HasKey(e => e.CategoryId).HasName("PK__ArticleC__19093A2BBF926BF6");
 
             entity.Property(e => e.CategoryId).HasColumnName("CategoryID");
             entity.Property(e => e.CategoryName).HasMaxLength(100);
@@ -144,7 +144,7 @@ public partial class AI_AgeContext : DbContext
 
         modelBuilder.Entity<ArticleComment>(entity =>
         {
-            entity.HasKey(e => e.CommentId).HasName("PK__ArticleC__C3B4DFAA84EE7612");
+            entity.HasKey(e => e.CommentId).HasName("PK__ArticleC__C3B4DFAAAB8FF6B7");
 
             entity.Property(e => e.CommentId).HasColumnName("CommentID");
             entity.Property(e => e.ArticleId).HasColumnName("ArticleID");
@@ -167,7 +167,7 @@ public partial class AI_AgeContext : DbContext
 
         modelBuilder.Entity<ArticleRating>(entity =>
         {
-            entity.HasKey(e => e.RatingId).HasName("PK__ArticleR__FCCDF85CF411C366");
+            entity.HasKey(e => e.RatingId).HasName("PK__ArticleR__FCCDF85C7D75F579");
 
             entity.Property(e => e.RatingId).HasColumnName("RatingID");
             entity.Property(e => e.ArticleId).HasColumnName("ArticleID");
@@ -188,7 +188,7 @@ public partial class AI_AgeContext : DbContext
 
         modelBuilder.Entity<ChatHistory>(entity =>
         {
-            entity.HasKey(e => e.ChatId).HasName("PK__ChatHist__A9FBE6268A45E81B");
+            entity.HasKey(e => e.ChatId).HasName("PK__ChatHist__A9FBE6269CEB044D");
 
             entity.ToTable("ChatHistory");
 
@@ -207,7 +207,7 @@ public partial class AI_AgeContext : DbContext
 
         modelBuilder.Entity<Role>(entity =>
         {
-            entity.HasKey(e => e.RoleId).HasName("PK__Roles__8AFACE3AD5151D80");
+            entity.HasKey(e => e.RoleId).HasName("PK__Roles__8AFACE3AAD6EAFC1");
 
             entity.Property(e => e.RoleId).HasColumnName("RoleID");
             entity.Property(e => e.CreatedDate)
@@ -220,9 +220,9 @@ public partial class AI_AgeContext : DbContext
 
         modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.UserId).HasName("PK__Users__1788CCAC1FFB364A");
+            entity.HasKey(e => e.UserId).HasName("PK__Users__1788CCAC0B68A92D");
 
-            entity.HasIndex(e => e.Username, "UQ__Users__536C85E40C399230").IsUnique();
+            entity.HasIndex(e => e.Username, "UQ__Users__536C85E4F48796EF").IsUnique();
 
             entity.Property(e => e.UserId).HasColumnName("UserID");
             entity.Property(e => e.Address).HasMaxLength(255);
@@ -249,7 +249,7 @@ public partial class AI_AgeContext : DbContext
 
         modelBuilder.Entity<UserPost>(entity =>
         {
-            entity.HasKey(e => e.PostId).HasName("PK__UserPost__AA12603881097B48");
+            entity.HasKey(e => e.PostId).HasName("PK__UserPost__AA1260382244ACB3");
 
             entity.Property(e => e.PostId).HasColumnName("PostID");
             entity.Property(e => e.AttachedImage).HasMaxLength(255);
@@ -277,7 +277,7 @@ public partial class AI_AgeContext : DbContext
 
         modelBuilder.Entity<UserPostCategory>(entity =>
         {
-            entity.HasKey(e => e.CategoryId).HasName("PK__UserPost__19093A2B0326C75C");
+            entity.HasKey(e => e.CategoryId).HasName("PK__UserPost__19093A2B36D27959");
 
             entity.Property(e => e.CategoryId).HasColumnName("CategoryID");
             entity.Property(e => e.CategoryName).HasMaxLength(100);
@@ -288,7 +288,7 @@ public partial class AI_AgeContext : DbContext
 
         modelBuilder.Entity<UserPostComment>(entity =>
         {
-            entity.HasKey(e => e.CommentId).HasName("PK__UserPost__C3B4DFAA1AE43344");
+            entity.HasKey(e => e.CommentId).HasName("PK__UserPost__C3B4DFAABCC78A07");
 
             entity.Property(e => e.CommentId).HasColumnName("CommentID");
             entity.Property(e => e.CommentDate)
@@ -311,7 +311,7 @@ public partial class AI_AgeContext : DbContext
 
         modelBuilder.Entity<VideoArticle>(entity =>
         {
-            entity.HasKey(e => e.VideoId).HasName("PK__VideoArt__BAE5124AEC4F7F7D");
+            entity.HasKey(e => e.VideoId).HasName("PK__VideoArt__BAE5124AEB4F29CC");
 
             entity.Property(e => e.VideoId).HasColumnName("VideoID");
             entity.Property(e => e.AverageRating)
@@ -349,7 +349,7 @@ public partial class AI_AgeContext : DbContext
 
         modelBuilder.Entity<VideoArticleCategory>(entity =>
         {
-            entity.HasKey(e => e.CategoryId).HasName("PK__VideoArt__19093A2B5FC87AD7");
+            entity.HasKey(e => e.CategoryId).HasName("PK__VideoArt__19093A2B153C05F8");
 
             entity.Property(e => e.CategoryId).HasColumnName("CategoryID");
             entity.Property(e => e.CategoryName).HasMaxLength(100);
@@ -361,7 +361,7 @@ public partial class AI_AgeContext : DbContext
 
         modelBuilder.Entity<VideoArticleComment>(entity =>
         {
-            entity.HasKey(e => e.CommentId).HasName("PK__VideoArt__C3B4DFAA7D6A806D");
+            entity.HasKey(e => e.CommentId).HasName("PK__VideoArt__C3B4DFAAAA002D37");
 
             entity.Property(e => e.CommentId).HasColumnName("CommentID");
             entity.Property(e => e.CommentDate)
@@ -384,7 +384,7 @@ public partial class AI_AgeContext : DbContext
 
         modelBuilder.Entity<VideoArticleRating>(entity =>
         {
-            entity.HasKey(e => e.RatingId).HasName("PK__VideoArt__FCCDF85C23604576");
+            entity.HasKey(e => e.RatingId).HasName("PK__VideoArt__FCCDF85CD6F5F3F6");
 
             entity.Property(e => e.RatingId).HasColumnName("RatingID");
             entity.Property(e => e.CreatedDate)
