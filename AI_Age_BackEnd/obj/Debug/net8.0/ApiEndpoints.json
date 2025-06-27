@@ -246,6 +246,22 @@
   },
   {
     "ContainingType": "AI_Age_BackEnd.Controllers.ArticleController.ArticleController",
+    "Method": "GetArticlesByTool",
+    "RelativePath": "api/Article/ByTool/{toolId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "toolId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AI_Age_BackEnd.Controllers.ArticleController.ArticleController",
     "Method": "CreateArticle",
     "RelativePath": "api/Article/createarticle",
     "HttpMethod": "POST",
@@ -540,6 +556,22 @@
     "Parameters": [
       {
         "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AI_Age_BackEnd.Controllers.VideoArticleController.VideoArticleController",
+    "Method": "GetVideoArticlesByTool",
+    "RelativePath": "api/VideoArticle/ByTool/{toolId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "toolId",
         "Type": "System.Int32",
         "IsRequired": true
       }

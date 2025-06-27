@@ -226,5 +226,19 @@ namespace AI_Age_BackEnd.Services.VideoArticleService
         {
             await _videoArticleRepository.IncrementViewCountAsync(id);
         }
+
+        public async Task<List<VideoArticleDto>> GetVideoArticlesByToolIdAsync(int toolId)
+        {
+            var videos = await _videoArticleRepository.GetByToolIdAsync(toolId);
+
+            return videos.Select(video => new VideoArticleDto
+            {
+                VideoId = video.VideoId,
+                Title = video.Title,
+                Thumbnail = video.Thumbnail,
+                VideoUrl = video.VideoUrl,
+                Duration = video.Duration
+            }).ToList();
+        }
     }
 }

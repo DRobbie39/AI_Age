@@ -12,6 +12,8 @@
 
   <ItemGroup>
     <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Models\ArticleViewModel\" />
+    <Folder Include="Models\VideoArticleViewModel\" />
   </ItemGroup>
 
 </Project>

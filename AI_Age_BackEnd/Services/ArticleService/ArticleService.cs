@@ -198,5 +198,29 @@ namespace AI_Age_BackEnd.Services.ArticleService
             await _articleRepository.IncrementViewCountAsync(id);
         }
 
+        public async Task<List<ArticleDto>> GetArticlesByToolIdAsync(int toolId)
+        {
+            var articles = await _articleRepository.GetByToolIdAsync(toolId);
+
+            return articles.Select(article => new ArticleDto
+            {
+                ArticleId = article.ArticleId,
+                Title = article.Title,
+                Summary = article.Summary,
+                Image = article.Image,
+                CategoryId = article.CategoryId,
+                CategoryName = article.Category?.CategoryName,
+                AuthorId = article.Author,
+                AuthorName = article.AuthorNavigation?.FullName,
+                PostedDate = article.PostedDate,
+                UpdatedDate = article.UpdatedDate,
+                Views = article.Views,
+                Level = article.Level,
+                AverageRating = article.AverageRating ?? 0.0m,
+                ToolId = article.ToolId,
+                ToolName = article.Tool?.ToolName
+            }).ToList();
+        }
+
     }
 }

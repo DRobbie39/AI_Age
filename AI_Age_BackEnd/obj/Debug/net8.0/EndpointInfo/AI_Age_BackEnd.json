@@ -624,6 +624,29 @@
         }
       }
     },
+    "/api/Article/ByTool/{toolId}": {
+      "get": {
+        "tags": [
+          "Article"
+        ],
+        "parameters": [
+          {
+            "name": "toolId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Auth/register": {
       "post": {
         "tags": [
@@ -1095,6 +1118,29 @@
         "parameters": [
           {
             "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/VideoArticle/ByTool/{toolId}": {
+      "get": {
+        "tags": [
+          "VideoArticle"
+        ],
+        "parameters": [
+          {
+            "name": "toolId",
             "in": "path",
             "required": true,
             "schema": {
