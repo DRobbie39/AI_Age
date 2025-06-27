@@ -1,4 +1,6 @@
-﻿@{
+﻿@model AI_Age_FrontEnd.Models.AIToolViewModel.HomeViewModel
+
+@{
     ViewData["Title"] = "Trang chủ";
 }
 
@@ -11,68 +13,42 @@
         </p>
     </section>
 
-    <section class="tool-filter">
-        <h2 class="tool-filter__title"><i class="fa-solid fa-magnifying-glass"></i> Bác muốn dùng AI để làm gì?</h2>
-        <div class="tool-filter__list">
-            <button class="tool-filter__button tool-filter__button--active">Tất cả công cụ</button>
-            <button class="tool-filter__button">Viết văn & Trả lời câu hỏi</button>
-            <button class="tool-filter__button">Tạo hình ảnh đẹp</button>
-            <button class="tool-filter__button">Sáng tác nhạc & Video</button>
-            <button class="tool-filter__button">Hỗ trợ công việc</button>
-        </div>
-    </section>
+    @if (Model.Categories != null && Model.Categories.Any())
+    {
+        <section class="tool-filter">
+            <h2 class="tool-filter__title"><i class="fa-solid fa-magnifying-glass"></i> Bác muốn dùng AI để làm gì?</h2>
+            <div class="tool-filter__list">
+                <button class="tool-filter__button tool-filter__button--active">Tất cả công cụ</button>
+                @foreach (var category in Model.Categories)
+                {
+                    <button class="tool-filter__button">@category.CategoryName</button>
+                }
+            </div>
+        </section>
+    }
 
-    <section class="tool-list">
-        <article class="tool-card">
-            <div class="tool-card__logo-wrapper">
-                <img src="" alt="Logo ChatGPT" class="tool-card__logo">
-            </div>
-            <div class="tool-card__content">
-                <h3 class="tool-card__title">ChatGPT</h3>
-                <p class="tool-card__description">
-                    Người bạn AI thông minh, có thể trò chuyện, trả lời mọi câu hỏi, viết thư, làm thơ giúp bác.
-                </p>
-            </div>
-            <a href="#" class="tool-card__link">Xem hướng dẫn <i class="fa-solid fa-arrow-right-long tool-card__link-icon"></i></a>
-        </article>
-
-        <article class="tool-card">
-            <div class="tool-card__logo-wrapper">
-                <img src="" alt="Logo Gemini" class="tool-card__logo">
-            </div>
-            <div class="tool-card__content">
-                <h3 class="tool-card__title">Gemini (Google)</h3>
-                <p class="tool-card__description">
-                    Công cụ AI sáng tạo của Google, giúp bác tìm kiếm thông tin, lên kế hoạch du lịch, tóm tắt nội dung.
-                </p>
-            </div>
-            <a href="#" class="tool-card__link">Xem hướng dẫn <i class="fa-solid fa-arrow-right-long tool-card__link-icon"></i></a>
-        </article>
-
-        <article class="tool-card">
-            <div class="tool-card__logo-wrapper">
-                <img src="" alt="Logo Suno AI" class="tool-card__logo">
-            </div>
-            <div class="tool-card__content">
-                <h3 class="tool-card__title">Suno AI</h3>
-                <p class="tool-card__description">
-                    Chỉ cần vài dòng mô tả, AI sẽ giúp bác tạo ra một bài hát hoàn chỉnh với cả nhạc và lời.
-                </p>
-            </div>
-            <a href="#" class="tool-card__link">Xem hướng dẫn <i class="fa-solid fa-arrow-right-long tool-card__link-icon"></i></a>
-        </article>
-
-        <article class="tool-card">
-            <div class="tool-card__logo-wrapper">
-                <img src="" alt="Logo Midjourney" class="tool-card__logo">
-            </div>
-            <div class="tool-card__content">
-                <h3 class="tool-card__title">Midjourney</h3>
-                <p class="tool-card__description">
-                    Biến những suy nghĩ, ý tưởng của bác thành những bức tranh vẽ nghệ thuật và vô cùng đẹp mắt.
-                </p>
-            </div>
-            <a href="#" class="tool-card__link">Xem hướng dẫn <i class="fa-solid fa-arrow-right-long tool-card__link-icon"></i></a>
-        </article>
-    </section>
+    @if (Model.AITools != null && Model.AITools.Any())
+    {
+        <section class="tool-list">
+            @foreach (var tool in Model.AITools)
+            {
+                <article class="tool-card">
+                    <div class="tool-card__logo-wrapper">
+                        <img src="@(tool.LogoURL ?? "/images/default-logo.png")" alt="Logo @tool.ToolName" class="tool-card__logo">
+                    </div>
+                    <div class="tool-card__content">
+                        <h3 class="tool-card__title">@tool.ToolName</h3>
+                        <p class="tool-card__description">
+                            @tool.Description
+                        </p>
+                    </div>
+                    <a href="#" class="tool-card__link">Xem hướng dẫn <i class="fa-solid fa-arrow-right-long tool-card__link-icon"></i></a>
+                </article>
+            }
+        </section>
+    }
+    else
+    {
+        <p style="text-align: center; margin-top: 2rem;">Hiện chưa có công cụ nào để hiển thị.</p>
+    }
 </main>
