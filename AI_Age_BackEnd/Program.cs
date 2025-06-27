@@ -7,6 +7,8 @@ using AI_Age_BackEnd.Services.UserService;
 using AI_Age_BackEnd.Services.ArticleService;
 using AI_Age_BackEnd.Services.ChatService;
 using AI_Age_BackEnd.Services.VideoArticleService;
+using AI_Age_BackEnd.Services.AIToolService;
+using AI_Age_BackEnd.Services.AIToolCategoryService;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
@@ -32,6 +34,8 @@ namespace AI_Age_BackEnd
             builder.Services.AddScoped<IVideoArticleRepository, VideoArticleRepository>();
             builder.Services.AddScoped<IVideoArticleCategoryRepository, VideoArticleCategoryRepository>();
             builder.Services.AddScoped<IVideoArticleRatingRepository, VideoArticleRatingRepository>();
+            builder.Services.AddScoped<IAIToolCategoryRepository, AIToolCategoryRepository>();
+            builder.Services.AddScoped<IAIToolRepository, AIToolRepository>();
 
             // Đăng ký các service
             builder.Services.AddScoped<AuthService>();
@@ -39,6 +43,8 @@ namespace AI_Age_BackEnd
             builder.Services.AddScoped<VideoArticleService>();
             builder.Services.AddScoped<ChatService>();
             builder.Services.AddScoped<UserService>();
+            builder.Services.AddScoped<AIToolCategoryService>();
+            builder.Services.AddScoped<AIToolService>();
 
             // Cấu hình CORS
             builder.Services.AddCors(options =>
