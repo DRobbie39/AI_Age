@@ -1,0 +1,69 @@
+﻿@{
+    ViewData["Title"] = "Quản lý Công cụ AI";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Quản lý Công cụ AI</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Dashboard" asp-action="Index">Dashboard</a></li>
+        <li class="breadcrumb-item active">Công cụ AI</li>
+    </ol>
+
+    <div class="card mb-4">
+        <div class="card-header ai-tool-card__header">
+            <div class="ai-tool-card__title">
+                <i class="fas fa-robot me-2"></i>
+                Danh sách Công cụ AI
+            </div>
+            <!-- Nút Thêm mới chỉ để hiển thị -->
+            <button class="btn btn-primary">
+                <i class="fas fa-plus me-1"></i> Thêm mới
+            </button>
+        </div>
+        <div class="card-body p-0">
+            <table id="toolsTable" class="table table-hover ai-tool-table">
+                <thead>
+                    <tr>
+                        <th>Logo</th>
+                        <th>Tên công cụ</th>
+                        <th>Thể loại</th>
+                        <th>Website</th>
+                        <th>Trạng thái</th>
+                        <th class="text-end">Hành động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dữ liệu tĩnh để demo -->
+                    <tr>
+                        <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/1024px-ChatGPT_logo.svg.png" alt="Logo ChatGPT" class="ai-tool-table__logo"></td>
+                        <td>ChatGPT</td>
+                        <td>Tạo nội dung</td>
+                        <td><a href="https://chat.openai.com" target="_blank" class="ai-tool-table__website-link">chat.openai.com</a></td>
+                        <td><span class="ai-tool-table__status ai-tool-table__status--active">Hoạt động</span></td>
+                        <td class="ai-tool-table__actions">
+                            <button class="btn btn-warning ai-tool-table__action-button" title="Sửa">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="btn btn-danger ai-tool-table__action-button" title="Xóa">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Khởi tạo thư viện datatable cho bảng để có chức năng tìm kiếm, phân trang
+        document.addEventListener('DOMContentLoaded', function () {
+            const toolsTable = document.querySelector('#toolsTable');
+            if (toolsTable) {
+                new simpleDatatables.DataTable(toolsTable);
+            }
+        });
+    </script>
+}

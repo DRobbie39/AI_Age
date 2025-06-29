@@ -1,5 +1,7 @@
 ﻿using AI_Age_BackEnd.DTOs.AIToolCategoryDTO;
+using AI_Age_BackEnd.DTOs.AIToolDTO;
 using AI_Age_BackEnd.Models;
+using AI_Age_BackEnd.Repositories;
 using AI_Age_BackEnd.Repositories.Interfaces;
 
 namespace AI_Age_BackEnd.Services.AIToolCategoryService
@@ -23,8 +25,7 @@ namespace AI_Age_BackEnd.Services.AIToolCategoryService
                 CategoryID = c.CategoryId,
                 CategoryName = c.CategoryName,
                 Description = c.Description,
-                CreatedDate = c.CreatedDate.GetValueOrDefault(),
-                Status = c.Status.GetValueOrDefault()
+                CreatedDate = c.CreatedDate.GetValueOrDefault()
             }).ToList();
         }
 
@@ -41,8 +42,7 @@ namespace AI_Age_BackEnd.Services.AIToolCategoryService
                 CategoryID = category.CategoryId,
                 CategoryName = category.CategoryName,
                 Description = category.Description,
-                CreatedDate = category.CreatedDate.GetValueOrDefault(),
-                Status = category.Status.GetValueOrDefault()
+                CreatedDate = category.CreatedDate.GetValueOrDefault()
             };
         }
 
@@ -58,7 +58,6 @@ namespace AI_Age_BackEnd.Services.AIToolCategoryService
             {
                 CategoryName = dto.CategoryName,
                 Description = dto.Description,
-                Status = dto.Status,
                 CreatedDate = DateTime.Now
             };
 
@@ -70,7 +69,6 @@ namespace AI_Age_BackEnd.Services.AIToolCategoryService
                 CategoryName = category.CategoryName,
                 Description = category.Description,
                 CreatedDate = category.CreatedDate.GetValueOrDefault(),
-                Status = category.Status.GetValueOrDefault()
             };
         }
 
@@ -90,7 +88,6 @@ namespace AI_Age_BackEnd.Services.AIToolCategoryService
 
             categoryToUpdate.CategoryName = dto.CategoryName;
             categoryToUpdate.Description = dto.Description;
-            categoryToUpdate.Status = dto.Status;
 
             await _categoryRepository.UpdateAsync(categoryToUpdate);
 
@@ -99,8 +96,7 @@ namespace AI_Age_BackEnd.Services.AIToolCategoryService
                 CategoryID = categoryToUpdate.CategoryId,
                 CategoryName = categoryToUpdate.CategoryName,
                 Description = categoryToUpdate.Description,
-                CreatedDate = categoryToUpdate.CreatedDate.GetValueOrDefault(),
-                Status = categoryToUpdate.Status.GetValueOrDefault()
+                CreatedDate = categoryToUpdate.CreatedDate.GetValueOrDefault()
             };
         }
 

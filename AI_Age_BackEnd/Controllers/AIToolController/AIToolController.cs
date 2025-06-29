@@ -101,5 +101,19 @@ namespace AI_Age_BackEnd.Controllers.AIToolController
                 return StatusCode(500, new { Message = "Đã xảy ra lỗi hệ thống: " + ex.Message });
             }
         }
+
+        [HttpGet("ByCategory/{categoryId}")]
+        public async Task<IActionResult> GetByCategoryId(int categoryId)
+        {
+            try
+            {
+                var tools = await _toolService.GetToolsByCategoryIdAsync(categoryId);
+                return Ok(tools);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "Đã xảy ra lỗi khi lấy dữ liệu công cụ theo danh mục.");
+            }
+        }
     }
 }

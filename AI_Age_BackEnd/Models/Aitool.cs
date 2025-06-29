@@ -19,8 +19,6 @@ public partial class Aitool
 
     public DateTime? CreatedDate { get; set; }
 
-    public bool? Status { get; set; }
-
     public virtual ICollection<Article> Articles { get; set; } = new List<Article>();
 
     public virtual AitoolCategory? Category { get; set; }

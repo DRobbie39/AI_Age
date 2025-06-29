@@ -25,8 +25,20 @@
       "PackagePath": "staticwebassets\\admin-assets\\assets\\img\\error-404-monochrome.svg"
     },
     {
+      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\admin-assets\\css\\ai-tool.css",
+      "PackagePath": "staticwebassets\\admin-assets\\css\\ai-tool.css"
+    },
+    {
       "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\admin-assets\\css\\styles.css",
       "PackagePath": "staticwebassets\\admin-assets\\css\\styles.css"
+    },
+    {
+      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\admin-assets\\css\\tool-category.css",
+      "PackagePath": "staticwebassets\\admin-assets\\css\\tool-category.css"
+    },
+    {
+      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\admin-assets\\css\\user-management.css",
+      "PackagePath": "staticwebassets\\admin-assets\\css\\user-management.css"
     },
     {
       "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\admin-assets\\js\\datatables-simple-demo.js",

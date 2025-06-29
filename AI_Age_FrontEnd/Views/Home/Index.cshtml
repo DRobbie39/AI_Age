@@ -6,7 +6,7 @@
 
 <main class="tool-showcase">
     <section class="tool-intro">
-        <h1 class="tool-intro__title">Chào Mừng Các Bác Đến Với Thế Giới AI</h1>
+        <h1 class="tool-intro__title">Chào Mừng Đến Với Thế Giới AI</h1>
         <p class="tool-intro__subtitle">
             Trí tuệ nhân tạo (AI) có thể giúp cuộc sống của chúng ta dễ dàng và thú vị hơn.
             Hãy cùng nhau khám phá nhé!
@@ -16,12 +16,12 @@
     @if (Model.Categories != null && Model.Categories.Any())
     {
         <section class="tool-filter">
-            <h2 class="tool-filter__title"><i class="fa-solid fa-magnifying-glass"></i> Bác muốn dùng AI để làm gì?</h2>
+            <h2 class="tool-filter__title"><i class="fa-solid fa-magnifying-glass"></i> Bạn muốn dùng AI để làm gì?</h2>
             <div class="tool-filter__list">
-                <button class="tool-filter__button tool-filter__button--active">Tất cả công cụ</button>
+                <button class="tool-filter__button tool-filter__button--active" data-category-id="0">Tất cả công cụ</button>
                 @foreach (var category in Model.Categories)
                 {
-                    <button class="tool-filter__button">@category.CategoryName</button>
+                    <button class="tool-filter__button" data-category-id="@category.CategoryID">@category.CategoryName</button>
                 }
             </div>
         </section>
@@ -29,7 +29,7 @@
 
     @if (Model.AITools != null && Model.AITools.Any())
     {
-        <section class="tool-list">
+        <section class="tool-list" id="tool-list-container">
             @foreach (var tool in Model.AITools)
             {
                 <article class="tool-card">
@@ -52,3 +52,84 @@
         <p style="text-align: center; margin-top: 2rem;">Hiện chưa có công cụ nào để hiển thị.</p>
     }
 </main>
+
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterButtons = document.querySelectorAll('.tool-filter__button');
+            const toolListContainer = document.getElementById('tool-list-container');
+            // Base URL của API, có thể lấy từ cấu hình
+            const apiBaseUrl = 'https://localhost:7022/api';
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function (e) {
+                    e.preventDefault(); // Ngăn hành vi mặc định của button
+
+                    // 1. Cập nhật giao diện nút active
+                    filterButtons.forEach(btn => btn.classList.remove('tool-filter__button--active'));
+                    this.classList.add('tool-filter__button--active');
+
+                    // 2. Lấy category ID từ thuộc tính data
+                    const categoryId = this.getAttribute('data-category-id');
+
+                    // 3. Xây dựng URL API dựa trên category ID
+                    let apiUrl = `${apiBaseUrl}/AITool`;
+                    if (categoryId !== '0') {
+                        apiUrl = `${apiBaseUrl}/AITool/ByCategory/${categoryId}`;
+                    }
+
+                    // Hiển thị loading (tùy chọn)
+                    toolListContainer.innerHTML = '<p style="text-align:center; margin-top: 2rem;">Đang tải dữ liệu...</p>';
+
+                    // 4. Gọi API bằng Fetch
+                    fetch(apiUrl)
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error('Network response was not ok');
+                            }
+                            return response.json();
+                        })
+                        .then(tools => {
+                            // 5. Cập nhật lại danh sách tool trên giao diện
+                            renderTools(tools);
+                        })
+                        .catch(error => {
+                            console.error('Lỗi khi lấy dữ liệu công cụ:', error);
+                            toolListContainer.innerHTML = '<p style="text-align:center; color: red; margin-top: 2rem;">Không thể tải danh sách công cụ. Vui lòng thử lại sau.</p>';
+                        });
+                });
+            });
+
+            // Hàm để render danh sách công cụ
+            function renderTools(tools) {
+                // Xóa nội dung cũ
+                toolListContainer.innerHTML = '';
+
+                if (tools && tools.length > 0) {
+                    tools.forEach(tool => {
+                        // Lưu ý: Tên thuộc tính (tool.toolName, tool.logoURL) phải khớp với JSON trả về từ API.
+                        // .NET Core mặc định sẽ chuyển thành camelCase (ví dụ: ToolName -> toolName)
+                        const toolCardHtml = `
+                            <article class="tool-card">
+                                <div class="tool-card__logo-wrapper">
+                                    <img src="${tool.logoURL || '/images/default-logo.png'}" alt="Logo ${tool.toolName}" class="tool-card__logo">
+                                </div>
+                                <div class="tool-card__content">
+                                    <h3 class="tool-card__title">${tool.toolName}</h3>
+                                    <p class="tool-card__description">${tool.description}</p>
+                                </div>
+                                <a href="/Home/Details/${tool.toolID}" class="tool-card__link">
+                                    Xem hướng dẫn <i class="fa-solid fa-arrow-right-long tool-card__link-icon"></i>
+                                </a>
+                            </article>
+                        `;
+                        toolListContainer.insertAdjacentHTML('beforeend', toolCardHtml);
+                    });
+                } else {
+                    toolListContainer.innerHTML = '<p style="text-align:center; margin-top: 2rem;">Không có công cụ nào trong danh mục này.</p>';
+                }
+            }
+        });
+    </script>
+}

@@ -13,6 +13,8 @@ namespace AI_Age_FrontEnd.Models.UserViewModel
 
         [Required(ErrorMessage = "Mật khẩu là bắt buộc")]
         [DataType(DataType.Password)]
+        [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$",
+            ErrorMessage = "Mật khẩu phải dài ít nhất 8 ký tự, chứa ít nhất một chữ hoa, một chữ thường và một chữ số.")]
         public string Password { get; set; }
 
         [Required(ErrorMessage = "Xác nhận mật khẩu là bắt buộc")]

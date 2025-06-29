@@ -13,7 +13,5 @@ public partial class AitoolCategory
 
     public DateTime? CreatedDate { get; set; }
 
-    public bool? Status { get; set; }
-
     public virtual ICollection<Aitool> Aitools { get; set; } = new List<Aitool>();
 }

@@ -1,0 +1,94 @@
+﻿@{
+    ViewData["Title"] = "Quản lý Người dùng";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Quản lý Người dùng</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Dashboard" asp-action="Index">Dashboard</a></li>
+        <li class="breadcrumb-item active">Người dùng</li>
+    </ol>
+
+    <div class="card mb-4">
+        <div class="card-header user-management-card__header">
+            <div class="user-management-card__title">
+                <i class="fas fa-users me-2"></i>
+                Danh sách Người dùng
+            </div>
+            <!-- Nút Thêm mới chỉ để hiển thị -->
+            <button class="btn btn-primary">
+                <i class="fas fa-plus me-1"></i> Thêm mới
+            </button>
+        </div>
+        <div class="card-body p-0">
+            <table id="usersTable" class="table table-hover user-management-table">
+                <thead>
+                    <tr>
+                        <th>Người dùng</th>
+                        <th>Tên đăng nhập</th>
+                        <th>Vai trò</th>
+                        <th>Ngày đăng ký</th>
+                        <th>Trạng thái</th>
+                        <th class="text-end">Hành động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dữ liệu tĩnh để demo -->
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <img src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="Avatar" class="user-management-table__avatar me-3">
+                                <span class="user-management-table__fullname">Nguyễn Văn An</span>
+                            </div>
+                        </td>
+                        <td>nguyenvana</td>
+                        <td>Admin</td>
+                        <td>22-05-2024</td>
+                        <td><span class="user-management-table__status user-management-table__status--active">Hoạt động</span></td>
+                        <td class="user-management-table__actions">
+                            <button class="btn btn-warning user-management-table__action-button" title="Sửa">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="btn btn-danger user-management-table__action-button" title="Xóa">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <img src="https://i.pravatar.cc/150?u=a042581f4e29026705d" alt="Avatar" class="user-management-table__avatar me-3">
+                                <span class="user-management-table__fullname">Trần Thị Bích</span>
+                            </div>
+                        </td>
+                        <td>tranthib</td>
+                        <td>Member</td>
+                        <td>20-05-2024</td>
+                        <td><span class="user-management-table__status user-management-table__status--locked">Bị khóa</span></td>
+                        <td class="user-management-table__actions">
+                            <button class="btn btn-warning user-management-table__action-button" title="Sửa">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="btn btn-danger user-management-table__action-button" title="Xóa">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Khởi tạo thư viện datatable cho bảng để có chức năng tìm kiếm, phân trang
+        document.addEventListener('DOMContentLoaded', function () {
+            const usersTable = document.querySelector('#usersTable');
+            if (usersTable) {
+                new simpleDatatables.DataTable(usersTable);
+            }
+        });
+    </script>
+}

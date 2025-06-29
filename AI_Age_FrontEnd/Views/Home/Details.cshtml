@@ -35,7 +35,7 @@
             <div class="tool-detail-articles__list">
                 @foreach (var article in Model.Articles)
                 {
-                    <a asp-controller="Article" asp-action="Details" asp-route-id="@article.ArticleId" target="_blank" class="tool-detail-tutorial-card">
+                    <a asp-controller="Article" asp-action="Details" asp-route-id="@article.ArticleId" class="tool-detail-tutorial-card">
                         <div class="tool-detail-tutorial-card__thumbnail">
                             <img src="@(article.Image ?? "/images/default-article-thumb.png")" alt="Ảnh bìa bài viết @article.Title">
                         </div>
@@ -64,7 +64,7 @@
             <div class="tool-detail-videos__list">
                 @foreach (var video in Model.Videos)
                 {
-                    <a href="@video.VideoURL" target="_blank" class="tool-detail-tutorial-card">
+                    <a href="@video.VideoURL" class="tool-detail-tutorial-card">
                         <div class="tool-detail-tutorial-card__thumbnail">
                             <img src="@(video.Thumbnail ?? "/images/default-video-thumb.png")" alt="Ảnh bìa video @video.Title">
                             <div class="tool-detail-tutorial-card__play-icon"><i class="fa-solid fa-play"></i></div>

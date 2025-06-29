@@ -68,7 +68,7 @@
         </script>
     }
 
-    @if (ViewBag.Error == true)
+    @if (ViewBag.Error != null)
     {
         <script>
             handleRegisterError();

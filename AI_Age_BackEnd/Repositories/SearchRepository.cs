@@ -7,7 +7,7 @@ namespace AI_Age_BackEnd.Repositories
 {
     public class SearchRepository : ISearchRepository
     {
-        private readonly AI_AgeContext _context; // Thay YourDbContext bằng tên DbContext của bạn
+        private readonly AI_AgeContext _context;
 
         public SearchRepository(AI_AgeContext context)
         {

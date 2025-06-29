@@ -46,5 +46,13 @@ namespace AI_Age_BackEnd.Repositories
             _context.Aitools.Remove(tool);
             await _context.SaveChangesAsync();
         }
+
+        public async Task<List<Aitool>> GetByCategoryIdAsync(int categoryId)
+        {
+            return await _context.Aitools
+                .Where(t => t.CategoryId == categoryId)
+                .OrderBy(t => t.ToolName)
+                .ToListAsync();
+        }
     }
 }

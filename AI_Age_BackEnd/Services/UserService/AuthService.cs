@@ -38,8 +38,7 @@ namespace AI_Age_BackEnd.Services.UserService
                 Username = registerDto.Username,
                 Password = hashedPassword,
                 RoleId = 3,
-                RegistrationDate = DateTime.Now,
-                Status = true
+                RegistrationDate = DateTime.Now
             };
 
             await _userRepository.AddUserAsync(newUser);

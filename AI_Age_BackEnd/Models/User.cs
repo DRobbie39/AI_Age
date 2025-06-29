@@ -27,10 +27,6 @@ public partial class User
 
     public DateTime? RegistrationDate { get; set; }
 
-    public DateTime? LastLogin { get; set; }
-
-    public bool? Status { get; set; }
-
     public virtual ICollection<ArticleComment> ArticleComments { get; set; } = new List<ArticleComment>();
 
     public virtual ICollection<ArticleRating> ArticleRatings { get; set; } = new List<ArticleRating>();
