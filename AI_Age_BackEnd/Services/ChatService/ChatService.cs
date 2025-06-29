@@ -6,14 +6,6 @@ using System.Text.Json;
 
 namespace AI_Age_BackEnd.Services.ChatService
 {
-    public class AIResponseDto
-    {
-        public string Action { get; set; }
-        public string Response { get; set; }
-        public string Url { get; set; }
-        public List<SearchResultDto> Suggestions { get; set; } = new List<SearchResultDto>();
-    }
-
     public class ChatService
     {
         private readonly HttpClient _httpClient;
