@@ -66,7 +66,6 @@ namespace AI_Age_BackEnd.Services.AIToolService
                 LogoUrl = logoUrl,
                 WebsiteUrl = dto.WebsiteURL,
                 CategoryId = dto.CategoryID,
-                Status = dto.Status,
                 CreatedDate = DateTime.Now
             };
 
@@ -82,8 +81,7 @@ namespace AI_Age_BackEnd.Services.AIToolService
                 WebsiteURL = createdTool.WebsiteUrl,
                 CategoryID = createdTool.CategoryId,
                 CategoryName = createdTool.Category?.CategoryName,
-                CreatedDate = createdTool.CreatedDate.GetValueOrDefault(),
-                Status = createdTool.Status.GetValueOrDefault()
+                CreatedDate = createdTool.CreatedDate.GetValueOrDefault()
             };
         }
 
@@ -102,8 +100,7 @@ namespace AI_Age_BackEnd.Services.AIToolService
                 WebsiteURL = tool.WebsiteUrl,
                 CategoryID = tool.CategoryId,
                 CategoryName = tool.Category?.CategoryName,
-                CreatedDate = tool.CreatedDate.GetValueOrDefault(),
-                Status = tool.Status.GetValueOrDefault()
+                CreatedDate = tool.CreatedDate.GetValueOrDefault()
             };
         }
 
@@ -120,8 +117,7 @@ namespace AI_Age_BackEnd.Services.AIToolService
                 WebsiteURL = tool.WebsiteUrl,
                 CategoryID = tool.CategoryId,
                 CategoryName = tool.Category?.CategoryName,
-                CreatedDate = tool.CreatedDate.GetValueOrDefault(),
-                Status = tool.Status.GetValueOrDefault()
+                CreatedDate = tool.CreatedDate.GetValueOrDefault()
             }).ToList();
         }
 
@@ -144,7 +140,6 @@ namespace AI_Age_BackEnd.Services.AIToolService
             existingTool.LogoUrl = newLogoUrl;
             existingTool.WebsiteUrl = dto.WebsiteURL;
             existingTool.CategoryId = dto.CategoryID;
-            existingTool.Status = dto.Status;
 
             await _toolRepository.UpdateAsync(existingTool);
 
@@ -159,8 +154,7 @@ namespace AI_Age_BackEnd.Services.AIToolService
                 WebsiteURL = updatedTool.WebsiteUrl,
                 CategoryID = updatedTool.CategoryId,
                 CategoryName = updatedTool.Category?.CategoryName,
-                CreatedDate = updatedTool.CreatedDate.GetValueOrDefault(),
-                Status = updatedTool.Status.GetValueOrDefault()
+                CreatedDate = updatedTool.CreatedDate.GetValueOrDefault()
             };
         }
 
@@ -171,6 +165,19 @@ namespace AI_Age_BackEnd.Services.AIToolService
                 throw new KeyNotFoundException("Không tìm thấy công cụ AI.");
 
             await _toolRepository.DeleteAsync(tool);
+        }
+
+        public async Task<List<AIToolDto>> GetToolsByCategoryIdAsync(int categoryId)
+        {
+            var tools = await _toolRepository.GetByCategoryIdAsync(categoryId);
+
+            return tools.Select(t => new AIToolDto
+            {
+                ToolID = t.ToolId,
+                ToolName = t.ToolName,
+                Description = t.Description,
+                LogoURL = t.LogoUrl
+            }).ToList();
         }
     }
 }

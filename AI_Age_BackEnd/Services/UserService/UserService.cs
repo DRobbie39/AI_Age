@@ -45,7 +45,6 @@ namespace AI_Age_BackEnd.Services.UserService
             user.DateOfBirth = dto.DateOfBirth;
             user.Gender = dto.Gender;
             user.Address = dto.Address;
-            user.LastLogin = DateTime.Now;
 
             // Upload ảnh đại diện mới nếu có
             if (dto.AvatarFile != null)

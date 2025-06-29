@@ -47,7 +47,7 @@
                 <ul>
                     <li>
                         <a asp-controller="Home" asp-action="Index" 
-                        class="@(ViewContext.RouteData.Values["Controller"]?.ToString() == "Home" && ViewContext.RouteData.Values["Action"]?.ToString() == "Index" ? "active" : "")">
+                        class="@(ViewContext.RouteData.Values["Controller"]?.ToString() == "Home" ? "active" : "")">
                             Trang chủ
                         </a>
                     </li>

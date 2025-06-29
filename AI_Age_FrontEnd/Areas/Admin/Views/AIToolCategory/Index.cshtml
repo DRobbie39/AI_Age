@@ -1,0 +1,82 @@
+﻿@{
+    ViewData["Title"] = "Quản lý Thể loại Công cụ AI";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Quản lý Thể loại Công cụ AI</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Dashboard" asp-action="Index">Dashboard</a></li>
+        <li class="breadcrumb-item active">Thể loại công cụ</li>
+    </ol>
+
+    <!-- KHỐI BẢNG DANH SÁCH -->
+    <div class="card mb-4">
+        <div class="card-header tool-category-card__header">
+            <div class="tool-category-card__title">
+                <i class="fas fa-sitemap me-2"></i>
+                Danh sách Thể loại
+            </div>
+            <!-- Nút Thêm mới chỉ để hiển thị -->
+            <button class="btn btn-primary">
+                <i class="fas fa-plus me-1"></i> Thêm mới
+            </button>
+        </div>
+        <div class="card-body p-0">
+            <table id="categoriesTable" class="table table-hover tool-category-table">
+                <thead>
+                    <tr>
+                        <th>Tên thể loại</th>
+                        <th>Mô tả</th>
+                        <th>Ngày tạo</th>
+                        <th>Trạng thái</th>
+                        <th class="text-end">Hành động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dữ liệu tĩnh để demo -->
+                    <tr>
+                        <td>Tạo hình ảnh</td>
+                        <td>Các công cụ giúp tạo hình ảnh từ văn bản.</td>
+                        <td>21-05-2024</td>
+                        <td><span class="tool-category-table__status tool-category-table__status--active">Hoạt động</span></td>
+                        <td class="tool-category-table__actions">
+                            <button class="btn btn-warning tool-category-table__action-button" title="Sửa">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="btn btn-danger tool-category-table__action-button" title="Xóa">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tạo nội dung</td>
+                        <td>Các công cụ giúp viết văn, làm thơ, soạn email.</td>
+                        <td>20-05-2024</td>
+                        <td><span class="tool-category-table__status tool-category-table__status--inactive">Ngừng hoạt động</span></td>
+                        <td class="tool-category-table__actions">
+                            <button class="btn btn-warning tool-category-table__action-button" title="Sửa">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="btn btn-danger tool-category-table__action-button" title="Xóa">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Khởi tạo thư viện datatable cho bảng để có chức năng tìm kiếm, phân trang
+        document.addEventListener('DOMContentLoaded', function () {
+            const categoriesTable = document.querySelector('#categoriesTable');
+            if (categoriesTable) {
+                new simpleDatatables.DataTable(categoriesTable);
+            }
+        });
+    </script>
+}

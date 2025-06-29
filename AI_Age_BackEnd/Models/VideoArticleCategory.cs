@@ -11,7 +11,5 @@ public partial class VideoArticleCategory
 
     public DateTime? CreatedDate { get; set; }
 
-    public bool? Status { get; set; }
-
     public virtual ICollection<VideoArticle> VideoArticles { get; set; } = new List<VideoArticle>();
 }

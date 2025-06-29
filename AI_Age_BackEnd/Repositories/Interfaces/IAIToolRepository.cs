@@ -9,5 +9,6 @@ namespace AI_Age_BackEnd.Repositories.Interfaces
         Task AddAsync(Aitool tool);
         Task UpdateAsync(Aitool tool);
         Task DeleteAsync(Aitool tool);
+        Task<List<Aitool>> GetByCategoryIdAsync(int categoryId);
     }
 }

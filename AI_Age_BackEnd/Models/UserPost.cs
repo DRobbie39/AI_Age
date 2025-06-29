@@ -23,8 +23,6 @@ public partial class UserPost
 
     public int? Views { get; set; }
 
-    public bool? Status { get; set; }
-
     public virtual UserPostCategory Category { get; set; } = null!;
 
     public virtual User User { get; set; } = null!;

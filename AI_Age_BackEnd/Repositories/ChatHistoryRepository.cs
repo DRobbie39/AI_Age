@@ -23,9 +23,9 @@ namespace AI_Age_BackEnd.Repositories
         public async Task<List<ChatHistory>> GetChatHistoryByUserIdAsync(int userId)
         {
             return await _context.ChatHistories
-                                 .Where(c => c.UserId == userId)
-                                 .OrderBy(c => c.ChatDate)
-                                 .ToListAsync();
+                .Where(c => c.UserId == userId)
+                .OrderBy(c => c.ChatDate)
+                .ToListAsync();
         }
     }
 }

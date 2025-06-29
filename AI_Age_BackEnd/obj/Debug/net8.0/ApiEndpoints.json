@@ -38,11 +38,6 @@
         "IsRequired": false
       },
       {
-        "Name": "Status",
-        "Type": "System.Boolean",
-        "IsRequired": false
-      },
-      {
         "Name": "Logo",
         "Type": "Microsoft.AspNetCore.Http.IFormFile",
         "IsRequired": false
@@ -105,11 +100,6 @@
         "IsRequired": false
       },
       {
-        "Name": "Status",
-        "Type": "System.Boolean",
-        "IsRequired": false
-      },
-      {
         "Name": "Logo",
         "Type": "Microsoft.AspNetCore.Http.IFormFile",
         "IsRequired": false
@@ -127,6 +117,22 @@
     "Parameters": [
       {
         "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AI_Age_BackEnd.Controllers.AIToolController.AIToolController",
+    "Method": "GetByCategoryId",
+    "RelativePath": "api/AITool/ByCategory/{categoryId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "categoryId",
         "Type": "System.Int32",
         "IsRequired": true
       }

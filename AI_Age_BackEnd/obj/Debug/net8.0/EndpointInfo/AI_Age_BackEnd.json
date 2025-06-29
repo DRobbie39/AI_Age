@@ -39,9 +39,6 @@
                     "type": "integer",
                     "format": "int32"
                   },
-                  "Status": {
-                    "type": "boolean"
-                  },
                   "Logo": {
                     "type": "string",
                     "format": "binary"
@@ -59,9 +56,6 @@
                   "style": "form"
                 },
                 "CategoryID": {
-                  "style": "form"
-                },
-                "Status": {
                   "style": "form"
                 },
                 "Logo": {
@@ -138,9 +132,6 @@
                     "type": "integer",
                     "format": "int32"
                   },
-                  "Status": {
-                    "type": "boolean"
-                  },
                   "Logo": {
                     "type": "string",
                     "format": "binary"
@@ -163,9 +154,6 @@
                 "CategoryID": {
                   "style": "form"
                 },
-                "Status": {
-                  "style": "form"
-                },
                 "Logo": {
                   "style": "form"
                 }
@@ -186,6 +174,29 @@
         "parameters": [
           {
             "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/AITool/ByCategory/{categoryId}": {
+      "get": {
+        "tags": [
+          "AITool"
+        ],
+        "parameters": [
+          {
+            "name": "categoryId",
             "in": "path",
             "required": true,
             "schema": {
@@ -1181,9 +1192,6 @@
           "description": {
             "type": "string",
             "nullable": true
-          },
-          "status": {
-            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -1202,9 +1210,6 @@
           "description": {
             "type": "string",
             "nullable": true
-          },
-          "status": {
-            "type": "boolean"
           }
         },
         "additionalProperties": false
