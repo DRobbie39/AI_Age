@@ -22,6 +22,7 @@
     .user-management-table td {
         vertical-align: middle;
         padding: 1rem 1.25rem;
+        text-align: center;
     }
 
     .user-management-table th {
@@ -30,46 +31,20 @@
         background-color: #f8f9fa;
     }
 
-/* --- Specific Table Cell Styles --- */
-
-/* Avatar in table */
 .user-management-table__avatar {
     width: 40px;
     height: 40px;
-    border-radius: 50%; /* Bo tròn ảnh đại diện */
-    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+    border-radius: 50%;
+    object-fit: cover;
     border: 1px solid #dee2e6;
 }
 
-/* User's full name */
 .user-management-table__fullname {
     font-weight: 600;
     color: #343a40;
 }
 
-/* Status Badges */
-.user-management-table__status {
-    padding: 0.4em 0.8em;
-    font-size: 0.78rem;
-    font-weight: 700;
-    border-radius: 20px;
-    color: #fff;
-    display: inline-block;
-    letter-spacing: 0.5px;
-    text-transform: capitalize;
-}
-
-.user-management-table__status--active {
-    background-color: #198754;
-}
-
-.user-management-table__status--locked {
-    background-color: #dc3545;
-}
-
-/* Action Buttons */
 .user-management-table__actions {
-    text-align: right;
     white-space: nowrap;
 }
 
@@ -83,6 +58,7 @@
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease-in-out;
+    background-color: transparent;
 }
 
     .user-management-table__action-button:hover {
@@ -94,3 +70,71 @@
         color: #000;
     }
 
+.user-form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.user-form__label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #495057;
+}
+
+.user-form__avatar-preview {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #dee2e6;
+    padding: 3px;
+    background-color: #fff;
+}
+
+.user-form__footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #dee2e6;
+}
+
+.user-form__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.55rem 1.2rem;
+    border: 1px solid transparent;
+    border-radius: .375rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    line-height: 1.5;
+}
+
+.user-form__button--primary {
+    background-color: #0d6efd;
+    color: #fff;
+    border-color: #0d6efd;
+}
+
+    .user-form__button--primary:hover {
+        background-color: #0b5ed7;
+        border-color: #0a58ca;
+    }
+
+.user-form__button--secondary {
+    background-color: #6c757d;
+    color: #fff;
+    border-color: #6c757d;
+}
+
+    .user-form__button--secondary:hover {
+        background-color: #5c636a;
+        border-color: #565e64;
+        color: #fff;
+    }

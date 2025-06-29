@@ -1,6 +1,5 @@
 ﻿@{
     ViewData["Title"] = "Quản lý Người dùng";
-    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
 <div class="container-fluid px-4">
@@ -16,61 +15,57 @@
                 <i class="fas fa-users me-2"></i>
                 Danh sách Người dùng
             </div>
-            <!-- Nút Thêm mới chỉ để hiển thị -->
-            <button class="btn btn-primary">
+            <a asp-area="Admin" asp-controller="UserManagement" asp-action="Create" class="btn btn-primary">
                 <i class="fas fa-plus me-1"></i> Thêm mới
-            </button>
+            </a>
         </div>
         <div class="card-body p-0">
             <table id="usersTable" class="table table-hover user-management-table">
                 <thead>
                     <tr>
-                        <th>Người dùng</th>
-                        <th>Tên đăng nhập</th>
-                        <th>Vai trò</th>
-                        <th>Ngày đăng ký</th>
-                        <th>Trạng thái</th>
-                        <th class="text-end">Hành động</th>
+                        <th class="text-center">Avatar</th>
+                        <th>Tên người dùng</th>
+                        <th class="text-center">Tên đăng nhập</th>
+                        <th class="text-center">Vai trò</th>
+                        <th class="text-center">Ngày đăng ký</th>
+                        <th class="text-center">Hành động</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Dữ liệu tĩnh để demo -->
                     <tr>
-                        <td>
-                            <div class="d-flex align-items-center">
-                                <img src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="Avatar" class="user-management-table__avatar me-3">
-                                <span class="user-management-table__fullname">Nguyễn Văn An</span>
-                            </div>
+                        <td class="text-center">
+                            <img src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="Avatar" class="user-management-table__avatar">
                         </td>
-                        <td>nguyenvana</td>
-                        <td>Admin</td>
-                        <td>22-05-2024</td>
-                        <td><span class="user-management-table__status user-management-table__status--active">Hoạt động</span></td>
+                        <td>
+                            <span class="user-management-table__fullname">Nguyễn Văn An</span>
+                        </td>
+                        <td class="text-center">nguyenvana</td>
+                        <td class="text-center">Admin</td>
+                        <td class="text-center">22-05-2024</td>
                         <td class="user-management-table__actions">
-                            <button class="btn btn-warning user-management-table__action-button" title="Sửa">
+                            <a asp-area="Admin" asp-controller="UserManagement" asp-action="Edit" asp-route-id="1" class="user-management-table__action-button btn-warning" title="Sửa">
                                 <i class="fas fa-edit"></i>
-                            </button>
-                            <button class="btn btn-danger user-management-table__action-button" title="Xóa">
+                            </a>
+                            <button class="btn-danger user-management-table__action-button" title="Xóa">
                                 <i class="fas fa-trash"></i>
                             </button>
                         </td>
                     </tr>
                     <tr>
-                        <td>
-                            <div class="d-flex align-items-center">
-                                <img src="https://i.pravatar.cc/150?u=a042581f4e29026705d" alt="Avatar" class="user-management-table__avatar me-3">
-                                <span class="user-management-table__fullname">Trần Thị Bích</span>
-                            </div>
+                        <td class="text-center">
+                            <img src="https://i.pravatar.cc/150?u=a042581f4e29026705d" alt="Avatar" class="user-management-table__avatar">
                         </td>
-                        <td>tranthib</td>
-                        <td>Member</td>
-                        <td>20-05-2024</td>
-                        <td><span class="user-management-table__status user-management-table__status--locked">Bị khóa</span></td>
+                        <td>
+                            <span class="user-management-table__fullname">Trần Thị Bích</span>
+                        </td>
+                        <td class="text-center">tranthib</td>
+                        <td class="text-center">Member</td>
+                        <td class="text-center">20-05-2024</td>
                         <td class="user-management-table__actions">
-                            <button class="btn btn-warning user-management-table__action-button" title="Sửa">
+                            <a asp-area="Admin" asp-controller="UserManagement" asp-action="Edit" asp-route-id="2" class="user-management-table__action-button btn-warning" title="Sửa">
                                 <i class="fas fa-edit"></i>
-                            </button>
-                            <button class="btn btn-danger user-management-table__action-button" title="Xóa">
+                            </a>
+                            <button class="btn-danger user-management-table__action-button" title="Xóa">
                                 <i class="fas fa-trash"></i>
                             </button>
                         </td>
@@ -80,15 +75,3 @@
         </div>
     </div>
 </div>
-
-@section Scripts {
-    <script>
-        // Khởi tạo thư viện datatable cho bảng để có chức năng tìm kiếm, phân trang
-        document.addEventListener('DOMContentLoaded', function () {
-            const usersTable = document.querySelector('#usersTable');
-            if (usersTable) {
-                new simpleDatatables.DataTable(usersTable);
-            }
-        });
-    </script>
-}

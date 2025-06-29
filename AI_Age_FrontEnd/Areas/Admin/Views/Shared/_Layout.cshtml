@@ -10,7 +10,7 @@
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <link href="~/admin-assets/css/styles.css" rel="stylesheet">
     <link href="~/admin-assets/css/tool-category.css" rel="stylesheet">
-    <link href="~/admin-assets/css/ai-tool.css" rel="stylesheet">
+    <link href="~/admin-assets/css/tool.css" rel="stylesheet">
     <link href="~/admin-assets/css/user-management.css" rel="stylesheet">
 </head>
 
@@ -51,15 +51,15 @@
                             Dashboard
                         </a>
                         <div class="sb-sidenav-menu-heading">Các trang</div>
-                        <a class="nav-link" href="/Admin/UserManagement/Index">
+                        <a class="nav-link" asp-area="Admin" asp-controller="UserManagement" asp-action="Index">
                             <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                             Người dùng
                         </a>
-                        <a class="nav-link" href="/Admin/AIToolCategory/Index">
+                        <a class="nav-link" asp-area="Admin" asp-controller="AIToolCategoryManagement" asp-action="Index">
                             <div class="sb-nav-link-icon"><i class="fas fa-sitemap"></i></div>
                             Thể loại công cụ
                         </a>
-                        <a class="nav-link" href="/Admin/AITool/Index">
+                        <a class="nav-link" asp-area="Admin" asp-controller="AIToolManagement" asp-action="Index">
                             <div class="sb-nav-link-icon"><i class="fas fa-robot"></i></div>
                             Công cụ AI
                         </a>

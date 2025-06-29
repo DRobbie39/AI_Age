@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "Quản lý Công cụ AI";
+}
+
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Quản lý Công cụ AI</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Dashboard" asp-action="Index">Dashboard</a></li>
+        <li class="breadcrumb-item active">Công cụ AI</li>
+    </ol>
+
+    <div class="card mb-4">
+        <div class="card-header tool-card__header">
+            <div class="tool-card__title">
+                <i class="fas fa-robot me-2"></i>
+                Danh sách Công cụ AI
+            </div>
+            <button class="btn btn-primary">
+                <i class="fas fa-plus me-1"></i> Thêm mới
+            </button>
+        </div>
+        <div class="card-body p-0">
+            <table class="table table-hover tool-table">
+                <thead>
+                    <tr>
+                        <th>Mã công cụ</th>
+                        <th>Logo</th>
+                        <th>Tên công cụ</th>
+                        <th>Thể loại</th>
+                        <th>Ngày tạo</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/1024px-ChatGPT_logo.svg.png" alt="Logo ChatGPT" class="tool-table__logo"></td>
+                        <td>ChatGPT</td>
+                        <td>Tạo nội dung</td>
+                        <td>21-05-2024</td>
+                        <td class="tool-table__actions">
+                            <button class="btn btn-warning tool-table__action-button" title="Sửa">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="btn btn-danger tool-table__action-button" title="Xóa">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
