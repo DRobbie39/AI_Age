@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Chỉnh sửa Thể loại";
+}
+
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Chỉnh sửa Thể loại</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+        <li class="breadcrumb-item"><a href="#">Thể loại công cụ</a></li>
+        <li class="breadcrumb-item active">Chỉnh sửa</li>
+    </ol>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-edit me-2"></i>
+            Cập nhật thông tin cho Thể loại: Tạo hình ảnh
+        </div>
+        <div class="card-body">
+            <form action="#" method="post" class="tool-category-form">
+                <input type="hidden" name="categoryId" value="1" />
+
+                <div class="tool-category-form__group mb-4">
+                    <label for="categoryName" class="tool-category-form__label">Tên thể loại</label>
+                    <input id="categoryName" name="categoryName" type="text" class="form-control tool-category-form__input" value="Tạo hình ảnh">
+                </div>
+
+                <div class="tool-category-form__group mb-4">
+                    <label for="description" class="tool-category-form__label">Mô tả</label>
+                    <textarea id="description" name="description" class="form-control tool-category-form__input" rows="4">Các công cụ giúp tạo hình ảnh từ văn bản.</textarea>
+                </div>
+
+                <div class="tool-category-form__footer">
+                    <a href="#" class="tool-category-form__button tool-category-form__button--secondary">Quay lại danh sách</a>
+                    <button type="submit" class="tool-category-form__button tool-category-form__button--primary">
+                        <i class="fas fa-save me-1"></i> Cập nhật
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
