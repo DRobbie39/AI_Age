@@ -12,6 +12,8 @@
     <link href="~/admin-assets/css/tool-category.css" rel="stylesheet">
     <link href="~/admin-assets/css/tool.css" rel="stylesheet">
     <link href="~/admin-assets/css/user-management.css" rel="stylesheet">
+    <link href="~/admin-assets/css/article-category.css" rel="stylesheet">
+    <link href="~/admin-assets/css/article.css" rel="stylesheet">
 </head>
 
 <body class="sb-nav-fixed">
@@ -63,11 +65,11 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-robot"></i></div>
                             Công cụ AI
                         </a>
-                        <a class="nav-link" href="charts.html">
+                        <a class="nav-link" asp-area="Admin" asp-controller="ArticleCategoryManagement" asp-action="Index">
                             <div class="sb-nav-link-icon"><i class="fas fa-sitemap"></i></div>
                             Thể loại bài viết
                         </a>
-                        <a class="nav-link" href="tables.html">
+                        <a class="nav-link" asp-area="Admin" asp-controller="ArticleManagement" asp-action="Index">
                             <div class="sb-nav-link-icon"><i class="fas fa-file-alt"></i></div>
                             Bài viết hướng dẫn
                         </a>

@@ -3,6 +3,8 @@ wwwroot\admin-assets\assets\demo\chart-bar-demo.js
 wwwroot\admin-assets\assets\demo\chart-pie-demo.js
 wwwroot\admin-assets\assets\demo\datatables-demo.js
 wwwroot\admin-assets\assets\img\error-404-monochrome.svg
+wwwroot\admin-assets\css\article.css
+wwwroot\admin-assets\css\article-category.css
 wwwroot\admin-assets\css\styles.css
 wwwroot\admin-assets\css\tool.css
 wwwroot\admin-assets\css\tool-category.css

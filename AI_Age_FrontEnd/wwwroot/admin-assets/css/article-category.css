@@ -1,0 +1,120 @@
+﻿.article-category-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.25rem;
+}
+
+.article-category-card__title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+.article-category-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .article-category-table th,
+    .article-category-table td {
+        vertical-align: middle;
+        padding: 1rem 1.25rem;
+        text-align: center;
+    }
+
+        .article-category-table th:nth-child(2),
+        .article-category-table td:nth-child(2) {
+            text-align: left;
+        }
+
+    .article-category-table th {
+        font-weight: 600;
+        color: #495057;
+        background-color: #f8f9fa;
+    }
+
+.article-category-table__actions {
+    white-space: nowrap;
+}
+
+.article-category-table__action-button {
+    border: none;
+    border-radius: 5px;
+    margin: 0 3px;
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+}
+
+    .article-category-table__action-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .article-category-table__action-button.btn-warning {
+        color: #000;
+    }
+
+.article-category-form {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.article-category-form__label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.article-category-form__footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #dee2e6;
+}
+
+.article-category-form__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.55rem 1.2rem;
+    border: 1px solid transparent;
+    border-radius: .375rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    line-height: 1.5;
+}
+
+.article-category-form__button--primary {
+    background-color: #0d6efd;
+    color: #fff;
+    border-color: #0d6efd;
+}
+
+    .article-category-form__button--primary:hover {
+        background-color: #0b5ed7;
+        border-color: #0a58ca;
+    }
+
+.article-category-form__button--secondary {
+    background-color: #6c757d;
+    color: #fff;
+    border-color: #6c757d;
+}
+
+    .article-category-form__button--secondary:hover {
+        background-color: #5c636a;
+        border-color: #565e64;
+        color: #fff;
+    }

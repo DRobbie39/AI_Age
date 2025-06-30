@@ -1,0 +1,157 @@
+﻿@{
+    ViewData["Title"] = "Chỉnh sửa Bài viết";
+}
+
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Chỉnh sửa Bài viết</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Dashboard" asp-action="Index">Dashboard</a></li>
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="ArticleManagement" asp-action="Index">Bài viết</a></li>
+        <li class="breadcrumb-item active">Chỉnh sửa</li>
+    </ol>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-edit me-2"></i>
+            Cập nhật thông tin cho Bài viết: Xu hướng công nghệ nổi bật năm 2024
+        </div>
+        <div class="card-body">
+            <form asp-action="Edit" method="post" enctype="multipart/form-data" class="article-form">
+                <input type="hidden" name="articleId" value="1" />
+
+                <div class="article-form__group mb-3">
+                    <label for="title" class="article-form__label">Tiêu đề bài viết</label>
+                    <input id="title" name="title" type="text" class="form-control" value="Xu hướng công nghệ nổi bật năm 2024">
+                </div>
+
+                <div class="article-form__group mb-3">
+                    <label for="summary" class="article-form__label">Tóm tắt</label>
+                    <textarea id="summary" name="summary" class="form-control" rows="3">Đây là tóm tắt về các xu hướng công nghệ mới nhất, bao gồm AI tạo sinh, điện toán lượng tử và tương lai của an ninh mạng.</textarea>
+                </div>
+
+                <div class="article-form__group mb-4">
+                    <label class="article-form__label">Ảnh đại diện</label>
+                    <div class="article-form__upload">
+                        @{
+                            var imageUrl = "https://images.unsplash.com/photo-1550745165-9bc0b252726a?q=80&w=1470&auto=format&fit=crop";
+                            var hasImage = !string.IsNullOrEmpty(imageUrl);
+                        }
+
+                        <div id="image-preview-container" class="article-form__preview">
+                            <img id="image-preview" src="@imageUrl" alt="Xem trước ảnh" class="article-form__preview-image" />
+                            <button type="button" id="remove-image-btn" class="article-form__remove-btn">×</button>
+                        </div>
+
+                        <label for="imageUpload" id="upload-label" class="article-form__upload-label d-none">
+                            <span class="article-form__upload-title">Thay đổi ảnh đại diện</span>
+                            <i class="fas fa-cloud-upload-alt article-form__upload-icon"></i>
+                            <p class="article-form__upload-text">Kéo và thả file hoặc nhấn để chọn ảnh mới</p>
+                        </label>
+                        <input id="imageUpload" name="imageFile" type="file" accept="image/*" class="article-form__upload-input">
+                    </div>
+                    <small class="form-text text-muted mt-2">Chọn file mới nếu bạn muốn thay đổi ảnh đại diện hiện tại.</small>
+                </div>
+
+                <div class="article-form__group mb-3">
+                    <label for="content-editor" class="article-form__label">Nội dung</label>
+                    <textarea id="content-editor" name="content">
+                    <p>Nội dung chi tiết của bài viết về <strong>công nghệ năm 2024</strong>.</p>
+                    <p>Bao gồm các phân tích sâu về từng xu hướng và tác động của chúng đến đời sống và kinh doanh.</p>
+                    <ul>
+                    <li>Trí tuệ nhân tạo tạo sinh (Generative AI)</li>
+                    <li>Điện toán biên (Edge Computing)</li>
+                    <li>Web 3.0 và Blockchain</li>
+                        </ul>
+                    </textarea>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="article-form__group mb-3">
+                            <label for="categoryId" class="article-form__label">Danh mục</label>
+                            <select id="categoryId" name="categoryId" class="form-select">
+                                <option value="">-- Chọn danh mục --</option>
+                                <option value="1">Lập trình Web</option>
+                                <option value="2" selected>AI & Machine Learning</option>
+                                <option value="3">An ninh mạng</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="article-form__group mb-3">
+                            <label for="toolId" class="article-form__label">Công cụ</label>
+                            <select id="toolId" name="toolId" class="form-select">
+                                <option value="">-- Chọn công cụ --</option>
+                                <option value="10">ASP.NET Core</option>
+                                <option value="11" selected>ReactJS</option>
+                                <option value="12">Docker</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="article-form__group mb-3">
+                            <label for="level" class="article-form__label">Cấp độ</label>
+                            <select id="level" name="level" class="form-select">
+                                <option value="">-- Chọn cấp độ --</option>
+                                <option value="Beginner">Sơ cấp</option>
+                                <option value="Intermediate">Trung cấp</option>
+                                <option value="Advanced" selected>Nâng cao</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="article-form__footer">
+                    <a asp-area="Admin" asp-controller="ArticleManagement" asp-action="Index" class="article-form__button article-form__button--secondary">Quay lại danh sách</a>
+                    <button type="submit" class="article-form__button article-form__button--primary">
+                        <i class="fas fa-save me-1"></i> Cập nhật
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.tiny.cloud/1/90titj9nvzu454ib38hsyacp308es73k7fii0d5c0pq7ay1w/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const imageUpload = document.getElementById('imageUpload');
+            const uploadLabel = document.getElementById('upload-label');
+            const imagePreviewContainer = document.getElementById('image-preview-container');
+            const imagePreview = document.getElementById('image-preview');
+            const removeImageBtn = document.getElementById('remove-image-btn');
+
+            imageUpload.addEventListener('change', function (e) {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(event) {
+                        imagePreview.src = event.target.result;
+                        imagePreviewContainer.classList.remove('d-none');
+                        uploadLabel.classList.add('d-none');
+                    }
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            removeImageBtn.addEventListener('click', function () {
+                imageUpload.value = '';
+                imagePreview.src = '#';
+                imagePreviewContainer.classList.add('d-none');
+                uploadLabel.classList.remove('d-none');
+            });
+
+            tinymce.init({
+                selector: 'textarea#content-editor',
+                plugins: 'code table lists image link media',
+                toolbar: 'undo redo | blocks | bold italic | alignleft aligncenter alignright | indent outdent | bullist numlist | code | table | image link media',
+                height: 500,
+                images_upload_url: '/Admin/ArticleManagement/UploadImage',
+                automatic_uploads: true,
+                file_picker_types: 'image',
+            });
+        });
+    </script>
+}

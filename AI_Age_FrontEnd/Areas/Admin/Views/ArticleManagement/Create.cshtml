@@ -1,0 +1,140 @@
+﻿@{
+    ViewData["Title"] = "Thêm mới Bài viết";
+}
+
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Thêm mới Bài viết</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Dashboard" asp-action="Index">Dashboard</a></li>
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="ArticleManagement" asp-action="Index">Bài viết</a></li>
+        <li class="breadcrumb-item active">Thêm mới</li>
+    </ol>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-plus-circle me-2"></i>
+            Thông tin Bài viết mới
+        </div>
+        <div class="card-body">
+            <form asp-action="Create" method="post" enctype="multipart/form-data" class="article-form">
+
+                <div class="article-form__group mb-3">
+                    <label for="title" class="article-form__label">Tiêu đề bài viết</label>
+                    <input id="title" name="title" type="text" class="form-control" placeholder="Nhập tiêu đề...">
+                </div>
+
+                <div class="article-form__group mb-3">
+                    <label for="summary" class="article-form__label">Tóm tắt</label>
+                    <textarea id="summary" name="summary" class="form-control" rows="3" placeholder="Nhập một đoạn tóm tắt ngắn..."></textarea>
+                </div>
+
+                <div class="article-form__group mb-4">
+                    <label class="article-form__label">Ảnh đại diện</label>
+                    <div class="article-form__upload">
+                        <div id="image-preview-container" class="article-form__preview d-none">
+                            <img id="image-preview" src="#" alt="Xem trước ảnh" class="article-form__preview-image" />
+                            <button type="button" id="remove-image-btn" class="article-form__remove-btn">×</button>
+                        </div>
+                        <label for="imageUpload" id="upload-label" class="article-form__upload-label">
+                            <span class="article-form__upload-title">Ảnh đại diện bài viết</span>
+                            <i class="fas fa-cloud-upload-alt article-form__upload-icon"></i>
+                            <p class="article-form__upload-text">Kéo và thả file hoặc nhấn để chọn ảnh</p>
+                        </label>
+                        <input id="imageUpload" name="imageFile" type="file" accept="image/*" class="article-form__upload-input">
+                    </div>
+                </div>
+
+                <div class="article-form__group mb-3">
+                    <label for="content-editor" class="article-form__label">Nội dung</label>
+                    <textarea id="content-editor" name="content"></textarea>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="article-form__group mb-3">
+                            <label for="categoryId" class="article-form__label">Danh mục</label>
+                            <select id="categoryId" name="categoryId" class="form-select">
+                                <option value="" selected>-- Chọn danh mục --</option>
+                                <option value="1">Lập trình Web</option>
+                                <option value="2">AI & Machine Learning</option>
+                                <option value="3">An ninh mạng</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="article-form__group mb-3">
+                            <label for="toolId" class="article-form__label">Công cụ</label>
+                            <select id="toolId" name="toolId" class="form-select">
+                                <option value="" selected>-- Chọn công cụ --</option>
+                                <option value="10">ASP.NET Core</option>
+                                <option value="11">ReactJS</option>
+                                <option value="12">Docker</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="article-form__group mb-3">
+                            <label for="level" class="article-form__label">Cấp độ</label>
+                            <select id="level" name="level" class="form-select">
+                                <option value="" selected>-- Chọn cấp độ --</option>
+                                <option value="Beginner">Sơ cấp</option>
+                                <option value="Intermediate">Trung cấp</option>
+                                <option value="Advanced">Nâng cao</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="article-form__footer">
+                    <a asp-area="Admin" asp-controller="ArticleManagement" asp-action="Index" class="article-form__button article-form__button--secondary">Quay lại danh sách</a>
+                    <button type="submit" class="article-form__button article-form__button--primary">
+                        <i class="fas fa-save me-1"></i> Lưu lại
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.tiny.cloud/1/90titj9nvzu454ib38hsyacp308es73k7fii0d5c0pq7ay1w/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const imageUpload = document.getElementById('imageUpload');
+            const uploadLabel = document.getElementById('upload-label');
+            const imagePreviewContainer = document.getElementById('image-preview-container');
+            const imagePreview = document.getElementById('image-preview');
+            const removeImageBtn = document.getElementById('remove-image-btn');
+
+            imageUpload.addEventListener('change', function (e) {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(event) {
+                        imagePreview.src = event.target.result;
+                        imagePreviewContainer.classList.remove('d-none');
+                        uploadLabel.classList.add('d-none');
+                    }
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            removeImageBtn.addEventListener('click', function () {
+                imageUpload.value = '';
+                imagePreview.src = '#';
+                imagePreviewContainer.classList.add('d-none');
+                uploadLabel.classList.remove('d-none');
+            });
+
+            tinymce.init({
+                selector: 'textarea#content-editor',
+                plugins: 'code table lists image link media',
+                toolbar: 'undo redo | blocks | bold italic | alignleft aligncenter alignright | indent outdent | bullist numlist | code | table | image link media',
+                height: 500,
+                images_upload_url: '/Admin/ArticleManagement/UploadImage',
+                automatic_uploads: true,
+                file_picker_types: 'image',
+            });
+        });
+    </script>
+}
