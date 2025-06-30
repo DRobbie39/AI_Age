@@ -22,7 +22,7 @@ namespace AI_Age_BackEnd.Repositories
                 .FirstOrDefaultAsync(a => a.ArticleId == id);
         }
 
-        public async Task<List<Article>> GetAllArticlesAsync(string? searchQuery = null)
+        public async Task<List<Article>> GetAllArticlesAsync(string? searchQuery = null, int? categoryId = null)
         {
             var query = _context.Articles
                .Include(a => a.Category)
@@ -30,14 +30,17 @@ namespace AI_Age_BackEnd.Repositories
                .Include(a => a.Tool)
                .AsQueryable();
 
-            // Nếu có từ khóa tìm kiếm, thêm điều kiện Where vào truy vấn
             if (!string.IsNullOrEmpty(searchQuery))
             {
-                // ToLower() để tìm kiếm không phân biệt hoa thường
                 var lowerCaseSearchQuery = searchQuery.ToLower();
                 query = query.Where(a =>
                     a.Title.ToLower().Contains(lowerCaseSearchQuery) ||
                     a.Summary.ToLower().Contains(lowerCaseSearchQuery));
+            }
+
+            if (categoryId.HasValue && categoryId > 0)
+            {
+                query = query.Where(a => a.CategoryId == categoryId);
             }
 
             return await query.OrderByDescending(a => a.PostedDate).ToListAsync();

@@ -22,7 +22,7 @@ namespace AI_Age_BackEnd.Repositories
                 .FirstOrDefaultAsync(v => v.VideoId == id);
         }
 
-        public async Task<List<VideoArticle>> GetAllVideoArticlesAsync(string? searchQuery = null)
+        public async Task<List<VideoArticle>> GetAllVideoArticlesAsync(string? searchQuery = null, int? categoryId = null)
         {
             var query = _context.VideoArticles
                 .Include(v => v.Category)
@@ -32,10 +32,14 @@ namespace AI_Age_BackEnd.Repositories
 
             if (!string.IsNullOrEmpty(searchQuery))
             {
-                // ToLower() để tìm kiếm không phân biệt hoa thường
                 var lowerCaseSearchQuery = searchQuery.ToLower();
                 query = query.Where(a =>
                     a.Title.ToLower().Contains(lowerCaseSearchQuery));
+            }
+
+            if (categoryId.HasValue && categoryId > 0)
+            {
+                query = query.Where(v => v.CategoryId == categoryId);
             }
 
             return await query.OrderByDescending(a => a.PostedDate).ToListAsync();

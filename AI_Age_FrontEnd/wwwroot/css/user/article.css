@@ -18,6 +18,12 @@
     padding: 0.375rem 0.75rem;
 }
 
+.article-list__search-button:hover {
+    color: white;
+    background-color: #4CAF50;
+    transition: background-color 0.3s ease;
+}
+
 .article-list__item {
     background-color: var(--surface-color);
     border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
@@ -109,12 +115,33 @@
 
 .article-detail__content img {
     max-width: 100% !important;
-    height: auto !important; /* Dùng !important để ghi đè inline style */
-    object-fit: unset !important; /* Hủy bỏ object-fit */
-    max-height: none !important; /* Hủy bỏ max-height */
-
+    height: auto !important;
+    object-fit: unset !important;
+    max-height: none !important;
     display: block;
     margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
 }
+
+.category-filters {
+    flex-wrap: wrap; /* Cho phép các nút xuống dòng trên màn hình nhỏ */
+}
+
+    .category-filters .btn-filter {
+        margin: 0 10px 10px 0;
+        border: 1px solid #ced4da;
+        color: #495057;
+        background-color: #fff;
+        transition: all 0.3s ease-in-out;
+        font-weight: 500;
+        border-radius: 50px; /* Bo tròn các góc */
+        padding: 8px 20px;
+    }
+
+        .category-filters .btn-filter.active,
+        .category-filters .btn-filter:hover {
+            background-color: #5cb874; /* Màu xanh lá cây của template */
+            color: #fff;
+            border-color: #5cb874;
+        }

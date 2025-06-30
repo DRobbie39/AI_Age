@@ -329,6 +329,11 @@
         "Name": "query",
         "Type": "System.String",
         "IsRequired": false
+      },
+      {
+        "Name": "categoryId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -430,6 +435,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AI_Age_BackEnd.Controllers.ArticleCategoryController.ArticleCategoryController",
+    "Method": "GetAllCategories",
+    "RelativePath": "api/ArticleCategory/getallcategories",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -898,6 +913,11 @@
         "Name": "query",
         "Type": "System.String",
         "IsRequired": false
+      },
+      {
+        "Name": "categoryId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -1004,6 +1024,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AI_Age_BackEnd.Controllers.VideoArticleCategoryController.VideoArticleCategoryController",
+    "Method": "GetAllCategories",
+    "RelativePath": "api/VideoArticleCategory/getallcategories",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   }
 ]
