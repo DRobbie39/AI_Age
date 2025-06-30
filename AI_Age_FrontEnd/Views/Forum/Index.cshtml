@@ -2,8 +2,8 @@
     ViewData["Title"] = "Diễn đàn";
 }
 
-<!-- Page Title -->
 <div class="page-title" data-aos="fade">
+    <!-- Phần này giữ nguyên -->
     <div class="heading">
         <div class="container">
             <div class="row d-flex justify-content-center text-center">
@@ -22,119 +22,387 @@
             </ol>
         </div>
     </nav>
-</div><!-- End Page Title -->
-<!-- Forum Section -->
+</div>
 <section id="forum" class="forum section">
     <div class="container">
-        <!-- New Post Form -->
+
+        <div id="notification-area"></div>
+
         <div class="new-post mb-5" data-aos="fade-up" data-aos-delay="100">
             <h2>Đăng bài viết mới</h2>
-            <form asp-controller="Forum" asp-action="CreatePost" method="post" class="d-flex flex-column">
+            <form id="new-post-form" method="post" enctype="multipart/form-data" class="d-flex flex-column">
                 <div class="mb-3">
                     <label for="title" class="form-label">Tiêu đề bài viết</label>
-                    <input type="text" name="title" id="title" class="form-control" placeholder="Nhập tiêu đề..." required />
-                </div>
-                <div class="mb-3">
-                    <label for="categoryId" class="form-label">Chọn danh mục</label>
-                    <select name="categoryId" id="categoryId" class="form-select" required>
-                        <option value="">Chọn danh mục</option>
-                        <option value="1">AI Cơ bản</option>
-                        <option value="2">Công cụ AI</option>
-                        <option value="3">AI Nâng cao</option>
-                    </select>
+                    <input type="text" name="Title" id="title" class="form-control" placeholder="Nhập tiêu đề..." required />
                 </div>
                 <div class="mb-3">
                     <label for="content" class="form-label">Nội dung</label>
-                    <textarea name="content" id="content" class="form-control mb-3" placeholder="Viết bài của bạn ở đây..." required></textarea>
+                    <textarea name="Content" id="content" class="form-control mb-3" placeholder="Viết bài của bạn ở đây..." required></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="attachedImage" class="form-label">Hình ảnh đính kèm (nếu có)</label>
-                    <input type="file" name="attachedImage" id="attachedImage" class="form-control" accept="image/*" />
+                    <input type="file" name="AttachedImageFile" id="attachedImage" class="form-control" accept="image/*" />
                 </div>
                 <button type="submit" class="btn btn-primary">Đăng bài</button>
             </form>
         </div>
 
-        <!-- Forum Posts -->
         <div class="forum-posts" data-aos="fade-up" data-aos-delay="200">
             <h2>Các bài viết</h2>
-            <div class="post-item mb-4" data-aos="zoom-in">
-                <div class="post-card">
-                    <div class="post-header d-flex justify-content-between align-items-center mb-2">
-                        <div class="d-flex align-items-center">
-                            <img src="~/img/profile.png" alt="Admin" class="rounded-circle me-2 post-header__img"/>
-                            <div>
-                                <h3>
-                                    <a asp-controller="Forum" asp-action="PostDetails" asp-route-id="1">Hỏi về cách dùng chatbot</a>
-                                </h3>
-                                <span>Đăng bởi: Admin - 05/06/2025</span>
-                            </div>
-                        </div>
-                    </div>
-                    <p>Mình mới bắt đầu học dùng chatbot, ai có kinh nghiệm chia sẻ giúp mình với?</p>
-                    <div class="post-meta d-flex align-items-center mb-3">
-                        <span class="me-3"><i class="bi bi-eye"></i> 150 lượt xem</span>
-                        <span><i class="bi bi-chat"></i> 2 bình luận</span>
-                    </div>
-                    <div class="comments">
-                        <h4>Bình luận</h4>
-                        <div class="comment mb-2" data-aos="fade-up" data-aos-delay="100">
-                            <div class="d-flex align-items-center mb-1">
-                                <img src="~/img/profile.png" alt="Người dùng 1" class="rounded-circle me-2 comment__img"/>
-                                <p class="mb-0"><strong>Người dùng 1:</strong> Cảm ơn bạn, mình cũng đang học, có thể dùng thử Grok 3 để tập nhé!</p>
-                            </div>
-                            <span>05/06/2025</span>
-                        </div>
-                        <div class="comment mb-2" data-aos="fade-up" data-aos-delay="200">
-                            <div class="d-flex align-items-center mb-1">
-                                <img src="~/img/profile.png" alt="Người dùng 2" class="rounded-circle me-2" style="width: 24px; height: 24px;" />
-                                <p class="mb-0"><strong>Người dùng 2:</strong> Mình thấy chatbot rất dễ, cứ thử dần nhé!</p>
-                            </div>
-                            <span>05/06/2025</span>
-                        </div>
-                        <form asp-controller="Forum" asp-action="AddComment" method="post" class="d-flex flex-column mt-2">
-                            <input type="hidden" name="postId" value="1" />
-                            <textarea name="content" class="form-control mb-2" placeholder="Viết bình luận của bạn..." required></textarea>
-                            <button type="submit" class="btn btn-primary comment-btn">Gửi bình luận</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="post-item mb-4" data-aos="zoom-in" data-aos-delay="300">
-                <div class="post-card">
-                    <div class="post-header d-flex justify-content-between align-items-center mb-2">
-                        <div class="d-flex align-items-center">
-                            <img src="~/img/profile.png" alt="Người dùng 2" class="rounded-circle me-2" style="width: 32px; height: 32px;" />
-                            <div>
-                                <h3>
-                                    <a asp-controller="Forum" asp-action="PostDetails" asp-route-id="2">AI có thể giúp gì cho sức khỏe?</a>
-                                </h3>
-                                <span>Đăng bởi: Người dùng 2 - 04/06/2025</span>
-                            </div>
-                        </div>
-                    </div>
-                    <p>Mình muốn biết AI hỗ trợ sức khỏe như thế nào, ai biết chỉ mình với!</p>
-                    <div class="post-meta d-flex align-items-center mb-3">
-                        <span class="me-3"><i class="bi bi-eye"></i> 120 lượt xem</span>
-                        <span><i class="bi bi-chat"></i> 1 bình luận</span>
-                    </div>
-                    <div class="comments">
-                        <h4>Bình luận</h4>
-                        <div class="comment mb-2" data-aos="fade-up" data-aos-delay="100">
-                            <div class="d-flex align-items-center mb-1">
-                                <img src="~/img/profile.png" alt="Admin" class="rounded-circle me-2" style="width: 24px; height: 24px;" />
-                                <p class="mb-0"><strong>Admin:</strong> AI có thể theo dõi sức khỏe qua wearable devices, rất tiện!</p>
-                            </div>
-                            <span>05/06/2025</span>
-                        </div>
-                        <form asp-controller="Forum" asp-action="AddComment" method="post" class="d-flex flex-column mt-2">
-                            <input type="hidden" name="postId" value="2" />
-                            <textarea name="content" class="form-control mb-2" placeholder="Viết bình luận của bạn..." required></textarea>
-                            <button type="submit" class="btn btn-primary comment-btn">Gửi bình luận</button>
-                        </form>
+            <div id="posts-container">
+                <div class="text-center">
+                    <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Đang tải...</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</section><!-- /Forum Section -->
+</section>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const apiBaseUrl = '@ViewBag.ApiBaseUrl';
+            const postsContainer = document.getElementById('posts-container');
+            const newPostForm = document.getElementById('new-post-form');
+            const notificationArea = document.getElementById('notification-area');
+
+            // =================================================================
+            // CÁC HÀM TIỆN ÍCH
+            // =================================================================
+
+            function getToken() {
+                return localStorage.getItem('jwtToken');
+            }
+
+            function getCurrentUserId() {
+                const token = getToken();
+                if (!token) return null;
+                try {
+                    const payload = JSON.parse(atob(token.split('.')[1]));
+                    // 'nameid' là claim chuẩn cho User ID trong ASP.NET Core
+                    return parseInt(payload.nameid, 10);
+                } catch (e) {
+                    console.error("Lỗi giải mã token:", e);
+                    return null;
+                }
+            }
+
+            function showNotification(message, type = 'success') {
+                const alertClass = type === 'success' ? 'alert-success' : 'alert-danger';
+                const notification = document.createElement('div');
+                notification.className = `alert ${alertClass} alert-dismissible fade show`;
+                notification.setAttribute('role', 'alert');
+                notification.innerHTML = `
+                    ${message}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                `;
+                notificationArea.appendChild(notification);
+                setTimeout(() => {
+                    notification.remove();
+                }, 5000);
+            }
+
+
+            // =================================================================
+            // CÁC HÀM RENDER (VẼ) GIAO DIỆN
+            // =================================================================
+
+            function createCommentHtml(comment) {
+                const currentUserId = getCurrentUserId();
+                const commentAvatar = comment.userAvatar || '/img/profile.png';
+                const commentDate = new Date(comment.commentDate).toLocaleString('vi-VN');
+
+                // QUAN TRỌNG: Kiểm tra quyền sở hữu bằng "comment.userId" (camelCase)
+                const actionButtons = comment.userId === currentUserId ? `
+                    <div class="comment-actions ms-auto">
+                        <button class="btn btn-sm btn-link text-primary edit-comment-btn" data-comment-id="${comment.commentID}">Sửa</button>
+                        <button class="btn btn-sm btn-link text-danger delete-comment-btn" data-comment-id="${comment.commentID}">Xóa</button>
+                    </div>
+                ` : '';
+
+                return `
+                    <div class="comment mb-3" id="comment-${comment.commentID}">
+                        <div class="d-flex align-items-start mb-1">
+                            <img src="${commentAvatar}" alt="${comment.userFullName}" class="rounded-circle me-2 comment__img" />
+                            <div class="flex-grow-1">
+                                <div id="comment-content-${comment.commentID}">
+                                    <p class="mb-0"><strong>${comment.userFullName}:</strong> ${comment.content}</p>
+                                </div>
+                                <small class="text-muted">${commentDate}</small>
+                            </div>
+                            ${actionButtons}
+                        </div>
+                    </div>`;
+            }
+
+            function renderPosts(posts) {
+                if (!posts || posts.length === 0) {
+                    postsContainer.innerHTML = '<div class="alert alert-info">Chưa có bài viết nào. Hãy là người đầu tiên đăng bài!</div>';
+                    return;
+                }
+
+                let html = '';
+                posts.forEach(post => {
+                    const userAvatar = post.userAvatar || '/img/profile.png';
+                    const postedDate = new Date(post.postedDate).toLocaleString('vi-VN');
+
+                    post.comments.sort((a, b) => new Date(b.commentDate) - new Date(a.commentDate));
+
+                    let commentsHtml = '';
+                    if (post.comments && post.comments.length > 0) {
+                        post.comments.forEach(comment => {
+                            commentsHtml += createCommentHtml(comment);
+                        });
+                    }
+
+                    // QUAN TRỌNG: Sử dụng "post.postId" (camelCase) cho các ID
+                    html += `
+                        <div class="post-item mb-4" id="post-${post.postId}">
+                            <div class="post-card">
+                                <div class="post-header d-flex justify-content-between align-items-center mb-2">
+                                    <div class="d-flex align-items-center">
+                                        <img src="${userAvatar}" alt="${post.userFullName}" class="rounded-circle me-2 post-header__img" />
+                                        <div>
+                                            <h3>${post.title}</h3>
+                                            <span class="text-muted">Đăng bởi: ${post.userFullName} - ${postedDate}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>${post.content.replace(/\n/g, '<br>')}</p>
+                                ${post.attachedImage ? `<div class="post-image my-3"><img src="${post.attachedImage}" class="img-fluid rounded" alt="Ảnh đính kèm" /></div>` : ''}
+                                <div class="post-meta d-flex align-items-center mb-3">
+                                    <span class="me-3"><i class="bi bi-chat"></i> <span id="comment-count-${post.postId}">${post.comments.length}</span> bình luận</span>
+                                </div>
+                                <div class="comments">
+                                    <div class="comment-list" id="comment-list-${post.postId}">
+                                        ${commentsHtml}
+                                    </div>
+                                    <form class="add-comment-form mt-3" data-post-id="${post.postId}">
+                                        <div class="d-flex">
+                                            <textarea name="content" class="form-control me-2" placeholder="Viết bình luận của bạn..." required></textarea>
+                                            <button type="submit" class="btn btn-primary comment-btn flex-shrink-0">Gửi</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>`;
+                });
+                postsContainer.innerHTML = html;
+            }
+
+
+            // =================================================================
+            // CÁC HÀM GỌI API
+            // =================================================================
+
+            async function fetchPosts() {
+                postsContainer.innerHTML = `
+                    <div class="text-center">
+                        <div class="spinner-border" role="status"><span class="visually-hidden">Đang tải...</span></div>
+                    </div>`;
+                try {
+                    const response = await fetch(`${apiBaseUrl}/api/userposts`);
+                    if (!response.ok) {
+                        throw new Error('Lỗi khi tải dữ liệu bài viết.');
+                    }
+                    const posts = await response.json();
+                    renderPosts(posts);
+                } catch (error) {
+                    postsContainer.innerHTML = `<div class="alert alert-danger">${error.message}</div>`;
+                }
+            }
+
+            async function submitNewPost(formData) {
+                const token = getToken();
+                if (!token) {
+                    showNotification('Bạn cần đăng nhập để đăng bài.', 'danger');
+                    return;
+                }
+                try {
+                    const response = await fetch(`${apiBaseUrl}/api/userposts`, {
+                        method: 'POST',
+                        headers: { 'Authorization': `Bearer ${token}` },
+                        body: formData
+                    });
+                    if (response.ok) {
+                        showNotification('Đăng bài viết thành công!', 'success');
+                        newPostForm.reset();
+                        await fetchPosts();
+                    } else {
+                        const errorData = await response.json();
+                        throw new Error(errorData.message || 'Đã có lỗi xảy ra khi đăng bài.');
+                    }
+                } catch (error) {
+                    showNotification(error.message, 'danger');
+                }
+            }
+
+            async function submitNewComment(postId, content) {
+                 const token = getToken();
+                if (!token) {
+                    showNotification('Bạn cần đăng nhập để bình luận.', 'danger');
+                    return;
+                }
+                try {
+                    const response = await fetch(`${apiBaseUrl}/api/posts/${postId}/comments`, {
+                        method: 'POST',
+                        headers: {
+                            'Authorization': `Bearer ${token}`,
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ content: content })
+                    });
+                     if (response.status === 201) {
+                        const newComment = await response.json();
+                        const commentList = document.getElementById(`comment-list-${postId}`);
+                        commentList.insertAdjacentHTML('afterbegin', createCommentHtml(newComment));
+
+                        const countEl = document.getElementById(`comment-count-${postId}`);
+                        countEl.textContent = parseInt(countEl.textContent) + 1;
+
+                        showNotification('Bình luận thành công!', 'success');
+                    } else {
+                        const errorData = await response.json();
+                        throw new Error(errorData.message || 'Lỗi khi gửi bình luận.');
+                    }
+                } catch (error) {
+                    showNotification(error.message, 'danger');
+                }
+            }
+
+            async function deleteComment(commentId) {
+                if (!confirm('Bạn có chắc chắn muốn xóa bình luận này không?')) return;
+
+                const token = getToken();
+                if (!token) return;
+
+                try {
+                    const response = await fetch(`${apiBaseUrl}/api/comments/${commentId}`, {
+                        method: 'DELETE',
+                        headers: { 'Authorization': `Bearer ${token}` }
+                    });
+
+                    if (response.ok) {
+                        const commentElement = document.getElementById(`comment-${commentId}`);
+                        const postElement = commentElement.closest('.post-item');
+                        const postId = postElement.id.split('-')[1];
+
+                        commentElement.remove();
+                        showNotification('Xóa bình luận thành công.', 'success');
+
+                        const countEl = document.getElementById(`comment-count-${postId}`);
+                        countEl.textContent = parseInt(countEl.textContent) - 1;
+                    } else {
+                         const errorData = await response.json();
+                        throw new Error(errorData.message || 'Lỗi khi xóa bình luận.');
+                    }
+                } catch(error) {
+                    showNotification(error.message, 'danger');
+                }
+            }
+
+            async function updateComment(commentId, newContent) {
+                const token = getToken();
+                if (!token) return;
+
+                try {
+                    const response = await fetch(`${apiBaseUrl}/api/comments/${commentId}`, {
+                        method: 'PUT',
+                        headers: {
+                            'Authorization': `Bearer ${token}`,
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ content: newContent })
+                    });
+
+                    if (response.ok) {
+                        const updatedComment = await response.json();
+                        const commentElement = document.getElementById(`comment-${commentId}`);
+                        commentElement.outerHTML = createCommentHtml(updatedComment);
+                        showNotification('Cập nhật bình luận thành công!', 'success');
+                    } else {
+                        const errorData = await response.json();
+                        throw new Error(errorData.message || 'Lỗi khi cập nhật bình luận.');
+                    }
+                } catch(error) {
+                    showNotification(error.message, 'danger');
+                }
+            }
+
+            // =================================================================
+            // LẮNG NGHE SỰ KIỆN (Event Listeners)
+            // =================================================================
+
+            newPostForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+                const formData = new FormData(newPostForm);
+                submitNewPost(formData);
+            });
+
+            postsContainer.addEventListener('submit', function (event) {
+                if (event.target.matches('.add-comment-form')) {
+                    event.preventDefault();
+                    const form = event.target;
+                    const postId = form.dataset.postId;
+                    const content = form.querySelector('textarea[name="content"]').value;
+                    if (content.trim()) {
+                        submitNewComment(postId, content.trim());
+                        form.reset();
+                    }
+                }
+            });
+
+            postsContainer.addEventListener('click', function (event) {
+                // Xử lý nút XÓA bình luận
+                if (event.target.matches('.delete-comment-btn')) {
+                    const commentId = event.target.dataset.commentId;
+                    deleteComment(commentId);
+                }
+
+                // Xử lý nút SỬA bình luận
+                if (event.target.matches('.edit-comment-btn')) {
+                    const commentId = event.target.dataset.commentId;
+                    const contentDiv = document.getElementById(`comment-content-${commentId}`);
+                    const currentContent = contentDiv.querySelector('p').textContent.replace(contentDiv.querySelector('strong').textContent, '').trim();
+
+                    // Lưu lại HTML gốc để có thể phục hồi khi nhấn "Hủy"
+                    const originalHtml = contentDiv.innerHTML;
+
+                    contentDiv.innerHTML = `
+                        <div class="edit-comment-form d-flex">
+                            <textarea class="form-control form-control-sm me-2">${currentContent}</textarea>
+                            <button class="btn btn-sm btn-success save-comment-btn" data-comment-id="${commentId}">Lưu</button>
+                            <button class="btn btn-sm btn-secondary cancel-edit-btn ms-1">Hủy</button>
+                        </div>
+                    `;
+                    // Gắn dữ liệu HTML gốc vào nút Hủy để có thể truy cập sau này
+                    contentDiv.querySelector('.cancel-edit-btn').originalHtml = originalHtml;
+                }
+
+                // Xử lý nút LƯU sau khi sửa
+                if (event.target.matches('.save-comment-btn')) {
+                    const commentId = event.target.dataset.commentId;
+                    const newContent = event.target.parentElement.querySelector('textarea').value;
+                    if (newContent.trim()) {
+                        updateComment(commentId, newContent.trim());
+                    }
+                }
+
+                // Xử lý nút HỦY sửa
+                if (event.target.matches('.cancel-edit-btn')) {
+                    const contentDiv = event.target.closest('[id^="comment-content-"]');
+                    // Lấy lại HTML gốc đã được lưu vào nút
+                    contentDiv.innerHTML = event.target.originalHtml;
+                }
+            });
+
+
+            // =================================================================
+            // KHỞI CHẠY LẦN ĐẦU
+            // =================================================================
+            fetchPosts();
+        });
+    </script>
+}
