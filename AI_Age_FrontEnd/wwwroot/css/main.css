@@ -6,13 +6,16 @@
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #37423b; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #5fcf80; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+:root {
+    --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+    --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
+    --heading-color: #37423b; /* Color for headings, subheadings and title throughout the website */
+    --accent-color: #5fcf80; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+    --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+    --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+    --primary-green: #198754; /* Màu xanh lá cây thành công của Bootstrap 5 */
+    --primary-green-darker: #146c43; /* Màu xanh lá đậm hơn khi hover */
+    --secondary-gray: #6c757d; /* Màu xám cho nút phụ */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -950,4 +953,94 @@ section,
 
 .dropdown-toggle::after {
     vertical-align: middle;
+}
+
+/* Tùy chỉnh cho Shepherd Tour */
+.shepherd-custom .shepherd-content {
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    border: 1px solid #ddd;
+}
+
+.shepherd-custom .shepherd-header {
+    /* SỬA: Đổi nền sang màu xanh lá */
+    background-color: var(--primary-green);
+    padding: 1rem;
+    border-top-left-radius: 11px; /* Điều chỉnh để khớp với border */
+    border-top-right-radius: 11px;
+}
+
+.shepherd-custom .shepherd-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.shepherd-custom .shepherd-cancel-icon {
+    color: white;
+    opacity: 0.8;
+}
+
+    .shepherd-custom .shepherd-cancel-icon:hover {
+        opacity: 1;
+    }
+
+.shepherd-custom .shepherd-text {
+    padding: 1.25rem; /* Tăng padding một chút */
+    color: #333;
+    font-size: 17px; /* Chữ to rõ hơn cho người lớn tuổi */
+    line-height: 1.7;
+}
+
+.shepherd-custom .shepherd-button {
+    margin: 0 0.5rem;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    transition: background-color 0.2s ease-in-out; /* THÊM: Hiệu ứng chuyển màu mượt mà */
+}
+
+    /* SỬA: Nút chính (Tiếp theo, Bắt đầu, Hoàn thành) */
+    .shepherd-custom .shepherd-button:not(.shepherd-button-secondary) {
+        background: var(--primary-green);
+        color: white;
+    }
+
+        /* THÊM: Hiệu ứng khi di chuột vào nút chính */
+        .shepherd-custom .shepherd-button:not(.shepherd-button-secondary):hover {
+            background: var(--primary-green-darker);
+        }
+
+    /* Giữ nguyên: Nút phụ (Quay lại) vẫn là màu xám để phân biệt */
+    .shepherd-custom .shepherd-button.shepherd-button-secondary {
+        background: var(--secondary-gray);
+        color: white;
+    }
+
+        /* THÊM: Hiệu ứng khi di chuột vào nút phụ */
+        .shepherd-custom .shepherd-button.shepherd-button-secondary:hover {
+            background: #5c636a;
+            color: white;
+        }
+
+/* CSS cho nhân vật hướng dẫn */
+.tour-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.tour-mascot {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+/* SỬA: Đổi màu tiêu đề của nhân vật cho nhất quán */
+.tour-header h4 {
+    margin: 0;
+    color: #222; /* Màu chữ đậm hơn một chút */
+    font-weight: 600;
+    font-size: 1.25rem;
 }

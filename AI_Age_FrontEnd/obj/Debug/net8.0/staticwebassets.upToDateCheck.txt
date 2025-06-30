@@ -28,11 +28,13 @@ wwwroot\img\apple-touch-icon.png
 wwwroot\img\chatbox.jpg
 wwwroot\img\favicon.png
 wwwroot\img\logo.png
+wwwroot\img\mascot.png
 wwwroot\img\old.jpg
 wwwroot\img\profile.png
 wwwroot\js\chatbox.js
 wwwroot\js\main.js
 wwwroot\js\toastrNotification.js
+wwwroot\js\tour-guide.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
 wwwroot\lib\bootstrap\dist\css\bootstrap.min.css

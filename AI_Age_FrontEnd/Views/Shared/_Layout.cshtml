@@ -28,6 +28,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
 
     <!-- Main CSS File -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shepherd.js@10.0.1/dist/css/shepherd.css" />
     <link href="~/css/main.css" rel="stylesheet">
     <link href="~/css/user/auth.css" rel="stylesheet">
     <link href="~/css/user/article.css" rel="stylesheet">
@@ -53,19 +54,19 @@
                             Trang chủ
                         </a>
                     </li>
-                    <li>
+                    <li id="nav-articles">
                         <a asp-controller="Article" asp-action="Index"
                         class="@(ViewContext.RouteData.Values["Controller"]?.ToString() == "Article" ? "active" : "")">
                             Bài hướng dẫn
                         </a>
                     </li>
-                    <li>
+                    <li id="nav-videos">
                         <a asp-controller="VideoArticle" asp-action="Index"
                         class="@(ViewContext.RouteData.Values["Controller"]?.ToString() == "VideoArticle" ? "active" : "")">
                             Video hướng dẫn
                         </a>
                     </li>
-                    <li>
+                    <li id="nav-forum">
                         <a asp-controller="Forum" asp-action="Index"
                         class="@(ViewContext.RouteData.Values["Controller"]?.ToString() == "Forum" ? "active" : "")">
                             Diễn đàn
@@ -119,6 +120,7 @@
                                 const userDropdown = document.createElement('li');
 
                                 userDropdown.className = 'dropdown';
+                                userDropdown.id = 'nav-user-profile';
                                 userDropdown.innerHTML = `
                                     <a href="#" onclick="return false;">
                                         <img src="${displayAvatar}" alt="Avatar" class="user-avatar" id="layoutUserAvatar" />
@@ -234,11 +236,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/shepherd.js@10.0.1/dist/js/shepherd.min.js"></script>
 
     <!-- Main JS File -->
     <script src="~/js/main.js"></script>
     <script src="~/js/toastrNotification.js"></script>
     <script src="~/js/chatbox.js"></script>
+    <script src="~/js/tour-guide.js"></script>
 
     @RenderSection("Scripts", required: false)
 </body>

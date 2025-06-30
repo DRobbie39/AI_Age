@@ -121,5 +121,17 @@
                 }
             }
         });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const userId = localStorage.getItem('userId');
+
+            const tourSeenKey = `tour_seen_for_user_${userId}`;
+
+            if (userId && !localStorage.getItem(tourSeenKey)) {
+                setTimeout(() => {
+                    startOnboardingTour();
+                }, 500);
+            }
+        });
     </script>
 }
