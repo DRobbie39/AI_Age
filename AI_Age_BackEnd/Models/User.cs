@@ -35,6 +35,8 @@ public partial class User
 
     public virtual Role Role { get; set; } = null!;
 
+    public virtual ICollection<SavedLesson> SavedLessons { get; set; } = new List<SavedLesson>();
+
     public virtual ICollection<UserPostComment> UserPostComments { get; set; } = new List<UserPostComment>();
 
     public virtual ICollection<UserPost> UserPosts { get; set; } = new List<UserPost>();

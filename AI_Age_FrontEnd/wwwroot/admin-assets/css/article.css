@@ -237,3 +237,15 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     padding: 0;
 }
+
+.article-card__search {
+    padding: 0.75rem 1.25rem;
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    justify-content: flex-end;
+}
+
+    .article-card__search .input-group {
+        width: 100%;
+        max-width: 380px;
+    }

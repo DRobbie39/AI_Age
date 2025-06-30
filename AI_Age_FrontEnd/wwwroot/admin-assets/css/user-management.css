@@ -138,3 +138,15 @@
         border-color: #565e64;
         color: #fff;
     }
+
+.user-management-card__search {
+    padding: 0.75rem 1.25rem;
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    justify-content: flex-end;
+}
+
+    .user-management-card__search .input-group {
+        width: 100%;
+        max-width: 380px;
+    }

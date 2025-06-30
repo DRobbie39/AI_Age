@@ -93,6 +93,10 @@
       "PackagePath": "staticwebassets\\css\\user\\profile.css"
     },
     {
+      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\user\\saved-lessions.css",
+      "PackagePath": "staticwebassets\\css\\user\\saved-lessions.css"
+    },
+    {
       "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\user\\tool.css",
       "PackagePath": "staticwebassets\\css\\user\\tool.css"
     },
