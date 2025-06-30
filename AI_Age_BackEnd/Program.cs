@@ -15,6 +15,7 @@ using System.Text;
 using CloudinaryDotNet;
 using AI_Age_BackEnd.Services.UserPostService;
 using AI_Age_BackEnd.Services.UserPostCommentService;
+using AI_Age_BackEnd.Services.SavedLessonService;
 
 namespace AI_Age_BackEnd
 {
@@ -42,6 +43,7 @@ namespace AI_Age_BackEnd
             builder.Services.AddScoped<ISearchRepository, SearchRepository>();
             builder.Services.AddScoped<IUserPostRepository, UserPostRepository>();
             builder.Services.AddScoped<IUserPostCommentRepository, UserPostCommentRepository>();
+            builder.Services.AddScoped<ISavedLessonRepository, SavedLessonRepository>();
 
             // Đăng ký các service
             builder.Services.AddScoped<AuthService>();
@@ -54,6 +56,7 @@ namespace AI_Age_BackEnd
             builder.Services.AddScoped<ChatService>();
             builder.Services.AddScoped<UserPostService>();
             builder.Services.AddScoped<UserPostCommentService, UserPostCommentService>();
+            builder.Services.AddScoped<SavedLessonService>();
 
             // Cấu hình CORS
             builder.Services.AddCors(options =>

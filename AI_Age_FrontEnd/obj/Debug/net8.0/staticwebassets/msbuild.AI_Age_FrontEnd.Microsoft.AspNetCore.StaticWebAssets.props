@@ -642,8 +642,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>xjkr94lhhh</Fingerprint>
-      <Integrity>M5bHzIPnkCDRFcBEwORvRU5eXGj2Nz7xNPPDXKPConU=</Integrity>
+      <Fingerprint>kh3ffndx0e</Fingerprint>
+      <Integrity>mAUe6TATF93VL2i36sTC+Qpp7B3ddKtNQOerI9TeMuU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\toastrNotification.js'))</OriginalItemSpec>

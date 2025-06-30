@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System.Net.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace AI_Age_FrontEnd.Controllers
 {
@@ -23,6 +23,8 @@ namespace AI_Age_FrontEnd.Controllers
 
         public IActionResult SavedLessons()
         {
+            ViewBag.ApiBaseUrl = _configuration.GetValue<string>("ApiSettings:BaseUrl");
+
             return View();
         }
     }

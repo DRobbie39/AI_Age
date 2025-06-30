@@ -15,7 +15,17 @@ public partial class SavedLesson
 
     public string? LessonImage { get; set; }
 
+    public string? LessonUrl { get; set; }
+
     public DateTime? SavedDate { get; set; }
 
+    public int? ArticleId { get; set; }
+
+    public int? VideoId { get; set; }
+
+    public virtual Article? Article { get; set; }
+
     public virtual User User { get; set; } = null!;
+
+    public virtual VideoArticle? Video { get; set; }
 }

@@ -565,6 +565,69 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "AI_Age_BackEnd.Controllers.SavedLessonController.SavedLessonController",
+    "Method": "SaveLesson",
+    "RelativePath": "api/SavedLesson",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "AI_Age_BackEnd.DTOs.SavedLessonTO.SavedLessonCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AI_Age_BackEnd.Controllers.SavedLessonController.SavedLessonController",
+    "Method": "GetMySavedLessons",
+    "RelativePath": "api/SavedLesson",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AI_Age_BackEnd.Controllers.SavedLessonController.SavedLessonController",
+    "Method": "DeleteSavedLesson",
+    "RelativePath": "api/SavedLesson/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AI_Age_BackEnd.Controllers.SavedLessonController.SavedLessonController",
+    "Method": "CheckSavedStatus",
+    "RelativePath": "api/SavedLesson/check",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "articleId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "videoId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AI_Age_BackEnd.Controllers.UserPostsController",
     "Method": "GetAllPosts",
     "RelativePath": "api/UserPosts",
