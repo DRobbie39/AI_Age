@@ -26,6 +26,37 @@ namespace AI_Age_BackEnd.Controllers.UserPostCommentsController
             throw new UnauthorizedAccessException("UserID không hợp lệ hoặc không tìm thấy trong token.");
         }
 
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetCommentById(int id)
+        {
+            try
+            {
+                var userId = GetCurrentUserId();
+                var comment = await _commentService.GetCommentByIdAsync(id); // Sử dụng repository hiện có
+                if (comment == null)
+                {
+                    return NotFound(new { message = "Không tìm thấy bình luận." });
+                }
+                if (comment.UserId != userId)
+                {
+                    return Forbid("Bạn không có quyền xem bình luận này.");
+                }
+                return Ok(new UserPostCommentDto
+                {
+                    CommentID = comment.CommentId,
+                    Content = comment.Content,
+                    CommentDate = comment.CommentDate,
+                    UserID = comment.UserId,
+                    UserFullName = comment.User?.FullName ?? "Người dùng ẩn danh",
+                    UserAvatar = comment.User?.Avatar
+                });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "Lỗi máy chủ nội bộ: " + ex.Message });
+            }
+        }
+
         // POST: api/posts/{postId}/comments - Route này sẽ đẹp hơn
         [HttpPost("~/api/posts/{postId}/comments")]
         public async Task<IActionResult> CreateComment(int postId, [FromBody] UserPostCommentCreateDto createDto)

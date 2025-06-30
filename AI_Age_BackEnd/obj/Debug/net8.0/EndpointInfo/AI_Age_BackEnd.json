@@ -763,14 +763,14 @@
         }
       }
     },
-    "/api/posts/{postId}/comments": {
-      "post": {
+    "/api/comments/{id}": {
+      "get": {
         "tags": [
           "UserPostComments"
         ],
         "parameters": [
           {
-            "name": "postId",
+            "name": "id",
             "in": "path",
             "required": true,
             "schema": {
@@ -779,33 +779,12 @@
             }
           }
         ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UserPostCommentCreateDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UserPostCommentCreateDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/UserPostCommentCreateDto"
-              }
-            }
-          }
-        },
         "responses": {
           "200": {
             "description": "OK"
           }
         }
-      }
-    },
-    "/api/comments/{id}": {
+      },
       "put": {
         "tags": [
           "UserPostComments"
@@ -861,6 +840,48 @@
             }
           }
         ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/posts/{postId}/comments": {
+      "post": {
+        "tags": [
+          "UserPostComments"
+        ],
+        "parameters": [
+          {
+            "name": "postId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserPostCommentCreateDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserPostCommentCreateDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserPostCommentCreateDto"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
