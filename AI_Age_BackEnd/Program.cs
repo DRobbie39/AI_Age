@@ -13,6 +13,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using CloudinaryDotNet;
+using AI_Age_BackEnd.Services.UserPostService;
+using AI_Age_BackEnd.Services.UserPostCommentService;
 
 namespace AI_Age_BackEnd
 {
@@ -38,6 +40,8 @@ namespace AI_Age_BackEnd
             builder.Services.AddScoped<IAIToolRepository, AIToolRepository>();
             builder.Services.AddScoped<IChatHistoryRepository, ChatHistoryRepository>();
             builder.Services.AddScoped<ISearchRepository, SearchRepository>();
+            builder.Services.AddScoped<IUserPostRepository, UserPostRepository>();
+            builder.Services.AddScoped<IUserPostCommentRepository, UserPostCommentRepository>();
 
             // Đăng ký các service
             builder.Services.AddScoped<AuthService>();
@@ -48,6 +52,8 @@ namespace AI_Age_BackEnd
             builder.Services.AddScoped<AIToolCategoryService>();
             builder.Services.AddScoped<AIToolService>();
             builder.Services.AddScoped<ChatService>();
+            builder.Services.AddScoped<UserPostService>();
+            builder.Services.AddScoped<UserPostCommentService, UserPostCommentService>();
 
             // Cấu hình CORS
             builder.Services.AddCors(options =>
