@@ -27,8 +27,6 @@ public partial class User
 
     public DateTime? RegistrationDate { get; set; }
 
-    public virtual ICollection<ArticleComment> ArticleComments { get; set; } = new List<ArticleComment>();
-
     public virtual ICollection<ArticleRating> ArticleRatings { get; set; } = new List<ArticleRating>();
 
     public virtual ICollection<Article> Articles { get; set; } = new List<Article>();
@@ -40,8 +38,6 @@ public partial class User
     public virtual ICollection<UserPostComment> UserPostComments { get; set; } = new List<UserPostComment>();
 
     public virtual ICollection<UserPost> UserPosts { get; set; } = new List<UserPost>();
-
-    public virtual ICollection<VideoArticleComment> VideoArticleComments { get; set; } = new List<VideoArticleComment>();
 
     public virtual ICollection<VideoArticleRating> VideoArticleRatings { get; set; } = new List<VideoArticleRating>();
 

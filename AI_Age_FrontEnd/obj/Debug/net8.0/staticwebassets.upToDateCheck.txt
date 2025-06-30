@@ -13,6 +13,7 @@ wwwroot\admin-assets\css\video.css
 wwwroot\admin-assets\css\video-category.css
 wwwroot\admin-assets\js\datatables-simple-demo.js
 wwwroot\admin-assets\js\scripts.js
+wwwroot\admin-assets\js\toastrNotification.js
 wwwroot\css\main.css
 wwwroot\css\user\article.css
 wwwroot\css\user\auth.css

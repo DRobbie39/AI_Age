@@ -39,7 +39,5 @@ public partial class VideoArticle
 
     public virtual User UploaderNavigation { get; set; } = null!;
 
-    public virtual ICollection<VideoArticleComment> VideoArticleComments { get; set; } = new List<VideoArticleComment>();
-
     public virtual ICollection<VideoArticleRating> VideoArticleRatings { get; set; } = new List<VideoArticleRating>();
 }

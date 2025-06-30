@@ -59,30 +59,25 @@
         document.addEventListener('DOMContentLoaded', function () {
             const filterButtons = document.querySelectorAll('.tool-filter__button');
             const toolListContainer = document.getElementById('tool-list-container');
-            // Base URL của API, có thể lấy từ cấu hình
-            const apiBaseUrl = 'https://localhost:7022/api';
+
+            const apiBaseUrl = '@ViewBag.ApiBaseUrl';
 
             filterButtons.forEach(button => {
                 button.addEventListener('click', function (e) {
-                    e.preventDefault(); // Ngăn hành vi mặc định của button
+                    e.preventDefault();
 
-                    // 1. Cập nhật giao diện nút active
                     filterButtons.forEach(btn => btn.classList.remove('tool-filter__button--active'));
                     this.classList.add('tool-filter__button--active');
 
-                    // 2. Lấy category ID từ thuộc tính data
                     const categoryId = this.getAttribute('data-category-id');
 
-                    // 3. Xây dựng URL API dựa trên category ID
-                    let apiUrl = `${apiBaseUrl}/AITool`;
+                    let apiUrl = `${apiBaseUrl}/api/AITool`;
                     if (categoryId !== '0') {
-                        apiUrl = `${apiBaseUrl}/AITool/ByCategory/${categoryId}`;
+                        apiUrl = `${apiBaseUrl}/api/AITool/ByCategory/${categoryId}`;
                     }
 
-                    // Hiển thị loading (tùy chọn)
                     toolListContainer.innerHTML = '<p style="text-align:center; margin-top: 2rem;">Đang tải dữ liệu...</p>';
 
-                    // 4. Gọi API bằng Fetch
                     fetch(apiUrl)
                         .then(response => {
                             if (!response.ok) {
@@ -91,7 +86,6 @@
                             return response.json();
                         })
                         .then(tools => {
-                            // 5. Cập nhật lại danh sách tool trên giao diện
                             renderTools(tools);
                         })
                         .catch(error => {
@@ -101,15 +95,11 @@
                 });
             });
 
-            // Hàm để render danh sách công cụ
             function renderTools(tools) {
-                // Xóa nội dung cũ
                 toolListContainer.innerHTML = '';
 
                 if (tools && tools.length > 0) {
                     tools.forEach(tool => {
-                        // Lưu ý: Tên thuộc tính (tool.toolName, tool.logoURL) phải khớp với JSON trả về từ API.
-                        // .NET Core mặc định sẽ chuyển thành camelCase (ví dụ: ToolName -> toolName)
                         const toolCardHtml = `
                             <article class="tool-card">
                                 <div class="tool-card__logo-wrapper">

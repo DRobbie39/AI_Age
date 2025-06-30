@@ -1,12 +1,13 @@
-﻿@{
+﻿@model AI_Age_FrontEnd.Areas.Admin.Models.AIToolCategoryViewModel.AIToolCategoryCreateViewModel
+@{
     ViewData["Title"] = "Thêm mới Thể loại";
 }
 
 <div class="container-fluid px-4">
     <h1 class="mt-4">Thêm mới Thể loại</h1>
     <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-        <li class="breadcrumb-item"><a href="#">Thể loại công cụ</a></li>
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Dashboard" asp-action="Index">Dashboard</a></li>
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="AIToolCategoryManagement" asp-action="Index">Thể loại công cụ</a></li>
         <li class="breadcrumb-item active">Thêm mới</li>
     </ol>
 
@@ -16,19 +17,24 @@
             Thông tin Thể loại mới
         </div>
         <div class="card-body">
-            <form action="#" method="post" class="tool-category-form">
+            <form asp-action="Create" method="post" class="tool-category-form">
+                @Html.AntiForgeryToken()
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
                 <div class="tool-category-form__group mb-4">
-                    <label for="categoryName" class="tool-category-form__label">Tên thể loại</label>
-                    <input id="categoryName" name="categoryName" type="text" class="form-control tool-category-form__input" placeholder="Ví dụ: Tạo nội dung, Thiết kế Logo...">
+                    <label asp-for="CategoryName" class="tool-category-form__label"></label>
+                    <input asp-for="CategoryName" class="form-control tool-category-form__input" placeholder="Ví dụ: Tạo nội dung, Thiết kế Logo...">
+                    <span asp-validation-for="CategoryName" class="text-danger"></span>
                 </div>
 
                 <div class="tool-category-form__group mb-4">
-                    <label for="description" class="tool-category-form__label">Mô tả</label>
-                    <textarea id="description" name="description" class="form-control tool-category-form__input" rows="4" placeholder="Mô tả ngắn về thể loại này..."></textarea>
+                    <label asp-for="Description" class="tool-category-form__label"></label>
+                    <textarea asp-for="Description" class="form-control tool-category-form__input" rows="4" placeholder="Mô tả ngắn về thể loại này..."></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
                 </div>
 
                 <div class="tool-category-form__footer">
-                    <a href="#" class="tool-category-form__button tool-category-form__button--secondary">Quay lại danh sách</a>
+                    <a asp-action="Index" class="tool-category-form__button tool-category-form__button--secondary">Quay lại danh sách</a>
                     <button type="submit" class="tool-category-form__button tool-category-form__button--primary">
                         <i class="fas fa-save me-1"></i> Lưu lại
                     </button>
@@ -37,3 +43,9 @@
         </div>
     </div>
 </div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

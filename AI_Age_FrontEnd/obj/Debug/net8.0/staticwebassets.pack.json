@@ -65,6 +65,10 @@
       "PackagePath": "staticwebassets\\admin-assets\\js\\scripts.js"
     },
     {
+      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\admin-assets\\js\\toastrNotification.js",
+      "PackagePath": "staticwebassets\\admin-assets\\js\\toastrNotification.js"
+    },
+    {
       "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\main.css",
       "PackagePath": "staticwebassets\\css\\main.css"
     },

@@ -1,8 +1,11 @@
-﻿@{
+﻿@model List<AI_Age_FrontEnd.Areas.Admin.Models.AIToolCategoryViewModel.AIToolCategoryViewModel>
+
+@{
     ViewData["Title"] = "Quản lý Thể loại Công cụ AI";
 }
 
 <div class="container-fluid px-4">
+    @Html.AntiForgeryToken()
     <h1 class="mt-4">Quản lý Thể loại Công cụ AI</h1>
     <ol class="breadcrumb mb-4">
         <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Dashboard" asp-action="Index">Dashboard</a></li>
@@ -31,36 +34,106 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Tạo hình ảnh</td>
-                        <td>Các công cụ giúp tạo hình ảnh từ văn bản.</td>
-                        <td>21-05-2024</td>
-                        <td class="tool-category-table__actions">
-                            <a asp-area="Admin" asp-controller="AIToolCategoryManagement" asp-action="Edit" asp-route-id="1" class="btn btn-warning tool-category-table__action-button" title="Sửa">
-                                <i class="fas fa-edit"></i>
-                            </a>
-                            <button class="btn btn-danger tool-category-table__action-button" title="Xóa">
-                                <i class="fas fa-trash"></i>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Tạo nội dung</td>
-                        <td>Các công cụ giúp viết văn, làm thơ, soạn email.</td>
-                        <td>20-05-2024</td>
-                        <td class="tool-category-table__actions">
-                            <a asp-area="Admin" asp-controller="AIToolCategoryManagement" asp-action="Edit" asp-route-id="2" class="btn btn-warning tool-category-table__action-button" title="Sửa">
-                                <i class="fas fa-edit"></i>
-                            </a>
-                            <button class="btn btn-danger tool-category-table__action-button" title="Xóa">
-                                <i class="fas fa-trash"></i>
-                            </button>
-                        </td>
-                    </tr>
+                    @if (Model != null && Model.Any())
+                    {
+                        @foreach (var category in Model)
+                        {
+                            <tr id="row-@category.CategoryID">
+                                <td>@category.CategoryID</td>
+                                <td>@Html.DisplayFor(modelItem => category.CategoryName)</td>
+                                <td>@Html.DisplayFor(modelItem => category.Description)</td>
+                                <td>@category.CreatedDate.ToString("dd-MM-yyyy")</td>
+                                <td class="tool-category-table__actions">
+                                    <a asp-area="Admin" asp-controller="AIToolCategoryManagement" asp-action="Edit" asp-route-id="@category.CategoryID" class="btn btn-warning tool-category-table__action-button" title="Sửa">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <button class="btn btn-danger tool-category-table__action-button js-delete-btn" title="Xóa"
+                                            data-id="@category.CategoryID"
+                                            data-name="@category.CategoryName">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="5" class="text-center">Không có dữ liệu thể loại nào.</td>
+                        </tr>
+                    }
                 </tbody>
             </table>
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="deleteConfirmationModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Xác nhận Xóa</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Bạn có chắc chắn muốn xóa thể loại <strong id="categoryNameToDelete"></strong> không? Hành động này không thể hoàn tác.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Xóa</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const deleteModal = new bootstrap.Modal(document.getElementById('deleteConfirmationModal'));
+            const confirmDeleteBtn = document.getElementById('confirmDeleteBtn');
+            const categoryNameToDelete = document.getElementById('categoryNameToDelete');
+            let categoryIdToDelete = 0;
+
+            document.querySelectorAll('.js-delete-btn').forEach(button => {
+                button.addEventListener('click', function () {
+                    categoryIdToDelete = this.dataset.id;
+                    const categoryName = this.dataset.name;
+
+                    categoryNameToDelete.textContent = `"${categoryName}"`;
+                    deleteModal.show();
+                });
+            });
+
+            confirmDeleteBtn.addEventListener('click', function () {
+                const antiForgeryToken = document.querySelector('input[name="__RequestVerificationToken"]').value;
+
+                fetch(`/Admin/AIToolCategoryManagement/Delete/${categoryIdToDelete}`, {
+                    method: 'DELETE',
+                    headers: {
+                        'RequestVerificationToken': antiForgeryToken
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        window.location.reload();
+
+                        const rowToDelete = document.getElementById(`row-${categoryIdToDelete}`);
+                        if (rowToDelete) {
+                            rowToDelete.remove();
+                        }
+                    } else {
+                        showToastrNotification('error', data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    showToastrNotification('error', 'Đã xảy ra lỗi kết nối.');
+                })
+                .finally(() => {
+                    deleteModal.hide();
+                });
+            });
+        });
+    </script>
+}
