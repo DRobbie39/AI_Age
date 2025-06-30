@@ -492,6 +492,22 @@
   },
   {
     "ContainingType": "AI_Age_BackEnd.Controllers.UserPostCommentsController.UserPostCommentsController",
+    "Method": "GetCommentById",
+    "RelativePath": "api/comments/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AI_Age_BackEnd.Controllers.UserPostCommentsController.UserPostCommentsController",
     "Method": "UpdateComment",
     "RelativePath": "api/comments/{id}",
     "HttpMethod": "PUT",

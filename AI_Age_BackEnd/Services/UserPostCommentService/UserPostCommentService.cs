@@ -28,6 +28,16 @@ namespace AI_Age_BackEnd.Services.UserPostCommentService
             };
         }
 
+        public async Task<UserPostComment> GetCommentByIdAsync(int id)
+        {
+            var comment = await _commentRepository.GetCommentByIdAsync(id);
+            if (comment == null)
+            {
+                throw new KeyNotFoundException("Không tìm thấy bình luận.");
+            }
+            return comment;
+        }
+
         public async Task<UserPostCommentDto> CreateCommentAsync(int postId, UserPostCommentCreateDto createDto, int userId)
         {
             // Kiểm tra xem bài viết có tồn tại không

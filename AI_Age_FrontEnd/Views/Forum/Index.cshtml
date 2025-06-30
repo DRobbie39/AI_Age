@@ -22,9 +22,9 @@
         </div>
     </nav>
 </div>
+
 <section id="forum" class="forum section">
     <div class="container">
-
         <div id="notification-area"></div>
 
         <div class="new-post mb-5" data-aos="fade-up" data-aos-delay="100">
@@ -59,7 +59,7 @@
     </div>
 </section>
 
-<!-- Modal xác nhận xóa -->
+<!-- Modal xác nhận xóa bài viết -->
 <div class="modal fade" id="deletePostModal" tabindex="-1" aria-labelledby="deletePostModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -78,12 +78,33 @@
     </div>
 </div>
 
+<!-- Modal xác nhận xóa bình luận -->
+<div class="modal fade" id="deleteCommentModal" tabindex="-1" aria-labelledby="deleteCommentModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteCommentModalLabel">Xác nhận xóa bình luận</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Bạn có chắc muốn xóa bình luận này? Hành động này không thể hoàn tác.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                <button type="button" class="btn btn-danger" id="confirmDeleteComment">Xóa</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 @section Scripts {
     <script>
         $(document).ready(function () {
             const apiBaseUrl = '@ViewBag.ApiBaseUrl';
             let editingPostId = null;
             let postIdToDelete = null;
+            let commentIdToDelete = null;
+            let editingCommentId = null;
 
             // Load posts on page load
             loadPosts();
@@ -154,11 +175,22 @@
                             ` : ''}
                             <div class="comments mt-3">
                                 <h5>Bình luận</h5>
-                                ${post.comments.map(comment => `
-                                    <div class="comment mb-2">
-                                        <p><strong>${comment.userFullName}</strong> (${new Date(comment.commentDate).toLocaleString('vi-VN')}): ${comment.content}</p>
+                                ${post.comments.length === 0 ? '<p class="text-muted">Không có bình luận nào.</p>' : post.comments.map(comment => `
+                                    <div class="comment mb-2" data-comment-id="${comment.commentID}">
+                                        <p><strong>${comment.userFullName}</strong> (${new Date(comment.commentDate).toLocaleString('vi-VN')}): ${comment.content}
+                                        ${comment.userID === userId ? `
+                                            <button class="btn btn-warning btn-sm edit-comment ms-2">Sửa</button>
+                                            <button class="btn btn-danger btn-sm delete-comment ms-2" data-bs-toggle="modal" data-bs-target="#deleteCommentModal">Xóa</button>
+                                        ` : ''}
+                                        </p>
                                     </div>
                                 `).join('')}
+                                <form class="new-comment-form mt-3" data-post-id="${post.postID}">
+                                    <div class="input-group">
+                                        <textarea class="form-control comment-content" placeholder="Viết bình luận..." required></textarea>
+                                        <button type="submit" class="btn btn-primary">Gửi</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -169,17 +201,23 @@
             // Handle edit post
             $(document).on('click', '.edit-post', function () {
                 const postId = $(this).closest('.post').data('post-id');
+                console.log('Editing post:', postId);
                 $.ajax({
                     url: `${apiBaseUrl}/api/UserPosts/${postId}`,
                     type: 'GET',
+                    headers: {
+                        'Authorization': 'Bearer ' + localStorage.getItem('jwtToken')
+                    },
                     success: function (post) {
+                        console.log('Post data:', post);
                         $('#title').val(post.title);
                         $('#content').val(post.content);
                         editingPostId = postId;
                         $('#new-post-form button').text('Cập nhật bài');
                         $('html, body').animate({ scrollTop: $('#new-post-form').offset().top }, 500);
                     },
-                    error: function () {
+                    error: function (xhr) {
+                        console.error('Error fetching post:', xhr);
                         showNotification('Không thể tải bài viết để sửa.', 'error');
                     }
                 });
@@ -190,7 +228,7 @@
                 postIdToDelete = $(this).closest('.post').data('post-id');
             });
 
-            // Handle confirm delete in modal
+            // Handle confirm delete post
             $('#confirmDeletePost').on('click', function () {
                 if (postIdToDelete) {
                     $.ajax({
@@ -213,16 +251,107 @@
                 }
             });
 
-            // Show notification
+            // Handle new comment form submission
+            $(document).on('submit', '.new-comment-form', function (e) {
+                e.preventDefault();
+                const postId = $(this).data('post-id');
+                const content = $(this).find('.comment-content').val().trim();
+                if (!content) {
+                    showNotification('Nội dung bình luận không được để trống.', 'error');
+                    return;
+                }
+
+                const url = editingCommentId ? `${apiBaseUrl}/api/comments/${editingCommentId}` : `${apiBaseUrl}/api/posts/${postId}/comments`;
+                const method = editingCommentId ? 'PUT' : 'POST';
+                const data = { content: content };
+
+                $.ajax({
+                    url: url,
+                    type: method,
+                    contentType: 'application/json',
+                    data: JSON.stringify(data),
+                    headers: {
+                        'Authorization': 'Bearer ' + localStorage.getItem('jwtToken')
+                    },
+                    success: function () {
+                        showNotification('Bình luận đã được ' + (editingCommentId ? 'cập nhật' : 'tạo'), 'success');
+                        $(`.new-comment-form[data-post-id="${postId}"] .comment-content`).val('');
+                        editingCommentId = null;
+                        loadPosts();
+                    },
+                    error: function (xhr) {
+                        const message = xhr.responseJSON?.message || 'Đã có lỗi xảy ra. Vui lòng thử lại.';
+                        showNotification(message, 'error');
+                    }
+                });
+            });
+
+            // Handle edit comment
+            $(document).on('click', '.edit-comment', function () {
+                const commentId = $(this).closest('.comment').data('comment-id');
+                const postId = $(this).closest('.post').data('post-id');
+                console.log('Editing comment:', commentId, 'for post:', postId);
+                $.ajax({
+                    url: `${apiBaseUrl}/api/comments/${commentId}`,
+                    type: 'GET',
+                    headers: {
+                        'Authorization': 'Bearer ' + localStorage.getItem('jwtToken')
+                    },
+                    success: function (comment) {
+                        console.log('Comment data:', comment);
+                        $(`.new-comment-form[data-post-id="${postId}"] .comment-content`).val(comment.content);
+                        editingCommentId = commentId;
+                        $(`.new-comment-form[data-post-id="${postId}"] button`).text('Cập nhật');
+                        $('html, body').animate({ scrollTop: $(`.new-comment-form[data-post-id="${postId}"]`).offset().top }, 500);
+                    },
+                    error: function (xhr) {
+                        console.error('Error fetching comment:', xhr);
+                        showNotification('Không thể tải bình luận để sửa.', 'error');
+                    }
+                });
+            });
+
+            // Handle delete comment button click (open modal)
+            $(document).on('click', '.delete-comment', function () {
+                commentIdToDelete = $(this).closest('.comment').data('comment-id');
+            });
+
+            // Handle confirm delete comment
+            $('#confirmDeleteComment').on('click', function () {
+                if (commentIdToDelete) {
+                    $.ajax({
+                        url: `${apiBaseUrl}/api/comments/${commentIdToDelete}`,
+                        type: 'DELETE',
+                        headers: {
+                            'Authorization': 'Bearer ' + localStorage.getItem('jwtToken')
+                        },
+                        success: function () {
+                            $('#deleteCommentModal').modal('hide');
+                            showNotification('Bình luận đã được xóa.', 'success');
+                            loadPosts();
+                        },
+                        error: function (xhr) {
+                            $('#deleteCommentModal').modal('hide');
+                            const message = xhr.responseJSON?.message || 'Đã có lỗi xảy ra khi xóa bình luận.';
+                            showNotification(message, 'error');
+                        }
+                    });
+                }
+            });
+
+            // Show notification with Toastr
             function showNotification(message, type) {
-                const alertClass = type === 'success' ? 'alert-success' : 'alert-danger';
-                $('#notification-area').html(`
-                    <div class="alert ${alertClass} alert-dismissible fade show" role="alert">
-                        ${message}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                `);
-                setTimeout(() => $('.alert').alert('close'), 3000);
+                toastr.options = {
+                    closeButton: true,
+                    progressBar: true,
+                    timeOut: 3000,
+                    positionClass: 'toast-top-right'
+                };
+                if (type === 'success') {
+                    toastr.success(message);
+                } else {
+                    toastr.error(message);
+                }
             }
         });
     </script>
