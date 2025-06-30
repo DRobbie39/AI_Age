@@ -49,6 +49,14 @@
       "PackagePath": "staticwebassets\\admin-assets\\css\\user-management.css"
     },
     {
+      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\admin-assets\\css\\video-category.css",
+      "PackagePath": "staticwebassets\\admin-assets\\css\\video-category.css"
+    },
+    {
+      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\admin-assets\\css\\video.css",
+      "PackagePath": "staticwebassets\\admin-assets\\css\\video.css"
+    },
+    {
       "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\admin-assets\\js\\datatables-simple-demo.js",
       "PackagePath": "staticwebassets\\admin-assets\\js\\datatables-simple-demo.js"
     },

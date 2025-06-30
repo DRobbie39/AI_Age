@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Chỉnh sửa Thể loại Video";
+}
+
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Chỉnh sửa Thể loại Video</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Dashboard" asp-action="Index">Dashboard</a></li>
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="VideoCategoryManagement" asp-action="Index">Thể loại video</a></li>
+        <li class="breadcrumb-item active">Chỉnh sửa</li>
+    </ol>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-edit me-2"></i>
+            Cập nhật thông tin cho Thể loại: Công nghệ
+        </div>
+        <div class="card-body">
+            <form asp-action="Edit" method="post" class="video-category-form">
+                <input type="hidden" name="categoryId" value="1" />
+
+                <div class="video-category-form__group mb-4">
+                    <label for="categoryName" class="video-category-form__label">Tên thể loại</label>
+                    <input id="categoryName" name="categoryName" type="text" class="form-control video-category-form__input" value="Công nghệ">
+                </div>
+
+                <div class="video-category-form__footer">
+                    <a asp-area="Admin" asp-controller="VideoCategoryManagement" asp-action="Index" class="video-category-form__button video-category-form__button--secondary">Quay lại danh sách</a>
+                    <button type="submit" class="video-category-form__button video-category-form__button--primary">
+                        <i class="fas fa-save me-1"></i> Cập nhật
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
