@@ -266,12 +266,12 @@ public partial class AI_AgeContext : DbContext
 
             entity.HasOne(d => d.Post).WithMany(p => p.UserPostComments)
                 .HasForeignKey(d => d.PostId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
+                .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("FK__UserPostC__PostI__02084FDA");
 
             entity.HasOne(d => d.User).WithMany(p => p.UserPostComments)
                 .HasForeignKey(d => d.UserId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
+                .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("FK__UserPostC__UserI__02FC7413");
         });
 

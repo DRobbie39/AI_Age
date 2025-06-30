@@ -7,7 +7,6 @@ namespace AI_Age_BackEnd.Services.UserPostCommentService
     public class UserPostCommentService
     {
         private readonly IUserPostCommentRepository _commentRepository;
-        // Inject thêm UserPostRepository để kiểm tra bài viết có tồn tại không
         private readonly IUserPostRepository _postRepository;
 
         public UserPostCommentService(IUserPostCommentRepository commentRepository, IUserPostRepository postRepository)
