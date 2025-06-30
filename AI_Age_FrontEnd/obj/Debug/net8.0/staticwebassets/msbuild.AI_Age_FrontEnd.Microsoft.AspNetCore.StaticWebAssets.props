@@ -102,8 +102,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>oqodat2jx9</Fingerprint>
-      <Integrity>gHyQ2pWcG+lI1HQ/Cc1ZHdugnoISwGTWApc3VTZcGvY=</Integrity>
+      <Fingerprint>y57pvkpzs8</Fingerprint>
+      <Integrity>ho9IMS0xbbxe4wen2j5o5HNfzkoVlK5GMxBHlqvHw1g=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\admin-assets\css\article.css'))</OriginalItemSpec>
@@ -120,8 +120,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>uojcykxsex</Fingerprint>
-      <Integrity>Us9Ij4fzkhuJZvWRUSsyj6fgoNkE/SFfzXmAe63jbzc=</Integrity>
+      <Fingerprint>j7u4wohydd</Fingerprint>
+      <Integrity>EX7jn6Oo/56zQWCuFkyIDKAIyInUb57zz3FLpaDikpg=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\admin-assets\css\article-category.css'))</OriginalItemSpec>
@@ -156,8 +156,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>q4ymd30jhz</Fingerprint>
-      <Integrity>Si/Jcif3chI8YZr9HVBF8K2GrBVf9twdZQ7cCm/CzDo=</Integrity>
+      <Fingerprint>to5y0mh0ld</Fingerprint>
+      <Integrity>TXkLBUxFv5J0rJTtVvgeEkNvdocCqy0ovZR84S8xdvk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\admin-assets\css\tool.css'))</OriginalItemSpec>
@@ -174,8 +174,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>sz30adj4bi</Fingerprint>
-      <Integrity>yB07Og/EgNWtMvmygkPfmruG7epOUoArbRbDJXcqSpM=</Integrity>
+      <Fingerprint>gkw4g9m5gn</Fingerprint>
+      <Integrity>4PEr/GVOx7smkUmPUhaCDh/OSHV0l6ou9YW8tlpWXWU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\admin-assets\css\tool-category.css'))</OriginalItemSpec>
@@ -192,8 +192,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>fqjaxn5533</Fingerprint>
-      <Integrity>Z49bi4IkaU03ZE/5EGJYUOzPwfC43Rb5DmVq8MAasVg=</Integrity>
+      <Fingerprint>fgru0x7815</Fingerprint>
+      <Integrity>f3pVe91srak2c4I1IjNpUszd94CND0uYIb+ft2Ekgmc=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\admin-assets\css\user-management.css'))</OriginalItemSpec>
@@ -210,8 +210,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>iztje3u1nh</Fingerprint>
-      <Integrity>cgdu4Q1UZkGO0pzrQtVeUJSGLgtP/wEJo5JGupi3iBw=</Integrity>
+      <Fingerprint>gl6l16kjqn</Fingerprint>
+      <Integrity>XHJFbELW+bf8+TsyFU0KIWKmLO3Zg6XMtMjfREI4HWw=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\admin-assets\css\video.css'))</OriginalItemSpec>
@@ -228,8 +228,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>v58m977wk5</Fingerprint>
-      <Integrity>02dqa7I2y1EIMlvNlpAmlR5J+VzynqlPYIBK10ykct0=</Integrity>
+      <Fingerprint>19nrwpuohj</Fingerprint>
+      <Integrity>i023G6xGnDyU70zTHImKn8lXuV3WLTgY8z531bRHFck=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\admin-assets\css\video-category.css'))</OriginalItemSpec>
@@ -413,6 +413,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\user\profile.css'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\user\saved-lessions.css'))">
+      <SourceType>Package</SourceType>
+      <SourceId>AI_Age_FrontEnd</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/AI_Age_FrontEnd</BasePath>
+      <RelativePath>css/user/saved-lessions.css</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>6uq7lrtz4j</Fingerprint>
+      <Integrity>npQmUI78owJ/EXAetBvrdNeIuZfSOTLIjMC3+2F3AEI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\user\saved-lessions.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\user\tool.css'))">
       <SourceType>Package</SourceType>

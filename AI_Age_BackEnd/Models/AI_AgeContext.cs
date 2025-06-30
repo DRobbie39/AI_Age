@@ -29,6 +29,8 @@ public partial class AI_AgeContext : DbContext
 
     public virtual DbSet<Role> Roles { get; set; }
 
+    public virtual DbSet<SavedLesson> SavedLessons { get; set; }
+
     public virtual DbSet<User> Users { get; set; }
 
     public virtual DbSet<UserPost> UserPosts { get; set; }
@@ -183,6 +185,25 @@ public partial class AI_AgeContext : DbContext
                 .HasColumnType("datetime");
             entity.Property(e => e.Description).HasMaxLength(255);
             entity.Property(e => e.RoleName).HasMaxLength(50);
+        });
+
+        modelBuilder.Entity<SavedLesson>(entity =>
+        {
+            entity.HasKey(e => e.SavedLessonId).HasName("PK__SavedLes__4F1AFABEAFFEB60F");
+
+            entity.Property(e => e.SavedLessonId).HasColumnName("SavedLessonID");
+            entity.Property(e => e.LessonId).HasColumnName("LessonID");
+            entity.Property(e => e.LessonImage).HasMaxLength(255);
+            entity.Property(e => e.LessonTitle).HasMaxLength(255);
+            entity.Property(e => e.SavedDate)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+            entity.Property(e => e.UserId).HasColumnName("UserID");
+
+            entity.HasOne(d => d.User).WithMany(p => p.SavedLessons)
+                .HasForeignKey(d => d.UserId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__SavedLess__UserI__0A9D95DB");
         });
 
         modelBuilder.Entity<User>(entity =>

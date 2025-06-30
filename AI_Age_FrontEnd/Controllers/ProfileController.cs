@@ -20,5 +20,10 @@ namespace AI_Age_FrontEnd.Controllers
 
             return View();
         }
+
+        public IActionResult SavedLessons()
+        {
+            return View();
+        }
     }
 }
