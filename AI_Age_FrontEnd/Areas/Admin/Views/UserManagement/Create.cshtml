@@ -1,7 +1,5 @@
 ﻿@{
     ViewData["Title"] = "Thêm mới Người dùng";
-    // Giả sử bạn có danh sách Roles được truyền từ Controller
-    // var roles = ViewData["Roles"] as SelectList;
 }
 
 <div class="container-fluid px-4">
@@ -70,7 +68,6 @@
                         <div class="user-form__group mb-4">
                             <label for="roleId" class="user-form__label">Vai trò</label>
                             <select id="roleId" name="RoleID" class="form-select user-form__input" required>
-                                <!-- Giả sử bạn lặp qua danh sách Roles -->
                                 <option value="1">Admin</option>
                                 <option value="2" selected>User</option>
                             </select>

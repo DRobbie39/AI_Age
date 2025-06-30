@@ -90,6 +90,42 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\admin-assets\assets\img\error-404-monochrome.svg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\admin-assets\css\article.css'))">
+      <SourceType>Package</SourceType>
+      <SourceId>AI_Age_FrontEnd</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/AI_Age_FrontEnd</BasePath>
+      <RelativePath>admin-assets/css/article.css</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>cvxex649h0</Fingerprint>
+      <Integrity>CETaz2hF5vqATTR+j+nBzNlrsPSBpZHWJiY3pydPTvA=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\admin-assets\css\article.css'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\admin-assets\css\article-category.css'))">
+      <SourceType>Package</SourceType>
+      <SourceId>AI_Age_FrontEnd</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/AI_Age_FrontEnd</BasePath>
+      <RelativePath>admin-assets/css/article-category.css</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>uojcykxsex</Fingerprint>
+      <Integrity>Us9Ij4fzkhuJZvWRUSsyj6fgoNkE/SFfzXmAe63jbzc=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\admin-assets\css\article-category.css'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\admin-assets\css\styles.css'))">
       <SourceType>Package</SourceType>
       <SourceId>AI_Age_FrontEnd</SourceId>
@@ -156,8 +192,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>nqfblrxvl6</Fingerprint>
-      <Integrity>kYq2oMaog/6oIFBWucnOOGoB6E4udELkyqvbCpGW/tw=</Integrity>
+      <Fingerprint>fqjaxn5533</Fingerprint>
+      <Integrity>Z49bi4IkaU03ZE/5EGJYUOzPwfC43Rb5DmVq8MAasVg=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\admin-assets\css\user-management.css'))</OriginalItemSpec>

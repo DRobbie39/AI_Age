@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Quản lý Thể loại Bài viết";
+}
+
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Quản lý Thể loại Bài viết</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Dashboard" asp-action="Index">Dashboard</a></li>
+        <li class="breadcrumb-item active">Thể loại bài viết</li>
+    </ol>
+
+    <div class="card mb-4">
+        <div class="card-header article-category-card__header">
+            <div class="article-category-card__title">
+                <i class="fas fa-tags me-2"></i>
+                Danh sách Thể loại Bài viết
+            </div>
+            <a asp-area="Admin" asp-controller="ArticleCategoryManagement" asp-action="Create" class="btn btn-primary">
+                <i class="fas fa-plus me-1"></i> Thêm mới
+            </a>
+        </div>
+        <div class="card-body p-0">
+            <table class="table table-hover article-category-table">
+                <thead>
+                    <tr>
+                        <th>Mã thể loại</th>
+                        <th>Tên thể loại</th>
+                        <th>Ngày tạo</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Công nghệ</td>
+                        <td>22-05-2024</td>
+                        <td class="article-category-table__actions">
+                            <a asp-area="Admin" asp-controller="ArticleCategoryManagement" asp-action="Edit" asp-route-id="1" class="btn btn-warning article-category-table__action-button" title="Sửa">
+                                <i class="fas fa-edit"></i>
+                            </a>
+                            <button class="btn btn-danger article-category-table__action-button" title="Xóa">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Đời sống</td>
+                        <td>21-05-2024</td>
+                        <td class="article-category-table__actions">
+                            <a asp-area="Admin" asp-controller="ArticleCategoryManagement" asp-action="Edit" asp-route-id="2" class="btn btn-warning article-category-table__action-button" title="Sửa">
+                                <i class="fas fa-edit"></i>
+                            </a>
+                            <button class="btn btn-danger article-category-table__action-button" title="Xóa">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

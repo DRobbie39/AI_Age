@@ -1,0 +1,77 @@
+﻿@{
+    ViewData["Title"] = "Quản lý Bài viết";
+}
+
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Quản lý Bài viết</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Dashboard" asp-action="Index">Dashboard</a></li>
+        <li class="breadcrumb-item active">Bài viết</li>
+    </ol>
+
+    <div class="card mb-4">
+        <div class="card-header article-card__header">
+            <div class="article-card__title">
+                <i class="fas fa-newspaper me-2"></i>
+                Danh sách Bài viết
+            </div>
+            <a asp-area="Admin" asp-controller="ArticleManagement" asp-action="Create" class="btn btn-primary">
+                <i class="fas fa-plus me-1"></i> Thêm mới
+            </a>
+        </div>
+        <div class="card-body p-0">
+            <table class="table table-hover article-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Hình ảnh</th>
+                        <th>Tiêu đề</th>
+                        <th>Thể loại</th>
+                        <th>Tác giả</th>
+                        <th>Ngày đăng</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <img src="~/images/articles/tech-trend-2024.jpg" alt="Xu hướng công nghệ 2024" class="article-table__image" />
+                        </td>
+                        <td>Xu hướng công nghệ nổi bật năm 2024</td>
+                        <td>Công nghệ</td>
+                        <td>Admin</td>
+                        <td>22-05-2024</td>
+                        <td class="article-table__actions">
+                            <a asp-area="Admin" asp-controller="ArticleManagement" asp-action="Edit" asp-route-id="1" class="btn btn-warning article-table__action-button" title="Sửa">
+                                <i class="fas fa-edit"></i>
+                            </a>
+                            <button class="btn btn-danger article-table__action-button" title="Xóa">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>
+                            <img src="~/images/articles/life-hacks.jpg" alt="Mẹo vặt cuộc sống" class="article-table__image" />
+                        </td>
+                        <td>10 mẹo vặt cuộc sống không phải ai cũng biết</td>
+                        <td>Đời sống</td>
+                        <td>Jane Doe</td>
+                        <td>21-05-2024</td>
+                        <td class="article-table__actions">
+                            <a asp-area="Admin" asp-controller="ArticleManagement" asp-action="Edit" asp-route-id="2" class="btn btn-warning article-table__action-button" title="Sửa">
+                                <i class="fas fa-edit"></i>
+                            </a>
+                            <button class="btn btn-danger article-table__action-button" title="Xóa">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

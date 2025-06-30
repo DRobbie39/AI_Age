@@ -25,6 +25,14 @@
       "PackagePath": "staticwebassets\\admin-assets\\assets\\img\\error-404-monochrome.svg"
     },
     {
+      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\admin-assets\\css\\article-category.css",
+      "PackagePath": "staticwebassets\\admin-assets\\css\\article-category.css"
+    },
+    {
+      "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\admin-assets\\css\\article.css",
+      "PackagePath": "staticwebassets\\admin-assets\\css\\article.css"
+    },
+    {
       "Id": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\admin-assets\\css\\styles.css",
       "PackagePath": "staticwebassets\\admin-assets\\css\\styles.css"
     },
