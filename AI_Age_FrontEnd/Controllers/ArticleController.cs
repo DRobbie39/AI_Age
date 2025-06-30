@@ -7,25 +7,22 @@ namespace AI_Age_FrontEnd.Controllers
     public class ArticleController : Controller
     {
         private readonly HttpClient _httpClient;
+        private readonly IConfiguration _configuration;
 
-        public ArticleController(IHttpClientFactory httpClientFactory)
+        public ArticleController(IHttpClientFactory httpClientFactory, IConfiguration configuration)
         {
-            _httpClient = httpClientFactory.CreateClient();
-            _httpClient.BaseAddress = new Uri("https://localhost:7022/api/");
+            _httpClient = httpClientFactory.CreateClient("ApiClient");
+            _configuration = configuration;
         }
 
         public async Task<IActionResult> Index(string? query)
         {
-            // Lưu lại query để hiển thị trên view
             ViewData["CurrentFilter"] = query;
 
-            // Tạo đường dẫn API
-            var requestUri = "Article/getallarticles";
+            var requestUri = "api/Article/getallarticles";
 
-            // Nếu có query, thêm vào URL
             if (!string.IsNullOrEmpty(query))
             {
-                // Uri.EscapeDataString để mã hóa các ký tự đặc biệt trong query (ví dụ: dấu cách)
                 requestUri += $"?query={Uri.EscapeDataString(query)}";
             }
 
@@ -41,12 +38,15 @@ namespace AI_Age_FrontEnd.Controllers
 
         public async Task<IActionResult> Details(int id)
         {
-            var response = await _httpClient.GetAsync($"Article/{id}");
+            var response = await _httpClient.GetAsync($"api/Article/{id}");
             response.EnsureSuccessStatusCode();
 
             var jsonString = await response.Content.ReadAsStringAsync();
 
             var article = JsonSerializer.Deserialize<ArticleDto>(jsonString, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+
+            // Truyền API Base URL cho View để sử dụng trong JavaScript
+            ViewBag.ApiBaseUrl = _configuration.GetValue<string>("ApiSettings:BaseUrl");
 
             return View(article);
         }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8Sg662emIak23BIEpbtBCEnZwBu50xzgeMK3QdrqQWU=",
+  "Hash": "iu/tn+qjEJuXTxPMnl6Fyc5Wg8RdRAYE9AHvBbY7Wo8=",
   "Source": "AI_Age_FrontEnd",
   "BasePath": "_content/AI_Age_FrontEnd",
   "Mode": "Default",
@@ -374,6 +374,27 @@
       "OriginalItemSpec": "wwwroot\\admin-assets\\js\\scripts.js"
     },
     {
+      "Identity": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\admin-assets\\js\\toastrNotification.js",
+      "SourceId": "AI_Age_FrontEnd",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\",
+      "BasePath": "_content/AI_Age_FrontEnd",
+      "RelativePath": "admin-assets/js/toastrNotification#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "i2zivtxut2",
+      "Integrity": "9trBuTpGp+HELWj7YedaUDKWbmvLreQTbOoFehBEPlo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\admin-assets\\js\\toastrNotification.js"
+    },
+    {
       "Identity": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\main.css",
       "SourceId": "AI_Age_FrontEnd",
       "SourceType": "Discovered",
@@ -703,8 +724,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "tdojl0q2io",
-      "Integrity": "z6jRNT487bTO7pecDyKNtlz98rueFwqAnQ3l549Cuxw=",
+      "Fingerprint": "m1x72gvuy5",
+      "Integrity": "9mq4Yc6DyhiIqD+BQRerVk74FmnfCryZ3nBgREHfFUI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\chatbox.js"
@@ -3307,6 +3328,88 @@
       ]
     },
     {
+      "Route": "admin-assets/js/toastrNotification.i2zivtxut2.js",
+      "AssetFile": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\admin-assets\\js\\toastrNotification.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "710"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9trBuTpGp+HELWj7YedaUDKWbmvLreQTbOoFehBEPlo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 30 Jun 2025 04:26:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "i2zivtxut2"
+        },
+        {
+          "Name": "label",
+          "Value": "admin-assets/js/toastrNotification.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9trBuTpGp+HELWj7YedaUDKWbmvLreQTbOoFehBEPlo="
+        }
+      ]
+    },
+    {
+      "Route": "admin-assets/js/toastrNotification.js",
+      "AssetFile": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\admin-assets\\js\\toastrNotification.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "710"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9trBuTpGp+HELWj7YedaUDKWbmvLreQTbOoFehBEPlo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 30 Jun 2025 04:26:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9trBuTpGp+HELWj7YedaUDKWbmvLreQTbOoFehBEPlo="
+        }
+      ]
+    },
+    {
       "Route": "AI_Age_FrontEnd.bundle.scp.css",
       "AssetFile": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AI_Age_FrontEnd.bundle.scp.css",
       "Selectors": [],
@@ -3329,7 +3432,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 30 Jun 2025 03:49:14 GMT"
+          "Value": "Mon, 30 Jun 2025 09:16:13 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3366,7 +3469,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 30 Jun 2025 03:49:14 GMT"
+          "Value": "Mon, 30 Jun 2025 09:16:13 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3411,7 +3514,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 30 Jun 2025 03:49:14 GMT"
+          "Value": "Mon, 30 Jun 2025 09:16:13 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3456,7 +3559,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 30 Jun 2025 03:49:14 GMT"
+          "Value": "Mon, 30 Jun 2025 09:16:13 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4711,7 +4814,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9035"
+          "Value": "9060"
         },
         {
           "Name": "Content-Type",
@@ -4719,11 +4822,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"z6jRNT487bTO7pecDyKNtlz98rueFwqAnQ3l549Cuxw=\""
+          "Value": "\"9mq4Yc6DyhiIqD+BQRerVk74FmnfCryZ3nBgREHfFUI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 27 Jun 2025 16:16:25 GMT"
+          "Value": "Mon, 30 Jun 2025 06:44:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4733,12 +4836,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-z6jRNT487bTO7pecDyKNtlz98rueFwqAnQ3l549Cuxw="
+          "Value": "sha256-9mq4Yc6DyhiIqD+BQRerVk74FmnfCryZ3nBgREHfFUI="
         }
       ]
     },
     {
-      "Route": "js/chatbox.tdojl0q2io.js",
+      "Route": "js/chatbox.m1x72gvuy5.js",
       "AssetFile": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\js\\chatbox.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -4748,7 +4851,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9035"
+          "Value": "9060"
         },
         {
           "Name": "Content-Type",
@@ -4756,11 +4859,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"z6jRNT487bTO7pecDyKNtlz98rueFwqAnQ3l549Cuxw=\""
+          "Value": "\"9mq4Yc6DyhiIqD+BQRerVk74FmnfCryZ3nBgREHfFUI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 27 Jun 2025 16:16:25 GMT"
+          "Value": "Mon, 30 Jun 2025 06:44:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4770,7 +4873,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "tdojl0q2io"
+          "Value": "m1x72gvuy5"
         },
         {
           "Name": "label",
@@ -4778,7 +4881,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-z6jRNT487bTO7pecDyKNtlz98rueFwqAnQ3l549Cuxw="
+          "Value": "sha256-9mq4Yc6DyhiIqD+BQRerVk74FmnfCryZ3nBgREHfFUI="
         }
       ]
     },

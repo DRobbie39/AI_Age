@@ -10,8 +10,7 @@ namespace AI_Age_FrontEnd.Controllers
 
         public AuthController(IHttpClientFactory httpClientFactory)
         {
-            _httpClient = httpClientFactory.CreateClient();
-            _httpClient.BaseAddress = new Uri("https://localhost:7022/api/");
+            _httpClient = httpClientFactory.CreateClient("ApiClient");
         }
 
         [HttpGet]
@@ -36,7 +35,7 @@ namespace AI_Age_FrontEnd.Controllers
                 model.Password
             };
 
-            var response = await _httpClient.PostAsJsonAsync("Auth/register", registerDto);
+            var response = await _httpClient.PostAsJsonAsync("api/Auth/register", registerDto);
             if (response.IsSuccessStatusCode)
             {
                 ViewBag.Success = true;
@@ -70,7 +69,7 @@ namespace AI_Age_FrontEnd.Controllers
                 model.Password
             };
 
-            var response = await _httpClient.PostAsJsonAsync("Auth/login", loginDto);
+            var response = await _httpClient.PostAsJsonAsync("api/Auth/login", loginDto);
             if (response.IsSuccessStatusCode)
             {
                 var jsonResponse = await response.Content.ReadAsStringAsync();

@@ -1,4 +1,5 @@
 ﻿document.addEventListener('DOMContentLoaded', () => {
+    const apiBaseUrl = window.apiBaseUrl;
     const chatToggleBtn = document.getElementById('chat-toggle');
     const chatContainer = document.getElementById('chat-container');
     const closeChatBtn = document.getElementById('close-chat');
@@ -101,7 +102,7 @@
 
     const loadChatHistory = async () => {
         try {
-            const response = await fetch('https://localhost:7022/api/Chat/history', {
+            const response = await fetch(`${apiBaseUrl}/api/Chat/history`, {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`
@@ -164,7 +165,7 @@
         showTypingIndicator();
 
         try {
-            const response = await fetch('https://localhost:7022/api/Chat/ask', {
+            const response = await fetch(`${apiBaseUrl}/api/Chat/ask`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

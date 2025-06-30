@@ -13,17 +13,9 @@ public partial class UserPost
 
     public string? AttachedImage { get; set; }
 
-    public int CategoryId { get; set; }
-
     public int UserId { get; set; }
 
     public DateTime? PostedDate { get; set; }
-
-    public DateTime? UpdatedDate { get; set; }
-
-    public int? Views { get; set; }
-
-    public virtual UserPostCategory Category { get; set; } = null!;
 
     public virtual User User { get; set; } = null!;
 

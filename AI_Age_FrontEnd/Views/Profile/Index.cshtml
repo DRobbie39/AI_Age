@@ -109,6 +109,8 @@
             }
         };
 
+        const apiBaseUrl = '@ViewBag.ApiBaseUrl';
+
         const fetchProfile = async () => {
             const token = localStorage.getItem('jwtToken');
             if (!token) {
@@ -119,7 +121,7 @@
 
             showLoading(true);
             try {
-                const response = await fetch('https://localhost:7022/api/users/profile', {
+                const response = await fetch(`${apiBaseUrl}/api/users/profile`, {
                     headers: { 'Authorization': `Bearer ${token}` }
                 });
 
@@ -164,7 +166,7 @@
             showLoading(true);
 
             try {
-                const response = await fetch('https://localhost:7022/api/users/profile', {
+                const response = await fetch(`${apiBaseUrl}/api/users/profile`, {
                     method: 'PUT',
                     headers: { 'Authorization': `Bearer ${token}` },
                     body: formData
