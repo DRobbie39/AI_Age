@@ -9,6 +9,8 @@ wwwroot\admin-assets\css\styles.css
 wwwroot\admin-assets\css\tool.css
 wwwroot\admin-assets\css\tool-category.css
 wwwroot\admin-assets\css\user-management.css
+wwwroot\admin-assets\css\video.css
+wwwroot\admin-assets\css\video-category.css
 wwwroot\admin-assets\js\datatables-simple-demo.js
 wwwroot\admin-assets\js\scripts.js
 wwwroot\css\main.css

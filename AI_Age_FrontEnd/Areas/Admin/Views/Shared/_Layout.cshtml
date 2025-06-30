@@ -14,6 +14,8 @@
     <link href="~/admin-assets/css/user-management.css" rel="stylesheet">
     <link href="~/admin-assets/css/article-category.css" rel="stylesheet">
     <link href="~/admin-assets/css/article.css" rel="stylesheet">
+    <link href="~/admin-assets/css/video-category.css" rel="stylesheet">
+    <link href="~/admin-assets/css/video.css" rel="stylesheet">
 </head>
 
 <body class="sb-nav-fixed">
@@ -73,11 +75,11 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-file-alt"></i></div>
                             Bài viết hướng dẫn
                         </a>
-                        <a class="nav-link" href="charts.html">
+                        <a class="nav-link" asp-area="Admin" asp-controller="VideoArticleCategoryManagement" asp-action="Index">
                             <div class="sb-nav-link-icon"><i class="fas fa-folder-open"></i></div>
                             Thể loại video
                         </a>
-                        <a class="nav-link" href="tables.html">
+                        <a class="nav-link" asp-area="Admin" asp-controller="VideoArticleManagement" asp-action="Index">
                             <div class="sb-nav-link-icon"><i class="fas fa-video"></i></div>
                             Video hướng dẫn
                         </a>

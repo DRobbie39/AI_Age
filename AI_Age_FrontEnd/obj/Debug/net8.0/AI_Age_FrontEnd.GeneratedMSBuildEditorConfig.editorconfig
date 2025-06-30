@@ -96,6 +96,30 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlck1hbmFnZW1lbnRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Study/HK2 2024-2025/DoAnTotNghiep/AI_Age/AI_Age_FrontEnd/Areas/Admin/Views/VideoArticleCategoryManagement/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVmlkZW9BcnRpY2xlQ2F0ZWdvcnlNYW5hZ2VtZW50XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Study/HK2 2024-2025/DoAnTotNghiep/AI_Age/AI_Age_FrontEnd/Areas/Admin/Views/VideoArticleCategoryManagement/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVmlkZW9BcnRpY2xlQ2F0ZWdvcnlNYW5hZ2VtZW50XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Study/HK2 2024-2025/DoAnTotNghiep/AI_Age/AI_Age_FrontEnd/Areas/Admin/Views/VideoArticleCategoryManagement/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVmlkZW9BcnRpY2xlQ2F0ZWdvcnlNYW5hZ2VtZW50XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Study/HK2 2024-2025/DoAnTotNghiep/AI_Age/AI_Age_FrontEnd/Areas/Admin/Views/VideoArticleManagement/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVmlkZW9BcnRpY2xlTWFuYWdlbWVudFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Study/HK2 2024-2025/DoAnTotNghiep/AI_Age/AI_Age_FrontEnd/Areas/Admin/Views/VideoArticleManagement/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVmlkZW9BcnRpY2xlTWFuYWdlbWVudFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Study/HK2 2024-2025/DoAnTotNghiep/AI_Age/AI_Age_FrontEnd/Areas/Admin/Views/VideoArticleManagement/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVmlkZW9BcnRpY2xlTWFuYWdlbWVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Study/HK2 2024-2025/DoAnTotNghiep/AI_Age/AI_Age_FrontEnd/Areas/Admin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
