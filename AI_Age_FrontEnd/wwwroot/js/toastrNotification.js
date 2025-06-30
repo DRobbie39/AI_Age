@@ -47,3 +47,7 @@ function handleNotLoginRating(message) {
 function handleUpdateProfileSuccess(message) {
     showToastrNotification('success', 'Cập nhật thông tin thành công.');
 }
+
+function handleAddArticleSuccess(message) {
+    showToastrNotification('success', 'Đã lưu bài học.');
+}

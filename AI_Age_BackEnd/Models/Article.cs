@@ -31,11 +31,15 @@ public partial class Article
 
     public decimal? AverageRating { get; set; }
 
+    public virtual ICollection<ArticleComment> ArticleComments { get; set; } = new List<ArticleComment>();
+
     public virtual ICollection<ArticleRating> ArticleRatings { get; set; } = new List<ArticleRating>();
 
     public virtual User AuthorNavigation { get; set; } = null!;
 
     public virtual ArticleCategory Category { get; set; } = null!;
+
+    public virtual ICollection<SavedLesson> SavedLessons { get; set; } = new List<SavedLesson>();
 
     public virtual Aitool? Tool { get; set; }
 }

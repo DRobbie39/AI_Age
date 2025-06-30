@@ -71,6 +71,16 @@
                                 <p id="sidebar-rating">@Model.AverageRating</p>
                             </li>
                         </ul>
+                        <div class="mt-3 text-center">
+                            <button id="save-lesson-btn"
+                                    class="btn btn-primary w-100"
+                                    data-article-id="@Model.ArticleId"
+                                    data-lesson-title="@Model.Title"
+                                    data-lesson-image="@Model.Image"
+                                    data-lesson-url="@Url.Action("Details", "Article", new { id = Model.ArticleId })">
+                                <i class="fa-regular fa-bookmark"></i> Lưu bài học
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -182,6 +192,98 @@
                     }
                 });
             });
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+             // --- LOGIC LƯU BÀI HỌC ---
+            const saveBtn = document.getElementById('save-lesson-btn');
+            if (saveBtn) {
+                const articleId = saveBtn.dataset.articleId;
+                const videoId = saveBtn.dataset.videoId;
+                const jwtToken = localStorage.getItem('jwtToken');
+
+                function updateButtonUI(isSaved, savedLessonId = null) {
+                    if (isSaved) {
+                        saveBtn.innerHTML = '<i class="fa-solid fa-bookmark"></i> Đã lưu';
+                        saveBtn.classList.remove('btn-primary');
+                        saveBtn.classList.add('btn-success');
+                        saveBtn.disabled = true;
+                    } else {
+                        saveBtn.innerHTML = '<i class="fa-regular fa-bookmark"></i> Lưu bài học';
+                        saveBtn.classList.remove('btn-success');
+                        saveBtn.classList.add('btn-primary');
+                        saveBtn.disabled = false;
+                    }
+                }
+
+                async function checkSavedStatus() {
+                    if (!jwtToken) return;
+
+                    let checkUrl = `${API_BASE_URL}/api/SavedLesson/check?`;
+                    if (articleId) {
+                        checkUrl += `articleId=${articleId}`;
+                    } else if (videoId) {
+                        checkUrl += `videoId=${videoId}`;
+                    } else {
+                        return;
+                    }
+
+                    try {
+                        const response = await fetch(checkUrl, {
+                            headers: { 'Authorization': `Bearer ${jwtToken}` }
+                        });
+                        if (response.ok) {
+                            const result = await response.json();
+                            updateButtonUI(result.isSaved, result.savedLessonId);
+                        }
+                    } catch (error) {
+                        console.error("Lỗi khi kiểm tra trạng thái lưu:", error);
+                    }
+                }
+
+                checkSavedStatus();
+
+                saveBtn.addEventListener('click', async () => {
+                    if (!jwtToken) {
+                        alert('Vui lòng đăng nhập để lưu bài học.');
+                        return;
+                    }
+
+                    const lessonData = {
+                        lessonTitle: saveBtn.dataset.lessonTitle,
+                        lessonImage: saveBtn.dataset.lessonImage,
+                        lessonUrl: saveBtn.dataset.lessonUrl
+                    };
+                    if (articleId) {
+                        lessonData.articleId = parseInt(articleId);
+                    } else if (videoId) {
+                        lessonData.videoId = parseInt(videoId);
+                    }
+
+                    try {
+                        const response = await fetch(`${API_BASE_URL}/api/SavedLesson`, {
+                            method: 'POST',
+                            headers: {
+                                'Authorization': `Bearer ${jwtToken}`,
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(lessonData)
+                        });
+
+                        if (response.ok) {
+                            const result = await response.json();
+                            handleAddArticleSuccess();
+                            updateButtonUI(true, result.savedLessonId);
+                        } else {
+                            const error = await response.json();
+                            alert(`Lưu bài học thất bại: ${error.message}`);
+                        }
+                    } catch (error) {
+                        console.error('Lỗi khi lưu bài học:', error);
+                        alert('Đã có lỗi xảy ra. Vui lòng thử lại.');
+                    }
+                });
+            }
         });
     </script>
 }

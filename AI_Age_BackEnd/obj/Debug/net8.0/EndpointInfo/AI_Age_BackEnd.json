@@ -763,6 +763,100 @@
         }
       }
     },
+    "/api/SavedLesson": {
+      "post": {
+        "tags": [
+          "SavedLesson"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SavedLessonCreateDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SavedLessonCreateDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SavedLessonCreateDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "SavedLesson"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/SavedLesson/{id}": {
+      "delete": {
+        "tags": [
+          "SavedLesson"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/SavedLesson/check": {
+      "get": {
+        "tags": [
+          "SavedLesson"
+        ],
+        "parameters": [
+          {
+            "name": "articleId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "videoId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/comments/{id}": {
       "get": {
         "tags": [
@@ -1555,6 +1649,34 @@
             "nullable": true
           },
           "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SavedLessonCreateDto": {
+        "type": "object",
+        "properties": {
+          "articleId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "videoId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "lessonTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "lessonImage": {
+            "type": "string",
+            "nullable": true
+          },
+          "lessonUrl": {
             "type": "string",
             "nullable": true
           }

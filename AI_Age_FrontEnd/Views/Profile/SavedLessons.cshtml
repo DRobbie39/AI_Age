@@ -1,4 +1,6 @@
-﻿@{
+﻿@model List<AI_Age_FrontEnd.Models.SavedLessonViewModel.SavedLessonViewModel>
+
+@{
     ViewData["Title"] = "Bài học đã lưu";
 }
 
@@ -13,50 +15,169 @@
                 </p>
             </div>
 
-            <div class="saved-lessons-page__list">
-                <div class="saved-lessons-page__item">
-                    <a href="#" class="saved-lessons-page__item-image-wrapper">
-                        <img src="https://picsum.photos/400/225?random=1" alt="Tiêu đề video hướng dẫn" class="saved-lessons-page__item-image">
-                        <div class="saved-lessons-page__item-play-icon">
-                            <i class="bi bi-play-circle-fill"></i>
-                        </div>
-                    </a>
-                    <div class="saved-lessons-page__item-content">
-                        <h3 class="saved-lessons-page__item-title">
-                            <a href="#">Video Hướng dẫn: Cách sử dụng ChatGPT để viết email</a>
-                        </h3>
-                        <p class="saved-lessons-page__item-meta">
-                            <i class="fa-regular fa-calendar"></i> Đã lưu ngày 20 tháng 5, 2024
-                        </p>
+            <div id="saved-lessons-list-container">
+                <div class="text-center mt-5">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Đang tải...</span>
                     </div>
-                    <div class="saved-lessons-page__item-actions">
-                        <a href="#" class="saved-lessons-page__item-view-btn">Xem lại video</a>
-                        <button class="saved-lessons-page__item-delete-btn" title="Xóa khỏi danh sách">
-                            <i class="fa-solid fa-trash-can"></i> Xóa
-                        </button>
-                    </div>
-                </div>
-
-                <div class="saved-lessons-page__item">
-                    <a href="#" class="saved-lessons-page__item-image-wrapper">
-                        <img src="https://picsum.photos/400/225?random=2" alt="Tiêu đề bài viết" class="saved-lessons-page__item-image">
-                    </a>
-                    <div class="saved-lessons-page__item-content">
-                        <h3 class="saved-lessons-page__item-title">
-                            <a href="#">Bài viết: 5 công cụ AI tạo hình ảnh miễn phí cho người mới bắt đầu</a>
-                        </h3>
-                        <p class="saved-lessons-page__item-meta">
-                            <i class="fa-regular fa-calendar"></i> Đã lưu ngày 18 tháng 5, 2024
-                        </p>
-                    </div>
-                    <div class="saved-lessons-page__item-actions">
-                        <a href="#" class="saved-lessons-page__item-view-btn">Đọc lại bài viết</a>
-                        <button class="saved-lessons-page__item-delete-btn" title="Xóa khỏi danh sách">
-                            <i class="fa-solid fa-trash-can"></i> Xóa
-                        </button>
-                    </div>
+                    <p class="mt-2">Đang tải danh sách bài học...</p>
                 </div>
             </div>
+
         </div>
     </section>
 </main>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const apiBaseUrl = '@ViewBag.ApiBaseUrl';
+            const jwtToken = localStorage.getItem('jwtToken');
+            const container = document.getElementById('saved-lessons-list-container');
+
+            async function fetchAndRenderSavedLessons() {
+                if (!jwtToken) {
+                    container.innerHTML = `
+                        <div class="text-center mt-5 p-5 border rounded bg-light">
+                            <h4>Bạn cần đăng nhập để xem các bài học đã lưu.</h4>
+                            <p class="mb-4">Vui lòng đăng nhập để tiếp tục.</p>
+                            <a href="/Auth/Login" class="btn btn-primary">Đi đến trang đăng nhập</a>
+                        </div>`;
+                    return;
+                }
+
+                try {
+                    const response = await fetch(`${apiBaseUrl}/api/SavedLesson`, {
+                        method: 'GET',
+                        headers: {
+                            'Authorization': `Bearer ${jwtToken}`
+                        }
+                    });
+
+                    if (response.status === 401) {
+                        localStorage.removeItem('jwtToken');
+                        localStorage.removeItem('userId');
+                        container.innerHTML = `
+                        <div class="text-center mt-5 p-5 border rounded bg-light">
+                            <h4>Phiên đăng nhập đã hết hạn.</h4>
+                            <p class="mb-4">Vui lòng đăng nhập lại để xem nội dung này.</p>
+                            <a href="/Auth/Login" class="btn btn-primary">Đi đến trang đăng nhập</a>
+                        </div>`;
+                        return;
+                    }
+
+                    if (!response.ok) {
+                        throw new Error('Lỗi khi tải dữ liệu từ server.');
+                    }
+
+                    const lessons = await response.json();
+                    renderLessons(lessons);
+
+                } catch (error) {
+                    console.error('Lỗi khi tải bài học đã lưu:', error);
+                    container.innerHTML = `
+                        <div class="text-center mt-5 p-5 border rounded bg-danger text-white">
+                            <h4>Đã có lỗi xảy ra!</h4>
+                            <p>Không thể tải danh sách bài học. Vui lòng thử lại sau.</p>
+                        </div>`;
+                }
+            }
+
+            // --- HÀM RENDER HTML ---
+            function renderLessons(lessons) {
+                if (!lessons || lessons.length === 0) {
+                    container.innerHTML = `
+                        <div class="text-center mt-5 p-5 border rounded bg-light">
+                            <h4>Bạn chưa lưu bài học nào cả.</h4>
+                            <p class="mb-4">Hãy bắt đầu khám phá và lưu lại những nội dung hữu ích nhé!</p>
+                            <a href="/Home/Index" class="btn btn-primary">Khám phá ngay</a>
+                        </div>`;
+                    return;
+                }
+
+                const lessonsHtml = lessons.map(item => {
+                    const isVideo = item.lessonType === 'Video';
+                    const defaultImage = '/images/default-image.png';
+                    const itemImage = item.lessonImage || defaultImage;
+                    const savedDate = new Date(item.savedDate).toLocaleDateString('vi-VN');
+
+                    return `
+                        <div class="saved-lessons-page__item" id="saved-item-${item.savedLessonId}">
+                            <a href="${item.lessonUrl}" class="saved-lessons-page__item-image-wrapper">
+                                <img src="${itemImage}" alt="${item.lessonTitle}" class="saved-lessons-page__item-image">
+                                ${isVideo ? `
+                                    <div class="saved-lessons-page__item-play-icon">
+                                        <i class="bi bi-play-circle-fill"></i>
+                                    </div>` : ''}
+                            </a>
+                            <div class="saved-lessons-page__item-content">
+                                <h3 class="saved-lessons-page__item-title">
+                                    <a href="${item.lessonUrl}">${item.lessonTitle}</a>
+                                </h3>
+                                <p class="saved-lessons-page__item-meta">
+                                    <i class="fa-regular fa-calendar"></i> Đã lưu ngày ${savedDate}
+                                </p>
+                            </div>
+                            <div class="saved-lessons-page__item-actions">
+                                <a href="${item.lessonUrl}" class="saved-lessons-page__item-view-btn">
+                                    ${isVideo ? 'Xem lại video' : 'Đọc lại bài viết'}
+                                </a>
+                                <button class="saved-lessons-page__item-delete-btn" title="Xóa khỏi danh sách" data-saved-id="${item.savedLessonId}">
+                                    <i class="fa-solid fa-trash-can"></i> Xóa
+                                </button>
+                            </div>
+                        </div>`;
+                }).join('');
+
+                container.innerHTML = `<div class="saved-lessons-page__list">${lessonsHtml}</div>`;
+
+                addDeleteEventListeners();
+            }
+
+            function addDeleteEventListeners() {
+                const deleteButtons = document.querySelectorAll('.saved-lessons-page__item-delete-btn');
+                deleteButtons.forEach(button => {
+                    button.addEventListener('click', function () {
+                        const savedLessonId = this.getAttribute('data-saved-id');
+                        if (confirm('Bạn có chắc chắn muốn xóa bài học này khỏi danh sách đã lưu không?')) {
+                            deleteSavedLesson(savedLessonId);
+                        }
+                    });
+                });
+            }
+
+            async function deleteSavedLesson(id) {
+                try {
+                    const response = await fetch(`${apiBaseUrl}/api/SavedLesson/${id}`, {
+                        method: 'DELETE',
+                        headers: {
+                            'Authorization': `Bearer ${jwtToken}`
+                        }
+                    });
+
+                    if (response.ok) {
+                        const itemElement = document.getElementById(`saved-item-${id}`);
+                        if (itemElement) {
+                            itemElement.style.transition = 'opacity 0.5s ease';
+                            itemElement.style.opacity = '0';
+                            setTimeout(() => {
+                                itemElement.remove();
+                                const list = document.querySelector('.saved-lessons-page__list');
+                                if (list && list.children.length === 0) {
+                                    renderLessons([]);
+                                }
+                            }, 500);
+                        }
+                    } else {
+                         alert('Xóa bài học thất bại. Vui lòng thử lại.');
+                    }
+                } catch (error) {
+                    console.error('Lỗi khi xóa bài học:', error);
+                    alert('Đã xảy ra lỗi mạng. Vui lòng thử lại.');
+                }
+            }
+
+            fetchAndRenderSavedLessons();
+        });
+    </script>
+}

@@ -35,9 +35,13 @@ public partial class VideoArticle
 
     public virtual VideoArticleCategory Category { get; set; } = null!;
 
+    public virtual ICollection<SavedLesson> SavedLessons { get; set; } = new List<SavedLesson>();
+
     public virtual Aitool? Tool { get; set; }
 
     public virtual User UploaderNavigation { get; set; } = null!;
+
+    public virtual ICollection<VideoArticleComment> VideoArticleComments { get; set; } = new List<VideoArticleComment>();
 
     public virtual ICollection<VideoArticleRating> VideoArticleRatings { get; set; } = new List<VideoArticleRating>();
 }
