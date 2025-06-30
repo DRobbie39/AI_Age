@@ -19,11 +19,11 @@ namespace AI_Age_BackEnd.Controllers.VideoArticleController
         }
 
         [HttpGet("getallvideoarticles")]
-        public async Task<IActionResult> GetAllVideoArticles([FromQuery] string? query)
+        public async Task<IActionResult> GetAllVideoArticles([FromQuery] string? query, [FromQuery] int? categoryId)
         {
             try
             {
-                var videoArticles = await _videoArticleService.GetAllVideoArticlesAsync(query);
+                var videoArticles = await _videoArticleService.GetAllVideoArticlesAsync(query, categoryId);
                 return Ok(videoArticles);
             }
             catch (Exception)

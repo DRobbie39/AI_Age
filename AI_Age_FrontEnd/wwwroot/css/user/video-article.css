@@ -18,6 +18,12 @@
     padding: 0.375rem 0.75rem;
 }
 
+.video-list__search-button:hover {
+    color: white;
+    background-color: #4CAF50;
+    transition: background-color 0.3s ease;
+}
+
 .video-list__item {
     background-color: var(--surface-color);
     border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
@@ -42,10 +48,6 @@
 .video-list__content-title-link {
     color: var(--heading-color);
     transition: 0.3s;
-}
-
-.video-list__content-title-link:hover {
-/*    color: var(--accent-color);*/
 }
 
 .video-list__content-category {

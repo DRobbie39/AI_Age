@@ -3,12 +3,100 @@
   "WorkspaceRootPath": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_frontend\\views\\profile\\savedlessons.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|solutionrelative:ai_age_frontend\\views\\profile\\savedlessons.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_frontend\\views\\videoarticle\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|solutionrelative:ai_age_frontend\\views\\videoarticle\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_frontend\\views\\article\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|solutionrelative:ai_age_frontend\\views\\article\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_frontend\\controllers\\videoarticlecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|solutionrelative:ai_age_frontend\\controllers\\videoarticlecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_frontend\\dtos\\videoarticlecategorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|solutionrelative:ai_age_frontend\\dtos\\videoarticlecategorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_frontend\\dtos\\articlecategorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|solutionrelative:ai_age_frontend\\dtos\\articlecategorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_backend\\controllers\\videoarticlecontroller\\videoarticlecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|solutionrelative:ai_age_backend\\controllers\\videoarticlecontroller\\videoarticlecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_backend\\controllers\\videoarticlecategorycontroller\\videoarticlecategorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|solutionrelative:ai_age_backend\\controllers\\videoarticlecategorycontroller\\videoarticlecategorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_backend\\services\\videoarticleservice\\videoarticleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|solutionrelative:ai_age_backend\\services\\videoarticleservice\\videoarticleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_backend\\repositories\\videoarticlerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|solutionrelative:ai_age_backend\\repositories\\videoarticlerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_backend\\repositories\\interfaces\\ivideoarticlerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|solutionrelative:ai_age_backend\\repositories\\interfaces\\ivideoarticlerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_backend\\repositories\\videoarticlecategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|solutionrelative:ai_age_backend\\repositories\\videoarticlecategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_backend\\repositories\\interfaces\\ivideoarticlecategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|solutionrelative:ai_age_backend\\repositories\\interfaces\\ivideoarticlecategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_backend\\repositories\\interfaces\\ivideoarticleratingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|solutionrelative:ai_age_backend\\repositories\\interfaces\\ivideoarticleratingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_backend\\dtos\\videoarticlecategorydto\\videoarticlecategorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|solutionrelative:ai_age_backend\\dtos\\videoarticlecategorydto\\videoarticlecategorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_frontend\\views\\article\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|solutionrelative:ai_age_frontend\\views\\article\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_frontend\\controllers\\articlecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|solutionrelative:ai_age_frontend\\controllers\\articlecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_backend\\services\\articleservice\\articleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|solutionrelative:ai_age_backend\\services\\articleservice\\articleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_backend\\repositories\\articlerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|solutionrelative:ai_age_backend\\repositories\\articlerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_backend\\repositories\\articlecategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|solutionrelative:ai_age_backend\\repositories\\articlecategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_backend\\repositories\\interfaces\\iarticlerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|solutionrelative:ai_age_backend\\repositories\\interfaces\\iarticlerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_backend\\repositories\\interfaces\\iarticlecategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|solutionrelative:ai_age_backend\\repositories\\interfaces\\iarticlecategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_backend\\controllers\\articlecategorycontroller\\articlecategorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|solutionrelative:ai_age_backend\\controllers\\articlecategorycontroller\\articlecategorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_backend\\dtos\\articlecategorydto\\articlecategorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|solutionrelative:ai_age_backend\\dtos\\articlecategorydto\\articlecategorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_backend\\controllers\\articlecontroller\\articlecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|solutionrelative:ai_age_backend\\controllers\\articlecontroller\\articlecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_frontend\\wwwroot\\css\\user\\article.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|solutionrelative:ai_age_frontend\\wwwroot\\css\\user\\article.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,8 +106,229 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "VideoArticleCategoryDto.cs",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\DTOs\\VideoArticleCategoryDto.cs",
+              "RelativeDocumentMoniker": "AI_Age_FrontEnd\\DTOs\\VideoArticleCategoryDto.cs",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\DTOs\\VideoArticleCategoryDto.cs",
+              "RelativeToolTip": "AI_Age_FrontEnd\\DTOs\\VideoArticleCategoryDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T18:24:22.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "VideoArticleCategoryController.cs",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Controllers\\VideoArticleCategoryController\\VideoArticleCategoryController.cs",
+              "RelativeDocumentMoniker": "AI_Age_BackEnd\\Controllers\\VideoArticleCategoryController\\VideoArticleCategoryController.cs",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Controllers\\VideoArticleCategoryController\\VideoArticleCategoryController.cs",
+              "RelativeToolTip": "AI_Age_BackEnd\\Controllers\\VideoArticleCategoryController\\VideoArticleCategoryController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAkwBEAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T18:22:01.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IVideoArticleRatingRepository.cs",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Repositories\\Interfaces\\IVideoArticleRatingRepository.cs",
+              "RelativeDocumentMoniker": "AI_Age_BackEnd\\Repositories\\Interfaces\\IVideoArticleRatingRepository.cs",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Repositories\\Interfaces\\IVideoArticleRatingRepository.cs",
+              "RelativeToolTip": "AI_Age_BackEnd\\Repositories\\Interfaces\\IVideoArticleRatingRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T18:18:47.915Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "VideoArticleCategoryDto.cs",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\DTOs\\VideoArticleCategoryDto\\VideoArticleCategoryDto.cs",
+              "RelativeDocumentMoniker": "AI_Age_BackEnd\\DTOs\\VideoArticleCategoryDto\\VideoArticleCategoryDto.cs",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\DTOs\\VideoArticleCategoryDto\\VideoArticleCategoryDto.cs",
+              "RelativeToolTip": "AI_Age_BackEnd\\DTOs\\VideoArticleCategoryDto\\VideoArticleCategoryDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T18:18:29.732Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\Views\\VideoArticle\\Index.cshtml",
+              "RelativeDocumentMoniker": "AI_Age_FrontEnd\\Views\\VideoArticle\\Index.cshtml",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\Views\\VideoArticle\\Index.cshtml",
+              "RelativeToolTip": "AI_Age_FrontEnd\\Views\\VideoArticle\\Index.cshtml",
+              "ViewState": "AgIAACgAAAAAAAAAAAAIwD8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-30T18:14:05.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "VideoArticleController.cs",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\Controllers\\VideoArticleController.cs",
+              "RelativeDocumentMoniker": "AI_Age_FrontEnd\\Controllers\\VideoArticleController.cs",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\Controllers\\VideoArticleController.cs",
+              "RelativeToolTip": "AI_Age_FrontEnd\\Controllers\\VideoArticleController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAgwB4AAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T18:13:44.25Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "VideoArticleController.cs",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Controllers\\VideoArticleController\\VideoArticleController.cs",
+              "RelativeDocumentMoniker": "AI_Age_BackEnd\\Controllers\\VideoArticleController\\VideoArticleController.cs",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Controllers\\VideoArticleController\\VideoArticleController.cs",
+              "RelativeToolTip": "AI_Age_BackEnd\\Controllers\\VideoArticleController\\VideoArticleController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAjwBcAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T18:12:19.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "VideoArticleService.cs",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Services\\VideoArticleService\\VideoArticleService.cs",
+              "RelativeDocumentMoniker": "AI_Age_BackEnd\\Services\\VideoArticleService\\VideoArticleService.cs",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Services\\VideoArticleService\\VideoArticleService.cs",
+              "RelativeToolTip": "AI_Age_BackEnd\\Services\\VideoArticleService\\VideoArticleService.cs",
+              "ViewState": "AgIAAHgAAAAAAAAAAAArwIsAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T18:11:55.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "VideoArticleRepository.cs",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Repositories\\VideoArticleRepository.cs",
+              "RelativeDocumentMoniker": "AI_Age_BackEnd\\Repositories\\VideoArticleRepository.cs",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Repositories\\VideoArticleRepository.cs",
+              "RelativeToolTip": "AI_Age_BackEnd\\Repositories\\VideoArticleRepository.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAgwCoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T18:11:38.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "VideoArticleCategoryRepository.cs",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Repositories\\VideoArticleCategoryRepository.cs",
+              "RelativeDocumentMoniker": "AI_Age_BackEnd\\Repositories\\VideoArticleCategoryRepository.cs",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Repositories\\VideoArticleCategoryRepository.cs",
+              "RelativeToolTip": "AI_Age_BackEnd\\Repositories\\VideoArticleCategoryRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAxwBMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T18:11:27.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IVideoArticleRepository.cs",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Repositories\\Interfaces\\IVideoArticleRepository.cs",
+              "RelativeDocumentMoniker": "AI_Age_BackEnd\\Repositories\\Interfaces\\IVideoArticleRepository.cs",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Repositories\\Interfaces\\IVideoArticleRepository.cs",
+              "RelativeToolTip": "AI_Age_BackEnd\\Repositories\\Interfaces\\IVideoArticleRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T18:11:10.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IVideoArticleCategoryRepository.cs",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Repositories\\Interfaces\\IVideoArticleCategoryRepository.cs",
+              "RelativeDocumentMoniker": "AI_Age_BackEnd\\Repositories\\Interfaces\\IVideoArticleCategoryRepository.cs",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Repositories\\Interfaces\\IVideoArticleCategoryRepository.cs",
+              "RelativeToolTip": "AI_Age_BackEnd\\Repositories\\Interfaces\\IVideoArticleCategoryRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T18:10:53.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ArticleCategoryDto.cs",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\DTOs\\ArticleCategoryDto.cs",
+              "RelativeDocumentMoniker": "AI_Age_FrontEnd\\DTOs\\ArticleCategoryDto.cs",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\DTOs\\ArticleCategoryDto.cs",
+              "RelativeToolTip": "AI_Age_FrontEnd\\DTOs\\ArticleCategoryDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T18:01:52.969Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "article.css",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\user\\article.css",
+              "RelativeDocumentMoniker": "AI_Age_FrontEnd\\wwwroot\\css\\user\\article.css",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\wwwroot\\css\\user\\article.css",
+              "RelativeToolTip": "AI_Age_FrontEnd\\wwwroot\\css\\user\\article.css",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAswJIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-06-30T18:00:08.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\Views\\Article\\Index.cshtml",
+              "RelativeDocumentMoniker": "AI_Age_FrontEnd\\Views\\Article\\Index.cshtml",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\Views\\Article\\Index.cshtml",
+              "RelativeToolTip": "AI_Age_FrontEnd\\Views\\Article\\Index.cshtml",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAYwGQAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-30T17:59:10.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ArticleController.cs",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\Controllers\\ArticleController.cs",
+              "RelativeDocumentMoniker": "AI_Age_FrontEnd\\Controllers\\ArticleController.cs",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\Controllers\\ArticleController.cs",
+              "RelativeToolTip": "AI_Age_FrontEnd\\Controllers\\ArticleController.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAQwE4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T17:58:01.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ArticleService.cs",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Services\\ArticleService\\ArticleService.cs",
+              "RelativeDocumentMoniker": "AI_Age_BackEnd\\Services\\ArticleService\\ArticleService.cs",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Services\\ArticleService\\ArticleService.cs",
+              "RelativeToolTip": "AI_Age_BackEnd\\Services\\ArticleService\\ArticleService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T17:56:12.971Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -66,28 +375,93 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SavedLessons.cshtml",
-              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\Views\\Profile\\SavedLessons.cshtml",
-              "RelativeDocumentMoniker": "AI_Age_FrontEnd\\Views\\Profile\\SavedLessons.cshtml",
-              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\Views\\Profile\\SavedLessons.cshtml",
-              "RelativeToolTip": "AI_Age_FrontEnd\\Views\\Profile\\SavedLessons.cshtml",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAqwK0AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-30T17:19:23.502Z",
+              "DocumentIndex": 22,
+              "Title": "ArticleController.cs",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Controllers\\ArticleController\\ArticleController.cs",
+              "RelativeDocumentMoniker": "AI_Age_BackEnd\\Controllers\\ArticleController\\ArticleController.cs",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Controllers\\ArticleController\\ArticleController.cs",
+              "RelativeToolTip": "AI_Age_BackEnd\\Controllers\\ArticleController\\ArticleController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T17:53:55.875Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\Views\\Article\\Details.cshtml",
-              "RelativeDocumentMoniker": "AI_Age_FrontEnd\\Views\\Article\\Details.cshtml",
-              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\Views\\Article\\Details.cshtml",
-              "RelativeToolTip": "AI_Age_FrontEnd\\Views\\Article\\Details.cshtml",
-              "ViewState": "AgIAAN4AAAAAAAAAAAAAABIBAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-30T16:48:18.976Z",
+              "DocumentIndex": 18,
+              "Title": "IArticleRepository.cs",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Repositories\\Interfaces\\IArticleRepository.cs",
+              "RelativeDocumentMoniker": "AI_Age_BackEnd\\Repositories\\Interfaces\\IArticleRepository.cs",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Repositories\\Interfaces\\IArticleRepository.cs",
+              "RelativeToolTip": "AI_Age_BackEnd\\Repositories\\Interfaces\\IArticleRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T17:53:45.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ArticleRepository.cs",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Repositories\\ArticleRepository.cs",
+              "RelativeDocumentMoniker": "AI_Age_BackEnd\\Repositories\\ArticleRepository.cs",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Repositories\\ArticleRepository.cs",
+              "RelativeToolTip": "AI_Age_BackEnd\\Repositories\\ArticleRepository.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAwFkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T17:52:07.48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ArticleCategoryController.cs",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Controllers\\ArticleCategoryController\\ArticleCategoryController.cs",
+              "RelativeDocumentMoniker": "AI_Age_BackEnd\\Controllers\\ArticleCategoryController\\ArticleCategoryController.cs",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Controllers\\ArticleCategoryController\\ArticleCategoryController.cs",
+              "RelativeToolTip": "AI_Age_BackEnd\\Controllers\\ArticleCategoryController\\ArticleCategoryController.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T17:50:40.488Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ArticleCategoryDto.cs",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\DTOs\\ArticleCategoryDTO\\ArticleCategoryDto.cs",
+              "RelativeDocumentMoniker": "AI_Age_BackEnd\\DTOs\\ArticleCategoryDTO\\ArticleCategoryDto.cs",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\DTOs\\ArticleCategoryDTO\\ArticleCategoryDto.cs",
+              "RelativeToolTip": "AI_Age_BackEnd\\DTOs\\ArticleCategoryDTO\\ArticleCategoryDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T17:50:09.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ArticleCategoryRepository.cs",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Repositories\\ArticleCategoryRepository.cs",
+              "RelativeDocumentMoniker": "AI_Age_BackEnd\\Repositories\\ArticleCategoryRepository.cs",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Repositories\\ArticleCategoryRepository.cs",
+              "RelativeToolTip": "AI_Age_BackEnd\\Repositories\\ArticleCategoryRepository.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAuwBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T17:49:11.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IArticleCategoryRepository.cs",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Repositories\\Interfaces\\IArticleCategoryRepository.cs",
+              "RelativeDocumentMoniker": "AI_Age_BackEnd\\Repositories\\Interfaces\\IArticleCategoryRepository.cs",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Repositories\\Interfaces\\IArticleCategoryRepository.cs",
+              "RelativeToolTip": "AI_Age_BackEnd\\Repositories\\Interfaces\\IArticleCategoryRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T17:48:46.957Z",
               "EditorCaption": ""
             }
           ]

@@ -1,6 +1,7 @@
 ﻿using AI_Age_FrontEnd.DTOs;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
+using System.Web;
 
 namespace AI_Age_FrontEnd.Controllers
 {
@@ -15,22 +16,42 @@ namespace AI_Age_FrontEnd.Controllers
             _configuration = configuration;
         }
 
-        public async Task<IActionResult> Index(string? query)
+        public async Task<IActionResult> Index(string? query, int? categoryId)
         {
-            ViewData["CurrentFilter"] = query;
-
-            var requestUri = "api/VideoArticle/getallvideoarticles";
-
-            if (!string.IsNullOrEmpty(query))
+            try
             {
-                requestUri += $"?query={Uri.EscapeDataString(query)}";
+                var categoryResponse = await _httpClient.GetAsync("api/VideoArticleCategory/getallcategories");
+                categoryResponse.EnsureSuccessStatusCode();
+                var categoryJson = await categoryResponse.Content.ReadAsStringAsync();
+
+                ViewBag.Categories = JsonSerializer.Deserialize<List<VideoArticleCategoryDto>>(categoryJson, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+            }
+            catch
+            {
+                ViewBag.Categories = new List<VideoArticleCategoryDto>();
             }
 
-            var response = await _httpClient.GetAsync(requestUri);
-            response.EnsureSuccessStatusCode();
+            ViewData["CurrentFilter"] = query;
+            ViewData["CurrentCategory"] = categoryId;
 
-            var jsonString = await response.Content.ReadAsStringAsync();
-            var videoArticles = JsonSerializer.Deserialize<List<VideoArticleDto>>(jsonString, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+            var queryParams = HttpUtility.ParseQueryString(string.Empty);
+            if (!string.IsNullOrEmpty(query))
+            {
+                queryParams["query"] = query;
+            }
+            if (categoryId.HasValue)
+            {
+                queryParams["categoryId"] = categoryId.ToString();
+            }
+            var requestUri = $"api/VideoArticle/getallvideoarticles?{queryParams}";
+
+            var response = await _httpClient.GetAsync(requestUri);
+            var videoArticles = new List<VideoArticleDto>();
+            if (response.IsSuccessStatusCode)
+            {
+                var jsonString = await response.Content.ReadAsStringAsync();
+                videoArticles = JsonSerializer.Deserialize<List<VideoArticleDto>>(jsonString, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+            }
 
             return View(videoArticles);
         }
@@ -43,7 +64,6 @@ namespace AI_Age_FrontEnd.Controllers
             var jsonString = await response.Content.ReadAsStringAsync();
             var videoArticle = JsonSerializer.Deserialize<VideoArticleDto>(jsonString, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 
-            // Truyền API Base URL cho View để sử dụng trong JavaScript
             ViewBag.ApiBaseUrl = _configuration.GetValue<string>("ApiSettings:BaseUrl");
 
             return View(videoArticle);

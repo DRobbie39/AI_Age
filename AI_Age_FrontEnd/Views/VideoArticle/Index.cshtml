@@ -1,7 +1,12 @@
-﻿@model List<AI_Age_FrontEnd.DTOs.VideoArticleDto>
+﻿@using AI_Age_FrontEnd.DTOs
+@model List<AI_Age_FrontEnd.DTOs.VideoArticleDto>
 
 @{
     ViewData["Title"] = "Video hướng dẫn";
+
+    var categories = ViewBag.Categories as List<VideoArticleCategoryDto> ?? new List<VideoArticleCategoryDto>();
+    var currentCategory = ViewData["CurrentCategory"] as int?;
+    var currentFilter = ViewData["CurrentFilter"] as string;
 }
 
 <div class="page-title" data-aos="fade">
@@ -36,6 +41,27 @@
                 </button>
             </form>
         </div>
+
+        @if (categories.Any())
+        {
+            <div class="category-filters d-flex justify-content-center mb-4" data-aos="fade-up" data-aos-delay="200">
+                <a asp-controller="VideoArticle"
+                   asp-action="Index"
+                   asp-route-query="@currentFilter"
+                   asp-route-categoryId=""
+                   class="btn btn-filter @(currentCategory == null ? "active" : "")">Tất cả</a>
+
+                @foreach (var category in categories)
+                {
+                    <a asp-controller="VideoArticle"
+                       asp-action="Index"
+                       asp-route-categoryId="@category.Id"
+                       asp-route-query="@currentFilter"
+                       class="btn btn-filter @(currentCategory == category.Id ? "active" : "")">@category.Name</a>
+                }
+            </div>
+        }
+
         <div class="row">
             @if (Model == null || !Model.Any())
             {
