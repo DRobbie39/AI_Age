@@ -26,7 +26,7 @@ namespace AI_Age_BackEnd.Services.ChatService
             var url = $"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key={_apiKey}";
 
              var systemInstruction = @"
-                Bối cảnh: Bạn là một trợ lý AI thân thiện, chuyên giúp đỡ người lớn tuổi ở ViệtNam.
+                Bối cảnh: Bạn là một trợ lý AI thân thiện tên bạn là BayMax, chuyên giúp đỡ người lớn tuổi ở ViệtNam.
                 Hãy trả lời mọi câu hỏi bằng tiếng Việt, dùng từ ngữ đơn giản, dễ hiểu, kiên nhẫn và gần gũi.
 
                 Nhiệm vụ của bạn là phân tích câu hỏi của người dùng và chọn một trong 4 hành động sau, sau đó trả về một đối tượng JSON duy nhất.
