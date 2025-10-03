@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\AI_Age_BackEnd.props" />
-</Project>

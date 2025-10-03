@@ -55,7 +55,7 @@ public partial class AI_AgeContext : DbContext
     {
         modelBuilder.Entity<Aitool>(entity =>
         {
-            entity.HasKey(e => e.ToolId).HasName("PK__AITools__CC0CEBB153229A79");
+            entity.HasKey(e => e.ToolId).HasName("PK__AITools__CC0CEBB186B0BA0F");
 
             entity.ToTable("AITools");
 
@@ -75,12 +75,12 @@ public partial class AI_AgeContext : DbContext
 
             entity.HasOne(d => d.Category).WithMany(p => p.Aitools)
                 .HasForeignKey(d => d.CategoryId)
-                .HasConstraintName("FK__AITools__Categor__60A75C0F");
+                .HasConstraintName("FK__AITools__Categor__5535A963");
         });
 
         modelBuilder.Entity<AitoolCategory>(entity =>
         {
-            entity.HasKey(e => e.CategoryId).HasName("PK__AIToolCa__19093A2B8E735347");
+            entity.HasKey(e => e.CategoryId).HasName("PK__AIToolCa__19093A2BFA615C28");
 
             entity.ToTable("AIToolCategories");
 
@@ -94,7 +94,7 @@ public partial class AI_AgeContext : DbContext
 
         modelBuilder.Entity<Article>(entity =>
         {
-            entity.HasKey(e => e.ArticleId).HasName("PK__Articles__9C6270C84B74BEA6");
+            entity.HasKey(e => e.ArticleId).HasName("PK__Articles__9C6270C8161A986E");
 
             entity.Property(e => e.ArticleId).HasColumnName("ArticleID");
             entity.Property(e => e.AverageRating)
@@ -116,21 +116,21 @@ public partial class AI_AgeContext : DbContext
             entity.HasOne(d => d.AuthorNavigation).WithMany(p => p.Articles)
                 .HasForeignKey(d => d.Author)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Articles__Author__693CA210");
+                .HasConstraintName("FK__Articles__Author__5FB337D6");
 
             entity.HasOne(d => d.Category).WithMany(p => p.Articles)
                 .HasForeignKey(d => d.CategoryId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Articles__Catego__68487DD7");
+                .HasConstraintName("FK__Articles__Catego__5EBF139D");
 
             entity.HasOne(d => d.Tool).WithMany(p => p.Articles)
                 .HasForeignKey(d => d.ToolId)
-                .HasConstraintName("FK__Articles__ToolID__6A30C649");
+                .HasConstraintName("FK__Articles__ToolID__60A75C0F");
         });
 
         modelBuilder.Entity<ArticleCategory>(entity =>
         {
-            entity.HasKey(e => e.CategoryId).HasName("PK__ArticleC__19093A2BD65CF575");
+            entity.HasKey(e => e.CategoryId).HasName("PK__ArticleC__19093A2B07AD46A6");
 
             entity.Property(e => e.CategoryId).HasColumnName("CategoryID");
             entity.Property(e => e.CategoryName).HasMaxLength(100);
@@ -141,7 +141,7 @@ public partial class AI_AgeContext : DbContext
 
         modelBuilder.Entity<ArticleComment>(entity =>
         {
-            entity.HasKey(e => e.CommentId).HasName("PK__ArticleC__C3B4DFAA645F17F3");
+            entity.HasKey(e => e.CommentId).HasName("PK__ArticleC__C3B4DFAA485B0E1A");
 
             entity.Property(e => e.CommentId).HasColumnName("CommentID");
             entity.Property(e => e.ArticleId).HasColumnName("ArticleID");
@@ -154,17 +154,17 @@ public partial class AI_AgeContext : DbContext
             entity.HasOne(d => d.Article).WithMany(p => p.ArticleComments)
                 .HasForeignKey(d => d.ArticleId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__ArticleCo__Artic__0E6E26BF");
+                .HasConstraintName("FK__ArticleCo__Artic__04E4BC85");
 
             entity.HasOne(d => d.User).WithMany(p => p.ArticleComments)
                 .HasForeignKey(d => d.UserId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__ArticleCo__UserI__0F624AF8");
+                .HasConstraintName("FK__ArticleCo__UserI__05D8E0BE");
         });
 
         modelBuilder.Entity<ArticleRating>(entity =>
         {
-            entity.HasKey(e => e.RatingId).HasName("PK__ArticleR__FCCDF85C1D727EEA");
+            entity.HasKey(e => e.RatingId).HasName("PK__ArticleR__FCCDF85CD2C7912F");
 
             entity.Property(e => e.RatingId).HasColumnName("RatingID");
             entity.Property(e => e.ArticleId).HasColumnName("ArticleID");
@@ -176,16 +176,16 @@ public partial class AI_AgeContext : DbContext
             entity.HasOne(d => d.Article).WithMany(p => p.ArticleRatings)
                 .HasForeignKey(d => d.ArticleId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__ArticleRa__Artic__6EF57B66");
+                .HasConstraintName("FK__ArticleRa__Artic__656C112C");
 
             entity.HasOne(d => d.User).WithMany(p => p.ArticleRatings)
                 .HasForeignKey(d => d.UserId)
-                .HasConstraintName("FK__ArticleRa__UserI__6FE99F9F");
+                .HasConstraintName("FK__ArticleRa__UserI__66603565");
         });
 
         modelBuilder.Entity<ChatHistory>(entity =>
         {
-            entity.HasKey(e => e.ChatId).HasName("PK__ChatHist__A9FBE6265BF1ABA6");
+            entity.HasKey(e => e.ChatId).HasName("PK__ChatHist__A9FBE626D4FB69BA");
 
             entity.ToTable("ChatHistory");
 
@@ -199,12 +199,12 @@ public partial class AI_AgeContext : DbContext
             entity.HasOne(d => d.User).WithMany(p => p.ChatHistories)
                 .HasForeignKey(d => d.UserId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__ChatHisto__UserI__1CBC4616");
+                .HasConstraintName("FK__ChatHisto__UserI__1332DBDC");
         });
 
         modelBuilder.Entity<Role>(entity =>
         {
-            entity.HasKey(e => e.RoleId).HasName("PK__Roles__8AFACE3A3A6F06A5");
+            entity.HasKey(e => e.RoleId).HasName("PK__Roles__8AFACE3A4778813C");
 
             entity.Property(e => e.RoleId).HasColumnName("RoleID");
             entity.Property(e => e.CreatedDate)
@@ -216,7 +216,7 @@ public partial class AI_AgeContext : DbContext
 
         modelBuilder.Entity<SavedLesson>(entity =>
         {
-            entity.HasKey(e => e.SavedLessonId).HasName("PK__SavedLes__4F1AFABE535EC2E6");
+            entity.HasKey(e => e.SavedLessonId).HasName("PK__SavedLes__4F1AFABE8A84FA0D");
 
             entity.Property(e => e.SavedLessonId).HasColumnName("SavedLessonID");
             entity.Property(e => e.ArticleId).HasColumnName("ArticleID");
@@ -233,24 +233,24 @@ public partial class AI_AgeContext : DbContext
             entity.HasOne(d => d.Article).WithMany(p => p.SavedLessons)
                 .HasForeignKey(d => d.ArticleId)
                 .OnDelete(DeleteBehavior.SetNull)
-                .HasConstraintName("FK__SavedLess__Artic__05D8E0BE");
+                .HasConstraintName("FK__SavedLess__Artic__7C4F7684");
 
             entity.HasOne(d => d.User).WithMany(p => p.SavedLessons)
                 .HasForeignKey(d => d.UserId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__SavedLess__UserI__04E4BC85");
+                .HasConstraintName("FK__SavedLess__UserI__7B5B524B");
 
             entity.HasOne(d => d.Video).WithMany(p => p.SavedLessons)
                 .HasForeignKey(d => d.VideoId)
                 .OnDelete(DeleteBehavior.SetNull)
-                .HasConstraintName("FK__SavedLess__Video__06CD04F7");
+                .HasConstraintName("FK__SavedLess__Video__7D439ABD");
         });
 
         modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.UserId).HasName("PK__Users__1788CCACB41D1165");
+            entity.HasKey(e => e.UserId).HasName("PK__Users__1788CCACFAB6EE96");
 
-            entity.HasIndex(e => e.Username, "UQ__Users__536C85E450FC862B").IsUnique();
+            entity.HasIndex(e => e.Username, "UQ__Users__536C85E4A56019A6").IsUnique();
 
             entity.Property(e => e.UserId).HasColumnName("UserID");
             entity.Property(e => e.Address).HasMaxLength(255);
@@ -275,7 +275,7 @@ public partial class AI_AgeContext : DbContext
 
         modelBuilder.Entity<UserPost>(entity =>
         {
-            entity.HasKey(e => e.PostId).HasName("PK__UserPost__AA126038458D05A0");
+            entity.HasKey(e => e.PostId).HasName("PK__UserPost__AA126038C4DF63AB");
 
             entity.Property(e => e.PostId).HasColumnName("PostID");
             entity.Property(e => e.AttachedImage).HasMaxLength(255);
@@ -289,12 +289,12 @@ public partial class AI_AgeContext : DbContext
             entity.HasOne(d => d.User).WithMany(p => p.UserPosts)
                 .HasForeignKey(d => d.UserId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__UserPosts__UserI__0A9D95DB");
+                .HasConstraintName("FK__UserPosts__UserI__01142BA1");
         });
 
         modelBuilder.Entity<UserPostComment>(entity =>
         {
-            entity.HasKey(e => e.CommentId).HasName("PK__UserPost__C3B4DFAAB7A01D0C");
+            entity.HasKey(e => e.CommentId).HasName("PK__UserPost__C3B4DFAA17D1B10B");
 
             entity.Property(e => e.CommentId).HasColumnName("CommentID");
             entity.Property(e => e.CommentDate)
@@ -307,17 +307,17 @@ public partial class AI_AgeContext : DbContext
             entity.HasOne(d => d.Post).WithMany(p => p.UserPostComments)
                 .HasForeignKey(d => d.PostId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__UserPostC__PostI__17F790F9");
+                .HasConstraintName("FK__UserPostC__PostI__0E6E26BF");
 
             entity.HasOne(d => d.User).WithMany(p => p.UserPostComments)
                 .HasForeignKey(d => d.UserId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__UserPostC__UserI__18EBB532");
+                .HasConstraintName("FK__UserPostC__UserI__0F624AF8");
         });
 
         modelBuilder.Entity<VideoArticle>(entity =>
         {
-            entity.HasKey(e => e.VideoId).HasName("PK__VideoArt__BAE5124A6D74EA2F");
+            entity.HasKey(e => e.VideoId).HasName("PK__VideoArt__BAE5124AB290DF95");
 
             entity.Property(e => e.VideoId).HasColumnName("VideoID");
             entity.Property(e => e.AverageRating)
@@ -341,21 +341,21 @@ public partial class AI_AgeContext : DbContext
             entity.HasOne(d => d.Category).WithMany(p => p.VideoArticles)
                 .HasForeignKey(d => d.CategoryId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__VideoArti__Categ__797309D9");
+                .HasConstraintName("FK__VideoArti__Categ__6FE99F9F");
 
             entity.HasOne(d => d.Tool).WithMany(p => p.VideoArticles)
                 .HasForeignKey(d => d.ToolId)
-                .HasConstraintName("FK__VideoArti__ToolI__7B5B524B");
+                .HasConstraintName("FK__VideoArti__ToolI__71D1E811");
 
             entity.HasOne(d => d.UploaderNavigation).WithMany(p => p.VideoArticles)
                 .HasForeignKey(d => d.Uploader)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__VideoArti__Uploa__7A672E12");
+                .HasConstraintName("FK__VideoArti__Uploa__70DDC3D8");
         });
 
         modelBuilder.Entity<VideoArticleCategory>(entity =>
         {
-            entity.HasKey(e => e.CategoryId).HasName("PK__VideoArt__19093A2B9B03CB2C");
+            entity.HasKey(e => e.CategoryId).HasName("PK__VideoArt__19093A2BF0E5458B");
 
             entity.Property(e => e.CategoryId).HasColumnName("CategoryID");
             entity.Property(e => e.CategoryName).HasMaxLength(100);
@@ -366,7 +366,7 @@ public partial class AI_AgeContext : DbContext
 
         modelBuilder.Entity<VideoArticleComment>(entity =>
         {
-            entity.HasKey(e => e.CommentId).HasName("PK__VideoArt__C3B4DFAA6F8D63F8");
+            entity.HasKey(e => e.CommentId).HasName("PK__VideoArt__C3B4DFAA7148176D");
 
             entity.Property(e => e.CommentId).HasColumnName("CommentID");
             entity.Property(e => e.CommentDate)
@@ -379,17 +379,17 @@ public partial class AI_AgeContext : DbContext
             entity.HasOne(d => d.User).WithMany(p => p.VideoArticleComments)
                 .HasForeignKey(d => d.UserId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__VideoArti__UserI__14270015");
+                .HasConstraintName("FK__VideoArti__UserI__0A9D95DB");
 
             entity.HasOne(d => d.Video).WithMany(p => p.VideoArticleComments)
                 .HasForeignKey(d => d.VideoId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__VideoArti__Video__1332DBDC");
+                .HasConstraintName("FK__VideoArti__Video__09A971A2");
         });
 
         modelBuilder.Entity<VideoArticleRating>(entity =>
         {
-            entity.HasKey(e => e.RatingId).HasName("PK__VideoArt__FCCDF85C53E00293");
+            entity.HasKey(e => e.RatingId).HasName("PK__VideoArt__FCCDF85C06DF752D");
 
             entity.Property(e => e.RatingId).HasColumnName("RatingID");
             entity.Property(e => e.CreatedDate)
@@ -398,12 +398,12 @@ public partial class AI_AgeContext : DbContext
 
             entity.HasOne(d => d.User).WithMany(p => p.VideoArticleRatings)
                 .HasForeignKey(d => d.UserId)
-                .HasConstraintName("FK__VideoArti__UserI__01142BA1");
+                .HasConstraintName("FK__VideoArti__UserI__778AC167");
 
             entity.HasOne(d => d.Video).WithMany(p => p.VideoArticleRatings)
                 .HasForeignKey(d => d.VideoId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__VideoArti__Video__00200768");
+                .HasConstraintName("FK__VideoArti__Video__76969D2E");
         });
 
         OnModelCreatingPartial(modelBuilder);

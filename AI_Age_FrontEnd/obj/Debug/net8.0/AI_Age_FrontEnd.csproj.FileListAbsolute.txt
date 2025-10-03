@@ -252,12 +252,6 @@ D:\Study\HK2 2024-2025\DoAnTotNghiep\AI_Age\AI_Age_FrontEnd\obj\Debug\net8.0\sco
 D:\Study\HK2 2024-2025\DoAnTotNghiep\AI_Age\AI_Age_FrontEnd\obj\Debug\net8.0\staticwebassets.build.json
 D:\Study\HK2 2024-2025\DoAnTotNghiep\AI_Age\AI_Age_FrontEnd\obj\Debug\net8.0\staticwebassets.development.json
 D:\Study\HK2 2024-2025\DoAnTotNghiep\AI_Age\AI_Age_FrontEnd\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-D:\Study\HK2 2024-2025\DoAnTotNghiep\AI_Age\AI_Age_FrontEnd\obj\Debug\net8.0\staticwebassets\msbuild.AI_Age_FrontEnd.Microsoft.AspNetCore.StaticWebAssets.props
-D:\Study\HK2 2024-2025\DoAnTotNghiep\AI_Age\AI_Age_FrontEnd\obj\Debug\net8.0\staticwebassets\msbuild.AI_Age_FrontEnd.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-D:\Study\HK2 2024-2025\DoAnTotNghiep\AI_Age\AI_Age_FrontEnd\obj\Debug\net8.0\staticwebassets\msbuild.build.AI_Age_FrontEnd.props
-D:\Study\HK2 2024-2025\DoAnTotNghiep\AI_Age\AI_Age_FrontEnd\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.AI_Age_FrontEnd.props
-D:\Study\HK2 2024-2025\DoAnTotNghiep\AI_Age\AI_Age_FrontEnd\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.AI_Age_FrontEnd.props
-D:\Study\HK2 2024-2025\DoAnTotNghiep\AI_Age\AI_Age_FrontEnd\obj\Debug\net8.0\staticwebassets.pack.json
 D:\Study\HK2 2024-2025\DoAnTotNghiep\AI_Age\AI_Age_FrontEnd\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\Study\HK2 2024-2025\DoAnTotNghiep\AI_Age\AI_Age_FrontEnd\obj\Debug\net8.0\AI_Age_F.F6D32E6C.Up2Date
 D:\Study\HK2 2024-2025\DoAnTotNghiep\AI_Age\AI_Age_FrontEnd\obj\Debug\net8.0\AI_Age_FrontEnd.dll
@@ -265,3 +259,8 @@ D:\Study\HK2 2024-2025\DoAnTotNghiep\AI_Age\AI_Age_FrontEnd\obj\Debug\net8.0\ref
 D:\Study\HK2 2024-2025\DoAnTotNghiep\AI_Age\AI_Age_FrontEnd\obj\Debug\net8.0\AI_Age_FrontEnd.pdb
 D:\Study\HK2 2024-2025\DoAnTotNghiep\AI_Age\AI_Age_FrontEnd\obj\Debug\net8.0\AI_Age_FrontEnd.genruntimeconfig.cache
 D:\Study\HK2 2024-2025\DoAnTotNghiep\AI_Age\AI_Age_FrontEnd\obj\Debug\net8.0\ref\AI_Age_FrontEnd.dll
+D:\Study\HK2 2024-2025\DoAnTotNghiep\AI_Age\AI_Age_FrontEnd\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\Study\HK2 2024-2025\DoAnTotNghiep\AI_Age\AI_Age_FrontEnd\obj\Debug\net8.0\rjimswa.dswa.cache.json
+D:\Study\HK2 2024-2025\DoAnTotNghiep\AI_Age\AI_Age_FrontEnd\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+D:\Study\HK2 2024-2025\DoAnTotNghiep\AI_Age\AI_Age_FrontEnd\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+D:\Study\HK2 2024-2025\DoAnTotNghiep\AI_Age\AI_Age_FrontEnd\obj\Debug\net8.0\staticwebassets.build.json.cache

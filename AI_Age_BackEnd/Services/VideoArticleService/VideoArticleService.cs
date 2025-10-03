@@ -48,7 +48,7 @@ namespace AI_Age_BackEnd.Services.VideoArticleService
                 var uploadParams = new VideoUploadParams
                 {
                     File = new FileDescription(file.FileName, stream),
-                    Transformation = new Transformation().Width(1280).Quality("auto:low").Crop("fit")
+                    Transformation = new Transformation().Width(1280).Quality(75).Crop("fit")
                 };
 
                 var uploadResult = await _cloudinary.UploadAsync(uploadParams);
