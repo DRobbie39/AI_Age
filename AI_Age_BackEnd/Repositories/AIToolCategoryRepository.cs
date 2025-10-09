@@ -13,9 +13,17 @@ namespace AI_Age_BackEnd.Repositories
             _context = context;
         }
 
-        public async Task<List<AitoolCategory>> GetAllAsync()
+        public async Task<List<AitoolCategory>> GetAllAsync(string? searchQuery = null)
         {
-            return await _context.AitoolCategories
+            var query = _context.AitoolCategories.AsQueryable();
+
+            // Nếu có chuỗi tìm kiếm, thì thêm điều kiện Where
+            if (!string.IsNullOrWhiteSpace(searchQuery))
+            {
+                query = query.Where(c => c.CategoryName.Contains(searchQuery));
+            }
+
+            return await query
                 .OrderBy(c => c.CategoryName)
                 .ToListAsync();
         }
