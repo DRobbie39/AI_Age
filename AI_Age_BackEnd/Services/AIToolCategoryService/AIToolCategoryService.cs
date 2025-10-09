@@ -16,9 +16,9 @@ namespace AI_Age_BackEnd.Services.AIToolCategoryService
             _categoryRepository = categoryRepository;
         }
 
-        public async Task<List<AIToolCategoryDto>> GetAllCategoriesAsync()
+        public async Task<List<AIToolCategoryDto>> GetAllCategoriesAsync(string? searchQuery = null)
         {
-            var categories = await _categoryRepository.GetAllAsync();
+            var categories = await _categoryRepository.GetAllAsync(searchQuery);
 
             return categories.Select(c => new AIToolCategoryDto
             {

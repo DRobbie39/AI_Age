@@ -15,9 +15,19 @@ namespace AI_Age_FrontEnd.Areas.Admin.Controllers
             _httpClient = httpClientFactory.CreateClient("ApiClient");
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchQuery)
         {
-            var response = await _httpClient.GetAsync("api/AIToolCategory");
+            ViewData["CurrentFilter"] = searchQuery;
+
+            // Xây dựng URL động
+            var requestUri = "api/AIToolCategory";
+            if (!string.IsNullOrEmpty(searchQuery))
+            {
+                // Uri.EscapeDataString để mã hóa các ký tự đặc biệt trong chuỗi tìm kiếm
+                requestUri += $"?searchQuery={Uri.EscapeDataString(searchQuery)}";
+            }
+
+            var response = await _httpClient.GetAsync(requestUri);
             var categories = new List<AIToolCategoryViewModel>();
 
             if (response.IsSuccessStatusCode)

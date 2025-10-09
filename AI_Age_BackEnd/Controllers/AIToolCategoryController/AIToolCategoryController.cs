@@ -17,9 +17,9 @@ namespace AI_Age_BackEnd.Controllers.AIToolCategoryController
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll([FromQuery] string? searchQuery)
         {
-            var categories = await _categoryService.GetAllCategoriesAsync();
+            var categories = await _categoryService.GetAllCategoriesAsync(searchQuery);
             return Ok(categories);
         }
 
