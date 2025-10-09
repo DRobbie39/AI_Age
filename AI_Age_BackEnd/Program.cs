@@ -50,7 +50,8 @@ namespace AI_Age_BackEnd
             builder.Services.AddScoped<ArticleService>();
             builder.Services.AddScoped<VideoArticleService>();
             builder.Services.AddScoped<ChatService>();
-            builder.Services.AddScoped<UserService>();
+            builder.Services.AddScoped<Services.UserService.UserService>();
+            builder.Services.AddScoped<Services.UserService.Admin.UserService>();
             builder.Services.AddScoped<AIToolCategoryService>();
             builder.Services.AddScoped<AIToolService>();
             builder.Services.AddScoped<ChatService>();

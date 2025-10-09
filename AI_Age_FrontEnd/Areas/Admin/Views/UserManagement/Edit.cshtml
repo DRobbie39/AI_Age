@@ -1,104 +1,83 @@
-﻿@{
+﻿@model AI_Age_FrontEnd.Areas.Admin.Models.UserViewModel.UserUpdateViewModel
+
+@{
     ViewData["Title"] = "Chỉnh sửa Người dùng";
 }
 
 <div class="container-fluid px-4">
     <h1 class="mt-4">Chỉnh sửa Người dùng</h1>
     <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-        <li class="breadcrumb-item"><a href="#">Quản lý Người dùng</a></li>
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Dashboard" asp-action="Index">Dashboard</a></li>
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="UserManagement" asp-action="Index">Quản lý Người dùng</a></li>
         <li class="breadcrumb-item active">Chỉnh sửa</li>
     </ol>
 
     <div class="card mb-4">
         <div class="card-header">
             <i class="fas fa-user-edit me-2"></i>
-            Cập nhật thông tin cho Người dùng: <strong>nguyenvana</strong>
+            Cập nhật thông tin cho: <strong>@Model.Username</strong>
         </div>
         <div class="card-body">
-            <form action="#" method="post" class="user-form" enctype="multipart/form-data">
-                <input type="hidden" name="UserID" value="101" />
+            <form asp-action="Edit" method="post" class="user-form">
+                @Html.AntiForgeryToken()
+                <input type="hidden" asp-for="UserId" />
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
 
-                <div class="user-form__group mb-4">
-                    <label class="user-form__label">Avatar</label>
-                    <div class="d-flex align-items-center">
-                        <img id="avatarPreview"
-                             src="https://via.placeholder.com/150"
-                             alt="Avatar"
-                             class="user-form__avatar-preview me-4" />
-
-                        <div class="flex-grow-1">
-                            <input id="avatarUpload" name="AvatarFile" type="file" class="form-control" accept="image/png, image/jpeg, image/gif">
-                            <small class="form-text text-muted mt-1 d-block">Để trống nếu không muốn thay đổi ảnh đại diện.</small>
-                        </div>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <label asp-for="FullName" class="user-form__label"></label>
+                        <input asp-for="FullName" class="form-control user-form__input">
+                        <span asp-validation-for="FullName" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <label asp-for="Username" class="user-form__label"></label>
+                        <input asp-for="Username" class="form-control user-form__input" readonly>
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="user-form__group mb-4">
-                            <label for="fullName" class="user-form__label">Họ và tên</label>
-                            <input id="fullName" name="FullName" type="text" class="form-control user-form__input" value="Nguyễn Văn A" required>
-                        </div>
+                    <div class="col-md-6 mb-4">
+                        <label asp-for="RoleId" class="user-form__label"></label>
+                        <select asp-for="RoleId" class="form-select user-form__input">
+                            <option value="1">Admin</option>
+                            <option value="3">Người dùng</option>
+                        </select>
+                        <span asp-validation-for="RoleId" class="text-danger"></span>
                     </div>
-                    <div class="col-md-6">
-                        <div class="user-form__group mb-4">
-                            <label for="username" class="user-form__label">Tên đăng nhập</label>
-                            <input id="username" name="Username" type="text" class="form-control user-form__input" value="nguyenvana" required readonly>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="user-form__group mb-4">
-                    <label for="password" class="user-form__label">Mật khẩu mới</label>
-                    <input id="password" name="Password" type="password" class="form-control user-form__input" placeholder="Để trống nếu không muốn thay đổi">
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="user-form__group mb-4">
-                            <label for="phoneNumber" class="user-form__label">Số điện thoại</label>
-                            <input id="phoneNumber" name="PhoneNumber" type="tel" class="form-control user-form__input" value="0987654321">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="user-form__group mb-4">
-                            <label for="dateOfBirth" class="user-form__label">Ngày sinh</label>
-                            <input id="dateOfBirth" name="DateOfBirth" type="date" class="form-control user-form__input" value="1995-08-15">
-                        </div>
+                    <div class="col-md-6 mb-4">
+                        <label asp-for="PhoneNumber" class="user-form__label"></label>
+                        <input asp-for="PhoneNumber" class="form-control user-form__input">
+                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="user-form__group mb-4">
-                            <label for="gender" class="user-form__label">Giới tính</label>
-                            <select id="gender" name="Gender" class="form-select user-form__input">
-                                <option value="Male" selected>Nam</option>
-                                <option value="Female">Nữ</option>
-                                <option value="Other">Khác</option>
-                            </select>
-                        </div>
+                    <div class="col-md-6 mb-4">
+                        <label asp-for="DateOfBirth" class="user-form__label"></label>
+                        <input asp-for="DateOfBirth" class="form-control user-form__input" type="date">
+                        <span asp-validation-for="DateOfBirth" class="text-danger"></span>
                     </div>
-                    <div class="col-md-6">
-                        <div class="user-form__group mb-4">
-                            <label for="roleId" class="user-form__label">Vai trò</label>
-                            <select id="roleId" name="RoleID" class="form-select user-form__input" required>
-                                <option value="1">Admin</option>
-                                <option value="2" selected>User</option>
-                            </select>
-                        </div>
+                    <div class="col-md-6 mb-4">
+                        <label asp-for="Gender" class="user-form__label"></label>
+                        <select asp-for="Gender" class="form-select user-form__input">
+                            <option value="">-- Chọn giới tính --</option>
+                            <option value="Nam">Nam</option>
+                            <option value="Nữ">Nữ</option>
+                            <option value="Khác">Khác</option>
+                        </select>
+                        <span asp-validation-for="Gender" class="text-danger"></span>
                     </div>
                 </div>
 
-                <div class="user-form__group mb-4">
-                    <label for="address" class="user-form__label">Địa chỉ</label>
-                    <textarea id="address" name="Address" class="form-control user-form__input" rows="3">123 Đường ABC, Phường X, Quận Y, TP.HCM</textarea>
+                <div class="mb-4">
+                    <label asp-for="Address" class="user-form__label"></label>
+                    <textarea asp-for="Address" class="form-control user-form__input" rows="3"></textarea>
+                    <span asp-validation-for="Address" class="text-danger"></span>
                 </div>
 
                 <div class="user-form__footer">
-                    <a href="#" class="user-form__button user-form__button--secondary">Quay lại danh sách</a>
-                    <button type="submit" class="user-form__button user-form__button--primary">
+                    <a asp-action="Index" class="btn btn-secondary">Quay lại danh sách</a>
+                    <button type="submit" class="btn btn-primary">
                         <i class="fas fa-save me-1"></i> Cập nhật
                     </button>
                 </div>
@@ -108,23 +87,7 @@
 </div>
 
 @section Scripts {
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const avatarUpload = document.getElementById('avatarUpload');
-            const avatarPreview = document.getElementById('avatarPreview');
-
-            if (avatarUpload && avatarPreview) {
-                avatarUpload.addEventListener('change', function (event) {
-                    const file = event.target.files[0];
-                    if (file) {
-                        const reader = new FileReader();
-                        reader.onload = function(e) {
-                            avatarPreview.src = e.target.result;
-                        };
-                        reader.readAsDataURL(file);
-                    }
-                });
-            }
-        });
-    </script>
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

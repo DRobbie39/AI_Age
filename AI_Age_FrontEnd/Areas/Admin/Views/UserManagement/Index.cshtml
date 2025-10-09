@@ -1,8 +1,11 @@
-﻿@{
+﻿@model List<AI_Age_FrontEnd.Areas.Admin.Models.UserViewModel.UserViewModel>
+
+@{
     ViewData["Title"] = "Quản lý Người dùng";
 }
 
 <div class="container-fluid px-4">
+    @Html.AntiForgeryToken()
     <h1 class="mt-4">Quản lý Người dùng</h1>
     <ol class="breadcrumb mb-4">
         <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Dashboard" asp-action="Index">Dashboard</a></li>
@@ -21,67 +24,136 @@
         </div>
 
         <div class="user-management-card__search">
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Tìm kiếm theo tên" aria-label="Tìm kiếm người dùng">
-                <button class="btn btn-outline-secondary" type="button">
-                    <i class="fas fa-search"></i>
-                </button>
-            </div>
+            <form asp-action="Index" method="get">
+                <div class="input-group">
+                    <input type="text" name="searchQuery" class="form-control"
+                           placeholder="Tên hoặc username..."
+                           value="@ViewData["CurrentFilter"]" />
+                    <button class="btn btn-primary" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <a asp-action="Index" class="btn btn-outline-secondary">Xóa bộ lọc</a>
+                </div>
+            </form>
         </div>
 
         <div class="card-body p-0">
-            <table id="usersTable" class="table table-hover user-management-table">
+            <table class="table table-hover user-management-table">
                 <thead>
                     <tr>
                         <th class="text-center">Avatar</th>
-                        <th>Tên người dùng</th>
-                        <th class="text-center">Tên đăng nhập</th>
+                        <th>Họ và tên</th>
+                        <th>Tên đăng nhập</th>
                         <th class="text-center">Vai trò</th>
                         <th class="text-center">Ngày đăng ký</th>
                         <th class="text-center">Hành động</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="text-center">
-                            <img src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="Avatar" class="user-management-table__avatar">
-                        </td>
-                        <td>
-                            <span class="user-management-table__fullname">Nguyễn Văn An</span>
-                        </td>
-                        <td class="text-center">nguyenvana</td>
-                        <td class="text-center">Admin</td>
-                        <td class="text-center">22-05-2024</td>
-                        <td class="user-management-table__actions">
-                            <a asp-area="Admin" asp-controller="UserManagement" asp-action="Edit" asp-route-id="1" class="user-management-table__action-button btn-warning" title="Sửa">
-                                <i class="fas fa-edit"></i>
-                            </a>
-                            <button class="btn-danger user-management-table__action-button" title="Xóa">
-                                <i class="fas fa-trash"></i>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-center">
-                            <img src="https://i.pravatar.cc/150?u=a042581f4e29026705d" alt="Avatar" class="user-management-table__avatar">
-                        </td>
-                        <td>
-                            <span class="user-management-table__fullname">Trần Thị Bích</span>
-                        </td>
-                        <td class="text-center">tranthib</td>
-                        <td class="text-center">Member</td>
-                        <td class="text-center">20-05-2024</td>
-                        <td class="user-management-table__actions">
-                            <a asp-area="Admin" asp-controller="UserManagement" asp-action="Edit" asp-route-id="2" class="user-management-table__action-button btn-warning" title="Sửa">
-                                <i class="fas fa-edit"></i>
-                            </a>
-                            <button class="btn-danger user-management-table__action-button" title="Xóa">
-                                <i class="fas fa-trash"></i>
-                            </button>
-                        </td>
-                    </tr>
+                    @if (Model != null && Model.Any())
+                    {
+                        @foreach (var user in Model)
+                        {
+                            <tr id="row-@user.UserId">
+                                <td class="text-center">
+                                    <img src="@(string.IsNullOrEmpty(user.Avatar) ? "/img/default-avatar.png" : user.Avatar)" alt="Avatar" class="user-management-table__avatar">
+                                </td>
+                                <td>@user.FullName</td>
+                                <td>@user.Username</td>
+                                <td class="text-center">
+                                    <span class="badge @(user.RoleName == "Admin" ? "bg-danger" : "bg-success")">
+                                        @user.RoleName
+                                    </span>
+                                </td>
+                                <td class="text-center">@user.RegistrationDate.ToString("dd-MM-yyyy")</td>
+                                <td class="user-management-table__actions">
+                                    <a asp-area="Admin" asp-controller="UserManagement" asp-action="Edit" asp-route-id="@user.UserId" class="btn btn-warning user-management-table__action-button" title="Sửa">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <button type="button" class="btn btn-danger user-management-table__action-button js-delete-btn" title="Xóa"
+                                            data-id="@user.UserId"
+                                            data-name="@user.Username">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="6" class="text-center">Không có người dùng nào.</td>
+                        </tr>
+                    }
                 </tbody>
             </table>
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="deleteConfirmationModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Xác nhận Xóa</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Bạn có chắc chắn muốn xóa người dùng <strong id="userNameToDelete"></strong> không?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Xóa</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const deleteModal = new bootstrap.Modal(document.getElementById('deleteConfirmationModal'));
+            const confirmDeleteBtn = document.getElementById('confirmDeleteBtn');
+            const userNameToDelete = document.getElementById('userNameToDelete');
+            let userIdToDelete = 0;
+
+            document.querySelectorAll('.js-delete-btn').forEach(button => {
+                button.addEventListener('click', function () {
+                    userIdToDelete = this.dataset.id;
+                    userNameToDelete.textContent = `"${this.dataset.name}"`;
+                    deleteModal.show();
+                });
+            });
+
+            confirmDeleteBtn.addEventListener('click', function () {
+                const antiForgeryToken = document.querySelector('input[name="__RequestVerificationToken"]').value;
+
+                fetch(`/Admin/UserManagement/Delete/${userIdToDelete}`, {
+                    method: 'DELETE',
+                    headers: {
+                        'RequestVerificationToken': antiForgeryToken
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        const rowToDelete = document.getElementById(`row-${userIdToDelete}`);
+
+                        if (rowToDelete) {
+                            rowToDelete.remove();
+                        }
+                    } else {
+                         showToastrNotification('error', data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Đã xảy ra lỗi kết nối.');
+                })
+                .finally(() => {
+                    deleteModal.hide();
+                });
+            });
+        });
+    </script>
+}

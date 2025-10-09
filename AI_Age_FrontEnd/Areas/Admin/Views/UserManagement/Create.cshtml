@@ -1,12 +1,14 @@
-﻿@{
+﻿@model AI_Age_FrontEnd.Areas.Admin.Models.UserViewModel.UserCreateViewModel
+
+@{
     ViewData["Title"] = "Thêm mới Người dùng";
 }
 
 <div class="container-fluid px-4">
     <h1 class="mt-4">Thêm mới Người dùng</h1>
     <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Dashboard">Dashboard</a></li>
-        <li class="breadcrumb-item"><a asp-action="Index" asp-controller="User">Quản lý Người dùng</a></li>
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Dashboard" asp-action="Index">Dashboard</a></li>
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="UserManagement" asp-action="Index">Quản lý Người dùng</a></li>
         <li class="breadcrumb-item active">Thêm mới</li>
     </ol>
 
@@ -16,78 +18,48 @@
             Thông tin Người dùng mới
         </div>
         <div class="card-body">
-            <form action="#" method="post" class="user-form">
+            <form asp-action="Create" method="post" class="user-form">
+                @Html.AntiForgeryToken()
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
 
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="user-form__group mb-4">
-                            <label for="fullName" class="user-form__label">Họ và tên</label>
-                            <input id="fullName" name="FullName" type="text" class="form-control user-form__input" placeholder="Ví dụ: Nguyễn Văn A" required>
-                        </div>
+                    <div class="col-md-6 mb-4">
+                        <label asp-for="FullName" class="user-form__label"></label>
+                        <input asp-for="FullName" class="form-control user-form__input" placeholder="Ví dụ: Nguyễn Văn An">
+                        <span asp-validation-for="FullName" class="text-danger"></span>
                     </div>
-                    <div class="col-md-6">
-                        <div class="user-form__group mb-4">
-                            <label for="username" class="user-form__label">Tên đăng nhập</label>
-                            <input id="username" name="Username" type="text" class="form-control user-form__input" placeholder="Ví dụ: nguyenvana" required>
-                        </div>
+                    <div class="col-md-6 mb-4">
+                        <label asp-for="Username" class="user-form__label"></label>
+                        <input asp-for="Username" class="form-control user-form__input" placeholder="Ví dụ: nguyenvana">
+                        <span asp-validation-for="Username" class="text-danger"></span>
                     </div>
                 </div>
 
-                <div class="user-form__group mb-4">
-                    <label for="password" class="user-form__label">Mật khẩu</label>
-                    <input id="password" name="Password" type="password" class="form-control user-form__input" placeholder="Nhập mật khẩu" required>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="user-form__group mb-4">
-                            <label for="phoneNumber" class="user-form__label">Số điện thoại</label>
-                            <input id="phoneNumber" name="PhoneNumber" type="tel" class="form-control user-form__input" placeholder="Ví dụ: 0987654321">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="user-form__group mb-4">
-                            <label for="dateOfBirth" class="user-form__label">Ngày sinh</label>
-                            <input id="dateOfBirth" name="DateOfBirth" type="date" class="form-control user-form__input">
-                        </div>
-                    </div>
+                <div class="mb-4">
+                    <label asp-for="Password" class="user-form__label"></label>
+                    <input asp-for="Password" class="form-control user-form__input" placeholder="Nhập mật khẩu (ít nhất 6 ký tự)">
+                    <span asp-validation-for="Password" class="text-danger"></span>
                 </div>
 
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="user-form__group mb-4">
-                            <label for="gender" class="user-form__label">Giới tính</label>
-                            <select id="gender" name="Gender" class="form-select user-form__input">
-                                <option value="Male">Nam</option>
-                                <option value="Female">Nữ</option>
-                                <option value="Other">Khác</option>
-                            </select>
-                        </div>
+                    <div class="col-md-6 mb-4">
+                        <label asp-for="RoleId" class="user-form__label"></label>
+                        <select asp-for="RoleId" class="form-select user-form__input">
+                            <option value="1">Admin</option>
+                            <option value="3" selected>Người dùng</option>
+                        </select>
+                        <span asp-validation-for="RoleId" class="text-danger"></span>
                     </div>
-                    <div class="col-md-6">
-                        <div class="user-form__group mb-4">
-                            <label for="roleId" class="user-form__label">Vai trò</label>
-                            <select id="roleId" name="RoleID" class="form-select user-form__input" required>
-                                <option value="1">Admin</option>
-                                <option value="2" selected>User</option>
-                            </select>
-                        </div>
+                    <div class="col-md-6 mb-4">
+                        <label asp-for="PhoneNumber" class="user-form__label"></label>
+                        <input asp-for="PhoneNumber" class="form-control user-form__input" placeholder="Ví dụ: 0987654321">
+                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
                     </div>
-                </div>
-
-                <div class="user-form__group mb-4">
-                    <label for="address" class="user-form__label">Địa chỉ</label>
-                    <textarea id="address" name="Address" class="form-control user-form__input" rows="3" placeholder="Ví dụ: 123 Đường ABC, Phường X, Quận Y, TP.HCM"></textarea>
-                </div>
-
-                <div class="user-form__group mb-4">
-                    <label for="avatar" class="user-form__label">Avatar (URL)</label>
-                    <input id="avatar" name="Avatar" type="text" class="form-control user-form__input" placeholder="Dán đường dẫn URL hình ảnh vào đây...">
                 </div>
 
                 <div class="user-form__footer">
-                    <a href="#" class="user-form__button user-form__button--secondary">Quay lại danh sách</a>
-                    <button type="submit" class="user-form__button user-form__button--primary">
+                    <a asp-action="Index" class="btn btn-secondary">Quay lại danh sách</a>
+                    <button type="submit" class="btn btn-primary">
                         <i class="fas fa-save me-1"></i> Lưu lại
                     </button>
                 </div>
@@ -95,3 +67,9 @@
         </div>
     </div>
 </div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
