@@ -25,6 +25,18 @@ namespace AI_Age_BackEnd.Repositories
                 .FirstOrDefaultAsync(u => u.Username == username);
         }
 
+        public async Task<List<User>> GetAllAsync(string? searchQuery = null)
+        {
+            var query = _context.Users.Include(u => u.Role).AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(searchQuery))
+            {
+                query = query.Where(u => u.Username.Contains(searchQuery) || u.FullName.Contains(searchQuery));
+            }
+
+            return await query.OrderByDescending(u => u.RegistrationDate).ToListAsync();
+        }
+
         public async Task AddUserAsync(User user)
         {
             await _context.Users.AddAsync(user);
@@ -34,6 +46,12 @@ namespace AI_Age_BackEnd.Repositories
         public async Task UpdateUserAsync(User user)
         {
             _context.Users.Update(user);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task DeleteUserAsync(User user)
+        {
+            _context.Users.Remove(user);
             await _context.SaveChangesAsync();
         }
     }
