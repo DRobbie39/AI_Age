@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_frontend\\areas\\admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|solutionrelative:ai_age_frontend\\areas\\admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_frontend\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|solutionrelative:ai_age_frontend\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_frontend\\areas\\admin\\views\\aitoolcategorymanagement\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|solutionrelative:ai_age_frontend\\areas\\admin\\views\\aitoolcategorymanagement\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -35,53 +43,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\Areas\\Admin\\Views\\AIToolCategoryManagement\\Index.cshtml",
-              "RelativeDocumentMoniker": "AI_Age_FrontEnd\\Areas\\Admin\\Views\\AIToolCategoryManagement\\Index.cshtml",
-              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\Areas\\Admin\\Views\\AIToolCategoryManagement\\Index.cshtml",
-              "RelativeToolTip": "AI_Age_FrontEnd\\Areas\\Admin\\Views\\AIToolCategoryManagement\\Index.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "AI_Age_FrontEnd\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "AI_Age_FrontEnd\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-03T08:52:30.415Z",
+              "WhenOpened": "2025-10-09T09:50:24.555Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IAIToolCategoryRepository.cs",
-              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Repositories\\Interfaces\\IAIToolCategoryRepository.cs",
-              "RelativeDocumentMoniker": "AI_Age_BackEnd\\Repositories\\Interfaces\\IAIToolCategoryRepository.cs",
-              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Repositories\\Interfaces\\IAIToolCategoryRepository.cs",
-              "RelativeToolTip": "AI_Age_BackEnd\\Repositories\\Interfaces\\IAIToolCategoryRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-03T07:47:02.735Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AIToolCategoryRepository.cs",
-              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Repositories\\AIToolCategoryRepository.cs",
-              "RelativeDocumentMoniker": "AI_Age_BackEnd\\Repositories\\AIToolCategoryRepository.cs",
-              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Repositories\\AIToolCategoryRepository.cs",
-              "RelativeToolTip": "AI_Age_BackEnd\\Repositories\\AIToolCategoryRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-03T07:46:54.251Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AIToolCategoryService.cs",
-              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Services\\AIToolCategoryService\\AIToolCategoryService.cs",
-              "RelativeDocumentMoniker": "AI_Age_BackEnd\\Services\\AIToolCategoryService\\AIToolCategoryService.cs",
-              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Services\\AIToolCategoryService\\AIToolCategoryService.cs",
-              "RelativeToolTip": "AI_Age_BackEnd\\Services\\AIToolCategoryService\\AIToolCategoryService.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAADgv0IAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-03T07:48:00.187Z",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "AI_Age_FrontEnd\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "AI_Age_FrontEnd\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-09T09:46:05.734Z",
               "EditorCaption": ""
             },
             {
@@ -130,7 +112,56 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\Areas\\Admin\\Views\\AIToolCategoryManagement\\Index.cshtml",
+              "RelativeDocumentMoniker": "AI_Age_FrontEnd\\Areas\\Admin\\Views\\AIToolCategoryManagement\\Index.cshtml",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\Areas\\Admin\\Views\\AIToolCategoryManagement\\Index.cshtml",
+              "RelativeToolTip": "AI_Age_FrontEnd\\Areas\\Admin\\Views\\AIToolCategoryManagement\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-03T08:52:30.415Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IAIToolCategoryRepository.cs",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Repositories\\Interfaces\\IAIToolCategoryRepository.cs",
+              "RelativeDocumentMoniker": "AI_Age_BackEnd\\Repositories\\Interfaces\\IAIToolCategoryRepository.cs",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Repositories\\Interfaces\\IAIToolCategoryRepository.cs",
+              "RelativeToolTip": "AI_Age_BackEnd\\Repositories\\Interfaces\\IAIToolCategoryRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T07:47:02.735Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AIToolCategoryRepository.cs",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Repositories\\AIToolCategoryRepository.cs",
+              "RelativeDocumentMoniker": "AI_Age_BackEnd\\Repositories\\AIToolCategoryRepository.cs",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Repositories\\AIToolCategoryRepository.cs",
+              "RelativeToolTip": "AI_Age_BackEnd\\Repositories\\AIToolCategoryRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T07:46:54.251Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AIToolCategoryService.cs",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Services\\AIToolCategoryService\\AIToolCategoryService.cs",
+              "RelativeDocumentMoniker": "AI_Age_BackEnd\\Services\\AIToolCategoryService\\AIToolCategoryService.cs",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Services\\AIToolCategoryService\\AIToolCategoryService.cs",
+              "RelativeToolTip": "AI_Age_BackEnd\\Services\\AIToolCategoryService\\AIToolCategoryService.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAADgv0IAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T07:48:00.187Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "AIToolCategoryController.cs",
               "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Controllers\\AIToolCategoryController\\AIToolCategoryController.cs",
               "RelativeDocumentMoniker": "AI_Age_BackEnd\\Controllers\\AIToolCategoryController\\AIToolCategoryController.cs",
@@ -138,8 +169,7 @@
               "RelativeToolTip": "AI_Age_BackEnd\\Controllers\\AIToolCategoryController\\AIToolCategoryController.cs",
               "ViewState": "AgIAACMAAAAAAAAAAAAgwC0AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-03T07:46:25.751Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-03T07:46:25.751Z"
             }
           ]
         }
