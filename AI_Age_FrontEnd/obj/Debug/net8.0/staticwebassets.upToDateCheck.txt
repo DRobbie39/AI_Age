@@ -34,7 +34,7 @@ wwwroot\img\profile.png
 wwwroot\js\chatbox.js
 wwwroot\js\main.js
 wwwroot\js\toastrNotification.js
-wwwroot\js\tour-guide.js
+wwwroot\js\tourGuide.js
 wwwroot\lib\bootstrap-icons\bootstrap-icons.css
 wwwroot\lib\bootstrap-icons\bootstrap-icons.json
 wwwroot\lib\bootstrap-icons\bootstrap-icons.min.css

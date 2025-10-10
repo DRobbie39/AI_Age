@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_backend\\controllers\\usercontroller\\admin\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|solutionrelative:ai_age_backend\\controllers\\usercontroller\\admin\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8508CB6-186E-400B-971A-9049CD512DA7}|AI_Age_BackEnd\\AI_Age_BackEnd.csproj|solutionrelative:ai_age_backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_frontend\\areas\\admin\\views\\aitoolcategorymanagement\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|solutionrelative:ai_age_frontend\\areas\\admin\\views\\aitoolcategorymanagement\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_frontend\\areas\\admin\\views\\usermanagement\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|solutionrelative:ai_age_frontend\\areas\\admin\\views\\usermanagement\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|d:\\study\\hk2 2024-2025\\doantotnghiep\\ai_age\\ai_age_frontend\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CACFCA21-179F-4842-BD57-2E48FFEE6F0E}|AI_Age_FrontEnd\\AI_Age_FrontEnd.csproj|solutionrelative:ai_age_frontend\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,53 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Controllers\\UserController\\Admin\\UsersController.cs",
-              "RelativeDocumentMoniker": "AI_Age_BackEnd\\Controllers\\UserController\\Admin\\UsersController.cs",
-              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Controllers\\UserController\\Admin\\UsersController.cs",
-              "RelativeToolTip": "AI_Age_BackEnd\\Controllers\\UserController\\Admin\\UsersController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T19:45:24.654Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Program.cs",
-              "RelativeDocumentMoniker": "AI_Age_BackEnd\\Program.cs",
-              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_BackEnd\\Program.cs",
-              "RelativeToolTip": "AI_Age_BackEnd\\Program.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAQwDgAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T19:43:06.772Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\Areas\\Admin\\Views\\AIToolCategoryManagement\\Index.cshtml",
-              "RelativeDocumentMoniker": "AI_Age_FrontEnd\\Areas\\Admin\\Views\\AIToolCategoryManagement\\Index.cshtml",
-              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\Areas\\Admin\\Views\\AIToolCategoryManagement\\Index.cshtml",
-              "RelativeToolTip": "AI_Age_FrontEnd\\Areas\\Admin\\Views\\AIToolCategoryManagement\\Index.cshtml",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAAAIUAAAAYAAAAAAAAAA==",
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "AI_Age_FrontEnd\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "AI_Age_FrontEnd\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAPYAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-09T19:35:53.323Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\Areas\\Admin\\Views\\UserManagement\\Index.cshtml",
-              "RelativeDocumentMoniker": "AI_Age_FrontEnd\\Areas\\Admin\\Views\\UserManagement\\Index.cshtml",
-              "ToolTip": "D:\\Study\\HK2 2024-2025\\DoAnTotNghiep\\AI_Age\\AI_Age_FrontEnd\\Areas\\Admin\\Views\\UserManagement\\Index.cshtml",
-              "RelativeToolTip": "AI_Age_FrontEnd\\Areas\\Admin\\Views\\UserManagement\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-09T19:35:40.699Z",
+              "WhenOpened": "2025-10-10T18:09:35.308Z",
               "EditorCaption": ""
             },
             {
