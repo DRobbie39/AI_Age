@@ -7,7 +7,7 @@ The project is built using **ASP .NET Core Web Application + ASP .NET Core Web A
 
 ## ✨ Demo
 
-### 🏠 Login and register interface
+### 🔐 Login and register interface
 <p align="center">
   <img width="700" alt="image" src="https://github.com/user-attachments/assets/0b6fb805-77d6-44d4-acf5-f5a6736f351c" />
 </p>
@@ -31,7 +31,7 @@ The project is built using **ASP .NET Core Web Application + ASP .NET Core Web A
 
 > The home page interface helps users to search for AI tools to access.
 
-### 🏠 Tour guide interface
+### 🗺️ Tour guide interface
 <p align="center">
   <img width="700" alt="image" src="https://github.com/user-attachments/assets/ad22d6d2-ac4d-4bb3-ada5-5cf213021d46" />
 </p>
@@ -42,7 +42,7 @@ The project is built using **ASP .NET Core Web Application + ASP .NET Core Web A
 
 > When registering for the first time, there will be a guide for new accounts, briefly guiding the main functions of the website so that users can understand better.
 
-### 🏠 Tutorial article and tutorial video interface
+### 📚 Tutorial article and tutorial video interface
 <p align="center">
   <img width="700" alt="image" src="https://github.com/user-attachments/assets/d7176ec7-5b81-42c0-a1ed-602357b49e0b" />
 </p>
@@ -53,7 +53,7 @@ The project is built using **ASP .NET Core Web Application + ASP .NET Core Web A
 
 > Users can search for tutorial articles and tutorial videos for AI tools, to learn how to use AI tools to avoid confusion.
 
-### 🏠 Tutorial article's detail and tutorial video's detail interface
+### 🔍 Tutorial article's detail and tutorial video's detail interface
 <p align="center">
   <img width="700" alt="image" src="https://github.com/user-attachments/assets/64624483-685e-46b3-8c07-8e073761bafc" />
 </p>
@@ -66,21 +66,21 @@ The project is built using **ASP .NET Core Web Application + ASP .NET Core Web A
 
 > Similarly, when a user clicks on a tutorial video, the video's details will be displayed, including basic information and instructional content of the video. Users can watch and learn from the video to apply. Users can also rate the video if they find it interesting.
 
-### 🏠 Chatbot interface
+### 🤖 Chatbot interface
 <p align="center">
   <img width="700" alt="image" src="https://github.com/user-attachments/assets/9c5a408a-68c5-4bff-acfd-44c0226bf33c" />
 </p>
 
 > If the user feels that the instructions on the website are not enough, they can open the chatbot in the lower right corner of the website and use it to ask questions. Users can also chat by voice if they do not want to type manually. Every time the user interacts with the chatbot, the chatbot will always respond in both text and voice.
 
-### 🏠 User management interface from admin
+### 👥 User management interface from admin
 <p align="center">
   <img width="700" alt="image" src="https://github.com/user-attachments/assets/cea88e89-10b7-4178-94c8-7a757913665b" />
 </p>
 
 > Admin can view, add, edit, delete users along with searching users for easy management.
 
-### 🏠 AI tool category management interface from admin
+### 🧠 AI tool category management interface from admin
 <p align="center">
   <img width="700" alt="image" src="https://github.com/user-attachments/assets/17fc3a86-c928-4a7f-a835-a5bd34ffa47f" />
 </p>
