@@ -68,7 +68,21 @@ The project is built using **ASP .NET Core Web Application + ASP .NET Core Web A
 
 ### 🏠 Chatbot interface
 <p align="center">
-  <img width="700" alt="image" src="https://github.com/user-attachments/assets/d6e6aaaa-3bb4-4d41-b09b-a4818e70c947" />
+  <img width="700" alt="image" src="https://github.com/user-attachments/assets/9c5a408a-68c5-4bff-acfd-44c0226bf33c" />
 </p>
 
 > If the user feels that the instructions on the website are not enough, they can open the chatbot in the lower right corner of the website and use it to ask questions. Users can also chat by voice if they do not want to type manually. Every time the user interacts with the chatbot, the chatbot will always respond in both text and voice.
+
+### 🏠 User management interface from admin
+<p align="center">
+  <img width="700" alt="image" src="https://github.com/user-attachments/assets/cea88e89-10b7-4178-94c8-7a757913665b" />
+</p>
+
+> Admin can view, add, edit, delete users along with searching users for easy management.
+
+### 🏠 AI tool category management interface from admin
+<p align="center">
+  <img width="700" alt="image" src="https://github.com/user-attachments/assets/17fc3a86-c928-4a7f-a835-a5bd34ffa47f" />
+</p>
+
+> Admin can view, add, edit, delete AI tool category along with searching AI tool categories for easy management.
