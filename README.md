@@ -8,8 +8,12 @@ The project is built using **ASP .NET Core Web Application + ASP .NET Core Web A
 ## ✨ Demo
 
 ### 🏠 Login and register interface
-![Login](<img width="1902" height="878" alt="image" src="https://github.com/user-attachments/assets/0b6fb805-77d6-44d4-acf5-f5a6736f351c" />)
+<p align="center">
+  <img width="700" alt="image" src="https://github.com/user-attachments/assets/0b6fb805-77d6-44d4-acf5-f5a6736f351c" />
+</p>
 > User login interface.
 
-![Register](<img width="1901" height="875" alt="image" src="https://github.com/user-attachments/assets/e2463b0a-7b62-459d-810d-61df84c9e502" />)
+<p align="center">
+  <img width="700" alt="image" src="https://github.com/user-attachments/assets/e2463b0a-7b62-459d-810d-61df84c9e502" />
+</p>
 > User register interface.
