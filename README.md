@@ -86,3 +86,10 @@ The project is built using **ASP .NET Core Web Application + ASP .NET Core Web A
 </p>
 
 > Admin can view, add, edit, delete AI tool category along with searching AI tool categories for easy management.
+
+## 🧠 Technologies used
+
+- ⚙️ **ASP.NET Core Web Application (MVC)** — building user interfaces
+- 🎨 **HTML, CSS, Bootstrap, JavaScript, jQuery, AJAX** — creating visual and dynamic interactive interfaces
+- 🔗 **ASP.NET Core Web API (C#)** — handling business logic and providing data
+- 💾 **SQL Server** — storing and managing data
