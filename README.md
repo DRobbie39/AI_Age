@@ -11,9 +11,11 @@ The project is built using **ASP .NET Core Web Application + ASP .NET Core Web A
 <p align="center">
   <img width="700" alt="image" src="https://github.com/user-attachments/assets/0b6fb805-77d6-44d4-acf5-f5a6736f351c" />
 </p>
+
 > User login interface.
 
 <p align="center">
-  <img width="700" alt="image" src="https://github.com/user-attachments/assets/e2463b0a-7b62-459d-810d-61df84c9e502" />
+  <img width="700" alt="image" src="https://github.com/user-attachments/assets/eed9daae-ac87-41a7-8952-999e4088dd7e" />
 </p>
+
 > User register interface.
