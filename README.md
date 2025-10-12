@@ -30,3 +30,14 @@ The project is built using **ASP .NET Core Web Application + ASP .NET Core Web A
 </p>
 
 > The home page interface helps users to search for AI tools to access.
+
+### 🏠 Tour guide interface
+<p align="center">
+  <img width="700" alt="image" src="https://github.com/user-attachments/assets/ad22d6d2-ac4d-4bb3-ada5-5cf213021d46" />
+</p>
+
+<p align="center">
+  <img width="700" alt="image" src="https://github.com/user-attachments/assets/96fa3089-97b9-485b-be9f-53e935c4f07c" />
+</p>
+
+> When registering for the first time, there will be a guide for new accounts, briefly guiding the main functions of the website so that users can understand better.
