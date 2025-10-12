@@ -53,3 +53,15 @@ The project is built using **ASP .NET Core Web Application + ASP .NET Core Web A
 
 > Users can search for tutorial articles and tutorial videos for AI tools, to learn how to use AI tools to avoid confusion.
 
+### 🏠 Tutorial article's detail and tutorial video's detail interface
+<p align="center">
+  <img width="700" alt="image" src="https://github.com/user-attachments/assets/64624483-685e-46b3-8c07-8e073761bafc" />
+</p>
+
+> When users click on a tutorial article, the article's details will be displayed, including basic information and instructional content of the article. Users can read and learn from the article to apply. Users can also rate the article if they find it interesting.
+
+<p align="center">
+  <img width="700" alt="image" src="https://github.com/user-attachments/assets/fe59043c-a5f1-44a8-b218-30fff4b292a4" />
+</p>
+
+> Similarly, when a user clicks on a tutorial video, the video's details will be displayed, including basic information and instructional content of the video. Users can watch and learn from the video to apply. Users can also rate the video if they find it interesting.
