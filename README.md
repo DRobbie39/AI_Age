@@ -65,3 +65,10 @@ The project is built using **ASP .NET Core Web Application + ASP .NET Core Web A
 </p>
 
 > Similarly, when a user clicks on a tutorial video, the video's details will be displayed, including basic information and instructional content of the video. Users can watch and learn from the video to apply. Users can also rate the video if they find it interesting.
+
+### 🏠 Chatbot interface
+<p align="center">
+  <img width="700" alt="image" src="https://github.com/user-attachments/assets/d6e6aaaa-3bb4-4d41-b09b-a4818e70c947" />
+</p>
+
+> If the user feels that the instructions on the website are not enough, they can open the chatbot in the lower right corner of the website and use it to ask questions. Users can also chat by voice if they do not want to type manually. Every time the user interacts with the chatbot, the chatbot will always respond in both text and voice.
