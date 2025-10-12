@@ -19,3 +19,14 @@ The project is built using **ASP .NET Core Web Application + ASP .NET Core Web A
 </p>
 
 > User register interface.
+
+### 🏠 Home page interface
+<p align="center">
+  <img width="700" alt="image" src="https://github.com/user-attachments/assets/88206f61-60d7-426e-b96b-c1bbff8ff3b2" />
+</p>
+
+<p align="center">
+  <img width="700" alt="image" src="https://github.com/user-attachments/assets/6fe999d8-1696-4ef4-b8a0-a93a349218b5" />
+</p>
+
+> The home page interface helps users to search for AI tools to access.
