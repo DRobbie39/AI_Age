@@ -41,3 +41,15 @@ The project is built using **ASP .NET Core Web Application + ASP .NET Core Web A
 </p>
 
 > When registering for the first time, there will be a guide for new accounts, briefly guiding the main functions of the website so that users can understand better.
+
+### 🏠 Tutorial article and tutorial video interface
+<p align="center">
+  <img width="700" alt="image" src="https://github.com/user-attachments/assets/d7176ec7-5b81-42c0-a1ed-602357b49e0b" />
+</p>
+
+<p align="center">
+  <img width="700" alt="image" src="https://github.com/user-attachments/assets/b1355b48-ae10-47cc-9d6b-43038f2e889a" />
+</p>
+
+> Users can search for tutorial articles and tutorial videos for AI tools, to learn how to use AI tools to avoid confusion.
+
