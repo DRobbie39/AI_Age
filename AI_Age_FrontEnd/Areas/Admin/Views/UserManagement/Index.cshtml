@@ -148,7 +148,7 @@
                 })
                 .catch(error => {
                     console.error('Error:', error);
-                    alert('Đã xảy ra lỗi kết nối.');
+                    showToastrNotification('error', 'Đã xảy ra lỗi kết nối.');
                 })
                 .finally(() => {
                     deleteModal.hide();
