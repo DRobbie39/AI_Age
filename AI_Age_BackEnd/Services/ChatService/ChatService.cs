@@ -23,7 +23,7 @@ namespace AI_Age_BackEnd.Services.ChatService
 
         public async Task<AIResponseDto> GetChatResponseAsync(ChatDto chatDto, int userId)
         {
-            var url = $"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key={_apiKey}";
+            var url = $"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={_apiKey}";
 
              var systemInstruction = @"
                 Bối cảnh: Bạn là một trợ lý AI thân thiện tên bạn là BayMax, chuyên giúp đỡ người lớn tuổi ở ViệtNam.
@@ -87,8 +87,10 @@ namespace AI_Age_BackEnd.Services.ChatService
                 },
                 generationConfig = new
                 {
-                    temperature = 0.5,
-                    maxOutputTokens = 400,
+                    temperature = 1,
+                    topP = 0.95,
+                    topK = 64,
+                    maxOutputTokens = 65536,
                     response_mime_type = "application/json"
                 }
             };
