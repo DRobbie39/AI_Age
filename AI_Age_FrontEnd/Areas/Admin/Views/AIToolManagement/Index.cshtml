@@ -1,8 +1,11 @@
-﻿@{
+﻿@model List<AI_Age_FrontEnd.Areas.Admin.Models.AIToolViewModel.AIToolViewModel>
+
+@{
     ViewData["Title"] = "Quản lý Công cụ AI";
 }
 
 <div class="container-fluid px-4">
+    @Html.AntiForgeryToken()
     <h1 class="mt-4">Quản lý Công cụ AI</h1>
     <ol class="breadcrumb mb-4">
         <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Dashboard" asp-action="Index">Dashboard</a></li>
@@ -15,25 +18,26 @@
                 <i class="fas fa-robot me-2"></i>
                 Danh sách Công cụ AI
             </div>
-            <button class="btn btn-primary">
+            <a asp-action="Create" class="btn btn-primary">
                 <i class="fas fa-plus me-1"></i> Thêm mới
-            </button>
+            </a>
         </div>
 
         <div class="tool-card__search">
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Tìm kiếm theo tên công cụ..." aria-label="Tìm kiếm công cụ AI">
-                <button class="btn btn-outline-secondary" type="button">
-                    <i class="fas fa-search"></i>
-                </button>
-            </div>
+            <form asp-action="Index" method="get">
+                <div class="input-group">
+                    <input type="text" name="searchQuery" class="form-control" placeholder="Tìm kiếm theo tên công cụ..." value="@ViewData["CurrentFilter"]">
+                    <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+                    <a asp-action="Index" class="btn btn-outline-secondary">Xóa bộ lọc</a>
+                </div>
+            </form>
         </div>
 
         <div class="card-body p-0">
             <table class="table table-hover tool-table">
                 <thead>
                     <tr>
-                        <th>Mã công cụ</th>
+                        <th>Mã</th>
                         <th>Logo</th>
                         <th>Tên công cụ</th>
                         <th>Thể loại</th>
@@ -42,23 +46,108 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/1024px-ChatGPT_logo.svg.png" alt="Logo ChatGPT" class="tool-table__logo"></td>
-                        <td>ChatGPT</td>
-                        <td>Tạo nội dung</td>
-                        <td>21-05-2024</td>
-                        <td class="tool-table__actions">
-                            <button class="btn btn-warning tool-table__action-button" title="Sửa">
-                                <i class="fas fa-edit"></i>
-                            </button>
-                            <button class="btn btn-danger tool-table__action-button" title="Xóa">
-                                <i class="fas fa-trash"></i>
-                            </button>
-                        </td>
-                    </tr>
+                    @if (Model != null && Model.Any())
+                    {
+                        @foreach (var tool in Model)
+                        {
+                            <tr id="row-@tool.ToolID">
+                                <td>@tool.ToolID</td>
+                                <td>
+                                    <img src="@(tool.LogoURL ?? "/images/default-logo.png")" alt="Logo @tool.ToolName" class="tool-table__logo">
+                                </td>
+                                <td>@Html.DisplayFor(modelItem => tool.ToolName)</td>
+                                <td>@Html.DisplayFor(modelItem => tool.CategoryName)</td>
+                                <td>@tool.CreatedDate.ToString("dd-MM-yyyy")</td>
+                                <td class="tool-table__actions">
+                                    <a asp-action="Edit" asp-route-id="@tool.ToolID" class="btn btn-warning tool-table__action-button" title="Sửa">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <button class="btn btn-danger tool-table__action-button js-delete-btn" title="Xóa"
+                                            data-id="@tool.ToolID"
+                                            data-name="@tool.ToolName">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="6" class="text-center">Không có công cụ AI nào.</td>
+                        </tr>
+                    }
                 </tbody>
             </table>
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="deleteConfirmationModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Xác nhận Xóa</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Bạn có chắc chắn muốn xóa công cụ <strong id="toolNameToDelete"></strong> không?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Xóa</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const deleteModal = new bootstrap.Modal(document.getElementById('deleteConfirmationModal'));
+            const confirmDeleteBtn = document.getElementById('confirmDeleteBtn');
+            const toolNameToDelete = document.getElementById('toolNameToDelete');
+            let toolIdToDelete = 0;
+
+            document.querySelectorAll('.js-delete-btn').forEach(button => {
+                button.addEventListener('click', function () {
+                    toolIdToDelete = this.dataset.id;
+                    const toolName = this.dataset.name;
+                    toolNameToDelete.textContent = `"${toolName}"`;
+                    deleteModal.show();
+                });
+            });
+
+            confirmDeleteBtn.addEventListener('click', function () {
+                const antiForgeryToken = document.querySelector('input[name="__RequestVerificationToken"]').value;
+
+                fetch(`/Admin/AIToolManagement/Delete/${toolIdToDelete}`, {
+                    method: 'DELETE',
+                    headers: {
+                        'RequestVerificationToken': antiForgeryToken
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    deleteModal.hide();
+                    if (data.success) {
+                        const rowToDelete = document.getElementById(`row-${toolIdToDelete}`);
+
+                        if (rowToDelete) {
+                            rowToDelete.remove();
+                        }
+                    } else {
+                        showToastrNotification('error', data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    showToastrNotification('error', 'Đã xảy ra lỗi kết nối.');
+                })
+                .finally(() => {
+                    deleteModal.hide();
+                });
+            });
+        });
+    </script>
+}

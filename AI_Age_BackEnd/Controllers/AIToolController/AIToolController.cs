@@ -16,9 +16,9 @@ namespace AI_Age_BackEnd.Controllers.AIToolController
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll([FromQuery] string? searchQuery, [FromQuery] int? categoryId)
         {
-            var tools = await _toolService.GetAllToolsAsync();
+            var tools = await _toolService.GetAllToolsAsync(searchQuery, categoryId);
             return Ok(tools);
         }
 
