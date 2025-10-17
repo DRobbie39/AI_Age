@@ -13,11 +13,23 @@ namespace AI_Age_BackEnd.Repositories
             _context = context;
         }
 
-        public async Task<List<Aitool>> GetAllAsync()
+        public async Task<List<Aitool>> GetAllAsync(string? searchQuery = null, int? categoryId = null)
         {
-            // Luôn Include Category để lấy được CategoryName
-            return await _context.Aitools
+            var query = _context.Aitools
                 .Include(t => t.Category)
+                .AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(searchQuery))
+            {
+                query = query.Where(t => t.ToolName.Contains(searchQuery));
+            }
+
+            if (categoryId.HasValue)
+            {
+                query = query.Where(t => t.CategoryId == categoryId.Value);
+            }
+
+            return await query
                 .OrderBy(t => t.ToolName)
                 .ToListAsync();
         }

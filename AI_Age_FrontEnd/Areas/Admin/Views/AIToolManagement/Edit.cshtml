@@ -1,68 +1,79 @@
-﻿@{
+﻿@model AI_Age_FrontEnd.Areas.Admin.Models.AIToolViewModel.AIToolUpdateViewModel
+@{
     ViewData["Title"] = "Chỉnh sửa Công cụ AI";
 }
 
 <div class="container-fluid px-4">
     <h1 class="mt-4">Chỉnh sửa Công cụ AI</h1>
     <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-        <li class="breadcrumb-item"><a href="#">Công cụ AI</a></li>
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Dashboard" asp-action="Index">Dashboard</a></li>
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="AIToolManagement" asp-action="Index">Công cụ AI</a></li>
         <li class="breadcrumb-item active">Chỉnh sửa</li>
     </ol>
 
     <div class="card mb-4">
         <div class="card-header">
-            <i class="fas fa-edit me-2"></i>
-            Cập nhật thông tin cho Công cụ: ChatGPT
+            <i class="fas fa-edit me-2"></i> Cập nhật thông tin cho: <strong>@Model.ToolName</strong>
         </div>
         <div class="card-body">
-            <form action="#" method="post" class="tool-form" enctype="multipart/form-data">
-                <input type="hidden" name="toolId" value="1" />
+            <form asp-action="Edit" asp-route-id="@Model.ToolID" method="post" class="tool-form" enctype="multipart/form-data">
+                @Html.AntiForgeryToken()
+                <input type="hidden" asp-for="ToolID" />
+                <input type="hidden" asp-for="ExistingLogoUrl" />
+                <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
                 <div class="tool-form__group mb-4">
-                    <label for="toolName" class="tool-form__label">Tên công cụ</label>
-                    <input id="toolName" name="toolName" type="text" class="form-control tool-form__input" value="ChatGPT" placeholder="Ví dụ: ChatGPT, Midjourney...">
+                    <label asp-for="ToolName" class="tool-form__label"></label>
+                    <input asp-for="ToolName" class="form-control tool-form__input">
+                    <span asp-validation-for="ToolName" class="text-danger"></span>
                 </div>
+
                 <div class="tool-form__group mb-4">
-                    <label for="categoryId" class="tool-form__label">Thể loại</label>
+                    <label asp-for="CategoryID" class="tool-form__label"></label>
                     <div class="tool-form__select-wrapper">
-                        <select id="categoryId" name="categoryId" class="form-select tool-form__input">
-                            <option selected disabled>-- Chọn một thể loại --</option>
-                            <option value="1" selected>Tạo nội dung</option>
-                            <option value="2">Tạo hình ảnh</option>
-                            <option value="3">Viết mã</option>
-                            <option value="4">Phân tích dữ liệu</option>
+                        <select asp-for="CategoryID" asp-items="@Model.Categories" class="form-select tool-form__input">
+                            <option value="">-- Chọn một thể loại --</option>
                         </select>
                     </div>
+                    <span asp-validation-for="CategoryID" class="text-danger"></span>
                 </div>
 
                 <div class="tool-form__group mb-4">
-                    <label for="description" class="tool-form__label">Mô tả</label>
-                    <textarea id="description" name="description" class="form-control tool-form__input" rows="4" placeholder="Mô tả chi tiết về công cụ và chức năng chính...">ChatGPT là một mô hình ngôn ngữ lớn được phát triển bởi OpenAI, có khả năng tạo ra văn bản giống con người.</textarea>
+                    <label asp-for="Description" class="tool-form__label"></label>
+                    <textarea asp-for="Description" class="form-control tool-form__input" rows="4"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
                 </div>
 
                 <div class="tool-form__group mb-4">
-                    <label class="tool-form__label">Logo công cụ</label>
+                    <label asp-for="Logo" class="tool-form__label"></label>
                     <div class="tool-form__upload">
-                        <div id="image-preview-container" class="tool-form__preview">
-                            <img id="image-preview" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/1024px-ChatGPT_logo.svg.png" alt="Xem trước logo" class="tool-form__preview-image" />
+                        @{
+                            var hasExistingLogo = !string.IsNullOrEmpty(Model.ExistingLogoUrl);
+                            var previewContainerClass = hasExistingLogo ? "" : "d-none";
+                            var uploadLabelClass = hasExistingLogo ? "d-none" : "";
+                        }
+                        <div id="image-preview-container" class="tool-form__preview @previewContainerClass">
+                            <img id="image-preview" src="@Model.ExistingLogoUrl" alt="Xem trước logo" class="tool-form__preview-image" />
                             <button type="button" id="remove-image-btn" class="tool-form__remove-btn">×</button>
                         </div>
-                        <label for="logoUpload" id="upload-label" class="tool-form__upload-label d-none">
+                        <label for="logoUpload" id="upload-label" class="tool-form__upload-label @uploadLabelClass">
                             <span class="tool-form__upload-title">Logo công cụ</span>
                             <i class="fas fa-cloud-upload-alt tool-form__upload-icon"></i>
-                            <p class="tool-form__upload-text">Kéo và thả file vào đây hoặc nhấn để chọn ảnh mới</p>
+                            <p class="tool-form__upload-text">Kéo và thả file hoặc nhấn để chọn ảnh mới</p>
                         </label>
-                        <input id="logoUpload" name="logoFile" type="file" accept="image/*" class="tool-form__upload-input">
+                        <input asp-for="Logo" id="logoUpload" type="file" accept="image/*" class="tool-form__upload-input">
                     </div>
+                    <span asp-validation-for="Logo" class="text-danger"></span>
                 </div>
 
                 <div class="tool-form__group mb-4">
-                    <label for="websiteUrl" class="tool-form__label">URL Website</label>
-                    <input id="websiteUrl" name="websiteUrl" type="text" class="form-control tool-form__input" value="https://chat.openai.com" placeholder="https://example.com">
+                    <label asp-for="WebsiteURL" class="tool-form__label"></label>
+                    <input asp-for="WebsiteURL" type="text" class="form-control tool-form__input">
+                    <span asp-validation-for="WebsiteURL" class="text-danger"></span>
                 </div>
 
                 <div class="tool-form__footer">
-                    <a href="#" class="tool-form__button tool-form__button--secondary">Quay lại danh sách</a>
+                    <a asp-action="Index" class="tool-form__button tool-form__button--secondary">Quay lại</a>
                     <button type="submit" class="tool-form__button tool-form__button--primary">
                         <i class="fas fa-save me-1"></i> Cập nhật
                     </button>
@@ -73,33 +84,7 @@
 </div>
 
 @section Scripts {
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const logoUpload = document.getElementById('logoUpload');
-            const uploadLabel = document.getElementById('upload-label');
-            const imagePreviewContainer = document.getElementById('image-preview-container');
-            const imagePreview = document.getElementById('image-preview');
-            const removeImageBtn = document.getElementById('remove-image-btn');
-
-            logoUpload.addEventListener('change', function (e) {
-                const file = e.target.files[0];
-                if (file) {
-                    const reader = new FileReader();
-                    reader.onload = function(event) {
-                        imagePreview.src = event.target.result;
-                        imagePreviewContainer.classList.remove('d-none');
-                        uploadLabel.classList.add('d-none');
-                    }
-                    reader.readAsDataURL(file);
-                }
-            });
-
-            removeImageBtn.addEventListener('click', function () {
-                logoUpload.value = '';
-                imagePreview.src = '#';
-                imagePreviewContainer.classList.add('d-none');
-                uploadLabel.classList.remove('d-none');
-            });
-        });
-    </script>
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

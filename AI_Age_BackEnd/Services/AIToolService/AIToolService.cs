@@ -104,9 +104,9 @@ namespace AI_Age_BackEnd.Services.AIToolService
             };
         }
 
-        public async Task<List<AIToolDto>> GetAllToolsAsync()
+        public async Task<List<AIToolDto>> GetAllToolsAsync(string? searchQuery = null, int? categoryId = null)
         {
-            var tools = await _toolRepository.GetAllAsync();
+            var tools = await _toolRepository.GetAllAsync(searchQuery, categoryId);
 
             return tools.Select(tool => new AIToolDto
             {
