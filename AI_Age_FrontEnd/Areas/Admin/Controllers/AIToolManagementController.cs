@@ -177,7 +177,7 @@ namespace AI_Age_FrontEnd.Areas.Admin.Controllers
             }
         }
 
-        [HttpPost]
+        [HttpDelete]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int id)
         {
